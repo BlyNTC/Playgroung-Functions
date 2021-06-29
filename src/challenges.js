@@ -19,7 +19,7 @@ compareTrue(true, true);
 // Desafio 2
 function calcArea(a, b) {
   // seu código aqui
-  let area = (a * b)/2;
+  let area = (a * b) / 2;
   return area;
 }
 
@@ -35,7 +35,7 @@ splitSentence("Vamo que vamo");
 // Desafio 4
 function concatName(lista) {
   // seu código aqui
-  let result = lista[lista.length -1] +"," + " "+ lista[0];
+  let result = lista[lista.length - 1] + "," + " " + lista[0];
   console.log(result);
   return result;  
 }
@@ -102,9 +102,33 @@ function catAndMouse(mouse, cat1, cat2) {
 catAndMouse(1, 0, 2)
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
+  let marcados = [];
+  for (index = 0; index < numbers.length; index += 1){
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 != 0) {
+      marcados.push('fizz');
+    }
+
+    if (numbers[index] % 5 === 0 && numbers[index] % 3 != 0){
+      marcados.push('buzz')
+    }
+
+    if (numbers[index] % 5 === 0 && numbers[index] % 3 === 0){
+      marcados.push('fizzBuzz')
+    }
+
+    if (numbers[index] % 3 != 0 && numbers[index] % 5 != 0){
+      marcados.push('bug!')
+    }
+
+    
+  }
+  console.log(marcados)
+  return marcados;
 }
+let coisas = [9, 25];
+fizzBuzz(coisas);
 
 // Desafio 9
 function encode() {
