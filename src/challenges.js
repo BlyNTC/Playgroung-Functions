@@ -28,20 +28,20 @@ function concatName(nome) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = 0;
-  switch (wins, ties) {
-    case wins:
-      pontos += 3
-      break
-    case ties:
-      pontos += 1
-      break
-  }
+  pontos = wins*3 + ties*1
   return pontos
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let maior = 0;
+  let contador = 0;
+  for (let index = 0; index = numeros.length; index += 1){
+    if (numeros[index] > maior) {
+      contador = contador + 1;
+    }
+  }
+  return contador
 }
 
 // Desafio 7
@@ -69,7 +69,6 @@ function fizzBuzz(numeros) {
   return palavras
   }  
 
-console.log(fizzBuzz([2,4]))
 // Desafio 9
 function encode() {
   // seu código aqui
