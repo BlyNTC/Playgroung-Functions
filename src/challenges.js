@@ -1,20 +1,17 @@
 // Desafio 1
 function compareTrue() {
-  let hojeTemAula = 14;
-  let horario = 15;
-
-  if(hojeTemAula && horario == hojeTemAula) {
-    console.log(true)
-  }else {
-    console.log(false)
-  }
+  let clima = "Sol";
+  let temp = 35;
+  if ((typeof clima == 'string') && (typeof temp == 'number'))
+    console.log(true);
+  else
+    console.log(false);  
 }
-compareTrue();
+compareTrue()
 
 // Desafio 2
 function calcArea() {
-  let base = 10;
-  let heigth = 50;
+  
 }
 calcArea();
 
