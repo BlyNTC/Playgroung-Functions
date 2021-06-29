@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(p1, p2) {
   // seu código aqui
-  if(p1===true && p2===true)
+  if (p1 === true && p2 === true)
   {
     return true;
   }
@@ -9,12 +9,12 @@ function compareTrue(p1, p2) {
   {
     return false;
   }
-
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return ((base*height)/2);
 }
 
 // Desafio 3
