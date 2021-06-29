@@ -98,24 +98,18 @@ function fizzBuzz(array) {
 function encode(string) {
   let result = '';
   for (char of string) {
-    switch (char) {
-      case 'a':
-        result += '1';
-        break;
-      case 'e':
-        result += '2';
-        break;
-      case 'i':
-        result += '3';
-        break;
-      case 'o':
-        result += '4';
-        break;
-      case 'u':
-        result += '5';
-        break;
-      default:
-        result += char;
+    if (char === 'a') {
+      result += '1';
+    } else if (char === 'e') {
+      result += '2';
+    } else if (char === 'i') {
+      result += '3';
+    } else if (char === 'o') {
+      result += '4';
+    } else if (char === 'u') {
+      result += '5';
+    } else {
+      result += char;
     }
   }
   return result;
