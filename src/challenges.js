@@ -132,9 +132,38 @@ return "os gatos trombam e o rato foge";
 catAndMouse(10, 8, 8)
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(valores) {
+
+  let resultado = [];
+
+  for ( let index = 0; index < valores.length; index += 1 ) {
+
+
+    if ( valores[index] % 3 === 0 && valores[index] % 5 === 0) {
+    
+      resultado.push("fizzBuzz")
+
+    } else if ( valores[index] % 5 === 0 ) {
+
+      resultado.push("buzz")
+    } else if ( valores[index] % 3 === 0 ) {
+
+      resultado.push("fizz")
+
+    } else {
+      resultado.push("bug!")
+
+    }
+
+
+  }
+  return resultado;
+  
+
   // seu código aqui
 }
+
+fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode() {
