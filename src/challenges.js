@@ -31,12 +31,14 @@ function splitSentence(frase) {
 console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
-function concatName(array) {
+function concatName(itens) {
   // seu código aqui
-let primeiroItem = array [0];
-let ultimoItem = array [array.lenght -1];
-return primeiroItem + " " + ultimoItem
+let primeiroItem = itens [0];
+let ultimoItem = itens[itens.length -1];
+return ultimoItem + "," + " " + primeiroItem;
 }
+let itens = ['lucas', 'ferraz', 'paolilo'];
+console.log(concatName(itens));
 
 // Desafio 5
 function footballPoints() {
