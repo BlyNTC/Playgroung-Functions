@@ -69,12 +69,10 @@ function generatePhoneNumber(arr) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, linec) {
-  function triangleCheck(lineA, lineB, LineC) {
-    if (Math.abs(lineB - LineC) < lineA && lineA < (lineB + LineC) && Math.abs(lineA - LineC) < lineB && lineB < (lineA + LineC) && Math.abs(lineA - lineB) < LineC && LineC < (lineA + lineB)) {
-      return true;
-    } else {
-      return false;
-    }
+  if (Math.abs(lineB - linec) < lineA && lineA < (lineB + linec) && Math.abs(lineA - linec) < lineB && lineB < (lineA + linec)&& Math.abs(lineA - lineB) < linec && linec < (lineA + lineB)) {
+    return true;
+  } else {
+    return false;
   }
 }
 
