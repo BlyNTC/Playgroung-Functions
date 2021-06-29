@@ -72,13 +72,32 @@ function catAndMouse(mouse, cat1, cat2) {
 // Fonte que usei para o desafio 7: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(param) {
   // seu código aqui
+  // let dividePor3 = []
+  // let dividePor5 = []
+  // let dividePelosDois = []
+  // let nemUmNemOutro = []
+  let final = []
+  for (let key in param) {
+    if (param[key] % 3 === 0 && param[key] % 5 != 0) {
+      final.push ('fizz')
+    } else if (param[key] % 3 != 0 && param[key] % 5 === 0) {
+      final.push ('buzz')
+    } else if (param[key] % 3 === 0 && param[key] % 5 === 0) {
+      final.push ('fizzBuzz')
+    } else if (param[key] % 3 != 0 && param[key] % 5 != 0) {
+      final.push ('bug!')
+    }
+  }
+  return final
 }
 
+
 // Desafio 9
-function encode() {
+function encode(param) {
   // seu código aqui
+
 }
 
 function decode() {
