@@ -14,6 +14,7 @@ function calcArea(base, height) {
   // seu código aqui
   let triArea;
   triArea = base * height / 2;
+
   return triArea;
 }
  
@@ -32,7 +33,9 @@ function splitSentence(word) {
       cacheword = '';
     }
   }
+
   splitword.push(cacheword);
+
   return splitword;
 }
 
@@ -48,6 +51,7 @@ function concatName(array) {
       manolos += array[i];
     }
   }
+
   return manolos;
 }
 
@@ -76,11 +80,10 @@ function highestCount(arrayah) {
       numOft++;
     }
   }
-  return numOft;
 
-  //IT'S RESETTING THE COUNT IF IT'S SOMETHING LIKE   9, 5, 7, 7
+  return numOft;  
 }
-  
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
@@ -147,7 +150,7 @@ function encode(toencode) {
       case 'a':
         encoded += '1';
         break;
-
+      
       case 'e':
         encoded += '2';
         break;
@@ -166,10 +169,8 @@ function encode(toencode) {
 
       default:
         encoded += key;
-    }
-   
+    }   
   }
-
   return encoded;
 }
 
@@ -203,7 +204,6 @@ function decode(todecode) {
         decoded += key;
     }
   }
-
   return decoded;
 }
 
