@@ -1,15 +1,15 @@
 // Desafio 10
 function techList(array, name) {
   if (array.length === 0) {
-    throw new Error('Vazio!');
+    console.log('Vazio!');
   }
 
   if (array.length === 5) {
     let technologies = [];
-
+    let sortedArray = array.sort();
     for (let i = 0; i < array.length; i += 1) {
       technologies[i] = {
-        tech: array[i],
+        tech: sortedArray[i],
         name: name,
       };
     }
