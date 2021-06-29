@@ -13,7 +13,7 @@ function calcArea(base,height) {
 
   if(base === 10,height === 50){
   } else if (base === 5,height === 2){
-  }else (base === 51,height === 1)
+  }else (base === 51,height === 1) 
 
 
   return area;
@@ -23,7 +23,7 @@ function calcArea(base,height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  let array = string.split('');
+  let array = string.split(' ');
   
   return array;
 }
@@ -38,8 +38,9 @@ let primeiroItem = array[0];
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return ((wins * 3) + (ties * 1));
 }
 
 // Desafio 6
