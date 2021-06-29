@@ -37,9 +37,19 @@ function splitSentence(word) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let manolos = '';
+  for (let i = array.length; i >= 0; i-=1){
+    if (i == array.length-1){
+      manolos += array[i] + ', ';
+    }
+    else if (i == 0){
+      manolos += array[i];
+    }
+  }
 
+  return manolos;
 }
 
 // Desafio 5
