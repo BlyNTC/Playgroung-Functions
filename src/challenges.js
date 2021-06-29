@@ -87,11 +87,47 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(s) {
+  let newString = "";
+
+  for (let i = 0; i < s.length; i++) {
+    if(s[i] == 'a'){
+      newString += s[i].replace('a', 1)
+    } else if(s[i] == 'e'){
+      newString += s[i].replace('e', 2)
+    } else if(s[i] == 'i'){
+      newString += s[i].replace('i', 3)
+    } else if(s[i] == 'o'){
+      newString += s[i].replace('o', 4)
+    } else if(s[i] == 'u'){
+      newString += s[i].replace('u', 5)
+    } else {
+      newString += s[i]
+    }
+  }
+
+  return newString
 }
-function decode() {
-  // seu código aqui
+function decode(s) {
+  let newString = "";
+
+  for (let i = 0; i < s.length; i++) {
+    if(s[i] == '1'){
+      newString += s[i].replace(1, 'a')
+    } else if(s[i] == '2'){
+      newString += s[i].replace(2, 'e')
+    } else if(s[i] == '3'){
+      newString += s[i].replace(3, 'i')
+    } else if(s[i] == '4'){
+      newString += s[i].replace(4, 'o')
+    } else if(s[i] == '5'){
+      newString += s[i].replace(5, 'u')
+    } else {
+      newString += s[i]
+    }
+  }
+
+  return newString
 }
 
 module.exports = {
