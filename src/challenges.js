@@ -48,17 +48,81 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  let control = []
+  for(let index in arr){
+    let contador5 = (arr[index] % 5);
+    let contador3 = (arr[index] % 3);
+    if(contador5 == 0 | contador3 == 0) {
+      (arr[index] % 5 == 0) && (arr[index] % 3 == 0) ? control.push("fizzBuzz") : arr[index] % 5 == 0 ? control.push("buzz") : control.push("fizz");
+    } else {
+      control.push("bug!");
+    }
+  }
+  return control;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let control = [];
+  let split = str.split("")
+  for (c = 0; c <= 1; c++){
+    control = split.join("");
+    if (c == 0){
+      for (i in split){
+        switch(split[i]) {
+          case "a":
+            split[i] = "1";
+            break;
+          case "e":
+            split[i] = "2";
+            break;
+          case "i":
+            split[i] = "3";
+            break;
+          case "o":
+            split[i] = "4";
+            break;
+          case "u":
+            split[i] = "5";
+            break;
+        }
+      } 
+    } else { 
+      return control; 
+    }
+  }
 }
-function decode() {
-  // seu código aqui
-}
+function decode(str) {
+  let control = [];
+  let split = str.split("")
+  for (c = 0; c <= 1; c++){
+    control = split.join("");
+    if (c == 0){
+      for (i in split){
+        switch(split[i]) {
+          case "1":
+            split[i] = "a";
+            break;
+          case "2":
+            split[i] = "e";
+            break;
+          case "3":
+            split[i] = "i";
+            break;
+          case "4":
+            split[i] = "o";
+            break;
+          case "5":
+            split[i] = "u";
+            break;
+        }
+      } 
+    } else { 
+      return control; 
+    }
+  }
+} 
 
 module.exports = {
   calcArea,
