@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue() {
-  if(5 >= 10 || 6 >= 10){
+  if(5 >= 10 && 6 >= 10){
     console.log(false);
   }
   else{
