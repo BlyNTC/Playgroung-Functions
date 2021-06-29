@@ -60,11 +60,25 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  const letras = ['a', 'e', 'i', 'o', 'u'];
+  let n = 1;
+  letras.forEach((element) => {
+    element = new RegExp(element, 'gi');
+    str = str.replace(element, n);
+    n++;
+  });
+  return str;
 }
-function decode() {
-  // seu código aqui
+function decode(str) {
+  const letras = ['a', 'e', 'i', 'o', 'u'];
+  let n = 1;
+  letras.forEach((element) => {
+    const regexp = new RegExp(n, 'gi');
+    str = str.replace(regexp, element);
+    n++;
+  });
+  return str;
 }
 
 module.exports = {
