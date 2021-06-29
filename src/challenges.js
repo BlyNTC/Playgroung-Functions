@@ -1,7 +1,17 @@
 // Desafio 1
-function compareTrue() {
-  
+function compareTrue(n1,n2) {
+  if(n1===false && n2===true){
+    return false
+  }else if(n1===true && n2===false){
+    return false
+  }else if(n1===false && n2===false){
+    return false
+  }else if(n1===true && n2===true){
+    return true
+  }
 }
+
+
 
 // Desafio 2
 function calcArea() {
