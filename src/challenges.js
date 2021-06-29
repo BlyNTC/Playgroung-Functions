@@ -101,11 +101,47 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  var array = string.split("");
+  var final = [];
+  for (i = 0; i < array.length; i++) {
+    if (array[i] == "a") {
+      final.push("1");
+    } else if (array[i] == "e") {
+      final.push("2");
+    } else if (array[i] == "i") {
+      final.push("3");
+    } else if (array[i] == "o") {
+      final.push("4");
+    } else if (array[i] == "u") {
+      final.push("5");
+    } else {
+      final.push(array[i]);
+    }
+  }
+  var result = final.join("");
+  return result;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  var array = string.split("");
+  var final = [];
+  for (i = 0; i < array.length; i++) {
+    if (array[i] == "1") {
+      final.push("a");
+    } else if (array[i] == "2") {
+      final.push("e");
+    } else if (array[i] == "3") {
+      final.push("i");
+    } else if (array[i] == "4") {
+      final.push("o");
+    } else if (array[i] == "5") {
+      final.push("u");
+    } else {
+      final.push(array[i]);
+    }
+  }
+  var result = final.join("");
+  return result;
 }
 
 module.exports = {
