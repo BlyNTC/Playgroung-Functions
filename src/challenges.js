@@ -102,11 +102,11 @@ function fizzBuzz(numArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  return frase.replace(/a/ig,'1').replace(/e/ig,'2').replace(/i/ig,'3').replace(/o/ig,'4').replace(/u/ig,'5')
 }
-function decode() {
-  // seu código aqui
+function decode(frase) {
+  return frase.replace(/1/ig,'a').replace(/2/ig,'e').replace(/3/ig,'i').replace(/4/ig,'o').replace(/5/ig,'u')
 }
 
 module.exports = {
