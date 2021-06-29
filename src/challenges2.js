@@ -1,6 +1,34 @@
 // Desafio 10
-function techList() {
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+function techList(array, name) {
   // seu código aqui
+  let arrayResposta = [];
+  if (array.length != 0)
+  {
+    for (let i of array)
+    {
+      let objeto = 
+      {
+        tech: i,
+        name: name
+      };
+      arrayResposta.push(objeto);
+    }
+    arrayResposta.sort(function (x, y) 
+    {
+      if (x.tech > y.tech)
+      {
+        return 1;
+      }
+    }
+    );
+    return arrayResposta;
+  }
+  else
+  {
+    return "Vazio!";
+  }
+  
 }
 
 // Desafio 11
