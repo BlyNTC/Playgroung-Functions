@@ -1,4 +1,4 @@
-const { array } = require("yargs");
+const { array, count } = require("yargs");
 
 // Desafio 1
 function compareTrue(boo1, boo2) {
@@ -43,9 +43,26 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let maiorValor = 0;
+
+  for(let numero of numeros){
+    if(maiorValor < numero){
+      maiorValor = numero;
+    }
+  }
+
+  let arrayTodos = []
+  let maiorNum = maiorValor
+  let idx = numeros.indexOf(maiorNum)
+  while (idx != -1) {
+    arrayTodos.push(idx)
+    idx = numeros.indexOf(maiorNum, idx + 1)
+  }
+
+  return arrayTodos.length
 }
+console.log(highestCount([0, 0, 0]))
 
 // Desafio 7
 function catAndMouse() {
