@@ -28,6 +28,10 @@ function phoneNumberCountCheck(array) {
   return true;
 }
 
+function triangleSideCheck(sideToCheck, side2, side3) {
+  return sideToCheck < (side2 + side3) && sideToCheck > Math.abs(side2 - side3);
+}
+
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
@@ -61,11 +65,15 @@ function generatePhoneNumber(array) {
 
   return part1 + part2 + part3;
 }
-console.log(generatePhoneNumber([0, 1, 6]));
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let checkA = triangleSideCheck(lineA, lineB, lineC);
+  let checkB = triangleSideCheck(lineB, lineA, lineC);
+  let checkC = triangleSideCheck(lineC, lineA, lineB);
+
+  return checkA && checkB && checkC;
 }
 
 // Desafio 13
