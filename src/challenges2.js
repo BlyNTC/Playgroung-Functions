@@ -1,6 +1,24 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function compare (a, b) {
+  if (a.tech < b.tech) return -1;
+  if (a.tech > b.tech) return 1;
+  return 0;
+}
+
+function techList(techArray, name) {
+  let answer = [];
+  let finalAnswer;
+  for (let i in techArray) {
+    answer[i] = {};
+    answer[i].tech = techArray[i];
+    answer[i].name = name;
+  }
+
+  if (techArray.length === 0) {
+    return 'Vazio!';
+  }
+  finalAnswer = answer.sort(compare);
+  return finalAnswer;
 }
 
 // Desafio 11
