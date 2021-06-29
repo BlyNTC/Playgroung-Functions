@@ -35,8 +35,6 @@ function concatName(names) {
   let concat = names[names.length-1] + ', ' + names[0];
   return concat;
 }
-let teste = ['captain', 'my', 'captain'];
-console.log(concatName(teste));
 // Desafio 5
 function footballPoints() {
   // seu código aqui
