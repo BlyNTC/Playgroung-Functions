@@ -14,9 +14,10 @@ compareTrue();
 // Desafio 2
 function calcArea(base, height) {
 let areaDoTriangulo = (base * height)/ 2
-  
+  return areaDoTriangulo;
 }
 calcArea();
+
 
 // Desafio 3
 function splitSentence() {
