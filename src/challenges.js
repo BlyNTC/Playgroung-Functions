@@ -2,7 +2,7 @@
 function compareTrue() {
   // seu código aqui
 }
-
+// git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'
 // Desafio 2
 function calcArea() {
   // seu código aqui
