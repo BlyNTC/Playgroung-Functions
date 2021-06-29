@@ -46,8 +46,7 @@ function highestCount(arrayNumeros) {
 }
 
 // Desafio 7
-function catAndMouse(positionCat1, positionCat2) {
-  let positionMouse = 10;
+function catAndMouse(positionMouse, positionCat1, positionCat2) {
   let winnerCat;
   if (Math.abs(positionCat1 - positionMouse) < Math.abs(positionCat2 - positionMouse)) {
     winnerCat = 'cat1';
