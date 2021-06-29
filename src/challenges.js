@@ -53,24 +53,23 @@ function catAndMouse() {
 function fizzBuzz(numeros) {
   let palavras = []; //Cria um array para receber as palavras conforme a divisibilidade do número
   for (numero of numeros) { //Comando que faz o código analisar elemento por elemento do array recebido
-    switch (numeros) { // Comando que configura a palavra recebida conforme a divisibilidade do elemento analisado e adiciona ao array palavras
-      case (numero % 3 === 0) && (numero % 5 === 0):
-        palavras.push('fizzBuzz')
-        break
-      case numero % 5 === 0:
-        palavras.push('buzz')
-        break
-      case numero % 3 === 0:
-        palavras.palavra.push('fizz') 
-        break
-      default:
-        palavras.push('bug!')
-        break
+    if ((numero % 3 === 0) && (numero % 5 === 0)){
+      palavras.push('fizzBuzz')
+    } else 
+    if (numero % 5 === 0) {
+      palavras.push('buzz')
+    } else
+    if (numero % 3 === 0) {
+      palavras.push('fizz')
+    } else {
+      palavras.push('bug!')
     }
+        
+     }
   return palavras
   }  
-}
 
+console.log(fizzBuzz([2,4]))
 // Desafio 9
 function encode() {
   // seu código aqui
