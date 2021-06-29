@@ -45,14 +45,39 @@ concatName(arraial);
 
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(v,e) {
   // seu código aqui
+  let pontos = 3*v + e;
+  console.log(pontos);
+  return pontos;
+
 }
 
+footballPoints(1,2)
+
 // Desafio 6
-function highestCount() {
+
+function highestCount(numeros) {
   // seu código aqui
+  let maior = -10;
+  let repete = 0;
+  for(let i = 0; i <= numeros.length; i += 1){
+    if(numeros[i] >= maior){
+      maior = numeros[i];
+    }
+  }
+  for(num of numeros){
+    if(maior === num){
+      repete = repete + 1;
+    }
+  }
+
+  console.log(repete)
+  return repete;
 }
+
+// let variados = [0, 0, 0];
+// highestCount(variados);
 
 // Desafio 7
 function catAndMouse() {
