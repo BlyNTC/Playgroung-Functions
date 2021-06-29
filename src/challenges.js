@@ -9,14 +9,17 @@ function compareTrue(boo1, boo2) {
 } //console.log(compareTrue(false,false))
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
+  return (base * height) / 2;
   // seu código aqui
-}
+} //console.log (calcArea(51, 1))
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(text) {
+  const vetor = text.split(" ");
+  return vetor;
   // seu código aqui
-}
+} //console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName() {
