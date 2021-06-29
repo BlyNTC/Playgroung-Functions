@@ -37,18 +37,24 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
 
   // Linha inspirada por: https://stackoverflow.com/questions/32647149/why-is-math-max-returning-nan-on-an-array-of-integers
+  // Os três pontos passam o array como argumentos independentes da função max
   let maxNumber = Math.max(...array);
 
   // Linha inspirada por: https://stackoverflow.com/questions/6120931/how-to-count-certain-elements-in-array
+  // A hof filter percorre o array e cria um novo array para cada número que satisfaz a condição da arrow function, aqui retorno o tamanho desse array gerado.
   return array.filter((number) => number === maxNumber).length;
 }
 
-console.log(highestCount([9, 9, 9, 4, 9, 3, 9, 3, 3, 3, 3, 5, 4, 9]));
+// console.log(highestCount([9, 9, 9, 4, 9, 3, 9, 3, 3, 3, 3, 5, 4, 9]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distancia1 = Math.abs(mouse - cat1);
+  let distancia2 = Math.abs(mouse - cat2);
+  return distancia1 > distancia2 ? 'cat2' : 'cat1';
 }
+
+console.log(catAndMouse(0, 3, 2));
 
 // Desafio 8
 function fizzBuzz() {
