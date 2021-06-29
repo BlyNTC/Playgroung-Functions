@@ -16,13 +16,20 @@ function calcArea(base, height) {
 let areaDoTriangulo = (base * height)/ 2
   return areaDoTriangulo;
 }
-calcArea();
+calcArea(10, 20);
 
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+let frase = {
+  quem: 'Eu',
+  sim: 'amo a',
+  lu: 'lulu'
+};
+for(let key in frase) {
 }
+}
+splitSentence();
 
 // Desafio 4
 function concatName() {
