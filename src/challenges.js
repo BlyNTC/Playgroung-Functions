@@ -9,7 +9,7 @@ function compareTrue(comparar1, comparar2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2 
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -22,12 +22,19 @@ function concatName(array) {
  let ultimo = array[array.length - 1];
  let primeiro = array[0];
  return ultimo + ', ' + primeiro;
-
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let somaV = 0;
+  let somaE = 0;
+  for(let contadorV = 0; contadorV < wins; contadorV += 1){
+    somaV += 3;
+  }
+  for (let contadorE = 0; contadorE < ties; contadorE +=1){
+    somaE += 1;
+  }
+  return somaV + somaE;
 }
 
 // Desafio 6
