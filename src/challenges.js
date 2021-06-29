@@ -79,12 +79,46 @@ function fizzBuzz(numArray) {
 }
 
 // Desafio 9
-function encode() {
+function encode(frase) {
   // seu código aqui
+  let encodeResult = ""
+  for(i of frase){
+    if(i === "a"){
+      encodeResult += 1
+    }else if(i === "e"){
+      encodeResult += 2
+    }else if(i === "i"){
+      encodeResult += 3
+    }else if(i === "o"){
+      encodeResult += 4
+    }else if(i === "u"){
+      encodeResult += 5
+    }else{
+      encodeResult += i
+    }
+  }
+  return encodeResult
   
 }
-function decode() {
+function decode(frase) {
   // seu código aqui
+  let decodeResult = ""
+  for(i of frase){
+    if(i === "1"){
+      decodeResult += "a"
+    }else if(i === "2"){
+      decodeResult += "e"
+    }else if(i === "3"){
+      decodeResult += "i"
+    }else if(i === "4"){
+      decodeResult += "o"
+    }else if(i === "5"){
+      decodeResult += "u"
+    }else{
+      decodeResult += i
+    }
+  }
+  return decodeResult
   
 }
 
