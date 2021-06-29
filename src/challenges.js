@@ -1,7 +1,9 @@
 // Desafio 1 - Gustavo Dias - Turma 14 - Tribo A
-function compareTrue() {
-  // seu código aqui
+function compareTrue(firstValue, secondValue) {
+  return firstValue && secondValue;
 }
+
+// console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea() {
