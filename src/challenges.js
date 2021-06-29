@@ -34,9 +34,10 @@ splitSentence();
 // Desafio 4
 function concatName() {
 let lista = ['Silas', 'Pedro', 'Tiago', 'Cassia'];
+return lista.length[0] && lastIndexOf[lista];
 
 }
-return lista.length[0] && lastIndexOf[lista];
+concatName();
 
 // Desafio 5
 function footballPoints() {
