@@ -24,19 +24,25 @@ function calcArea(a, b) {
 }
 
 // Desafio 3
-let quebrada;
 function splitSentence(frase) {
   // seu código aqui
-  quebrada = frase.split(" ");
+  let quebrada = frase.split(" ");
   return quebrada;
   
 }
 splitSentence("Vamo que vamo");
 
 // Desafio 4
-function concatName() {
+function concatName(lista) {
   // seu código aqui
+  let result = lista[lista.length -1] +"," + " "+ lista[0];
+  console.log(result);
+  return result;  
 }
+
+let arraial = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+concatName(arraial);
+
 
 // Desafio 5
 function footballPoints() {
