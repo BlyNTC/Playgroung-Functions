@@ -9,7 +9,7 @@ function compareTrue(a,b) {
 
 // Desafio 2
 function calcArea(b, h) {
-  area = (b*h)/2
+  const area = (b*h)/2
   return area
 }
 
@@ -29,8 +29,23 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  let maiorNumero = 0, seRepete = 0
+
+  arr.forEach(element => {
+    if(element == arr[0]){
+      maiorNumero = element
+    }
+    
+    if(element > maiorNumero){
+      maiorNumero = element
+      seRepete = 1
+    } else if(element == maiorNumero){
+      seRepete++;
+    }
+  });
+
+  return seRepete
 }
 
 // Desafio 7
