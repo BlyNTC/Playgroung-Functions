@@ -67,16 +67,16 @@ function highestCount(array) {
 
   for (let key in array) {
     let max = Math.max.apply(null, array);
-    
 
-      if (max === array[key]) {
-        contNumero += 1;
 
-      }
+    if (max === array[key]) {
+      contNumero += 1;
+
     }
-    return contNumero;
   }
-  
+  return contNumero;
+}
+
 
 
 // Desafio 7
@@ -122,15 +122,15 @@ function encode(string) {
   let frase = '';
   for (let value of string) {
     if (value === "a") {
-      frase += 1;
+      frase += '1';
     } else if (value === "e") {
-      frase += 2;
+      frase += '2';
     } else if (value === "i") {
-      frase += 3;
+      frase += '3';
     } else if (value === "o") {
-      frase += 4;
+      frase += '4';
     } else if (value === "u") {
-      frase += 5;
+      frase += '5';
     } else {
       frase += value;
     }
