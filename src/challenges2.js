@@ -47,8 +47,18 @@ function generatePhoneNumber(fullNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let myAnswer;
+  if (((lineA + lineB) < lineC) || ((lineC + lineB) < lineA)
+     || ((lineA + lineC) < lineA)) {
+    myAnswer = false;
+  } else if (((Math.abs(lineA - lineB) > lineC) || (Math.abs(lineC - lineB) > lineA)
+            || (Math.abs(lineA - lineC) > lineA))) {
+    myAnswer = false;
+  } else {
+    myAnswer = true;
+  }
+  return myAnswer;
 }
 
 // Desafio 13
