@@ -10,11 +10,13 @@ function compareTrue(carbon, oxygen) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
-
+  let triArea;
+  triArea = base * height / 2;
+  return triArea;
 }
-
+ 
 // Desafio 3
 function splitSentence() {
   // seu código aqui
