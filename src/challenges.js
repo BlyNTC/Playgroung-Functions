@@ -1,4 +1,3 @@
-// Desafio 1
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true){
     return true;
@@ -47,13 +46,13 @@ for (let index2 = 0; index2 < nums.length; index2 += 1) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distancia1 = (mouse) - (cat1);
-  let distancia2 = (mouse) - (cat2);
-  if (distancia1 < distancia2) {
+  let distancia1 = (mouse - cat1);
+  let distancia2 = (mouse - cat2);
+  if (Math.abs(distancia1) < Math.abs(distancia2)) {
       return 'cat1'
-  } else if (distancia2 < distancia1) {
+  } else if (Math.abs(distancia2) < Math.abs(distancia1)) {
       return 'cat2'
-  } else {
+  } else if (Math.abs(distancia2) === Math.abs(distancia1)){
       return "os gatos trombam e o rato foge"
   }
 }
