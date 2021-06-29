@@ -17,14 +17,14 @@ calcArea();
 
 // Desafio 3
 function splitSentence(arraySentence) {
-  return arraySentence.split(" ");
+  return arraySentence.split(' ');
 }
 
-splitSentence();
+splitSentence()
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  
 }
 
 // Desafio 5
