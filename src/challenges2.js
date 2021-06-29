@@ -9,14 +9,36 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let triangulo = false;
+  if (lineA + lineB > lineC && lineB + lineC > lineA && lineC + lineA > lineB && Math.abs(lineA - lineB) < lineC && Math.abs(lineB - lineC) < lineA && Math.abs(lineA - lineC) < lineB) {
+    triangulo = true;
+  }
+return triangulo;
 }
 
+
 // Desafio 13
-function hydrate() {
+function hydrate(frase) {
   // seu código aqui
+  let teste = /\d+/g;
+  let numero = frase.match(teste);
+  let soma = 0;
+  for (let i = 0; i < numero.length; i += 1){
+    soma += parseInt(numero[i]);
+  }
+  if (soma > 1){
+    resposta = soma + ' copos de água';
+  }
+  else{
+    resposta = soma + ' copo de água';
+  }
+  
+  return resposta;
 }
+
+
 
 module.exports = {
   generatePhoneNumber,

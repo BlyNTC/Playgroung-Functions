@@ -77,7 +77,6 @@ function decode(frase) {
   let deCodigo = frase.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
   return deCodigo;
 }
-console.log(encode('hi there!'));
 
 module.exports = {
   calcArea,
