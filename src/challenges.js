@@ -51,7 +51,29 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  let palavras = {}; //Cria um array para receber as palavras conforme a divisibilidade do número
+  let palavra = 0 //Cria a variável palavra para ser alterada e adicionada no array palavras conforme o andamento do código
+  for (numero of numeros) { //Comando que faz o código analisar elemento por elemento do array recebido
+    switch (numeros) { // Comando que configura a palavra recebida conforme a divisibilidade do elemento analisado e adiciona ao array palavras
+      case numero % 3 === 0:
+        palavra = 'fizz'
+        palavras.palavra.push()
+        break
+      case numero % 5 === 0:
+        palavra = 'buzz'
+        palavras.palavra.push()
+        break
+      case (numero % 3 === 0) && (numero % 5 === 0):
+        palavra = 'fizzBuzz'
+        palavras.palavra.push() 
+        break
+      default:
+        palavra = 'bug!'
+        palavras.palavra.push()
+        break
+    }
+  return palavras
+  }  
 }
 
 // Desafio 9
