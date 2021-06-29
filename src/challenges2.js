@@ -1,13 +1,13 @@
 // Desafio 10
 function techList(array, name) {
   if (array.length === 0) {
-    return 'Vazio!'
+    return 'Vazio!';
   }
   array.sort();
   let result = [];
   for (let i of array) {
-    result = result.concat({'tech': i, 'name': name});
-  }
+    result = result.concat({ tech: i, name: name });
+  } 
   return result;
 }
 
@@ -23,13 +23,13 @@ function generatePhoneNumber(arr) {
         count += 1;
       }
       if (i > 9 || i < 0 || count >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores'
+        return 'não é possível gerar um número de telefone com esses valores';
       }
     }
   }
   let number = '(' + arr[0] + arr[1] + ') ';
   for (let i = 2; i < arr.length; i += 1) {
-    if (i===7) {
+    if (i === 7) {
       number += '-';
     }
     number += arr[i];
@@ -64,11 +64,10 @@ function hydrate(string) {
     }
   }
   if (count === 1) {
-    return count + ' copo de água'
+    return count + ' copo de água';
   }
-  return count + ' copos de água'
+  return count + ' copos de água';
 }
-
 
 module.exports = {
   generatePhoneNumber,
