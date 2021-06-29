@@ -81,7 +81,7 @@ function fizzBuzz(array) {
 function encode(oi) {
   let array = oi.split("");
   for (let index in array){
-    if(array[index] === 'a') {
+    if (array[index] === 'a') {
       array[index] = 1;
     } else if (array[index] === 'e') {
       array[index] = 2;
@@ -96,10 +96,11 @@ function encode(oi) {
   let junto = array.join('');
   return junto;
 }
+
 function decode(oi) {
   let array = oi.split("");
   for (let index in array){
-    if(array[index] === '1') {
+    if (array[index] === '1') {
       array[index] = 'a';
     } else if (array[index] === '2') {
       array[index] = 'e';
@@ -111,7 +112,7 @@ function decode(oi) {
       array[index] = 'u';
     }
   }
-  let junto = array.join('')
+  let junto = array.join('');
   return junto;
 }
 
