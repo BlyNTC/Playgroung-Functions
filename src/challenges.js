@@ -24,14 +24,22 @@ function footballPoints(wins, ties) {
   let pontos = (3 * wins) + (1 * ties);
   return pontos;
 }
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// Utilizamos o spread(...) para quebrar o array.
+function highestCount(Array) {
+  let numeroMaximo = Math.max(...Array);
+  let repetições = 0;
+  for(let index =0; index < Array.length; index += 1) {
+    if (numeroMaximo === Array[index]) {
+      repetições += 1;
+    }
+  }
+  return repetições;
 }
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
 }
 
 // Desafio 8
