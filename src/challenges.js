@@ -72,7 +72,8 @@ function highestCount(numeros) {
       idx = numeros.indexOf(maiorNum, idx + 1)
     }
 
-    return arrayTodos.length
+    let arrayFinalizado = arrayTodos.length;
+    return arrayFinalizado;
 }
 
 // Desafio 7
