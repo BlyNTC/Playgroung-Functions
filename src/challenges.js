@@ -21,12 +21,14 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(listNames) {
+  return (listNames[listNames.length -1]+', '+listNames[0])
   // seu código aqui
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(win, ties) {
+  return ((win * 3)+ties)
   // seu código aqui
 }
 
