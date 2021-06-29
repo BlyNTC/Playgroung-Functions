@@ -12,8 +12,10 @@ let falso = true;
 console.log(compareTrue(verdadeiro, falso));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  let multiArea = base * heigth;
+  let divArea = multiArea / 2;
+  return divArea;
 }
 
 // Desafio 3
