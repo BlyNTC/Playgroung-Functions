@@ -22,13 +22,20 @@ function concatName(arr) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((wins * 3) + ties);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  let order = arr.sort((a, b) => a - b);
+  let maj = 0;
+  for(i = 0; i <= arr.length; i++) {
+    if (arr[i] === order[arr.length - 1]) {
+      maj++;
+    }
+  }
+  return maj;
 }
 
 // Desafio 7
