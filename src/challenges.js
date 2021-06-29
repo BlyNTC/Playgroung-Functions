@@ -35,7 +35,6 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-
   // Linha inspirada por: https://stackoverflow.com/questions/32647149/why-is-math-max-returning-nan-on-an-array-of-integers
   // Os três pontos passam o array como argumentos independentes da função max
   let maxNumber = Math.max(...array);
