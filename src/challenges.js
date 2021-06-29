@@ -17,8 +17,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let primeiro = array.shift();
+  let ultimo = array.pop();
+  return ultimo + ", " + primeiro;
 }
 
 // Desafio 5
