@@ -1,6 +1,20 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arr, name) {
+  let studies = arr.sort()
+  let newArr = []
+
+  if(studies.length == 0){
+    return 'Vazio!'
+  } else {
+    studies.forEach(el => {
+      newArr.push({
+        tech: el, 
+        name: name
+      })
+    });
+  
+    return newArr
+  }
 }
 
 // Desafio 11
