@@ -48,7 +48,6 @@ function concatName(array) {
       manolos += array[i];
     }
   }
-
   return manolos;
 }
 
@@ -58,15 +57,28 @@ function footballPoints(wins, ties) {
   let score = 0;
   score += wins*3 + ties;
   return score;
-
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayah) {
   // seu código aqui
+  let numOft = 0;
+  let highestnum = arrayah[0];
 
+  for (let key of arrayah){
+    if (arrayah[key] > highestnum){
+      highestnum = arrayah[key];
+    }
+  }
+
+  for (let key of arrayah){
+    if (highestnum == arrayah[key]){
+      numOft++;
+    }
+  }
+  return numOft;
 }
-
+  
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
