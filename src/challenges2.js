@@ -1,5 +1,5 @@
 // Desafio 10
-function sortList (listObjects) {
+function sortList(listObjects) {
   listObjects.sort(function (obj1, obj2) {
     if (obj1.tech < obj2.tech) {
       return -1;
@@ -12,15 +12,23 @@ function sortList (listObjects) {
 }
 function techList(array, name) {
   let listObjects = [];
-  for (let elem of array) {
-    let object = {
-      tech: elem,
-      name: name
-    };
-    listObjects.push(object);
+  let answer;
+  if (array.length === 0) {
+    answer = 'Vazio!';
   }
-  sortList(listObjects);
-  return listObjects;
+  else{
+    for (let elem of array) {
+      let object = 
+      {
+        'tech': elem,
+        'name': name
+      };
+      listObjects.push(object);
+    }
+    sortList(listObjects);
+    answer = listObjects;
+  }
+  return answer;
 }
 
 // Desafio 11
