@@ -54,8 +54,9 @@ function footballPoints(wins,ties) {
   let pontuacao = 0;
   pontuacao = (wins * 3) + (ties * 1);
   
-  return pontuacao + ' ' + 'pontos';
+  return pontuacao;
 }
+console.log(footballPoints(14,8));
 
 // Desafio 6
 function highestCount() {
