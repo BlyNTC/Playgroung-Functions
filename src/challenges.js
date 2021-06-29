@@ -1,6 +1,9 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
+  let operador1 = true;
+  let operador2 = false;
+  let resultado = operador1 && operador2;
 }
 
 // Desafio 2
