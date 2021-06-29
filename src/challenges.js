@@ -16,8 +16,21 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = [];
+  let word = '';
+  for (let char of string) {
+    if (char != ' ') {
+      word += char;
+    } else if (word != '') {
+      array.push(word);
+      word = '';
+    }
+  }
+  if (word != '') {
+    array.push(word);
+  }
+  return array;
 }
 
 // Desafio 4
@@ -65,3 +78,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
