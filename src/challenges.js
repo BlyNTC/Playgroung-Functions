@@ -1,6 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  // initial commit
+function compareTrue(a,b) {
+  if (a && b === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
