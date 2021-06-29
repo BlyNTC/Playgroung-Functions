@@ -93,7 +93,7 @@ function fizzBuzz (arrayFizz){
   }
   return arrayBuzz
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+console.log(fizzBuzz([9,25]))
 
 // Ex9
 
@@ -152,5 +152,5 @@ console.log(decode('h3 th2r2!'))
 // Ex10
 
 function name() {
-  
+
 }

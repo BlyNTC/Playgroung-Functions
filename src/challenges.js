@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(numA, numB) {
-  if (numA > 5 && numB > 7) {
+  if (numA == true && numB == true) {
     return true;
   } else {
     return false;
@@ -45,11 +45,11 @@ function highestCount(arrayMaior) {
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return cat1
+    return 'cat1'
   } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
-    return cat2
+    return 'cat2'
   } else if (Math.abs(cat2 - mouse) == Math.abs(cat1 - mouse)) {
     return "os gatos trombam e o rato foge"
   }
@@ -62,7 +62,7 @@ function fizzBuzz(arrayFizz) {
     if (arrayFizz[i3] % 3 == 0 && arrayFizz[i3] % 5 == 0) {
       arrayBuzz.push('fizzBuzz');
     } else if (arrayFizz[i3] % 5 == 0) {
-      arrayBuzz.push('Buzz');
+      arrayBuzz.push('buzz');
     } else if (arrayFizz[i3] % 3 == 0) {
       arrayBuzz.push('fizz');
     } else {
