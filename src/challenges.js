@@ -21,8 +21,11 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(juncao) { 
+   let elementoA = juncao[0]; 
+  let elementoB = juncao[juncao.length - 1];
+  let concat = elementoB +  ', '  + elementoA;
+  return concat;
 }
 
 // Desafio 5
