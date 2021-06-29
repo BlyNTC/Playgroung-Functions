@@ -1,3 +1,5 @@
+const { techList } = require("./challenges2");
+
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 && param2 === true){
@@ -14,7 +16,7 @@ compareTrue(false, false);
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height / 2
+  return base * height / 2;
 }
 
 calcArea(10, 50);
@@ -28,32 +30,34 @@ calcArea(51, 1);
 
 function splitSentence(string) {
   let arrayDeStrings = [];
-  arrayDeStrings = string.split(" ");
+  arrayDeStrings = string.split(' ');
   return arrayDeStrings;
 }
 
-console.log(splitSentence("go Trybe"));
-console.log(splitSentence("vamo que vamo"));
-console.log(splitSentence("foguete"));
-
+splitSentence('go Trybe');
+splitSentence('vamo que vamo');
+splitSentence('foguete');
 
 // Desafio 4
 
 function concatName(arrayDeStrings) {
   let novoArray = [];
-  novoArray = arrayDeStrings[arrayDeStrings.length - 1] + " " + arrayDeStrings[0];
+  novoArray = arrayDeStrings[arrayDeStrings.length - 1] + ', ' + arrayDeStrings[0];
   return novoArray;
 }
 
-(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-
-
-
+(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  winPoints = 3;
+  tiePoints = 1;
+  totalPoints = (wins * winPoints) + (ties * tiePoints);
+  return totalPoints;
 }
+footballPoints(14, 8);
+footballPoints(1, 2);
+footballPoints(0, 0);
 
 // Desafio 6
 function highestCount() {
