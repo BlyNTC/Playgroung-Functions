@@ -91,11 +91,33 @@ function fizzBuzz(arrayNumberFB) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(eCode) {
+  let nECode = ""
+  for (let index = 0; index < eCode.length; index += 1 ) {
+    if ("a"=== eCode[index]){nECode +="1"}
+    else if ("e"=== eCode[index]){nECode +="2"}
+    else if ("o"=== eCode[index]){nECode +="4"}
+    else if ("i"=== eCode[index]){nECode +="3"}
+    else if ("u"=== eCode[index]){nECode +="5"}
+    else nECode += eCode[index] ;
+  }
+  return nECode ;
 }
-function decode() {
-  // seu código aqui
+function decode(dCode) {
+  let nDCode = ""
+  for (let index = 0; index < dCode.length; index += 1 ) {
+    if ("1"=== dCode[index]){nDCode +="a"}
+    else if ("2"=== dCode[index]){nDCode +="e"}
+    else if ("3"=== dCode[index]){nDCode +="i"}
+    else if ("4"=== dCode[index]){nDCode +="o"}
+    else if ("5"=== dCode[index]){nDCode +="u"}
+        else nDCode += dCode[index] ;
+    
+    
+  }
+
+  return nDCode ;
+
 }
 
 module.exports = {
