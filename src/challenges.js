@@ -1,7 +1,7 @@
-// Desafio 1  
+// Desafio 1
 function compareTrue(valor1, valor2) {
   let absoluto;
-  if (valor1 == true && valor2 == true) {
+  if (valor1 === true && valor2 === true) {
     absoluto = true;
   }
   else {
@@ -22,9 +22,6 @@ function splitSentence(frase) {
   return palavra;
 }
 
-
-
-
 // Desafio 4
 function concatName(nomes) {
   let nome = [];
@@ -35,8 +32,16 @@ function concatName(nomes) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsPoint = tiesPoint = 0;
+  for (let iw = 1; iw <= wins; iw++) {
+    winsPoint += 3;
+  }
+  for (let it = 1; it <= ties; it++) {
+    tiesPoint++;
+  }
+  let total = winsPoint + tiesPoint;
+  return total;
 }
 
 // Desafio 6
