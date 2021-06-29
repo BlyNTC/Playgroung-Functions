@@ -1,6 +1,9 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(fazChuva, fazSol) {
   // seu código aqui
+  let arcoIris = fazChuva && fazSol
+
+  return arcoIris;
 }
 
 // Desafio 2
