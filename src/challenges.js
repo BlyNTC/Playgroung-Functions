@@ -37,7 +37,7 @@ function highestCount(array) {
   for (let i of array) {
     i > highest ? highest = i : highest;
   }
-  let ount = 0;
+  let count = 0;
   for (let i of array) {
     i === highest ? count += 1 : count;
   }
