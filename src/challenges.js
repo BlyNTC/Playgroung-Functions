@@ -61,21 +61,69 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  let contRepete =0;
+  let contNumero =0;
   
+  for(let key in array){
+    let verifica = array[key];
+      for(let index in array){
+        if(verifica=== array[index]){
+          contNumero += 1;
+          
+        }
+       
+      }
+      if(contNumero > contRepete ){
+        contRepete = contNumero;
+        
+
+      } 
+      contNumero=0;
+      
+
+  }
+  return contRepete;
+
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1 , cat2) {
   // seu código aqui
+  // cat1 é a distancia em unidades do gato1 para o rato
+  if(cat1>cat2){
+    return 'cat2';
+  } else if(cat2>cat1){
+    return 'cat1';
+  } else{
+    return "os gatos trombam e o rato foge";
+  }
+
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
-}
+  let fizz ='fizz';
+  let buzz = 'buzz';
+  let fizzBuzz = 'fizzBuzz';
+  let bug ='bug';
+  let lista=[''];
 
+  for (let key in array){
+    if( array[key]%5===0 && array[key]%3===0){
+      lista[key]= fizzBuzz;
+    } else if(array[key]%5===0){
+      lista[key]= buzz;
+    } else if(array[key]%3===0){
+      lista[key]= fizz;         
+    } else {
+      lista[key]= bug;
+    }
+}
+return lista;
+}
 // Desafio 9
 function encode() {
   // seu código aqui
