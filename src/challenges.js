@@ -3,9 +3,8 @@ function compareTrue(x, y) {
   // seu código aqui
   if (x && y === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -19,7 +18,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(phrase) {
   // seu código aqui (Font: https://www.w3schools.com/jsref/jsref_split.asp)
-  let result = phrase.split(" ");
+  let result = phrase.split(' ');
   return (result);
 }
 
@@ -28,7 +27,7 @@ function concatName(names) {
   // seu código aqui
   let lastName = names[names.length - 1];
   let firstName = names[0];
-  let lastFirst = lastName + ", " + firstName;
+  let lastFirst = lastName + ', ' + firstName;
   return (lastFirst);
 }
 
@@ -46,16 +45,24 @@ function highestCount(numbers) {
   let timesRepeat = 0;
   for (let index of numbers) {
     if (maxNumber === index) {
-      timesRepeat += 1
+      timesRepeat += 1;
     }
   }
-  return (timesRepeat)
+  return (timesRepeat);
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  if ((cat2 - mouse) === (mouse - cat1)) {
+    return ("os gatos trombam e o rato foge");
+  } else if ((cat1 - mouse) < (cat2 - mouse)) {
+    return ("cat1");
+  } else {
+    return ("cat2");
+  }
 }
+
 
 // Desafio 8
 function fizzBuzz() {
