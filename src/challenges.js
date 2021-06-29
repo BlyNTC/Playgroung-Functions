@@ -1,7 +1,12 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(carbon, oxygen) {
   // seu código aqui
-
+  let carbonmonoxyde;
+  if (carbon == true && oxygen == true){
+    return carbonmonoxyde = true;
+  }
+  else
+  return carbonmonoxyde = false;
 }
 
 // Desafio 2
@@ -53,7 +58,7 @@ function encode() {
 }
 function decode() {
   // seu código aqui
-  
+
 }
 
 module.exports = {
