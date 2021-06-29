@@ -1,15 +1,16 @@
-let compareNum = {
-  numRef1: 5,
-  numRef2: 6,
-  numRef3: 5,
-  numRef4: 10
-}
 
 // Desafio 1
-function compareTrue(num1, num2) {
-  if(num1 === num2){return true;}
+function compareTrue(num1, num2,num3 ,num4) {
+  num1 = 5
+  num2 = 5
+  num3 = 7
+  num4 = 8
+  //vai retornar falso
+  if(num1 === num2 && num3 === num4){return true }
   else{return false;}
-}
+  //vai retornar verdadeiro
+ 
+} console.log(compareTrue());
 
 // Desafio 2
 function calcArea() {
