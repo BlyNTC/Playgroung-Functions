@@ -77,14 +77,45 @@ function highestCount(arrayah) {
     }
   }
   return numOft;
+
+  //IT'S RESETTING THE COUNT IF IT'S SOMETHING LIKE   9, 5, 7, 7
 }
   
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let message;
+  let distC1;
+  let distC2;
 
+  if (cat1 > mouse){
+    distC1 = cat1 - mouse;
+  }
+  else{
+    distC1 = mouse - cat1;
+  }
+
+  if (cat2 > mouse){
+    distC2 = cat2 - mouse;
+  }
+  else{
+    distC2 = mouse - cat2;
+  }
+
+  if (distC1 > distC2){
+    message = 'cat2';
+  }
+
+  else if (distC1 < distC2){
+    message = 'cat1';
+  }
+
+  else
+  message = 'os gatos trombam e o rato foge';
+
+  return message;
 }
-
+  
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
