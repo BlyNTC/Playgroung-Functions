@@ -34,8 +34,14 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let string = '';
+  if (array.length >= 2 ) {
+    let firstName = array.shift();
+    let lastName = array.pop();
+    string = lastName + ', ' + firstName;
+  }  
+  return string;
 }
 
 // Desafio 5
@@ -78,4 +84,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
