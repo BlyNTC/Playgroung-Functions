@@ -31,9 +31,16 @@ calcArea(51, 1);
 
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
+
+  fraseDividida = frase.split(" ")
+
+  return fraseDividida
+
   // seu código aqui
 }
+
+splitSentence('Go Trybe')
 
 // Desafio 4
 function concatName() {
