@@ -97,11 +97,22 @@ function fizzBuzz(param) {
 // Desafio 9
 function encode(param) {
   // seu código aqui
-
+param = param.replaceAll('a', '1')
+param = param.replaceAll('e', '2')
+param = param.replaceAll('i', '3')
+param = param.replaceAll('o', '4')
+param = param.replaceAll('u', '5')
+return param
 }
 
-function decode() {
+function decode(param) {
   // seu código aqui
+param = param.replaceAll('1', 'a')
+param = param.replaceAll('2', 'e')
+param = param.replaceAll('3', 'i')
+param = param.replaceAll('4', 'o')
+param = param.replaceAll('5', 'u')
+return param
 }
 
 module.exports = {
