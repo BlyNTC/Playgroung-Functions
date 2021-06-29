@@ -148,7 +148,7 @@ function encode(frase) {
   return newfrase;
 }
 
-function decode() {
+function decode(frase) {
   newfrase = '';
   for (let letter of frase) {
       switch (letter) {
