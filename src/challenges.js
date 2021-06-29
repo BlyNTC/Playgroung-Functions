@@ -1,4 +1,11 @@
 // Funções auxiliares
+function maxNumber (array) {
+  let max = array[0];
+  for (let num of array){
+    if (num > max){max = num};
+  }
+  return max;
+}
 
 // Desafio 1
 function compareTrue(param1, param2) {
@@ -31,8 +38,15 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  let numberCount = 0;
+  let max = maxNumber(array);
+
+  for(let num of array){
+    if (num === max){numberCount+=1};
+  }
+  return numberCount;
 }
 
 // Desafio 7
