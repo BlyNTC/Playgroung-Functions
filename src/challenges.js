@@ -70,11 +70,65 @@ function fizzBuzz(arrayDeNumeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodedString = '';
+  for (let index of string) {
+  switch (index) {
+    case 'a':
+      encodedString += 1;
+      break;
+  
+    case 'e':
+      encodedString += 2;
+      break;
+    
+    case 'i':
+      encodedString += 3;
+      break;
+
+    case 'o':
+      encodedString += 4;
+      break;
+    
+    case 'u':
+      encodedString += 5;
+      break;
+    
+    default:
+      encodedString += index;
+      break;
+    }
+  } return (encodedString);
 }
-function decode() {
-  // seu código aqui
+function decode(strings) {
+  let decodedString = '';
+  for (let index of strings) {
+  switch (index) {
+    case '1':
+      decodedString += 'a';
+      break;
+  
+    case '2':
+      decodedString += 'e';
+      break;
+    
+    case '3':
+      decodedString += 'i';
+      break;
+
+    case '4':
+      decodedString += 'o';
+      break;
+    
+    case '5':
+      decodedString += 'u';
+      break;
+    
+    default:
+      decodedString += index;
+      break;
+    }
+  } return (decodedString);
 }
 
 module.exports = {
