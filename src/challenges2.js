@@ -22,14 +22,16 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'Javascript'], 'Lucas'));
 function generatePhoneNumber(inputArray) {
   let myPhoneNumber = '';
   const error = 'não é possível gerar um número de telefone com esses valores';
+  let sorted = inputArray.slice().sort((a, b) => a - b);
   if (inputArray.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (let value of inputArray) {
-    if ((value < 0) || (value > 9)) {
-      return error;
-    }
+  if (sorted[0] < 0 || sorted[sorted.length - 1] > 9) {
+    return error;
   }
+  // Se eu soubesse separar um array em arrays de valores repetidos, eu poderia usar o .length para checar se nenhum numero se
+  // repete 3 ou mais vezes e diminuir a complexity e cognitive complexity do meu codigo. - Mas eu não sei! Achei um codigo que
+  // faz isso na internet e não entendi.
   for (let index in inputArray) {
     if (inputArray.hasOwnProperty.call(inputArray, index)) {
       let counter = 0;
