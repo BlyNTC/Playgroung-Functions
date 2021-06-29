@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 && param2) return true;
-  else return false;
+  return false;
 }
 
 // Desafio 2
@@ -11,8 +11,12 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let strArray;
+  //explicação do metodo split https://stackoverflow.com/questions/20169809/pushing-each-word-to-an-array
+  strArray = string.split(' ');
+
+  return strArray;
 }
 
 // Desafio 4
@@ -44,6 +48,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
