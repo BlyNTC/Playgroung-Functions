@@ -52,9 +52,16 @@ console.log(myString);
 
 
 // Desafio 5
-function footballPoints() {
+let numero_de_pontos = 0;
+function footballPoints(wins,ties) {
   // seu código aqui
+  const vitoria = 3;
+  const empate = 1;
+  numero_de_pontos = wins * vitoria + ties * empate;
+  return numero_de_pontos;
 }
+footballPoints(0,0);
+console.log(numero_de_pontos);
 
 // Desafio 6
 function highestCount() {
