@@ -104,12 +104,46 @@ function fizzBuzz(arrayDeNumeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(sentence) {
+  let arrayAuxiliar = sentence.split('');
+  let n = 0;
+
+  for (let letra of arrayAuxiliar) {
+
+    switch (letra) {
+      case 'a':
+        arrayAuxiliar[n] = 1;
+        break;
+
+      case 'e':
+        arrayAuxiliar[n] = 2;
+        break;
+
+      case 'i':
+        arrayAuxiliar[n] = 3;
+        break;
+
+      case 'o':
+        arrayAuxiliar[n] = 4;
+        break;
+
+      case 'u':
+        arrayAuxiliar[n] = 5;
+        break;
+
+    }
+    n += 1;
+  }
+  sentence = '';
+  for (let index = 0; index < arrayAuxiliar.length; index += 1) {
+    sentence = sentence.concat(arrayAuxiliar[index]);
+  }
+
+  return sentence;
 }
 
 function decode() {
-  // seu código aqui
+
 }
 
 module.exports = {
