@@ -44,13 +44,12 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numeros) {
-  let maiorValor = 0;
-
-  for(let numero of numeros){
+  let maiorValor = Math.max.apply(null, numeros)
+  /* for(let numero of numeros){
     if(maiorValor < numero){
       maiorValor = numero;
-    }
-  }
+    } */
+  
 
   let arrayTodos = []
   let maiorNum = maiorValor
@@ -60,9 +59,7 @@ function highestCount(numeros) {
     idx = numeros.indexOf(maiorNum, idx + 1)
   }
 
-  let finau = arrayTodos.length
-
-  return finau
+  return arrayTodos.length
 }
 
 // Desafio 7
