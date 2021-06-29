@@ -76,11 +76,23 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(toEc) {
+  let chA = toEc.replace(/a/g, 1);
+  let chE = chA.replace(/e/g, 2);
+  let chI = chE.replace(/i/g, 3);
+  let chO = chI.replace(/o/g, 4);
+  let chU = chO.replace(/u/g, 5);
+  let result = chU;
+  return chU;
 }
-function decode() {
-  // seu código aqui
+function decode(toDec) {
+  let ch1 = toDec.replace(/1/g, 'a');
+  let ch2 = ch1.replace(/2/g, 'e');
+  let ch3 = ch2.replace(/3/g, 'i');
+  let ch4 = ch3.replace(/4/g, 'o');
+  let ch5 = ch4.replace(/5/g, 'u');
+  let result = ch5;
+  return ch5;
 }
 
 module.exports = {
