@@ -1,6 +1,5 @@
 // Desafio 1  
 function compareTrue(valor1, valor2) {
-  // seu código aqui
   let absoluto;
   if (valor1 == true && valor2 == true) {
     absoluto = true;
@@ -13,21 +12,26 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  // seu código aqui
   let calculo = (base * height) / 2;
   return calculo;
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  // seu código aqui
   let palavra = frase.split(' ');
   return palavra;
 }
 
+
+
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+  let nome = [];
+  nome.push(nomes[nomes.length - 1]); // Ultimo Item
+  nome.push(nomes[0]);                // Primeiro item
+  let nomeForm = nome.join(', ')      // Juntanto
+  return nomeForm;
 }
 
 // Desafio 5
