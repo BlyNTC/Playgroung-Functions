@@ -7,8 +7,17 @@ function compareTrue(fazChuva, fazSol) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea( base ,height) {
   // seu código aqui
+  let area = base * height /2
+
+  if(base===10, height===50){
+  } else if (base===5, height===2){
+  }else (base===51, height===1)
+
+
+  return area
+  
 }
 
 // Desafio 3
