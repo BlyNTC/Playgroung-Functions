@@ -21,13 +21,14 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(sentenca) {
   // seu código aqui
-  let divisaoDeSentenca = sentenca.split(" ");
-  return divisaoDeSentenca;
+  // fonte codigo: https://www.w3schools.com/jsref/jsref_split.asp (.plit)
+  let divisao = sentenca.split(" ");
+  return divisao;
 }
 // Desafio 4
 function concatName(nome) {
   // seu código aqui
-  return nome[nome.length - 1] + "," + nome[0];
+  return nome[nome.length - 1] + ", " + nome[0];
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -38,10 +39,15 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   // seu código aqui
   // fonte: https://www.youtube.com/watch?v=8xqU_hXb-9k (math.max)
-  let maiorNumero = Math.max(array)
+  
+  let maiorNumero = Math.max(...array);
+
   let contador = 0;
+
   for (index = 0; index < array.length; index += 1) {
+
     if (array[index] === maiorNumero) {
+
       contador += 1;
     }
   }
@@ -50,8 +56,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-// seu código aqui
-// fonte: https://www.youtube.com/watch?v=8xqU_hXb-9k (math.abs)
+  // seu código aqui
+  // fonte: https://www.youtube.com/watch?v=8xqU_hXb-9k (math.abs)
 
   let diffCat1 = Math.abs(mouse - cat1);
 
@@ -59,16 +65,16 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (diffCat1 === diffCat2) {
 
-    return "os gatos trombam e o rato foge" 
+    return "os gatos trombam e o rato foge"
 
-  } else if (diffCat1 < diffCat2){
+  } else if (diffCat1 < diffCat2) {
 
     return "cat1"
-    
-  }  else {
+
+  } else {
 
     return "cat2"
-    
+
   }
 }
 
