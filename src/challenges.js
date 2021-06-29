@@ -5,7 +5,6 @@ function compareTrue(a, b) {
   } else {
     return false;
   }
-  
 }
 
 // Desafio 2
