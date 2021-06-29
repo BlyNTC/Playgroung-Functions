@@ -2,10 +2,8 @@
 function compareTrue(sum1, sum2) {
   if (sum1 === true && sum2 === true) {
     return true;
-  } else {
-    return false;
   }
-  
+  return false;
 }
 
 // Desafio 2
