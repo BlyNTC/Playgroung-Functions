@@ -57,8 +57,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   }
 
-  let gato1 = mouse - cat1;
-  let gato2 = mouse - cat2;
+  let gato1 = Math.abs(mouse - cat1);
+  let gato2 = Math.abs(mouse - cat2);
 
   if (gato1 < gato2) {
     return "cat1";
