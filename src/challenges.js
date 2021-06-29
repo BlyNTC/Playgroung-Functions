@@ -62,7 +62,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numeros) {
+  let numero = []
+    for (const i of numeros) {
+      if (i % 3 == 0 && i % 5 == 0) {
+        numero.push("fizzBuzz")
+      }
+     else if (i % 3 == 0) {
+        numero.push('fizz')
+      }
+      else if (i % 5 == 0) {
+        numero.push('buzz')
+      }
+      else {numero.push('bug!')}
+    }
+    return(numero)
   // seu código aqui
 }
 
