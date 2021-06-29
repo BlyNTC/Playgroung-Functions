@@ -20,6 +20,7 @@ let areaDoTriangulo = 0;
 // Desafio 2
 function calcArea(base,height) {
   areaDoTriangulo = (base*height)/2;
+  return areaDoTriangulo;
   // seu código aqui
 }
 calcArea(51,1);
