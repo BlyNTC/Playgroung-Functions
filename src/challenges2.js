@@ -21,7 +21,9 @@ function generatePhoneNumber(array) {
   }, {});
 
   if (array.length !== 11) return 'Array com tamanho incorreto.';
-  if (array.some((e) => e < 0 || e > 9 || qtd[e] >= 3)) return 'não é possível gerar um número de telefone com esses valores';
+  if (array.some((e) => e < 0 || e > 9 || qtd[e] >= 3)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
 
   const op = array.splice(0, 2).join('');
   const part1 = array.splice(0, 5).join('');
@@ -32,17 +34,20 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(l1, l2, l3) {
-  if (l1 + l2 > l3 && l3 > Math.abs(l1 - l2)) return true;
-  if (l1 + l3 > l2 && l2 > Math.abs(l1 - l3)) return true;
-  if (l3 + l2 > l1 && l1 > Math.abs(l3 - l2)) return true;
-  return false;
+  const arr = [];
+
+  arr.push(l1 + l2 > l3 ? l3 > Math.abs(l1 - l2) : false);
+  arr.push(l1 + l3 > l2 ? l2 > Math.abs(l1 - l3) : false);
+  arr.push(l3 + l2 > l1 ? l1 > Math.abs(l3 - l2) : false);
+
+  return arr.some((e) => e === true);
 }
 
 // Desafio 13
 function hydrate(str) {
   let watter = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (isFinite(str.charAt(i))) watter += Number(str.charAt(i));
+  for (let i = 0; i < str.length; i += 1) {
+    if (Number(str.charAt(i))) watter += Number(str.charAt(i));
   }
 
   if (watter === 1) return `${watter} copo de água`;
