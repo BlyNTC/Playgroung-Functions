@@ -43,7 +43,7 @@ function generatePhoneNumber(array) {
   for (let item of array) {
     number += item;
   }
-
+  //Ideia retirada de https://stackoverflow.com/questions/4313841/insert-a-string-at-a-specific-index
   return `(${number.slice(0, 2)}) ${number.slice(2, 7)}-${number.slice(7)}`;
 }
 
