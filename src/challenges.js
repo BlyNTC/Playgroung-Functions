@@ -48,7 +48,7 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   // seu código aqui
   let points = (wins * 3) + ties;
-  return points
+  return points;
 }
 
 // Desafio 6
@@ -80,26 +80,45 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  let fizzBuzz = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i]%3 === 0 && array[i]%5 === 0) {
+      fizzBuzz.push("fizzBuzz")
+      
+    } else if (array[i]%3 !== 0 && array[i]%5 !== 0) {
+      fizzBuzz.push("bug!");
+      
+    } else if (array[i]%3 === 0) {
+      fizzBuzz.push("fizz");
+      
+    } else if (array[i]%5 === 0) {
+      fizzBuzz.push("buzz");
+      
+    }
+  }
+  return fizzBuzz
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 9
 function encode() {
