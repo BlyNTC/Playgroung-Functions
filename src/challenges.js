@@ -33,31 +33,68 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(arr) {
   let primeiraPalavra = arr[0];
-  let ultimaPalavra = ''
+  let ultimaPalavra = '';
   for(let i in arr){
-    ultimaPalavra = arr[i]
+    ultimaPalavra = arr[i];
   }
   let ultimaPrimeira = ultimaPalavra +', ' + primeiraPalavra;
   return ultimaPrimeira;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = wins * 3 + ties;
+  return pontos;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arr) {
+  let maior = 0
+  let repeticao = 0
+  let index = 0
+  for(let i in arr){
+    if(maior<arr[i]){
+      maior = arr[i];
+      for(let j in arr){
+        if(maior === arr[i]){
+          repeticao+=1;
+
+        }
+      }
+    }
+  }
   // seu código aqui
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  let mensagem = 'os gatos trombam e o rato foge';
+  if(cat1<cat2){
+    return 'cat1';
+  }else if(cat1>cat2){
+    return 'cat2';
+  }else if(cat1 === mouse || cat2 === mouse){
+    return mensagem;
+  }
   // seu código aqui
 }
+catAndMouse(5,5,5);
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arr) {
+  let deploy = []
+  for(let i in arr){
+    if(arr[i]%3===0 && arr[i]%5===0){
+      deploy.push('fizzBuzz')
+    }else if(arr[i]%3===0 && arr[i]%5!==0){
+      deploy.push('fizz')
+    }else if(arr[i]%3!==0 && arr[i]%5===0){
+      deploy.push('buzz')
+    }else{
+      deploy.push('bug!')
+    }
+  }
+  return deploy;
   // seu código aqui
 }
 
