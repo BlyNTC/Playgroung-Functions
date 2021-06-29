@@ -73,10 +73,24 @@ function catAndMouse(mouse, cat1, cat2) {
  }
 }
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let words = [];
+  for(let i = 0; i<numeros.length; i += 1){
+    if(numeros[i]%3 === 0 && numeros[i]%5 === 0){
+      words[i] = 'fizzBuzz';
+    }
+    else if(numeros[i]%3 === 0){
+      words[i] = 'fizz';
+    }
+    else if(numeros[i]%5 === 0){
+      words[i] = 'buzz';
+    }
+    else{
+      words[i] = 'bug!';
+    }
+  }
+  return words;
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
