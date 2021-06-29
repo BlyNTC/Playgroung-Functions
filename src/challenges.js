@@ -1,6 +1,7 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
+  //so para fazer o primeiro PR
 }
 
 // Desafio 2
