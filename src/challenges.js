@@ -2,6 +2,8 @@
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
+  } else {
+    return false;
   }
 }
 
@@ -27,7 +29,7 @@ function concatName(info) {
   let primeiroElemento = info.shift();
   let ultimoElemento = info.pop();
 
-  return ultimoElemento + ' ' + primeiroElemento;
+  return ultimoElemento + ', ' + primeiroElemento;
 }
 
 // Desafio 5
@@ -104,8 +106,6 @@ function fizzBuzz(array) {
   }
   return resultado;
 }
-let a = [9,25];
-console.log(fizzBuzz(a));
 
 // Desafio 9
 function encode() {
