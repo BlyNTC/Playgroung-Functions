@@ -23,8 +23,9 @@ splitSentence();
 
 // Desafio 4
 function concatName(arSentence) {
-  // código
+  return arSentence[arSentence.length -1] + ', ' + arSentence[0];
 }
+concatName();
 
 // Desafio 5
 function footballPoints() {
