@@ -1,5 +1,8 @@
 // Desafio 10
 function techList(array,name) {
+  if(array.length === 0){
+    return 'Vazio!';
+  }else{
   array = array.sort();
   let object = {};
   let arrayResp = [];
@@ -11,7 +14,9 @@ function techList(array,name) {
   }
   return arrayResp;
 }
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'lucas');
+}
+// }
+techList([],"lucas");
 
 // Desafio 11
 function generatePhoneNumber() {
