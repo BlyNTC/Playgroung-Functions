@@ -26,23 +26,78 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  var winpoints = wins * 3;
+  var tiepoints = ties;
+  return winpoints + tiepoints;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  var max = Math.max(...array);
+  var count = 0;
+  for (i = 0; i < array.length; ++i) {
+    if (array[i] == max) {
+      count++;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  var cat1d = cat1 - mouse;
+  var cat2d = cat2 - mouse;
+  var result = "";
+
+  if (cat1d < 0) {
+    cat1d = cat1d * -1;
+  }
+
+  if (cat2d < 0) {
+    cat2d = cat2d * -1;
+  }
+
+  if (cat1d > cat2d) {
+    result = "cat2"
+  } else if (cat1d < cat2d) {
+    result = "cat1"
+  } else {
+    result = "os gatos trombam e o rato foge";
+  }
+  return result;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  var result = [];
+  var final = [];
+  for (i = 0; i < array.length; i++) {
+    if (array[i] % 3 == 0) {
+      var a = "fizz";
+    } else {
+      var a = "null";
+    }
+    if (array[i] % 5 == 0) {
+      var b = "buzz";
+    } else {
+      b = "null";
+    }
+    var c = a + b;
+    result.push(c);
+  }
+  for (i = 0; i < result.length; i++) {
+    if (result[i] == "nullnull") {
+      final.push("bug!");
+    } else if (result[i] == "fizzbuzz") {
+      final.push("fizzBuzz");
+    } else if (result[i] == "fizznull") {
+      final.push("fizz");
+    } else if (result[i] == "nullbuzz") {
+      final.push("buzz");
+    }
+  }
+  return final;
 }
 
 // Desafio 9
