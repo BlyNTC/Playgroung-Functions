@@ -87,8 +87,7 @@ function highestCount(array) {
   return contRepete;
 
 }
-let lista=[0, 4, 4, 4, 9, 2, 1]
-console.log(highestCount(lista));
+
 
 // Desafio 7
 function catAndMouse(cat1, cat2) {
@@ -110,7 +109,7 @@ function fizzBuzz(array) {
   let fizz = 'fizz';
   let buzz = 'buzz';
   let fizzBuzz = 'fizzBuzz';
-  let bug = 'bug';
+  let bug = 'bug!';
   let lista = [''];
 
   for (let key in array) {
