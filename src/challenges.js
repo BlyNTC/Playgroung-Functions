@@ -2,17 +2,17 @@
 let boraPraia;
 function compareTrue(fimDeSemana,temSol) {
   // seu código aqui
-if(fimDeSemana === "sabado" || fimDeSemana === "domingo" || fimDeSemana === true){
-  fimDeSemana = true;
-} else {
-  fimDeSemana = false;
-}
+// if(fimDeSemana === "sabado" || fimDeSemana === "domingo" || fimDeSemana === true){
+//   fimDeSemana = true;
+// } else {
+//   fimDeSemana = false;
+// }
 
-if(temSol === "sim" || temSol === true){
-  temSol = true;
-} else {
-  temSol = false;
-}
+// if(temSol === "sim" || temSol === true){
+//   temSol = true;
+// } else {
+//   temSol = false;
+// }
 
 if(fimDeSemana === true && temSol === true){
   boraPraia = true;
@@ -22,7 +22,7 @@ if(fimDeSemana === true && temSol === true){
 return console.log(boraPraia);
 }
 
-compareTrue("domingo", "sim");
+compareTrue(true, true);
 
 // Desafio 2
 function calcArea() {
