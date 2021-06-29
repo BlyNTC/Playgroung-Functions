@@ -75,11 +75,59 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let newString = '';
+  for(let key in frase)
+  {
+    switch(frase[key])
+    {
+      case 'a':
+        newString = newString + '1';
+        break;
+      case 'e':
+        newString = newString + '2';
+        break;
+      case 'i':
+        newString = newString + '3';
+        break;
+      case 'o':
+        newString = newString + '4';
+        break;
+      case 'u':
+        newString = newString + '5';
+        break;
+      default:
+        newString = newString + frase[key];
+    }
+  }
+  return '"' + newString + '"';
 }
-function decode() {
-  // seu código aqui
+function decode(frase) {
+  let newString = '';
+  for(let key in frase)
+  {
+    switch(frase[key])
+    {
+      case '1':
+        newString = newString + 'a';
+        break;
+      case '2':
+        newString = newString + 'e';
+        break;
+      case '3':
+        newString = newString + 'i';
+        break;
+      case '4':
+        newString = newString + 'o';
+        break;
+      case '5':
+        newString = newString + 'u';
+        break;
+      default:
+        newString = newString + frase[key];
+    }
+  }
+  return '"' + newString + '"';
 }
 
 module.exports = {
@@ -95,4 +143,4 @@ module.exports = {
   splitSentence,
 };
 
-console.log(fizzBuzz([9, 25]));
+console.log(decode("h3 th2r2!"));
