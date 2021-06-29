@@ -26,18 +26,53 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arraystring) {
+  let resultado;
+  string0 = arraystring[0];
+  string1 = arraystring[arraystring.length - 1]
+  resultado = string0 + ', ' + string1
+
+  return resultado
 }
+
+  console.log(concatName(['foguete', 'nao', 'tem', 'ré']))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(win, ties) {  
+  let resultado = 0;
+  winpoints = 3;
+  tiespoints = 1;
+  win = win * winpoints
+  ties = ties * tiespoints
+  resultado = win + ties
+  return resultado
 }
+  console.log(footballPoints(14, 8))
+
+    // Aprendido novo jeito de fazer
+    // let point = win * 3
+    // let points = point + ties;
+    // return points;
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+    let maiorValor = 0;
+    
+    for(let numero of numeros){
+      if(maiorValor < numero){
+        maiorValor = numero;
+      }
+    }
+    
+    let arrayTodos = []
+    let maiorNum = maiorValor
+    let idx = numeros.indexOf(maiorNum)
+    while (idx != -1) {
+      arrayTodos.push(idx)
+      idx = numeros.indexOf(maiorNum, idx + 1)
+    }
+
+    return arrayTodos.length
 }
 
 // Desafio 7
