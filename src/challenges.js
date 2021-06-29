@@ -18,8 +18,12 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(string) {
+  let virgula = ', ';
+  let primeira = string[0];
+  let ultima = string[(string.length - 1)];
+  let result = ultima + virgula + primeira;
+  return result;
 }
 
 // Desafio 5
