@@ -66,16 +66,70 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  let vetor = [];
+  for (let i of array) {
+    if (i % 3 == 0) {
+      if (i % 5 == 0) {
+        vetor.push("fizzBuzz");
+      }
+      else {
+        vetor.push("fizz");
+      }
+
+    }
+    else if (i % 5 == 0 && i % 3 != 0) {
+      vetor.push("buzz");
+    }
+    else {
+      vetor.push("bug!");
+    }
+  }
+  return vetor;
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let num = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  };
+
+  for (let i in string) {
+    for (let j in num) {
+      if (string[i] == j) {
+        string = string.replace(string[i], num[j]);
+      }
+    }
+  }
+
+  return string;
+
 }
-function decode() {
+function decode(string) {
   // seu código aqui
+  let num = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  };
+
+  for (let i in string) {
+    for (let j in num) {
+      if (string[i] == num[j]) {
+        string = string.replace(string[i], j);
+      }
+    }
+  }
+
+  return string;
 }
 
 module.exports = {
