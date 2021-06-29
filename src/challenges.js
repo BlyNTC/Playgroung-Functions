@@ -23,7 +23,7 @@ splitSentence();
 
 // Desafio 4
 function concatName(arSentence) {
-  return arSentence[arSentence.length -1] + ', ' + arSentence[0];
+  return arSentence[arSentence.length - 1] + ', ' + arSentence[0];
 }
 concatName();
 
