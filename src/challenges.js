@@ -26,7 +26,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// Utilizamos o spread(...) para quebrar o array.
+// Utilizamos o spread(...) para quebrar o array - w3.
 function highestCount(Array) {
   let numeroMaximo = Math.max(...Array);
   let repetições = 0;
@@ -39,7 +39,17 @@ function highestCount(Array) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  posicaoCat1 = Math.abs(mouse - cat1);
+  posicaoCat2 = Math.abs(mouse - cat2);
+
+  if (posicaoCat1 < posicaoCat2 ) {
+    return 'cat1';
+  } if (posicaoCat1 > posicaoCat2) {
+    return 'cat2';
+  } if (posicaoCat1 === posicaoCat2) {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
