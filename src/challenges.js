@@ -31,10 +31,10 @@ return conacat
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  let conta = wins * 3  + ties
+  return conta
 }
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
