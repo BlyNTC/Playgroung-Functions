@@ -72,11 +72,11 @@ function fizzBuzz(arr) {
   let newArr = []
   
   arr.forEach(el => {
-    if(el%5 == 0 && el%3 == 0){
+    if(el % 5 == 0 && el % 3 == 0){
       newArr.push("fizzBuzz")
-    } else if(el%5 == 0){
+    } else if(el % 5 == 0){
       newArr.push("buzz")
-    } else if(el%3 == 0){
+    } else if(el % 3 == 0){
       newArr.push("fizz")
     } else {
       newArr.push("bug!")
