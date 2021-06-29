@@ -20,8 +20,7 @@ function concatName(array) {
   let prItem= array[0];
   let sgItem= array[array.length - 1];
   let juntos;
-  juntos = sgItem +","+prItem;
-  return juntos;
+  return juntos = sgItem +","+" "+prItem;
 }
 
 // Desafio 5
@@ -44,13 +43,16 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-    if(mouse - cat1 > mouse - cat2){
+  let gato1 = Math.abs(mouse - cat1);
+  let gato2 = Math.abs(mouse - cat2)
+
+  if(gato1 < gato2){
       return "cat1";
-  }else if(mouse - cat2 > mouse - cat1){
+    }else if(gato1 > gato2){
       return "cat2";
-  }else {
+    }else {
       return "os gatos trombam e o rato foge";
-  }
+    }
 }
 
 // Desafio 8
@@ -59,9 +61,9 @@ function fizzBuzz(numeros) {
   for(let i = 0; i < numeros.length; i +=1 ){
       if(numeros[i]% 3 === 0 && numeros[i]%5 === 0){
           resp.push("fizzbuzz");
-      }else if(numeros[i]%3 === 0){
+      }else if(numeros[i]%3 === 0 && numeros[i]%5 !== 0){
           resp.push("fizz");
-      }else if(numeros[i]%5 === 0){
+      }else if(numeros[i]%5 === 0 && numeros[i]%3 !== 0){
           resp.push("buzz");
       }else{
           resp.push("bug!");
