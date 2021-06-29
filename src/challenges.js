@@ -149,7 +149,31 @@ function encode(frase) {
 }
 
 function decode() {
-  // seu código aqui
+  newfrase = '';
+  for (let letter of frase) {
+      switch (letter) {
+          case '1':
+              newfrase += 'a';
+              break;
+          case '2':
+              newfrase += 'e';
+              break;
+          case '3':
+              newfrase += 'i';
+              break;
+          case '4':
+              newfrase += 'o';
+              break;
+          case '5':
+              newfrase += 'u';
+              break;
+          
+          default:
+              newfrase += letter
+      
+      }
+  }
+  return newfrase;
 }
 
 module.exports = {
