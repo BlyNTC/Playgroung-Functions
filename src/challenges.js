@@ -19,12 +19,11 @@ calcArea();
 function splitSentence(arraySentence) {
   return arraySentence.split(' ');
 }
-
-splitSentence()
+splitSentence();
 
 // Desafio 4
-function concatName() {
-  
+function concatName(arSentence) {
+  // código
 }
 
 // Desafio 5
