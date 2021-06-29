@@ -62,8 +62,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(meuBar) {
+  let total = 0;
+  let myAnswer;
+  if (meuBar.match(/\d+/g)) {
+    for (let index = 0; index < meuBar.match(/\d+/g).length; index += 1) {
+      total += parseInt(meuBar.match(/\d+/g)[index], 10);
+    }
+    if (total === 0) {
+      myAnswer = 'Vazio!';
+    } else if (total === 1) {
+      myAnswer = `${total} copo de água`;
+    } else {
+      myAnswer = `${total} copos de água`;
+    }
+  }
+  return myAnswer;
 }
 
 module.exports = {
