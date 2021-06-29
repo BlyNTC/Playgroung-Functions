@@ -26,7 +26,7 @@ function concatName(nomes) {
   let primeiroNome = nomes[0];
   let ultimoNome = nomes[nomes.length - 1];
   
-  return (primeiroNome +', '+ ultimoNome);
+  return (ultimoNome +', '+ primeiroNome);
 
 }
 
