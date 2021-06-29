@@ -1,14 +1,13 @@
 // Desafio 1
 function compareTrue() {
-  let a = true;
-  let b = false;
-  if (a == true && b == false)
+  let clima = "Sol";
+  let temp = 35;
+  if ((typeof clima == 'string') && (typeof temp == 'number'))
     return true;
-  else 
-    return false;
-}  
-compareTrue()
-
+  else if ((typeof clima != 'string') && (typeof temp != 'number'))
+    return false;  
+}
+compareTrue();
 
 // Desafio 2
 function calcArea() {
