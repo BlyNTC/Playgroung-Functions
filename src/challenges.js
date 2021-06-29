@@ -8,7 +8,7 @@ if(a === true && b === true){
   return false;
 }
 }
-compareTrue();
+console.log(compareTrue(2,2));
 
 
 // Desafio 2
@@ -40,18 +40,19 @@ return lista.length[0] && lastIndexOf[lista];
 concatName();
 
 // Desafio 5
-function footballPoints(wins, ties) {
-wins = 3;
-ties = 1; 
+function footballPoints() {
+let wins = 3 * 
+let ties = 1 * 
 let resultado = wins + ties;
 return resultado;
-
 }
-footballPoints();
+let a footballPoints(11);
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+
+
+
 }
 
 // Desafio 7
