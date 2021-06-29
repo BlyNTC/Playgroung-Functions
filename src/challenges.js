@@ -100,7 +100,7 @@ function encode(frase) {
         newString = newString + frase[key];
     }
   }
-  return '"' + newString + '"';
+  return newString;
 }
 function decode(frase) {
   let newString = '';
@@ -127,7 +127,7 @@ function decode(frase) {
         newString = newString + frase[key];
     }
   }
-  return '"' + newString + '"';
+  return newString;
 }
 
 module.exports = {
@@ -142,5 +142,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-console.log(decode("h3 th2r2!"));
