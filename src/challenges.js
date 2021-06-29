@@ -13,7 +13,7 @@ compareTrue();
 function calcArea(b, h) {
   return (b * h) / 2;
 }
-calcArea(51, 1);
+calcArea();
 
 // Desafio 3
 function splitSentence() {
