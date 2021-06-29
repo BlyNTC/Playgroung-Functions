@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(primeiroValor,segundoValor) {
-  if(primeiroValor&&segundoValor >0){
+  if(true===primeiroValor&&true===segundoValor){
     return true;
   }
 else{
@@ -8,14 +8,22 @@ else{
 }
 
 }
-console.log(compareTrue(-5,-6));
+console.log(compareTrue(true,false));
 
 
 
 
 // Desafio 2
 function calcArea( base,height) {
-  
+  let areaTriangulo=base*height/2;
+  return areaTriangulo
+}
+console.log(calcArea(10,50))
+console.log(calcArea(5,2))
+console.log(calcArea(51,1))
+
+
+
 // Desafio 3
 function splitSentence() {
   // seu código aqui
