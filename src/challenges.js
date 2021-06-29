@@ -1,7 +1,28 @@
 // Desafio 1
-function compareTrue() {
+let boraPraia;
+function compareTrue(fimDeSemana,temSol) {
   // seu código aqui
+if(fimDeSemana === "sabado" || fimDeSemana === "domingo" || fimDeSemana === true){
+  fimDeSemana = true;
+} else {
+  fimDeSemana = false;
 }
+
+if(temSol === "sim" || temSol === true){
+  temSol = true;
+} else {
+  temSol = false;
+}
+
+if(fimDeSemana === true && temSol === true){
+  boraPraia = true;
+ } else {
+  boraPraia = false;
+ }
+return console.log(boraPraia);
+}
+
+compareTrue("domingo", "sim");
 
 // Desafio 2
 function calcArea() {
