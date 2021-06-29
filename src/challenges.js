@@ -16,9 +16,11 @@ function calcArea(b, h) {
 calcArea();
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(arraySentence) {
+  return arraySentence.split(" ");
 }
+
+splitSentence();
 
 // Desafio 4
 function concatName() {
