@@ -31,8 +31,40 @@ function techList(arr, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arr) {
+  let arrToStr = arr.join("");
+  let reg = /(?=^\d{11}$)/
+
+  function countDuplicate(a) {
+    let counts = {}
+
+    for (let i = 0; i < a.length; i++) {
+      if (counts[a[i]]) {
+        counts[a[i]] += 1
+      } else {
+        counts[a[i]] = 1
+      }
+    }
+    for (let prop in counts) {
+      if (counts[prop] >= 3) {
+        return true;
+      }
+    }
+  }
+
+  if (arr.length !== 11) {
+    return "Array com tamanho incorreto.";
+  } else if (reg.test(arrToStr) === false || countDuplicate(arr) === true) {
+
+    return "não é possível gerar um número de telefone com esses valores";
+
+  } else {
+    let ddd = arr.slice(0, 2);
+    let firsts = arr.slice(2, 7);
+    let lasts = arr.slice(7, 11);
+    return "(" + ddd.join("") + ") " + firsts.join("") + "-" + lasts.join("");
+
+  }
 }
 
 // Desafio 12
