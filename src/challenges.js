@@ -11,9 +11,9 @@ else {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-}
+function calcArea(base, height) {
+  let triang = base * height / 2
+  return triang}
 
 // Desafio 3
 function splitSentence() {
