@@ -1,6 +1,12 @@
 // Desafio 1
-function compareTrue() {
-  console.log();
+function compareTrue(boolOne, boolTwo) {
+  boolOne = true;
+  boolTwo = false;
+  if (boolTwo && boolOne === true) {
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Desafio 2
