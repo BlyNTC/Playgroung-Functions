@@ -16,8 +16,11 @@ function calcArea(base, height) {
   return triang}
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  let divisor = ' ';
+  let splitArray = str.split(divisor);
+
+  return splitArray;
 }
 
 // Desafio 4
