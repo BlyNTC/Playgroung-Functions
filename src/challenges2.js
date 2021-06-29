@@ -3,11 +3,10 @@ function techList(array, name) {
   let arrayObjects = [];
   if (array.length === 0) {
     return 'Vazio!';
-  } else {
-    array.sort();
-    for (let value of array) {
-      arrayObjects.push({'tech': value, 'name':name})
-    }
+  }
+  array.sort();
+  for (let value of array) {
+    arrayObjects.push({ tech: value, name: name });
   }
   return arrayObjects;
 }
@@ -32,7 +31,7 @@ function generatePhoneNumber(array) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
       count = 0;
-    }    
+    }
   }
   for (let index = 0; index < array.length; index += 1) {
     if (index === 0) {
@@ -53,9 +52,17 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA >= (lineB + lineC) || lineB >= (lineA + lineC) || (lineC >= lineA + lineB)) {
-    return false;    
-  } else if (lineA <= Math.abs(lineB - lineC) || lineB <= Math.abs(lineA - lineC) || lineC <= Math.abs(lineB - lineA)) {
+  if (
+    lineA >= lineB + lineC ||
+    lineB >= lineA + lineC ||
+    lineC >= lineA + lineB
+  ) {
+    return false;
+  } else if (
+    lineA <= Math.abs(lineB - lineC) ||
+    lineB <= Math.abs(lineA - lineC) ||
+    lineC <= Math.abs(lineB - lineA)
+  ) {
     return false;
   }
   return true;
@@ -71,7 +78,8 @@ function hydrate(string) {
   }
   if (count > 1) {
     return count + ' copos de água';
-  } return count + ' copo de água';
+  }
+  return count + ' copo de água';
 }
 
 module.exports = {
