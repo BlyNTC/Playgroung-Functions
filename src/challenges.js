@@ -30,14 +30,12 @@ function concatName(param) {
   let palavra2 = param[param.length - 1];
   let palavras = palavra2 + ', ' + palavra1
   return palavras;
-
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
   return wins * 3 + ties
-
 }
 
 // Desafio 6
@@ -58,11 +56,20 @@ function highestCount(param) {
   return vezesRepete
 }
 
-
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distanciaGato1DoRato = Math.abs(mouse - cat1)
+  let distanciaGato2DoRato = Math.abs(mouse - cat2)
+  if (distanciaGato1DoRato < distanciaGato2DoRato) {
+    return 'cat1'
+  } else if (distanciaGato2DoRato < distanciaGato1DoRato) {
+    return 'cat2'
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
+// Fonte que usei para o desafio 7: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 // Desafio 8
 function fizzBuzz() {
