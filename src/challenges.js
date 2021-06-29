@@ -1,6 +1,6 @@
 // Desafio 1 - Começando agora
 function compareTrue(num1, num2) {
-  if (num1 === true && num2 === true) {
+  if (num1 === true && num2 === true){
     return true;
   } else {
     return false;
@@ -8,8 +8,8 @@ function compareTrue(num1, num2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, altura) {
+  return (base * altura) / 2;  
 }
 
 // Desafio 3
