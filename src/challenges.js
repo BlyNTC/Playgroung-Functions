@@ -33,8 +33,10 @@ splitSentence();
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+let lista = ['Silas', 'Pedro', 'Tiago', 'Cassia'];
+
 }
+return lista.length[0] && lastIndexOf[lista];
 
 // Desafio 5
 function footballPoints() {
