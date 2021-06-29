@@ -103,7 +103,7 @@ function fizzBuzz(array) {
   let newArray = [];
     for (let numeros of array){
          if (numeros % 3 === 0 && numeros % 5 === 0){
-        newArray.push('fizzbuzz');
+        newArray.push('fizzBuzz');
     }
     else if (numeros % 3 === 0){
         newArray.push('fizz');
