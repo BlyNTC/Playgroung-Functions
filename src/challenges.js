@@ -31,8 +31,14 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  let primeiraPalavra = arr[0];
+  let ultimaPalavra = ''
+  for(let i in arr){
+    ultimaPalavra = arr[i]
+  }
+  let ultimaPrimeira = ultimaPalavra +', ' + primeiraPalavra;
+  return ultimaPrimeira;
 }
 
 // Desafio 5
