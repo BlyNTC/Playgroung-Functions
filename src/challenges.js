@@ -81,12 +81,60 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
+  let stringencode = ''
+  for (let i of string) {
+    switch (i) {
+      case 'a':
+        stringencode += 1
+        break;
+      case 'e':
+        stringencode += 2
+        break;
+      case 'i':
+        stringencode += 3
+        break;
+      case 'o':
+        stringencode += 4
+        break;
+      case 'u':
+        stringencode += 5
+        break;
+      default:
+        stringencode += i
+        break;
+    }
+    
+  }return(stringencode)
   // seu código aqui
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let stringdecode = ''
+  for (let i of string) {
+    switch (i) {
+      case '1':
+        stringdecode +='a'
+        break;
+      case '2':
+        stringdecode +='e'
+        break;
+      case '3':
+        stringdecode +='i'
+        break;
+      case '4':
+        stringdecode +='o'
+        break;
+      case '5':
+        stringdecode +='u'
+        break;
+      default:
+        stringdecode += i
+        break;
+    }
+  }return(stringdecode)
 }
+  // seu código aqui
+
 
 module.exports = {
   calcArea,
