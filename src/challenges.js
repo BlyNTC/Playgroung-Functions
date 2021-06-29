@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(p1, p2) {
+  let resultado = false;
   if (p1 && p2) {
-    return true;
-  } else {
-    return false;
+    resultado = true;
   }
+  return resultado;
 }
 
 // Desafio 2
@@ -26,7 +26,7 @@ function splitSentence(frase) {
 
   for (let index = 0; index <= arrayAuxiliar.length; index += 1) {
 
-    if ((arrayAuxiliar[index] != ' ') && (index < arrayAuxiliar.length)) {
+    if ((arrayAuxiliar[index] !== ' ') && (index < arrayAuxiliar.length)) {
       palavra = palavra.concat(arrayAuxiliar[index]);
     } else {
       arrayFinal[n] = palavra;
@@ -176,36 +176,6 @@ function decode(decodifica) {
   return decodifica;
 }
 
-// Desafio 10
-function techList(listaDesordenada, nome) {
-
-  let resultado;
-
-  if (listaDesordenada.length === 0) {
-    resultado = "Vazio!";
-  } else {
-
-    listaOrdenada = listaDesordenada.sort();
-    let arrayDeObjetos = [];
-    let n = 0;
-
-    let objetoTech = {
-      name: nome,
-      tech: "NomeTech"      
-    }
-
-    for (let tecnologia of listaOrdenada) {
-      arrayDeObjetos[n] = objetoTech = {
-        name: nome,
-        tech: tecnologia,
-      }
-      n += 1;
-    }
-    resultado = arrayDeObjetos;
-  }
-  return resultado;
-}
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -217,5 +187,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-  techList
 };
