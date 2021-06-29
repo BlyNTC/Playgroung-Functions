@@ -68,7 +68,7 @@ function highestCount(numeros) {
     }
   }
 
-  for (num of numeros) {
+  for (let num of numeros) {
 
     if (maior === num) {
       repete = repete + 1;
@@ -124,18 +124,80 @@ function fizzBuzz(numbers) {
 
     
   }
-  console.log(marcados)
   return marcados;
 }
 let coisas = [9, 25];
 fizzBuzz(coisas);
 
 // Desafio 9
-function encode() {
+function encode(estranho) {
   // seu código aqui
+  let sopa = [];
+  for(let letras of estranho){
+    sopa.push(letras);
+  }
+
+  for(let i = 0; i < sopa.length; i += 1){
+    switch (sopa[i]){
+      case 'a':
+        sopa[i] = 1;
+        break;
+      case 'e':
+        sopa[i] = 2;
+        break;
+      case 'i':
+        sopa[i] = 3;
+        break;
+      case 'o':
+        sopa[i] = 4;
+        break;
+      case 'u':
+        sopa[i] = 5;
+        break;
+            
+    }
+    
+  }
+  let codigo = sopa.join("");
+  console.log(codigo);
+  return codigo;
+  
 }
-function decode() {
+encode('aranha');
+
+
+function decode(convem) {
   // seu código aqui
+  let caos = [];
+  for (pecas of convem){
+    caos.push(pecas);
+  }
+
+  for (let i = 0; i < convem.length; i += 1){
+    switch (caos[i]){
+      case '1':
+        caos[i] = 'a';
+        break;
+      case '2':
+        caos[i] = 'e';
+        break;
+      case '3':
+        caos[i] = 'i';
+        break;
+      case '4':
+        caos[i] = 'o';
+        break;
+      case '5':
+        caos[i] = 'u';
+        break;
+            
+    }
+
+  }
+  let decodigo = caos.join("");
+  console.log(decodigo);
+  return decodigo;
+
 }
 
 module.exports = {
