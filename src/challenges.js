@@ -16,13 +16,14 @@ function calcArea(base, height) {
 function splitSentence(frase) {
   let splitado = frase.split(' ')
   return (splitado)
-  
-  // 
+  //link refercia:
+  //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 }
 
 // Desafio 4
 function concatName(listNames) {
   return (listNames[listNames.length -1]+', '+listNames[0])
+
   // seu código aqui
 }
 
@@ -33,13 +34,23 @@ function footballPoints(win, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numeros) {
+  let numeroMaior = Math.max(...numeros);
+  let count = 0;
+  for (let i of numeros) {
+    if(numeroMaior === i){
+      count += 1
+    }
+    }return (count)
+  }
   // seu código aqui
-}
+
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+
+  //link de referencia:
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 }
 
 // Desafio 8
