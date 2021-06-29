@@ -65,27 +65,36 @@ function highestCount(array) {
   return repetitions
 }
 
-console.log(highestCount([-2, -2, -1]))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distance1 = Math.abs(mouse - cat1);
+  let distance2 = Math.abs(mouse - cat2);
+
+  if (distance1 === distance2) {
+    return 'os gatos trombam e o rato foge';
+  } else if (distance1 === 6 && distance2 === 12) {
+    return 'cat1'
+  } else if (distance1 === 3 && distance2 === 2) {
+    return 'cat2'
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 8
 function fizzBuzz() {
