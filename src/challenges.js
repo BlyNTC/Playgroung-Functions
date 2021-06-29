@@ -4,17 +4,22 @@
 function compareTrue(n1,n2) {
   if(n1 === true && n2 === true){
     return true
-  }else{(n1 === false && n2 === false)
+  }else if(n1 === false && n2 === false){
+    return false
+  }else { (n1 === true && n2 === false) 
     return false
   }
 }
 
-compareTrue(true,true)
+console.log(compareTrue(true,true))
 
 
 // Desafio 2
+
+
+
 function calcArea() {
-  // seu código aqui
+  
 }
 
 // Desafio 3
