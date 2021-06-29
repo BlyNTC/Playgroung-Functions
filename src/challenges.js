@@ -1,8 +1,13 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  //so para fazer o primeiro PR
+function compareTrue(value1, value2) {
+  if (value1 !== 0 && value2 !== 0) {
+    return true;
+  } else {
+    return false;
+  }
+   
 }
+console.log(compareTrue(10, 1));
 
 // Desafio 2
 function calcArea() {
