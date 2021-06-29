@@ -1,6 +1,6 @@
 
 > @ test /home/filipe/turma_14_tribo_a/projetos/sd-014-a-project-playground-functions
-> jest "pass"
+> jest "6"
 
 No tests found, exiting with code 1
 Run with `--passWithNoTests` to exit with code 0
@@ -9,4 +9,4 @@ In /home/filipe/turma_14_tribo_a/projetos/sd-014-a-project-playground-functions
   testMatch: **/__tests__/**/*.[jt]s?(x), **/?(*.)+(spec|test).[tj]s?(x) - 13 matches
   testPathIgnorePatterns: /node_modules/ - 19 matches
   testRegex:  - 0 matches
-Pattern: pass - 0 matches
+Pattern: 6 - 0 matches
