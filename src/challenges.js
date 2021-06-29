@@ -16,10 +16,14 @@ function compareTrue(a, b) {
 compareTrue(false,false);
 console.log (status);
 
+let areaDoTriangulo = 0;
 // Desafio 2
-function calcArea() {
+function calcArea(base,height) {
+  areaDoTriangulo = (base*height)/2;
   // seu código aqui
 }
+calcArea(51,1);
+console.log(areaDoTriangulo);
 
 // Desafio 3
 function splitSentence() {
