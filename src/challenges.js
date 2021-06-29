@@ -132,20 +132,79 @@ function fizzBuzz(numbers) {
       results.push('buzz');
     }
     else
-    results.push('bug!');
-  
+    results.push('bug!');  
   }
   return results;
 }
 
 // Desafio 9
-function encode() {
+function encode(toencode) {
   // seu código aqui
+  let encoded = '';
 
+  for (let key of toencode){
+    switch (key){
+      case 'a':
+        encoded += '1';
+        break;
+
+      case 'e':
+        encoded += '2';
+        break;
+
+      case 'i':
+        encoded += '3';
+        break;
+
+      case 'o':
+        encoded += '4';
+        break;
+
+      case 'u':
+        encoded += '5';
+        break;
+
+      default:
+        encoded += key;
+    }
+   
+  }
+
+  return encoded;
 }
-function decode() {
-  // seu código aqui
 
+function decode(todecode) {
+  // seu código aqui
+  let decoded = '';
+
+  for (let key of todecode){
+    switch (key){
+      case '1':
+        decoded += 'a';
+        break;
+
+      case '2':
+        decoded += 'e';
+        break;
+
+      case '3':
+        decoded += 'i';
+        break;
+
+      case '4':
+        decoded += 'o';
+        break;
+
+      case '5':
+        decoded += 'u';
+        break;
+
+      default:
+        decoded += key;
+    }
+  }
+
+  return decoded;
 }
 
 module.exports = {
