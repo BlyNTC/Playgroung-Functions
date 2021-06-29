@@ -18,13 +18,15 @@ function splitSentence(frase) {
   let n = frase.split(/\s+/).length;
   return frase.split(" ", n);
 }
-console.log(splitSentence("vamo que vamo"));
-
+console.log(splitSentence("foguete"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayNome) {
+  for(let index in arrayNome){
+    return arrayNome[arrayNome.length - 1] + ", " + arrayNome[0];
+  }
 }
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints() {
