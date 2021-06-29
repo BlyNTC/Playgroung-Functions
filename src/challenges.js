@@ -87,11 +87,42 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  const vowelToNumber = {
+      a: '1',
+      e: '2',
+      i: '3',
+      o: '4',
+      u: '5'
+  };
+  let encodedString = '';
+  let aux;
+
+  for(let str of string) {
+    aux = str in vowelToNumber ? vowelToNumber[str] : str;
+    encodedString += aux;
+  }
+  return encodedString;
 }
-function decode() {
+
+function decode(string) {
   // seu código aqui
+  const numberToVowel = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u'
+  };
+  let decodedString = '';
+  let aux;
+
+  for(let str of string) {
+    aux = str in numberToVowel ? numberToVowel[str] : str;
+    decodedString += aux;
+  }
+  return decodedString;
 }
 
 module.exports = {
@@ -106,3 +137,11 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+let a = true;
+let b = false;
+
+let c = 'srt';
+
+c = c + a? ' oi': 'tchau';
+console.log(c)
