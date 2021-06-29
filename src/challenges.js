@@ -20,13 +20,13 @@ function concatName(array) {
   let prItem= array[0];
   let sgItem= array[array.length - 1];
   let juntos;
-  return juntos = sgItem +","+" "+prItem;
+  return juntos = sgItem + "," + " " +prItem;
 }
 
 // Desafio 5
 function footballPoints(wins,ties) {
   let pontos =(wins*3)+ties;
-  return pontos
+  return pontos;
 }
 
 // Desafio 6
@@ -60,7 +60,7 @@ function fizzBuzz(numeros) {
   let resp =[];
   for(let i = 0; i < numeros.length; i +=1 ){
       if(numeros[i]% 3 === 0 && numeros[i]%5 === 0){
-          resp.push("fizzbuzz");
+          resp.push("fizzBuzz");
       }else if(numeros[i]%3 === 0 && numeros[i]%5 !== 0){
           resp.push("fizz");
       }else if(numeros[i]%5 === 0 && numeros[i]%3 !== 0){
