@@ -36,7 +36,7 @@ function highestCount(arr) {
     if(element == arr[0]){
       maiorNumero = element
     }
-    
+
     if(element > maiorNumero){
       maiorNumero = element
       seRepete = 1
@@ -49,13 +49,41 @@ function highestCount(arr) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let absCat1 = Math.abs(cat1)
+  let absCat2 = Math.abs(cat2)
+
+  let d1 = Math.abs(absCat1 - mouse)
+  let d2 = Math.abs(absCat2 - mouse)
+
+  if(d1 == d2){
+    return "os gatos trombam e o rato foge"
+  }
+
+  if(d1 < d2){
+    return "cat1"
+  } else {
+    return "cat2"
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  let newArr = []
+  
+  arr.forEach(el => {
+    if(el%5 == 0 && el%3 == 0){
+      newArr.push("fizzBuzz")
+    } else if(el%5 == 0){
+      newArr.push("buzz")
+    } else if(el%3 == 0){
+      newArr.push("fizz")
+    } else {
+      newArr.push("bug!")
+    }
+  })
+
+  return newArr
 }
 
 // Desafio 9
