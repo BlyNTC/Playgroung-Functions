@@ -11,28 +11,53 @@ function compareTrue(n1, n2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let result = (base * height) / 2;
+
+  return result;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let result = string.split(' ');
+
+  return result;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let novoArray = [];
+  let string;
+
+  novoArray.unshift(array[array.length - 1]);
+  novoArray.push(array[0]);
+
+  string = novoArray.join(', ');
+
+  return string;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontosVitoria = wins * 3;
+  let pontosEmpate = ties * 1;
+
+  let totalPontos = pontosVitoria + pontosEmpate;
+
+  return totalPontos;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorNumero = Math.max(...array);
+  let ocorrencias = 0;
+
+  for (let i = 0; i < array.length; i += 1) {
+    if (maiorNumero === array[i]) {
+      ocorrencias += 1;
+    }
+  }
+  return ocorrencias;
 }
 
 // Desafio 7
