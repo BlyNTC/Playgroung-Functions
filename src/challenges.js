@@ -22,14 +22,18 @@ function splitSentence(palavras) {
 
 // Desafio 4
 function concatName(nomes) {
-  arrayConcat = [];
-  arrayConcat = nomes[nomes.length -1] + ', ' + nomes[0];
+  let arrayConcat = [];
+  arrayConcat = nomes[nomes.length - 1] + ', ' + nomes[0];
   return arrayConcat;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontosCampeonato = 0;
+  wins *= 3;
+  ties *= 1;
+  pontosCampeonato = wins + ties;
+  return pontosCampeonato;
 }
 
 // Desafio 6
