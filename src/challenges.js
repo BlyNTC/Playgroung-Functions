@@ -20,13 +20,14 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(ultimaPrimeira) {
-  let string = (ultimaPrimeira[ultimaPrimeira.length - 1]) + ', ' + ultimaPrimeira[0];
+  let string = ultimaPrimeira[ultimaPrimeira.length - 1] + ', ' + ultimaPrimeira[0];
   return string;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = (wins * 3) + ties;
+  return pontos;
 }
 
 // Desafio 6
