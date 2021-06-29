@@ -14,10 +14,21 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let separar = '';
+  let separacao = [];
+  for (index = 0; index < string.length; index += 1){
+    if (string[index] !== ' '){
+      separar += string[index];
+    } else {
+      separacao.push(separar);
+      separar = '';
+    }
+  }
+  separacao.push(separar);
+  return separacao;
 }
-
+//console.log(splitSentence('vamo que vamo'));
 // Desafio 4
 function concatName(string) {
   let ultimo = string[string.length-1];
@@ -94,9 +105,24 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let codificado = '';
+  let codificar = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  };
+  for (index = 0; index < string.length; index += 1){
+    if (string[index] === 'e'){
+      string.replace('e', codificar.e);
+      //codificado[index] = codificar.e;
+    }
+    }
+  return codificado;
 }
+console.log(encode("hi there!"));
 function decode() {
   // seu código aqui
 }
