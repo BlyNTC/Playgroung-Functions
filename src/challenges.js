@@ -99,11 +99,25 @@ function encode(string) {
   return code;
 }
 
-console.log(encode('hi there'));
+// console.log(encode('hi there'));
 
-function decode() {
-  // seu código aqui
+function decode(code) {
+  let string = '';
+  let keys = ['1', '2', '3', '4', '5'];
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+  for (let i = 0; i < code.length; i += 1) {
+    if (keys.includes(code[i])) {
+      string += vowels[keys.indexOf(code[i])];
+    } else {
+      string += code[i];
+    }
+  }
+
+  return string;
 }
+
+console.log(decode('h2ll4'));
 
 module.exports = {
   calcArea,
