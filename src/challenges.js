@@ -2,29 +2,25 @@
 function compareTrue(a, b) {
   // seu código aqui
   if (a === true && b === true) {
-    return true;}
+    return true; }
   else if (a === true && b === false) {
-    return false;}
+    return false; }
   else if (a === false && b === true) {
-    return false;}
+    return false; }
   else if (a === false && b === false) {
-    return false;}
-}
-console.log(compareTrue(false, false));  
+    return false; }
+}  
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
   return ((base * height) / 2);
 }
-console.log(calcArea(10, 50));
-
 // Desafio 3
 function splitSentence(array) {
   // seu código aqui
   let separa = array.split(' ');
   return separa;
 }
-
 // Desafio 4
 function concatName(array) {
   // seu código aqui
@@ -32,7 +28,6 @@ function concatName(array) {
   let ultimo = array[array.length - 1];
   return ultimo + ',' + ' ' + primeiro;
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
@@ -40,7 +35,6 @@ function footballPoints(wins, ties) {
   let vitoria = wins * 3;
   return empate + vitoria;
 }
-
 // Desafio 6
 function highestCount(array) {
   // seu código aqui
@@ -53,7 +47,6 @@ function highestCount(array) {
   }
   return vezes;
 }
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
@@ -65,7 +58,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   }
 }
-
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
@@ -83,7 +75,6 @@ function fizzBuzz(array) {
   }
   return frases;
 }
-
 // Desafio 9
 function encode(string) {
   // seu código aqui
