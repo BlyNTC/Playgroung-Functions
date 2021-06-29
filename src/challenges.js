@@ -99,9 +99,26 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
+  let code = [1,2,3,4,5];
+  let letra = ['a','e','i','o','u']
+  let letraFinder = ''
+  let deploy = '';
+  for(let i = 0;i<string.length;i+=1){
+    letraFinder = string[i];
+    let indexLetra = letra.indexOf(string[i])
+    if(string[i]===letra[indexLetra]){
+      let index = letra.indexOf(letraFinder)
+      deploy += code[index];
+    }else if(string[i]!==letra[indexLetra]){
+      let index = letra.indexOf(letraFinder)
+      deploy += string[i];
+    }
+  }
+  return deploy;
   // seu código aqui
 }
+encode('giboia');
 function decode() {
   // seu código aqui
 }
