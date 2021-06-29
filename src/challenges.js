@@ -11,10 +11,25 @@ function calcArea(base, heigth) {
   return (base*heigth)/2;
 }
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  var split = [];
+  var aux = '';
+  for(let i = 0; i<str.length; i+=1){
+    if(str[i] === ' '){
+      split.push(aux);
+      aux = '';
+    }
+    else if (i == str.length-1){
+      aux += str[i];
+      split.push(aux);
+      aux = '';
+    }
+    else{
+      aux += str[i];
+    }
+  }
+  return split;
 }
-
 // Desafio 4
 function concatName() {
   // seu código aqui
