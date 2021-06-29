@@ -81,7 +81,7 @@ function fizzBuzz(array) {
 function encode(phrase) {
   let newPhrase = '';
   for (let i = 0; i < phrase.length; i += 1) {
-    if ( phrase[i] === 'a') {
+    if (phrase[i] === 'a') {
       newPhrase += '1';
     } else if (phrase[i] === 'e') {
       newPhrase += '2';
@@ -101,7 +101,7 @@ function encode(phrase) {
 function decode(phrase) {
   let newPhrase = '';
   for (let i = 0; i < phrase.length; i += 1) {
-    if ( phrase[i] === '1') {
+    if (phrase[i] === '1') {
       newPhrase += 'a';
     } else if (phrase[i] === '2') {
       newPhrase += 'e';
