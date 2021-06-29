@@ -25,17 +25,15 @@ console.log (splitSentence(phraseSplit));
 
 // Desafio 4
 function concatName(sentenceConcat) {
-    var retornaPrimeiroUltimo = sentenceConcat [0] + sentenceConcat.lenght - 1;
-    return retornaPrimeiroUltimo;
+   // digitar codigo aqui
 }
-sentenceConcat = "Lucas Cassiano Ferraz Paolillo";
-console.log (retornaPrimeiroUltimo);
-
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties; 
 }
+console.log (footballPoints(1, 2));
+
 
 // Desafio 6
 function highestCount() {
