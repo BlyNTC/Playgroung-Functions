@@ -1,6 +1,14 @@
+let compareNum = {
+  numRef1: 5,
+  numRef2: 6,
+  numRef3: 5,
+  numRef4: 10
+}
+
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(num1, num2) {
+  if(num1 === num2){return true;}
+  else{return false;}
 }
 
 // Desafio 2
