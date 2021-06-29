@@ -1,4 +1,4 @@
-// Desafio 1
+// Desafio 1 - Gustavo Dias - Turma 14 - Tribo A
 function compareTrue() {
   // seu código aqui
 }
