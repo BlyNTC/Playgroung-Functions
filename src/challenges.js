@@ -7,8 +7,9 @@ function compareTrue(sum1, sum2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let calculo = (base * height) / 2;
+  return calculo;
 }
 
 // Desafio 3
