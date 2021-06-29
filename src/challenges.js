@@ -28,7 +28,7 @@ function splitSentence(frase) {
   // seu código aqui
 }
 
-console.log(splitSentence('vamo que vamo'));
+
 
 // Desafio 4
 function concatName(itens) {
@@ -37,13 +37,16 @@ let primeiroItem = itens [0];
 let ultimoItem = itens[itens.length -1];
 return ultimoItem + "," + " " + primeiroItem;
 }
-let itens = ['lucas', 'ferraz', 'paolilo'];
-console.log(concatName(itens));
+
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let empate = ties * 1;
+  let vitoria = wins * 3;
+  return empate + vitoria
 }
+
 
 // Desafio 6
 function highestCount() {
