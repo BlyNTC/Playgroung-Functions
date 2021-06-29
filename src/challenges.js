@@ -1,18 +1,19 @@
 // Desafio 1
+
 function compareTrue(a1, a2) {
   if (a1 === true && a2 === true) {
     return true;
-  } else {
+  }
     return false;
   }
 }
-
-compareTrue()
+compareTrue();
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(b, h) {
+  return (b * h) / 2;
 }
+calcArea(51, 1);
 
 // Desafio 3
 function splitSentence() {
