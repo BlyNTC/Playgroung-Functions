@@ -46,7 +46,7 @@ function concatName(arrayDeStrings) {
   return novoArray;
 }
 
-(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -60,9 +60,15 @@ footballPoints(1, 2);
 footballPoints(0, 0);
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayDeNumeros) {
+  for (let index = 0; index < arrayDeNumeros.length; index += 1); {
+
+  }
+  
 }
+
+
+
 
 // Desafio 7
 function catAndMouse() {
