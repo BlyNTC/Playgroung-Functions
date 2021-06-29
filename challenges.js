@@ -151,6 +151,11 @@ console.log(decode('h3 th2r2!'))
 
 // Ex10
 
-function name() {
-
-}
+function techList(arrayTech,name) {
+  for (i6 = 0; i6 < arrayTech.length; i6++){
+    let bloco = {
+      tech: arrayTech[i6],
+      name: name,
+    }
+    return bloco
+  }
