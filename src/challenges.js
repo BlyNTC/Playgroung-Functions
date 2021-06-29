@@ -1,17 +1,15 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
 
-  valor1 = true;
-  valor2 = true;
-  
+ 
   if (valor1 && valor2) {
     return true;
   } else {
     return false;
   }
-  // seu código aqui
+  
 }
-compareTrue();
+compareTrue(true, true);
 
 // Desafio 2
 function calcArea() {
