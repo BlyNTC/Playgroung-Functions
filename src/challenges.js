@@ -16,10 +16,13 @@ function calcArea(base, height) {
 }
 calcArea (51, 1);
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+// Desafio 3 - material consultado para resolução https://www.w3schools.com/jsref/jsref_split.asp
+function splitSentence(stringParam) {
+  let newArray = stringParam.split(" ")
+  return newArray
 }
+
+splitSentence('go Trybe');
 
 // Desafio 4
 function concatName() {
