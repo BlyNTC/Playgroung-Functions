@@ -44,13 +44,39 @@ function generatePhoneNumber(phone) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let bolA;
+  let bolB;
+  let bolC;
+   ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) ? bolA = true : bolA = false;
+   ((lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC))) ? bolB = true : bolB = false;
+   ((lineC < lineB + lineA) && (lineC > Math.abs(lineB - lineA))) ? bolC = true : bolC = false;
+   if(bolA == false | bolB == false | bolC == false) {
+     return false;
+   } else {
+     if (bolA == true) {
+       if(bolB == true) {
+         if(bolC == true) {
+           return true;
+         }
+       }
+     }
+   }
 }
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+  let counter = 0;
+  regEx = /[1-9]+/g;
+  index =  str.match(/[1-9]+/g);
+  for(let i in index){
+  counter = counter + Math.abs(index[i]);
+  }
+  if(counter == 1) {
+    return ('1 copo de água');
+  } else {
+    return (counter + ' copos de água');
+  }
 }
 
 module.exports = {
