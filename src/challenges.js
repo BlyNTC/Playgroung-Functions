@@ -19,9 +19,16 @@ function compareTrue(valor1, valor2) {
 
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+ triangulo = (base * height) / 2
+
+ return triangulo
 }
+
+calcArea(10, 50);
+calcArea(5, 2);
+calcArea(51, 1);
+
 
 // Desafio 3
 function splitSentence() {
