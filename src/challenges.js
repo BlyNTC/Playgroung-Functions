@@ -1,21 +1,41 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(a, b) {
   // seu código aqui
+  if(a == true && b == true){
+    return true;
+  }
+  else if(a == true && b == false){
+    return false;
+  }
+  else if (a == false && b == true){
+    return false;
+  }
+  else if (a == false && b == false){
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
+  return ((base * height)/2)
   // seu código aqui
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
+  let resultado = frase.split(' ');
+  return resultado
   // seu código aqui
 }
 
+console.log(splitSentence('vamo que vamo'));
+
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+let primeiroItem = array [0];
+let ultimoItem = array [array.lenght -1];
+return primeiroItem + " " + ultimoItem
 }
 
 // Desafio 5
