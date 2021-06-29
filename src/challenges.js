@@ -35,18 +35,30 @@ function concatName([array]) {
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let pontos = (wins * 3) + (ties * 1);
+  return pontos;
 }
 
 // Desafio 6
 function highestCount() {
   // seu código aqui
+
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  if ( Math.abs((cat1 - mouse)) < Math.abs((cat2 - mouse))){
+    return 'cat1';
+  }
+  else if ( Math.abs((cat2 - mouse)) < Math.abs((cat1 - mouse))){
+    return 'cat2';
+  }
+  else{
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
