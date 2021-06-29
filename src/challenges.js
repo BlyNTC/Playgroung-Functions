@@ -27,12 +27,12 @@ function splitSentence(sentenca) {
 // Desafio 4
 function concatName(nomePessoa) {
   // seu código aqui
-  return nomePessoa[nomePessoa.lenght - 1] + "," + nome[0];
+  return nomePessoa[nomePessoa.lenght - 1] + "," + nomePessoa[0];
 }
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  return (wins * 3) + ties
+  return (wins * 3) + ties;
 }
 // Desafio 6
 function highestCount() {
