@@ -16,6 +16,8 @@ function compareTrue(x, y) {
 
 // Desafio 3
 function splitSentence(string) {
+  //Método split
+  //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
   return(string.split(' '));
 }
 
@@ -41,8 +43,14 @@ function highestCount(values) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  //Referência ao operador condicional ternário 
+  //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+  if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+    return ("os gatos trombam e o rato foge");
+  } else {
+    return Math.abs(mouse - cat1) < Math.abs(mouse - cat2) ? 'cat1' : 'cat2';
+  }
 }
 
 // Desafio 8
