@@ -54,17 +54,17 @@ function highestCount(numeros) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if (cat1 === cat2) {
-    console.log('os gatos trombam e o rato foge');
+    return "os gatos trombam e o rato foge";
   }
 
   let gato1 = mouse - cat1;
   let gato2 = mouse - cat2;
 
   if (gato1 < gato2) {
-    console.log('cat1');
+    return "cat1";
   }
   else {
-    console.log('cat2');
+    return "cat2";
   }
 }
 
