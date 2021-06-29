@@ -21,7 +21,7 @@ function splitSentence(a) {
 
 // Desafio 4
 function concatName(array) {
-  let array= [0] + array[array.lenght-1];
+
 
 
 // percorrer os itens de um array 
