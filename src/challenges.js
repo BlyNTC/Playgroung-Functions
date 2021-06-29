@@ -9,8 +9,10 @@ function compareTrue(valor1, valor2) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  calcArea = (base*height)/2;
+  return calcArea;
 }
 
 // Desafio 3
