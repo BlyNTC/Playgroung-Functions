@@ -8,7 +8,8 @@ function compareTrue(valor1, valor2) {
 }
 // Desafio 2
 function calcArea(area, height) {
-  return area * height / 2
+  let output = area * height / 2;
+  return output;
 }
 // Desafio 3
 function splitSentence(string) {
@@ -38,10 +39,12 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(win, ties) {
+  let pontosVitorias = win * 3;
+  let pontosEmpates = ties * 1;
+  return (pontosVitorias + pontosEmpates);
 }
-
+console.log(footballPoints(1, 2));
 // Desafio 6
 function highestCount() {
   // seu código aqui
