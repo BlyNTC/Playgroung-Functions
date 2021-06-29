@@ -7,25 +7,24 @@ function compareTrue(a1, a2) {
     return false;
   }
 }
-compareTrue();
 
 // Desafio 2
 function calcArea(b, h) {
   return (b * h) / 2;
 }
-calcArea();
 
 // Desafio 3
 function splitSentence(arraySentence) {
   return arraySentence.split(' ');
 }
-splitSentence();
 
 // Desafio 4
 function concatName(arSentence) {
-  return arSentence[arSentence.length - 1] + ', ' + arSentence[0];
+  let lastItem = arSentence.length - 1];
+  let firstItem = arSentence[0];
+
+  return arSentence[lastName + ', ' + firstItem];
 }
-concatName();
 
 // Desafio 5
 function footballPoints() {
