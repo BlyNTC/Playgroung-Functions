@@ -1,7 +1,11 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-}
+let param1 = true;
+let param2 = true;
+function compareTrue(param1, param2) {
+  if (param1 = true && param2 = true) {
+    consolel
+  }
+  };
 
 // Desafio 2
 function calcArea() {
@@ -57,4 +61,5 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
+ ;
