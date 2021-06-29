@@ -1,16 +1,16 @@
 // Desafio 1
-function compareTrue(valor1, valor2); {
+function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
-    return true;
+    return true
   } else {
-    return false;
+    return false
   } 
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) / 2;
-  return area;
+  let area = (base * height)/2
+  return area
 }
 
 // Desafio 3
@@ -27,13 +27,13 @@ function concatName() {
 
 // Desafio 5
 function footballPoints() {
-  let pontos = 0;
+  let pontos = 0
   switch (wins, ties) {
     case wins:
-      pontos += 3;
+      pontos += 3
       break
     case ties:
-      pontos += 1;
+      pontos += 1
       break
   }
   return pontos
