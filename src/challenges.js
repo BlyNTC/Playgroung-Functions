@@ -66,13 +66,13 @@ function highestCount(arrayah) {
   let highestnum = arrayah[0];
 
   for (let key of arrayah){
-    if (arrayah[key] > highestnum){
-      highestnum = arrayah[key];
+    if (key >= highestnum){
+      highestnum = key;
     }
   }
 
-  for (let key of arrayah){
-    if (highestnum == arrayah[key]){
+  for (let index of arrayah){
+    if (highestnum == index){
       numOft++;
     }
   }
