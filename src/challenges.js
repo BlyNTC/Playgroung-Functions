@@ -62,27 +62,57 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  lista = []
+  let lista = [];
   for (let index of array) {
-    if (index % 3 == 0 && index % 5 == 0) {
-      lista.push("fizzBuzz");
-    } else if (index % 3 == 0) {
-      lista.push("fizz");
-    } else if (index % 5 == 0) {
-      lista.push("buzz")
+    if (index % 3 === 0 && index % 5 === 0) {
+      lista.push('fizzBuzz');
+    } else if (index % 3 === 0) {
+      lista.push('fizz');
+    } else if (index % 5 === 0) {
+      lista.push('buzz');
     } else {
-      lista.push("bug!")
+      lista.push('bug!');
     }
   }
   return lista;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(oi) {
+  let array = oi.split("");
+  for (let index in array){
+    if(array[index] === 'a') {
+      array[index] = 1;
+    } else if (array[index] === 'e') {
+      array[index] = 2;
+    } else if (array[index] === 'i') {
+      array[index] = 3;
+    } else if (array[index] === 'o') {
+      array[index] = 4;
+    } else if (array[index] === 'u') {
+      array[index] = 5;
+    }
+  }
+  let junto = array.join('');
+  return junto;
 }
-function decode() {
-  // seu código aqui
+function decode(oi) {
+  let array = oi.split("");
+  for (let index in array){
+    if(array[index] === '1') {
+      array[index] = 'a';
+    } else if (array[index] === '2') {
+      array[index] = 'e';
+    } else if (array[index] === '3') {
+      array[index] = 'i';
+    } else if (array[index] === '4') {
+      array[index] = 'o';
+    } else if (array[index] === '5') {
+      array[index] = 'u';
+    }
+  }
+  let junto = array.join('')
+  return junto;
 }
 
 module.exports = {
