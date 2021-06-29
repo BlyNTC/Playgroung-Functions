@@ -149,11 +149,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-let a = true;
-let b = false;
-
-let c = 'srt';
-
-c = c + a? ' oi': 'tchau';
-console.log(c)
