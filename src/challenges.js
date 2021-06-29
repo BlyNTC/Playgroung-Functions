@@ -22,9 +22,11 @@ function splitSentence(text) {
 } //console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
+function concatName(words) {
+  let firstLastWords = words[words.length - 1] + ", " + words[0];
+  return firstLastWords;
   // seu código aqui
-}
+} //console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints() {
