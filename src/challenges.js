@@ -12,9 +12,11 @@ compareTrue();
 
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+let areaDoTriangulo = (base * height)/ 2
+  
 }
+calcArea();
 
 // Desafio 3
 function splitSentence() {
