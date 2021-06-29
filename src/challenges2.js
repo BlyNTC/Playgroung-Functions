@@ -17,7 +17,7 @@ function generatePhoneNumber(array) {
   if (array.length === 11) {
     let cache = {};
     for (let num of array) {
-      cache[num] ? cache[num] += 1 : cache[num] = 1;
+      cache[num] = cache[num] ? cache[num] += 1 : 1;
       if (num < 0 || num > 9 || cache[num] >= 3) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
@@ -35,7 +35,7 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  return ((lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) 
+  return ((lineA < lineB + lineC && lineA > Math.abs(lineB - lineC))
   || (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC))
   || (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)));
 }
@@ -47,7 +47,7 @@ function hydrate(string) {
   for (let number of string) {
     if (number !== ' ') result += Number(number);
   }
-  return result === 1 ? `1 copo de água` : `${result} copos de água`;
+  return result === 1 ? '1 copo de água' : `${result} copos de água`;
 }
 
 module.exports = {

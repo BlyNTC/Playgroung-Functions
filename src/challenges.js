@@ -28,10 +28,11 @@ function highestCount(array) {
   let highest;
   let result = 0;
   for (let num of array) {
-    if (!highest || highest < num) highest = num;
-  }
-  for (let num of array) {
     if (num === highest) result += 1;
+    else if (!highest || highest < num) {
+      highest = num;
+      result = 1;
+    }
   }
   return result;
 }
