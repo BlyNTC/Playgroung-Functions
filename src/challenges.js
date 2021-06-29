@@ -7,10 +7,6 @@ function compareTrue(param1, param2) {
   }
 }
 
-let verdadeiro = true;
-let falso = true;
-console.log(compareTrue(verdadeiro, falso));
-
 // Desafio 2
 function calcArea(base, heigth) {
   let multiArea = base * heigth;
@@ -19,8 +15,9 @@ function calcArea(base, heigth) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  // string.split([separado quando conter :])
+  return string.split([' ']);
 }
 
 // Desafio 4
