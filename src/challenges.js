@@ -1,28 +1,29 @@
 // Desafio 1
-function compareTrue(comp1,comp2) {
+function compareTrue(comp1, comp2) {
   // seu código aqui
   let resultadoComparacao;
-  if ((comp1===true && comp2===true)){
-      resultadoComparacao = true;
+  if ((comp1 === true && comp2 === true)) {
+    resultadoComparacao = true;
   } else {
-  return false
+    return false;
   }
   return resultadoComparacao;
-} 
+}
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   // seu código aqui
 
-     let calculoArea = (base*height)/2;
+  let calculoArea = (base * height) / 2;
 
-     return calculoArea
-} 
-
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+  return calculoArea;
 }
 
+// Desafio 3
+function splitSentence(sentenca) {
+  // seu código aqui
+  let divisaoDeSentenca = sentenca.split(" ");
+  return divisaoDeSentenca;
+}
 // Desafio 4
 function concatName() {
   // seu código aqui
