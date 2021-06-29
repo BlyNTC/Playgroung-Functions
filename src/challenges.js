@@ -39,7 +39,7 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   // seu código aqui
   // fonte: https://www.youtube.com/watch?v=8xqU_hXb-9k (math.max)
-  
+
   let maiorNumero = Math.max(...array);
 
   let contador = 0;
@@ -80,9 +80,38 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+
+  let resultado = [];
+
+  for (let cont in array) {
+
+    if (array[cont] % 3 === 0 && array[cont] % 5 === 0) {
+
+      resultado.push("fizzBuzz");
+
+    } else if (array[cont] % 3 === 0) {
+
+      resultado.push("fizz");
+
+    } else if (array[cont] % 5 === 0) {
+
+      resultado.push("buzz");
+
+    } else {
+
+      resultado.push("bug!");
+
+    }
+  }
+
+  return resultado;
+
 }
+
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode() {
