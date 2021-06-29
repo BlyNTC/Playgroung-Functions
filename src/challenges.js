@@ -1,26 +1,22 @@
 // Desafio 1
 function compareTrue(p1, p2) {
-  // seu código aqui
-  if (p1 === true && p2 === true)
-  {
+// seu código aqui
+  if (p1 === true && p2 === true) {
     return true;
-  }
-  else
-  {
+  } else {
     return false;
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  // seu código aqui
-  return ((base*height)/2);
+// seu código aqui
+  return ((base * height) / 2);
 }
 
-// Desafio 3
-//https://www.w3schools.com/jsref/jsref_split.asp
+// Desafio 3 //https://www.w3schools.com/jsref/jsref_split.asp
 function splitSentence(string) {
-  // seu código aqui
+// seu código aqui
   return string.split(" ");
 }
 
@@ -29,11 +25,9 @@ function splitSentence(string) {
 function concatName(array) {
   // seu código aqui
   let newArray = [];
-  let arrayLength = array.length-1;
-  for (let i=(array.length-1); i>=0; i-=1)
-  {
-    if (i===0 || i===(arrayLength))
-    {
+  let arrayLength = array.length - 1;
+  for (let i = (array.length - 1); i >= 0; i -= 1) {
+    if (i === 0 || i === (arrayLength)) {
       newArray.push(array[i]);
     }
   }
@@ -43,7 +37,7 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  return (wins*3+ties);
+  return (wins * 3 + ties);
 
 }
 
@@ -51,20 +45,16 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   // seu código aqui
   let maior = array[0];
-  let n=0;
+  let n = 0;
 
-  for (let i of array)
-  {
-    if (i > maior)
-    {
+  for (let i of array) {
+    if (i > maior) {
       maior = i;
     }
   }
-  for (let i of array)
-  {
-    if (maior === i)
-    {
-      n+=1;
+  for (let i of array) {
+    if (maior === i) {
+      n += 1;
     }
   }
   return n;
@@ -73,16 +63,11 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if ((cat1-mouse) > (cat2-mouse))
-  {
+  if ((cat1 - mouse) > (cat2 - mouse)) {
     return "cat2";
-  }
-  else if ((mouse-cat1) < (cat2-mouse))
-  {
+  } else if ((mouse - cat1) < (cat2 - mouse)) {
     return "cat1"
-  }
-  else if ((mouse-cat1) === (cat2-mouse))
-  {
+  } else if ((mouse - cat1) === (cat2 - mouse)) {
     return "os gatos trombam e o rato foge";
   }
 }
@@ -92,22 +77,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   newArray = [];
-  for (let i of array)
-  {
-    if (i%3 === 0 && i%5 === 0)
-    {
+  for (let i of array) {
+    if (i % 3 === 0 && i % 5 === 0) {
       newArray.push("fizzBuzz");
-    }
-    else if (i%3 === 0)
-    {
+    } else if (i % 3 === 0) {
       newArray.push("fizz");
-    }
-    else if (i%5 === 0)
-    {
+    } else if (i % 5 === 0) {
       newArray.push("buzz");
-    }
-    else
-    {
+    } else {
       newArray.push("bug!");
     }
   }
@@ -118,30 +95,18 @@ function fizzBuzz(array) {
 function encode(string1) {
   // seu código aqui
   let array = [];
-  for (let i=0; i<string1.length; i+=1)
-  {
-    if (string1[i] === "a")
-    {
+  for (let i = 0; i < string1.length; i += 1) {
+    if (string1[i] === "a") {
       array.push("1");
-    }
-    else if (string1[i] === "e")
-    {      
+    } else if (string1[i] === "e") {
       array.push("2");
-    }
-    else if (string1[i] === "i")
-    {      
+    } else if (string1[i] === "i") {
       array.push("3");
-    }
-    else if (string1[i] === "o")
-    {      
+    } else if (string1[i] === "o") {
       array.push("4");
-    }
-    else if (string1[i] === "u")
-    {      
+    } else if (string1[i] === "u") {
       array.push("5");
-    }
-    else
-    {
+    } else {
       array.push(string1[i]);
     }
   }
@@ -149,33 +114,22 @@ function encode(string1) {
   palavra = array.join("");
   return palavra;
 }
+
 function decode(string2) {
   // seu código aqui
   let array = [];
-  for (let i=0; i<string2.length; i+=1)
-  {
-    if (string2[i] === "1")
-    {
+  for (let i = 0; i < string2.length; i += 1) {
+    if (string2[i] === "1") {
       array.push("a");
-    }
-    else if (string2[i] === "2")
-    {      
+    } else if (string2[i] === "2") {
       array.push("e");
-    }
-    else if (string2[i] === "3")
-    {      
+    } else if (string2[i] === "3") {
       array.push("i");
-    }
-    else if (string2[i] === "4")
-    {      
+    } else if (string2[i] === "4") {
       array.push("o");
-    }
-    else if (string2[i] === "5")
-    {      
+    } else if (string2[i] === "5") {
       array.push("u");
-    }
-    else
-    {
+    } else {
       array.push(string2[i]);
     }
   }
