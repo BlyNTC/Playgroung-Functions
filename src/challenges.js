@@ -13,7 +13,9 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   let strArray;
-  //explicação do metodo split https://stackoverflow.com/questions/20169809/pushing-each-word-to-an-array
+
+  // https://stackoverflow.com/questions/20169809/pushing-each-word-to-an-array
+
   strArray = string.split(' ');
 
   return strArray;
@@ -21,14 +23,16 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(nameArray) {
-  let name = nameArray[nameArray.length-1] + ', ' + nameArray[0];
+  let name = nameArray[nameArray.length - 1] + ', ' + nameArray[0];
 
   return name;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = (wins * 3) + (ties);
+
+  return pontos;
 }
 
 // Desafio 6
