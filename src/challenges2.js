@@ -73,12 +73,20 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
+  if((lineA < lineB + lineC && lineA > Math.abs(lineB - lineC))||
+  (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC))||
+  (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB))) return true;
+  else return false;
 };
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let result = 0;
+  string = string.replace(/\D/g, ' ');
+  for(let number of string){
+    if(number !== ' ') result += Number(number)
+  };
+  return result === 1? `1 copo de água`: `${result} copos de água`
 };
 
 module.exports = {
