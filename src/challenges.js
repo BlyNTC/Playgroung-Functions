@@ -11,13 +11,13 @@ compareTrue ()
 
 // Desafio 2
 function calcArea(base, height) {
-  area = ((base * height)/2)
+  area = ((base * height)/2);
+  return area;
 }
-calcArea (51, 1)
-console.log(area)
+calcArea (51, 1);
 
 // Desafio 3
-function splitSentence(a) {
+function splitSentence() {
   // seu código aqui
 }
 
