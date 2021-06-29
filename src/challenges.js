@@ -117,7 +117,7 @@ function decode(code) {
   return string;
 }
 
-console.log(decode('h2ll4'));
+// console.log(decode('h2ll4'));
 
 module.exports = {
   calcArea,
