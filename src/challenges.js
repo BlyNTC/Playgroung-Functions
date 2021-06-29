@@ -16,14 +16,18 @@ function calcArea(base, heigth) {
 
 // Desafio 3
 function splitSentence(string) {
-  // string.split([separado quando conter :])
+  // string.split([separado quando conter : ' '])
   return string.split([' ']);
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  //Array.of para criar array com elementos estabelecidos.
+  array = Array.of(array[array.length - 1], array[0]);
+  //join() junta os elementos do array para uma string
+  return array.join(', ');
 }
+
 
 // Desafio 5
 function footballPoints() {
