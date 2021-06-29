@@ -7,20 +7,23 @@ function compareTrue(param1, param2) {
    }
 }
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) { 
+  var resultado = (base * height / 2)
+  return resultado;
 }
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let resultado = string.split(" ");
+    return resultado;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(lista) {
+  let primeiroItem = lista[0]
+  let ultimoItem = lista[lista.length -1]
+  var conjunto = primeiroItem + ', ' + ultimoItem
+  return conjunto
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
