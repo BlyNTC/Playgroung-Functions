@@ -1,19 +1,19 @@
 // Desafio 10
 function techList(arr, name) {
-  let studies = arr.sort()
-  let newArr = []
+  let studies = arr.sort();
+  let newArr = [];
 
-  if(studies.length == 0){
-    return 'Vazio!'
+  if (studies.length === 0){
+    return 'Vazio!';
   } else {
     studies.forEach(el => {
       newArr.push({
         tech: el, 
         name: name
-      })
+      });
     });
   
-    return newArr
+    return newArr;
   }
 }
 
@@ -23,8 +23,8 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+
 }
 
 // Desafio 13
