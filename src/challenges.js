@@ -18,10 +18,13 @@ function splitSentence(string) {
   return array;
 }
 
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let array1 = array[0];
+  let array2 = array[array.length-1];
+  let arrayAuxiliar = array2.concat(", ", array1);
+  let string = arrayAuxiliar.toString();
+  return string;
 }
 
 // Desafio 5
