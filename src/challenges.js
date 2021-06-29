@@ -39,11 +39,17 @@ console.log (array);
 /* Consultei o seguinte site para conseguir realizar esse desafio.
    link: https://blog.betrybe.com/javascript/javascript-split/ */
 
-
+let myString = " ";
 // Desafio 4
-function concatName() {
+function concatName(arrays) {
   // seu código aqui
+  myString = arrays[arrays.length -1];
+  myString = myString +", "+ arrays[0];
+  return myString;
 }
+concatName(['captain', 'my', 'captain']);
+console.log(myString);
+
 
 // Desafio 5
 function footballPoints() {
