@@ -6,7 +6,7 @@ function compareTrue(bool1, bool2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height)/2;
+  let area = (base * height) / 2;
   return area;
 }
 
@@ -18,7 +18,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(arr) {
-  return  (arr[arr.length - 1]+ ", " + arr[0]);
+  return (arr[arr.length - 1] + ", " + arr[0]);
 }
 
 // Desafio 5
@@ -30,7 +30,7 @@ function footballPoints(wins, ties) {
 function highestCount(arr) {
   let order = arr.sort((a, b) => a - b);
   let maj = 0;
-  for(i = 0; i <= arr.length; i++) {
+  for (i = 0; i <= arr.length; i++) {
     if (arr[i] === order[arr.length - 1]) {
       maj++;
     }
@@ -50,11 +50,11 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arr) {
   let control = []
-  for(let index in arr){
+  for (let index in arr) {
     let contador5 = (arr[index] % 5);
     let contador3 = (arr[index] % 3);
-    if(contador5 == 0 | contador3 == 0) {
-      (arr[index] % 5 == 0) && (arr[index] % 3 == 0) ? control.push("fizzBuzz") : arr[index] % 5 == 0 ? control.push("buzz") : control.push("fizz");
+    if (contador5 == 0 | contador3 == 0) {
+      (arr[index] % 5 == 0) && (arr[index] % 3 == 0) ? control.push("fizzBuzz"): arr[index] % 5 == 0 ? control.push("buzz") : control.push("fizz");
     } else {
       control.push("bug!");
     }
@@ -66,11 +66,11 @@ function fizzBuzz(arr) {
 function encode(str) {
   let control = [];
   let split = str.split("")
-  for (c = 0; c <= 1; c++){
+  for (c = 0; c <= 1; c++) {
     control = split.join("");
-    if (c == 0){
-      for (i in split){
-        switch(split[i]) {
+    if (c == 0) {
+      for (i in split) {
+        switch (split[i]) {
           case "a":
             split[i] = "1";
             break;
@@ -87,20 +87,21 @@ function encode(str) {
             split[i] = "5";
             break;
         }
-      } 
-    } else { 
-      return control; 
+      }
+    } else {
+      return control;
     }
   }
 }
+
 function decode(str) {
   let control = [];
   let split = str.split("")
-  for (c = 0; c <= 1; c++){
+  for (c = 0; c <= 1; c++) {
     control = split.join("");
-    if (c == 0){
-      for (i in split){
-        switch(split[i]) {
+    if (c == 0) {
+      for (i in split) {
+        switch (split[i]) {
           case "1":
             split[i] = "a";
             break;
@@ -117,12 +118,12 @@ function decode(str) {
             split[i] = "u";
             break;
         }
-      } 
-    } else { 
-      return control; 
+      }
+    } else {
+      return control;
     }
   }
-} 
+}
 
 module.exports = {
   calcArea,
