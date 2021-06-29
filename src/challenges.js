@@ -31,8 +31,21 @@ function concatName(info) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(vitorias, empates) {
+  let ponto = 0;
+  let vitor = 0;
+  let empate = 0;
+
+  for (let i = 0; i < vitorias; i += 1) {
+    vitor += 3;
+  }
+
+  for (let i = 0; i < empates; i += 1) {
+    empate += 1;
+  }
+  ponto = vitor + empate;
+
+  return ponto;
 }
 
 // Desafio 6
