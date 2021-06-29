@@ -61,18 +61,21 @@ function highestCount(numeros) {
   // seu código aqui
   let maior = -10;
   let repete = 0;
-  for(let i = 0; i <= numeros.length; i += 1){
-    if(numeros[i] >= maior){
+  for(let i = 0; i <= numeros.length; i += 1) {
+
+    if (numeros[i] >= maior) {
       maior = numeros[i];
     }
   }
-  for(num of numeros){
-    if(maior === num){
+
+  for (num of numeros) {
+
+    if (maior === num) {
       repete = repete + 1;
     }
   }
 
-  console.log(repete)
+  console.log(repete);
   return repete;
 }
 
@@ -80,9 +83,23 @@ function highestCount(numeros) {
 // highestCount(variados);
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let dcat1 = Math.abs(cat1 - mouse);
+  let dcat2 = Math.abs(cat2 - mouse);
+  if (dcat1 === dcat2) {
+    return 'os gatos trombam e o rato foge';
+
+  } else 
+    if (dcat1 < dcat2) {
+      return 'cat1';
+    } else 
+        if (dcat2 < dcat1) {
+          return 'cat2';
+        }
+    
 }
+catAndMouse(1, 0, 2)
 
 // Desafio 8
 function fizzBuzz() {
