@@ -16,16 +16,18 @@ function calcArea(base, height) {
   area = (base * height) / 2;
   return area; 
 }
-console.log(calcArea(20,10,));
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(stringRef) {
+  let str = stringRef.split(' ');
+  return str;
 }
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
-}
+  // ao receber uma array de strings, retorna uma string com o fomato "ultimo item, primeiro item", independente do tamanho da array
+  
+}console.log(concatName());
 
 // Desafio 5
 function footballPoints() {
