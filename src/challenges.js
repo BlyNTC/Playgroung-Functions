@@ -120,9 +120,34 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  newfrase = '';
+  for (let letter of frase) {
+      switch (letter) {
+          case 'a':
+              newfrase += '1';
+              break;
+          case 'e':
+              newfrase += '2';
+              break;
+          case 'i':
+              newfrase += '3';
+              break;
+          case 'o':
+              newfrase += '4';
+              break;
+          case 'u':
+              newfrase += '5';
+              break;
+          
+          default:
+              newfrase += letter;
+      
+      }
+  }
+  return newfrase;
 }
+
 function decode() {
   // seu código aqui
 }
