@@ -22,13 +22,25 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let sum = wins * 3 + ties;
+  let sum = wins*3 + ties;
   return sum;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let higher = array[0];
+  let qt = 0;
+  for(let num of array){
+    if(higher < num){
+      higher = num;
+    }
+  }
+  for(let elem of array){
+    if(elem === higher){
+      qt += 1;
+    }
+  }
+  return qt;
 }
 
 // Desafio 7
