@@ -57,14 +57,13 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let resultadoDoArray = [];
-
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       resultadoDoArray.push('fizzBuzz');
     } else if (array[index] % 3 === 0) {
       resultadoDoArray.push('fizz');
     } else if (array[index] % 5 === 0) {
-      resultadoDoArray.push('buzz'); 
+      resultadoDoArray.push('buzz');
     } else {
       resultadoDoArray.push('bug!');
     }
@@ -73,11 +72,55 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let texto = string.split('');
+  for (let result = 0; result < texto.length; result += 1) {
+    switch (texto[result]) {
+    case 'a':
+      texto[result] = '1';
+      break;
+    case 'e':
+      texto[result] = '2';
+      break;
+    case 'i':
+      texto[result] = '3';
+      break;
+    case 'o':
+      texto[result] = '4';
+      break;
+    case 'u':
+      texto[result] = '5';
+      break;
+    default:
+      break;
+    }
+  }
+  return texto.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let texto = string.split('');
+  for (let result = 0; result < texto.length; result += 1) {
+    switch (texto[result]) {
+    case '1':
+      texto[result] = 'a';
+      break;
+    case '2':
+      texto[result] = 'e';
+      break;
+    case '3':
+      texto[result] = 'i';
+      break;
+    case '4':
+      texto[result] = 'o';
+      break;
+    case '5':
+      texto[result] = 'u';
+      break;
+    default:
+      break;
+    }
+  }
+  return texto.join('');
 }
 
 module.exports = {
