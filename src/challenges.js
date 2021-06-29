@@ -17,7 +17,8 @@ function splitSentence(stringSplitting) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(stringConcatenation) {
+  return `${stringConcatenation[stringConcatenation.length - 1]}, ${stringConcatenation[0]}` ;
   // seu código aqui
 }
 
