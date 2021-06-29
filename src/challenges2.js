@@ -1,4 +1,15 @@
 // Desafio 10
+function sortList (listObjects) {
+  listObjects.sort(function (obj1, obj2) {
+    if (obj1.tech < obj2.tech) {
+      return -1;
+    } else if (obj1.tech > obj2.tech) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+}
 function techList(array, name) {
   let listObjects = [];
   for (let elem of array) {
@@ -8,15 +19,7 @@ function techList(array, name) {
     };
     listObjects.push(object);
   }
-  listObjects.sort(function (obj1,obj2) {
-    if (obj1.tech < obj2.tech) {
-      return -1;
-    } else if (obj1.tech > obj2.tech) {
-      return 1;
-    } else {
-      return 0;
-    }
-  })
+  sortList(listObjects);
   return listObjects;
 }
 
