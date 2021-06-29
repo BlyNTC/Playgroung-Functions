@@ -21,9 +21,16 @@ function splitSentence(param) {
   return separaFrase
 }
 
+// Fonte que usei para o desafio 3: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
+
 // Desafio 4
-function concatName() {
+function concatName(param) {
   // seu código aqui
+  let palavra1 = param[0];
+  let palavra2 = param[param.length - 1];
+  let palavras = palavra2 + ', ' + palavra1
+  return palavras;
+
 }
 
 // Desafio 5
