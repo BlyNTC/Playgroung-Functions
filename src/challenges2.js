@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(array, name) {
   if (array.length === 0) {
-    console.log('Vazio!');
+    return 'Vazio!';
   }
 
   if (array.length === 5) {
