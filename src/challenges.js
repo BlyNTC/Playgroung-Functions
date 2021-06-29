@@ -83,12 +83,20 @@ highestCount([1, 9, 2, 3, 9, 5, 7]);
 highestCount([-2, -2, -1]);
 
 // Deafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  distanceCat1 = Math.abs(cat1 - mouse);
+  distanceCat2 = Math.abs(cat2 - mouse);
+
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1'
+  } else if (distanceCat1 > distanceCat2) {
+    return 'cat2'
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
 
-
-
+console.log(catAndMouse(0, 3, 2));
 
 // Desafio 8
 function fizzBuzz() {
