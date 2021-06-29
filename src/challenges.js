@@ -2,22 +2,25 @@
 function compareTrue(param1, param2) {
   // seu código aqui
   if (param1 === true && param2 === true ) {
-    return true
+    return true;
   } else if (param1 === false && param2 === false) {
-    return false
+    return false;
   }  else if (param1 === false && param2 === true) {
-    return false
+    return false;
   } else if (param1 === true && param2 === false) {
-    return false
+    return false;
   }
 }
 
-console.log(compareTrue(false, false))
-
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  let triangleArea;
+  triangleArea = (base * height) / 2;
+  return triangleArea;
 }
+
+console.log(calcArea(10, 50))
 
 
 
