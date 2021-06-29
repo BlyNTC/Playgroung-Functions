@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(p1, p2) {
-  if (p1 && p2){
+  if (p1 && p2) {
     return true;
-  }else {
+  } else {
     return false;
   }
 }
@@ -11,14 +11,30 @@ function compareTrue(p1, p2) {
 function calcArea(base, height) {
   let area = 0;
 
-  area = (base*height)/2;
+  area = (base * height) / 2;
 
   return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+
+  let arrayAuxiliar = frase.split('');
+  let arrayFinal = [];
+  let n = 0;
+  let palavra = '';
+
+  for (let index = 0; index <= arrayAuxiliar.length; index += 1) {
+
+    if ((arrayAuxiliar[index] != ' ') && (index < arrayAuxiliar.length)) {
+      palavra = palavra.concat(arrayAuxiliar[index]);
+    } else {
+      arrayFinal[n] = palavra;
+      n += 1;
+      palavra = '';
+    }
+  }
+  return arrayFinal;
 }
 
 // Desafio 4
@@ -50,6 +66,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
