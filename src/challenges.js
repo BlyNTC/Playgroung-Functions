@@ -65,12 +65,24 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge'
   }
   // seu código aqui
-} console.log(catAndMouse(10, 5, 5));
+} //console.log(catAndMouse(10, 5, 5));
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(parametros) {
+  let vetor2 = [];
+  for(let index = 0; index < parametros.length; index += 1) {
+    if(parametros[index] % 5 === 0 && parametros[index] % 3 === 0) {
+      vetor2.push("fizzBuzz");
+    } else if(parametros[index] % 5 === 0) {
+      vetor2.push("buzz");
+    } else if(parametros[index] % 3 === 0) {
+      vetor2.push("fizz");
+    } else {
+      vetor2.push("bug!");
+    }
+  } return vetor2;
   // seu código aqui
-}
+} //console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
