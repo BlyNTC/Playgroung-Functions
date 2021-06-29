@@ -17,19 +17,21 @@ function splitSentence(string) {
   return string.split(' ');
 }
 
-// console.log(splitSentence("go Trybe"));
+// console.log(splitSentence("go  Trybe"));
 
 // Desafio 4
 function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}`;
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties * 1);
 }
+
+console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount() {
