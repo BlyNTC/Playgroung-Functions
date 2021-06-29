@@ -115,6 +115,8 @@ param = param.replaceAll('5', 'u')
 return param
 }
 
+// Fonte que usei para o desafio 9: https://www.alura.com.br/artigos/trocando-caracteres-de-uma-string-no-java
+
 module.exports = {
   calcArea,
   catAndMouse,
