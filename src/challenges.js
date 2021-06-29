@@ -50,12 +50,21 @@ function highestCount(numeros) {
   return vezes;
 }
 
-
-
-
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let gato1 = mouse - cat1;
+  let gato2 = mouse - cat2;
+
+  if(gato1 === gato2) {
+    return 'os gatos trombam e o rato foge';
+  }
+  else if (gato1 < gato2) {
+    return 'cat1';
+  }
+  else {
+    return 'cat2';
+  }
 }
 
 // Desafio 8
