@@ -8,26 +8,26 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let areaTriangulo = (base*height)/2;
+  let areaTriangulo = (base * height) / 2;
   return areaTriangulo;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  let array = string.split(" ");
+  let array = string.split(' ');
   return array;
 }
 
 // Desafio 4
 function concatName(array) {
-  let last = array.length -1;
-  let string = array[last] + ", " + array[0];
+  let last = array.length - 1;
+  let string = array[last] + ', ' + array[0];
   return string;
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
-  let points = wins*3 + ties;
+function footballPoints(wins, ties) {
+  let points = wins * 3 + ties;
   return points;
 }
 
@@ -37,11 +37,11 @@ function highestCount(array) {
   for (let i of array) {
     i > highest ? highest = i : highest;
   }
-  let highestCount = 0;
+  let ount = 0;
   for (let i of array) {
-    i === highest ? highestCount +=1 : highestCount;
+    i === highest ? count += 1 : count;
   }
-  return highestCount;
+  return count;
 }
 
 // Desafio 7
@@ -49,26 +49,25 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(cat1 - mouse);
   let distCat2 = Math.abs(cat2 - mouse);
   if (distCat1 < distCat2) {
-    return "cat1";
+    return 'cat1';
   } else if (distCat2 < distCat1) {
-    return "cat2";
-  } else {
-    return "os gatos trombam e o rato foge"
+    return 'cat2';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   let result = [];
   for (let i of array) {
-    if (i%3===0 && i%5===0) {
+    if (i % 3 === 0 && i % 5 === 0) {
       result.push("fizzBuzz");
-    } else if (i%3===0) {
+    } else if (i % 3 === 0) {
       result.push("fizz");
-    } else if (i%5===0) {
+    } else if (i % 5 === 0) {
       result.push("buzz");
     } else {
-      result.push("bug!")
+      result.push("bug!");
     }
   }
   return result;
@@ -80,7 +79,7 @@ function encode(string) {
   for (let i in array) {
     switch (array[i]) {
       case 'a':
-        array[i]="1";
+        array[i] = "1";
         break;
       case 'e':
         array[i] = "2";
@@ -94,10 +93,10 @@ function encode(string) {
       case 'u':
         array[i] = "5";
         break;
-        
+
     }
   }
-  array = array.join("");
+  array = array.join('');
   return array;
 }
 function decode(string) {
@@ -105,7 +104,7 @@ function decode(string) {
   for (let i in array) {
     switch (array[i]) {
       case '1':
-        array[i]="a";
+        array[i] = "a";
         break;
       case '2':
         array[i] = "e";
@@ -119,7 +118,6 @@ function decode(string) {
       case '5':
         array[i] = "u";
         break;
-        
     }
   }
   array = array.join("");
