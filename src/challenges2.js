@@ -1,13 +1,22 @@
 // Desafio 10
 function techList(array, name) {
   let listObjects = [];
-  for (elem of array) {
+  for (let elem of array) {
     let object = {
       tech: elem,
       name: name
-    }
+    };
     listObjects.push(object);
   }
+  listObjects.sort(function (obj1,obj2) {
+    if (obj1.tech < obj2.tech) {
+      return -1;
+    } else if (obj1.tech > obj2.tech) {
+      return 1;
+    } else {
+      return 0;
+    }
+  })
   return listObjects;
 }
 
