@@ -1,10 +1,7 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true) {
-    return true;
-  } else {
-    return false;
-  }
+  if (a === true && b === true) return true;
+  return false;
 }
 
 // Desafio 2
@@ -56,15 +53,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let d1 = Math.abs(absCat1 - mouse);
   let d2 = Math.abs(absCat2 - mouse);
 
-  if (d1 == d2) {
+  if (d1 === d2) {
     return "os gatos trombam e o rato foge";
   }
 
-  if (d1 < d2) {
-    return "cat1";
-  } else {
-    return "cat2";
-  }
+  if (d1 < d2) return "cat1";
+  return "cat2";
 }
 
 // Desafio 8
