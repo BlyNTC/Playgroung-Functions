@@ -64,11 +64,9 @@ function highestCount(arrayDeNumeros) {
   let maiorNumero = 0; 
   let contador = 0;
   for (let index = 0; index < arrayDeNumeros.length; index += 1) {
-    if (arrayDeNumeros[index] > arrayDeNumeros[0]) {
+    if (arrayDeNumeros[index] > maiorNumero) {
         maiorNumero = arrayDeNumeros[index];
-      } else {
-        maiorNumero = arrayDeNumeros[0];
-      }
+    }
   }
   for (let indice = 0; indice < arrayDeNumeros.length; indice += 1) {
     if (maiorNumero === arrayDeNumeros[indice]) {
@@ -81,11 +79,15 @@ function highestCount(arrayDeNumeros) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
+console.log(highestCount([1, 9, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
+
+
+
 
 // Desafio 8
 function fizzBuzz() {
