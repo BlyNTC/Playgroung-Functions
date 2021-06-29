@@ -118,24 +118,18 @@ function encode(string) {
 function decode(string) {
   let result = '';
   for (let char of string) {
-    switch (char) {
-      case '1':
-        result += 'a';
-        break;
-      case '2':
-        result += 'e';
-        break;
-      case '3':
-        result += 'i';
-        break;
-      case '4':
-        result += 'o';
-        break;
-      case '5':
-        result += 'u';
-        break;
-      default:
-        result += char;
+    if (char === '1') {
+      result += 'a';
+    } else if (char === '2') {
+      result += 'e';
+    } else if (char === '3') {
+      result += 'i';
+    } else if (char === '4') {
+      result += 'o';
+    } else if (char === '5') {
+      result += 'u';
+    } else {
+      result += char;
     }
   }
   return result;
