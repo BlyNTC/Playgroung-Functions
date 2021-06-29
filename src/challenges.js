@@ -59,16 +59,33 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numArray) {
   // seu código aqui
+  let r = [];
+  for(i of numArray){
+    if(i % 3 == 0){
+      if(i % 5 == 0){
+        r.push("fizzBuzz")
+      }else{
+        r.push("fizz")
+      }
+    }else if(i % 5 == 0){
+      r.push("buzz")
+    }else{
+      r.push("bug!")
+    }
+  }
+  return r
 }
 
 // Desafio 9
 function encode() {
   // seu código aqui
+  
 }
 function decode() {
   // seu código aqui
+  
 }
 
 module.exports = {
