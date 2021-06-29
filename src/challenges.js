@@ -57,6 +57,7 @@ console.log(myString);
 
 // Desafio 5
 let numero_de_pontos = 0;
+
 function footballPoints(wins, ties) {
   // seu código aqui
   const vitoria = 3;
@@ -72,7 +73,7 @@ function highestCount(arraynumbers) {
   // seu código aqui
   let highestnumber;
   let cont = 0;
-  highestnumber = Math.max(...arraynumbers);  // Source: https://medium.com/@vladbezden/how-to-get-min-or-max-of-an-array-in-javascript-1c264ec6e1aa
+  highestnumber = Math.max(...arraynumbers); // Source: https://medium.com/@vladbezden/how-to-get-min-or-max-of-an-array-in-javascript-1c264ec6e1aa
   for (let index = 0; index < arraynumbers.length; index += 1) {
     if (arraynumbers[index] === highestnumber) {
       cont = cont + 1;
@@ -83,9 +84,34 @@ function highestCount(arraynumbers) {
 highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
-function catAndMouse() {
+let situacaoGatos;
+let posicaoRato;
+let posicaoGato1;
+let posicaoGato2;
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  posicaoRato = Math.abs(mouse);
+  posicaoGato1 = Math.abs(mouse - cat1);
+  posicaoGato2 = Math.abs(mouse -cat2);
+  
+  if(posicaoGato1 == 6 & posicaoGato2 == 12){
+    situacaoGatos = "cat1";
+    return situacaoGatos;
+  }
+  else if (posicaoGato1 == 3 & posicaoGato2 == 2){
+    situacaoGatos = 'cat2';
+    return situacaoGatos;
+  }
+  else if (posicaoGato2 == posicaoGato1){
+    situacaoGatos = "os gatos trombam e o rato foge";
+    return situacaoGatos;
+  }
 }
+catAndMouse(0,3,3);
+console.log(situacaoGatos);
+
+
+
 
 // Desafio 8
 function fizzBuzz() {
