@@ -1,13 +1,12 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 !== 0 && value2 !== 0) {
+  if (value1 === true && value2 === true) {
     return true;
   } else {
     return false;
-  }
-   
+  } 
 }
-console.log(compareTrue(10, 1));
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -18,16 +17,20 @@ console.log(calcArea (51, 1));
 // Desafio 3
 function splitSentence(phraseSplit) {
   //função split pesquisada em: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
-  return phraseSplit.split (" ");
+  return phraseSplit.split(" ");
 
 }
 phraseSplit = "Vamo que vamo";
 console.log (splitSentence(phraseSplit));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(sentenceConcat) {
+    var retornaPrimeiroUltimo = sentenceConcat [0] + sentenceConcat.lenght - 1;
+    return retornaPrimeiroUltimo;
 }
+sentenceConcat = "Lucas Cassiano Ferraz Paolillo";
+console.log (retornaPrimeiroUltimo);
+
 
 // Desafio 5
 function footballPoints() {
