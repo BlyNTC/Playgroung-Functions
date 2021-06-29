@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(param1, param2){
+function compareTrue(param1, param2) {
   // seu código aqui
   if (param1 === true && param2 === true) {
     return true
@@ -15,8 +15,10 @@ function calcArea(base, altura) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(param) {
   // seu código aqui
+  let separaFrase = param.split(' ')
+  return separaFrase
 }
 
 // Desafio 4
@@ -48,6 +50,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
