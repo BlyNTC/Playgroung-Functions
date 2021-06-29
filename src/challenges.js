@@ -9,7 +9,7 @@ function calcArea() {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(a) {
   // seu código aqui
 }
 
