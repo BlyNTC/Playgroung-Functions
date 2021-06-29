@@ -47,10 +47,18 @@ function highestCount(numeros) {
 
 
 // Desafio 7
-function catAndMouse() {
-
-  //link de referencia:
-  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+function catAndMouse(mouse, cat1, cat2) {
+  let cat11 = cat1-mouse
+  let cat22 = cat2-mouse
+  if(Math.abs(cat11) < Math.abs(cat22)){
+    return ('cat1')
+  }
+  else if(Math.abs(cat11) > Math.abs(cat22)){
+    return ('cat2')
+  }
+  else {
+    return ("os gatos trombam e o rato foge")
+  }
 }
 
 // Desafio 8
