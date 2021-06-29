@@ -3,7 +3,7 @@ function compareTrue(valor1, valor2) {
   if (valor1 && valor2) {
     return true;
   } else {
-      return false;
+    return false;
   }
 }
 
@@ -20,8 +20,9 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let frase = array[array.length -1] + ", " + array[0];
+  return frase;
 }
 
 // Desafio 5
