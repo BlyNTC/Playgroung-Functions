@@ -1,13 +1,21 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(primeiroValor,segundoValor) {
+  if(primeiroValor&&segundoValor >0){
+    return true;
+  }
+else{
+  return false;
 }
+
+}
+console.log(compareTrue(-5,-6));
+
+
+
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-}
-
+function calcArea( base,height) {
+  
 // Desafio 3
 function splitSentence() {
   // seu código aqui
