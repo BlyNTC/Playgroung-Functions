@@ -33,8 +33,14 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(s) {
+  let num = s.match(/\d+/g) //Busque por todos os digitos (\d+) e os agrupe (g)
+  let sum = 0;
+  
+  num.forEach(el => sum += Number(el))
+
+  if (num === 1) return sum + " copo de água"
+  return sum + " copos de água"
 }
 
 module.exports = {
