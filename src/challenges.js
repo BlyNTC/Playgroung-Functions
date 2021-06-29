@@ -90,6 +90,7 @@ function encode(stringEncode) {
       encodeString += stringEncode[i4];
     }
   }
+  return encodeString
 }
 
 function decode(stringEncode) {
