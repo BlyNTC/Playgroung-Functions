@@ -1,10 +1,14 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(requisito1, requisito2) {
+  let trueFalse = requisito1&&requisito2
+  return (trueFalse)
   // seu código aqui
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
+  let area = (base * height) / 2
+  return area
   // seu código aqui
 }
 
