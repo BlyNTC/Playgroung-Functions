@@ -37,22 +37,25 @@ function generatePhoneNumber(array) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-
   let number = '';
-
   for (let item of array) {
     number += item;
   }
-  //Ideia retirada de https://stackoverflow.com/questions/4313841/insert-a-string-at-a-specific-index
+  // Ideia retirada de https://stackoverflow.com/questions/4313841/insert-a-string-at-a-specific-index
   return `(${number.slice(0, 2)}) ${number.slice(2, 7)}-${number.slice(7)}`;
 }
 
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if ((lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) && (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB))) {
+    return true;
+  }
+  return false;
 }
+
+// console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
