@@ -1,27 +1,22 @@
 
 // Desafio 1
-function compareTrue(num1, num2,num3 ,num4) {
-  num1 = 5
-  num2 = 5
-  num3 = 7
-  num4 = 8
+function compareTrue(bool1, bool2) {
+  
   //vai retornar falso
-  if(num1 === num2 && num3 === num4){return true }
+  if(bool1 === true && bool2 === true){return true }
   else{return false;}
   //vai retornar verdadeiro
  
 } 
 
 // Desafio 2
-function calcArea(base, height, area) {
- // valor da base e altura do triangulo
-  base = 20
-  height = 10
+function calcArea(base, height) {
+ let area;
   //formula
-  area = base * height / 2;
+  area = (base * height) / 2;
   return area; 
 }
-
+console.log(calcArea(20,10,));
 // Desafio 3
 function splitSentence() {
   // seu código aqui
