@@ -16,13 +16,14 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(array) {
   let size = array.length;
-  let concatName = array[size-1] + ", " + array[0];
-  return concatName;
+  let concatenation = array[size - 1] + ', '  + array[0];
+  return concatenation;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let sum = wins * 3 + ties;
+  return sum;
 }
 
 // Desafio 6
