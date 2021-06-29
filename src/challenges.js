@@ -25,13 +25,16 @@ function splitSentence(texto) {
 function concatName(arrayPalavras) {
   let primeiroItem = arrayPalavras[0];
   let ultimoItem = arrayPalavras[arrayPalavras.length -1];
-  let retornaItens = [ultimoItem, primeiroItem];
+  let retornaItens = ultimoItem + ', ' + primeiroItem;
   return retornaItens;// seu código aqui
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  let pontoVitoria = wins * 3;
+  let pontoEmpate = ties * 1;
+  let resultado = pontoVitoria + pontoEmpate;
+  return resultado;// seu código aqui
 }
 
 // Desafio 6
