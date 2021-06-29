@@ -20,9 +20,21 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let word = '';
+  let splitedSentence = [];
 
+  for (let str of string) {
+    if (str !== ' ') {
+      word += str;
+    } else if (word.length > 0) {
+      splitedSentence.push(word);
+      word = '';
+    }
+  }
+  if (word.length > 0) { splitedSentence.push(word); }
+  return splitedSentence;
 }
 
 // Desafio 4
