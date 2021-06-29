@@ -119,7 +119,6 @@ function decode(param2) {
     u: 5,
   };
   let letra = '';
-
   for (let index = 0; index < param2.length; index += 1) {
     for (let key in codigo) {
       if (param2[index] == codigo[key]) {
