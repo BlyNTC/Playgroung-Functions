@@ -61,13 +61,13 @@ function fizzBuzz(array) {
   let result = [];
   for (let i of array) {
     if (i % 3 === 0 && i % 5 === 0) {
-      result.push("fizzBuzz");
+      result.push('fizzBuzz');
     } else if (i % 3 === 0) {
-      result.push("fizz");
+      result.push('fizz');
     } else if (i % 5 === 0) {
-      result.push("buzz");
+      result.push('buzz');
     } else {
-      result.push("bug!");
+      result.push('bug!');
     }
   }
   return result;
@@ -79,21 +79,20 @@ function encode(string) {
   for (let i in array) {
     switch (array[i]) {
       case 'a':
-        array[i] = "1";
+        array[i] = '1';
         break;
       case 'e':
-        array[i] = "2";
+        array[i] = '2';
         break;
       case 'i':
-        array[i] = "3";
+        array[i] = '3';
         break;
       case 'o':
-        array[i] = "4";
+        array[i] = '4';
         break;
       case 'u':
-        array[i] = "5";
+        array[i] = '5';
         break;
-
     }
   }
   array = array.join('');
@@ -104,23 +103,23 @@ function decode(string) {
   for (let i in array) {
     switch (array[i]) {
       case '1':
-        array[i] = "a";
+        array[i] = 'a';
         break;
       case '2':
-        array[i] = "e";
+        array[i] = 'e';
         break;
       case '3':
-        array[i] = "i";
+        array[i] = 'i';
         break;
       case '4':
-        array[i] = "o";
+        array[i] = 'o';
         break;
       case '5':
-        array[i] = "u";
+        array[i] = 'u';
         break;
     }
   }
-  array = array.join("");
+  array = array.join('');
   return array;
 }
 
