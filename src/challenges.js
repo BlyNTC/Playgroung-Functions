@@ -1,6 +1,6 @@
 // Desafio 1
 
-function compareTrue(a,b) {
+function compareTrue(a, b) {
 if(a === true && b === true){
   return true;
 }
@@ -20,7 +20,7 @@ function calcArea(base,altura) {
 // Desafio 3
 function splitSentence(palavras) {
   let palavra ='';
-    let array =[];
+    let array = [];
     for(let letters of palavras){
         if(letters != ' '){
          palavra += letters;
@@ -37,8 +37,16 @@ function splitSentence(palavras) {
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let conca = '';
+    let index = 0;
+
+    for(let key in array){
+        index = key;
+    }
+    conca = array[index] + ',' + ' ' + array[0];
+    
+    return conca;
 }
 
 // Desafio 5
