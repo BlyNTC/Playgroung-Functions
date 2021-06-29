@@ -22,7 +22,7 @@ function splitSentence(stringFrase) {
 // Desafio 4
 function concatName(parArray) {
   let concatenamento = [parArray[parArray.length - 1], parArray[0]];
-  return concatenamento.join(', ');
+  return concatenamento.join(", ");
 }
 
 // Desafio 5
@@ -60,10 +60,10 @@ function catAndMouse(mouse, cat1, cat2) {
       return "os gatos trombam e o rato foge" ;
     }
     else if (distCat1 < distCat2) {
-      return 'cat1'
+      return "cat1"
     }
     else {
-      return 'cat2'
+      return "cat2"
     }
 }
 
@@ -76,13 +76,13 @@ function fizzBuzz(arrNumbers) {
     div3 = arrNumbers[index] % 3;
     div5 = arrNumbers[index] % 5;
 
-    if ((div3 == 0) && (div5 == 0)) {
+    if ((div3 === 0) && (div5 === 0)) {
       fBuzz.push("fizzBuzz");
     }
-    else if (div3 == 0) {
+    else if (div3 === 0) {
       fBuzz.push("fizz");
     }
-    else if (div5 == 0) {
+    else if (div5 === 0) {
       fBuzz.push("buzz");
     }
     else {
@@ -94,11 +94,48 @@ function fizzBuzz(arrNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(parS) {
+  let arrayEn = parS.split('');
+  for (index = 0; index < parS.length; index += 1) {
+    if (arrayEn[index] === "a") {
+      arrayEn[index] = 1;
+    }
+    else if (arrayEn[index] === "e") {
+      arrayEn[index] = 2;
+    }
+    else if (arrayEn[index] === "i") {
+      arrayEn[index] = 3;
+    }
+    else if (arrayEn[index] === "o") {
+      arrayEn[index] = 4;
+    }
+    else if (arrayEn[index] === "u") {
+      arrayEn[index] = 5;
+    }
+  }
+  return arrayEn.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(parSd) {
+  let arrayDec = parSd.split('');
+  for (index = 0; index < parSd.length; index += 1) {
+    if (arrayDec[index] === '1') {
+      arrayDec[index] = "a";
+    }
+    else if (arrayDec[index] === '2') {
+      arrayDec[index] = "e";
+    }
+    else if (arrayDec[index] === '3') {
+      arrayDec[index] = "i";
+    }
+    else if (arrayDec[index] === '4') {
+      arrayDec[index] = "o";
+    }
+    else if (arrayDec[index] === '5') {
+      arrayDec[index] = "u";
+    }
+  }
+  return arrayDec.join('');
 }
 
 module.exports = {
