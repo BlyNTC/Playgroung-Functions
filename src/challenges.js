@@ -22,8 +22,12 @@ function splitSentence(text) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+let conacat =[];
+let first = array[0];
+let last = array.slice(-1);
+conacat = last + ', ' + first
+return conacat
 }
 
 // Desafio 5
