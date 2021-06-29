@@ -50,12 +50,21 @@ function highestCount(arrayNumeros) {
   return contador;
 }
 
-let numeros = [-1, -1, -7];
-console.log(highestCount(numeros));
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = Math.abs(cat1-mouse);
+  let distanciaCat2 = Math.abs(cat2-mouse);
+  let string = "";
+  if(distanciaCat1 === distanciaCat2){
+    string = "os gatos trombam e o rato foge";
+  } else {
+    if(distanciaCat1<distanciaCat2){
+      string = "cat1";
+    } else {
+      string = "cat2";
+    }
+  }
+  return string;
 }
 
 // Desafio 8
