@@ -22,7 +22,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let sum = wins*3 + ties;
+  let sum = (wins * 3) + ties;
   return sum;
 }
 
@@ -30,13 +30,13 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let higher = array[0];
   let qt = 0;
-  for(let num of array){
-    if(higher < num){
+  for (let num of array) {
+    if (higher < num) {
       higher = num;
     }
   }
-  for(let elem of array){
-    if(elem === higher){
+  for (let elem of array) {
+    if (elem === higher) {
       qt += 1;
     }
   }
@@ -44,8 +44,20 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let answer = "";
+  let distance1 = Math.abs(cat1 - mouse);
+  let distance2 = Math.abs(cat2 - mouse); 
+  if (distance1 > distance2) {
+    answer = "cat2";
+  }
+  else if (distance1 < distance2) {
+    answer = "cat1";
+  }
+  else {
+    answer = "os gatos trombam e o rato foge";
+  }
+  return answer;
 }
 
 // Desafio 8
