@@ -10,11 +10,16 @@ function compareTrue(num1, num2,num3 ,num4) {
   else{return false;}
   //vai retornar verdadeiro
  
-} console.log(compareTrue());
+} 
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height, area) {
+ // valor da base e altura do triangulo
+  base = 20
+  height = 10
+  //formula
+  area = base * height / 2;
+  return area; 
 }
 
 // Desafio 3
