@@ -62,21 +62,39 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arr) {
   let answer = [];
   for (let i = 0; i < arr.length; i++) {
-    if (((arr[i] % 3) === 0) && ((arr[i] % 5) === 0)) answer[i] = 'fizzBuzz';
-    else if (((arr[i] % 3) === 0) && answer[i] !== 'fizzBuzz') answer[i] = 'fizz';
-    else if (((arr[i] % 5) === 0) && answer[i] !== 'fizzBuzz') answer[i] = 'buzz';
+    if (arr[i] % 3 === 0 && arr[i] % 5 === 0) answer[i] = 'fizzBuzz';
+    else if (arr[i] % 3 === 0 && answer[i] !== 'fizzBuzz') answer[i] = 'fizz';
+    else if (arr[i] % 5 === 0 && answer[i] !== 'fizzBuzz') answer[i] = 'buzz';
     else answer[i] = 'bug!';
   }
   return answer;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let answer = '';
+  for (i in string) {
+    if (string[i] === 'a') answer += '1';
+    else if (string[i] === 'e') answer += '2';
+    else if (string[i] === 'i') answer += '3';
+    else if (string[i] === 'o') answer += '4';
+    else if (string[i] === 'u') answer += '5';
+    else answer += string[i];
+  }
+  return answer;
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let answer = '';
+  for (i in string) {
+    if (string[i] === '1') answer += 'a';
+    else if (string[i] === '2') answer += 'e';
+    else if (string[i] === '3') answer += 'i';
+    else if (string[i] === '4') answer += 'o';
+    else if (string[i] === '5') answer += 'u';
+    else answer += string[i];
+  }
+  return answer;
 }
 
 module.exports = {
