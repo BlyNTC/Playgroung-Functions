@@ -27,13 +27,13 @@ function triangleCheck(lineA,lineB,lineC) {
   let abLineCB = Math.abs(lineC - lineB);
 
   if(lineA + lineB > lineC && lineC > abLineAB ){
-      return console.log(true);
+      return true;
   }else if(lineA + lineB > lineC && lineC > abLineAB ){
-      return console.log(true);
+      return true;
   }else if(lineA + lineB > lineC && lineC > abLineAB ){
-      return console.log(true);
+      return true;
   }else{
-      return console.log(false);
+      return false;
   }
 }
 
