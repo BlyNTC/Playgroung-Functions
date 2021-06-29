@@ -16,14 +16,14 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(concatArray) {
   let ultimaString = concatArray.length - 1;
-    return concatArray[ultimaString] + ", " + concatArray[0];
+  return concatArray[ultimaString] + ', ' + concatArray[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = (3 * wins) + (1 * ties);
+  return pontos;
 }
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
