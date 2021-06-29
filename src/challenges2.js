@@ -44,20 +44,26 @@ function generatePhoneNumber(inputArray) {
       myPhoneNumber += inputArray[index];
     }
   }
-  return '('.concat(myPhoneNumber.substr(0, 2)).concat(')').concat(' ')
-    .concat(myPhoneNumber.substr(2, 5)).concat('-').concat(myPhoneNumber.substr(7));
+  return '('.concat(myPhoneNumber.substr(0, 2)).concat(')')
+    .concat(' ').concat(myPhoneNumber.substr(2, 5))
+    .concat('-')
+    .concat(myPhoneNumber.substr(7));
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if ((lineA > lineB + lineC) || (lineB > lineA + lineC) || (lineC > lineA + lineB)) {
-    return false;
+  let lado = [];
+  lado[0] = lineA;
+  lado[1] = lineB;
+  lado[2] = lineC;
+  lado.sort((a, b) => a - b);
+  if ((lado[2] < lado[0] + lado[1]) || (lado[1] > lado[2] - lado[0])) {
+    return true;
   }
-  if ((lineA < Math.abs(lineB - lineC)) || (lineB < Math.abs(lineA - lineC)) || (lineC < Math.abs(lineA - lineB))) {
-    return false;
-  }
-  return true;
+  return false;
 }
+
+triangleCheck(16, 9, 2);
 
 // Desafio 13
 function hydrate(string) {
