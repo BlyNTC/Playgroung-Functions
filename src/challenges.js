@@ -3,9 +3,7 @@ function compareTrue(par1, par2) {
   if (par1 === true && par2 === true) {
     return true;
   }
-    else {
-      return false;
-    }
+    return false;
 }
 
 // Desafio 2
@@ -17,35 +15,34 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(stringFrase) {
-  let stringToArray = stringFrase.split(" ");
-  return stringToArray;
+  let stringArray = stringFrase.split(" ");
+  return stringArray;
 }
-
 
 // Desafio 4
 function concatName(parArray) {
-  let concatenamento = [parArray[parArray.length-1], parArray[0]]
+  let concatenamento = [parArray[parArray.length - 1], parArray[0]];
   return concatenamento.join(', ');
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = 0;
-  points = (wins * 3 + ties)
+  points = (wins * 3 + ties);
   return points;
 }
 
 // Desafio 6
-function highestCount(numbersArray) {
-  let maior = -99999999999;
+function highestCount(numberArray) {
+  let maior = -9999999999;
   for (let cont = 0; cont < numbersArray.length; cont += 1) {
     if (numbersArray[cont] > maior) {
       maior = numbersArray[cont];
     }
   }
   let contador = 0;
-  for (let index = 0; index < numbersArray.length; index += 1){
-    if(numbersArray[index] === maior){
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] === maior) {
       contador += 1;
     }
   }
