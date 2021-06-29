@@ -66,8 +66,19 @@ return repeticoes;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaDoGato1 = Math.abs(mouse - cat1);
+  let distanciaDoGato2 = Math.abs(mouse - cat2);
+  let resutaldo;
+
+  if (distanciaDoGato1 === distanciaDoGato2){
+    resultado = "os gatos trombam e o rato foge"
+  }else if (distanciaDoGato1 < distanciaDoGato2){
+    resultado = 'cat1';
+  }else {
+    resultado = 'cat2';
+  }
+  return resultado;
 }
 
 // Desafio 8
