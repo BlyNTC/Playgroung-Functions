@@ -24,7 +24,7 @@ function splitSentence(words) {
 // Desafio 4
 function concatName(name) {
   // seu código aqui
-  
+  return (`${name[name.length-1]}, ${name[0]}`);
 }
 
 // Desafio 5
