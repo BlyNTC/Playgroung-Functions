@@ -82,8 +82,8 @@ function encode(toEc) {
   let chI = chE.replace(/i/g, 3);
   let chO = chI.replace(/o/g, 4);
   let chU = chO.replace(/u/g, 5);
-  let result = chU;
-  return chU;
+  let result1 = chU;
+  return result1;
 }
 function decode(toDec) {
   let ch1 = toDec.replace(/1/g, 'a');
@@ -91,8 +91,8 @@ function decode(toDec) {
   let ch3 = ch2.replace(/3/g, 'i');
   let ch4 = ch3.replace(/4/g, 'o');
   let ch5 = ch4.replace(/5/g, 'u');
-  let result = ch5;
-  return ch5;
+  let result2 = ch5;
+  return result2;
 }
 
 module.exports = {
