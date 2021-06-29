@@ -20,14 +20,11 @@ function splitSentence(a) {
 }
 
 // Desafio 4
-function concatName(array) {
-
-
-
-// percorrer os itens de um array 
-//identificar e pegar o primeiro e o último elemento
-// inserir em uma string
-
+function concatName(palavras) {
+let ultimoItem = palavras[palavras.length-1];
+let primeiroItem = palavras[0];
+let resultado = ultimoItem + ', ' + primeiroItem;
+return resultado;
 }
 
 // Desafio 5
