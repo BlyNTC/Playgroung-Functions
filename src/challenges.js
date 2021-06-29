@@ -1,18 +1,16 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  let output;
   if (bool1 === true && bool2 === true) {
-    output = true;
-  } else {
-    output = false;
-  }
-  return output;
+    return true;
+  };
+
+  return false;
 }
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = base * height / 2;
-  return area;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -22,14 +20,14 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(name) {
-  let concatName = name[name.length - 1] + ', ' + name[0];
-  return concatName;
+  let output = name[name.length - 1] + ', ' + name[0];
+
+  return output;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = wins * 3 + ties;
-  return points;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
@@ -37,11 +35,11 @@ function highestCount(numbers) {
   let output = 0;
   let higher = numbers[0];
 
-  for (let value of numbers) {
+  for (let value of numbers) { // determines higher value
     if (value > higher) {
       higher = value;
     }
-  }
+  };
 
   for (let value of numbers) {
     if (value === higher) {
@@ -59,20 +57,18 @@ function catAndMouse(mouse, cat1, cat2) {
     distance2 = Math.abs(mouse - cat2);
 
   if (distance1 === distance2) {
-    output = "os gatos trombam e o rato foge";
+    return "os gatos trombam e o rato foge";
+  } else if (distance1 < distance2) {
+    return 'cat1';
   } else {
-    if (distance1 < distance2) {
-      output = 'cat1';
-    } else {
-      output = 'cat2';
-    }
-  }
-  return output;
+    return 'cat2';
+  };
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let output = [];
+
   for (let number of numbers) {
     if (number % 3 === 0 && number % 5 === 0) {
       output.push("fizzBuzz");
@@ -84,6 +80,7 @@ function fizzBuzz(numbers) {
       output.push("bug!");
     };
   };
+
   return output;
 }
 
