@@ -1,9 +1,17 @@
 // Desafio 1  
-function compareTrue(valor1,valor2) {
-  // seu código aqui NAO ENTENDI O QUE SE PEDE  
+function compareTrue(valor1, valor2) {
+  // seu código aqui
+  let absoluto;
+  if (valor1 == true && valor2 == true) {
+    absoluto = true;
+  }
+  else {
+    absoluto = false;
+  }
+  return absoluto;
 }
 
-// Desafio 2 "OK"
+// Desafio 2
 function calcArea(base, height) {
   // seu código aqui
   let calculo = (base * height) / 2;
