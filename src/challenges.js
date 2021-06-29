@@ -17,8 +17,8 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(stringArray) {
+  return stringArray[stringArray.length -1].concat(', ' + stringArray[0]);
 }
 
 // Desafio 5
@@ -62,4 +62,4 @@ module.exports = {
   splitSentence,
 };
 
-console.log(splitSentence("foguete"));
+console.log(concatName(['captain', 'my', 'captain']));
