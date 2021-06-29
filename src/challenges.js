@@ -1,16 +1,16 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-  if (a == true && b == true) {
+  if (a === true && b === true) {
     return true;
   }
-  else if (a == true && b == false) {
+  else if (a === true && b === false) {
     return false;
   }
-  else if (a == false && b == true) {
+  else if (a === false && b === true) {
     return false;
   }
-  else if (a == false && b == false) {
+  else if (a === false && b === false) {
     return false;
   }
 }
@@ -36,7 +36,6 @@ function concatName(array) {
   let ultimo = array[array.length - 1];
   return ultimo + ',' + ' ' + primeiro;
 }
-console.log(concatName('henrique','junqueira' ,'braga'));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -47,8 +46,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  let vezes = 0;
+  let maior = Math.max.apply(null, array);
+  for (let i = 0; i < array.length; i += 1){
+    if (array[i] == maior) {
+      vezes += 1;
+    }
+  }
+  return vezes;
 }
 
 // Desafio 7
