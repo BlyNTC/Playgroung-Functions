@@ -63,34 +63,24 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   // seu código aqui
-  let contRepete = 0;
   let contNumero = 0;
 
   for (let key in array) {
-    let verifica = array[key];
-    for (let index in array) {
-      if (verifica === array[index]) {
+    let max = Math.max.apply(null, array);
+    
+
+      if (max === array[key]) {
         contNumero += 1;
 
       }
-
     }
-    if (contNumero > contRepete) {
-      contRepete = contNumero;
-
-
-    }
-    contNumero = 0;
-
-
+    return contNumero;
   }
-  return contRepete;
-
-}
+  
 
 
 // Desafio 7
-function catAndMouse(cat1, cat2) {
+function catAndMouse(cat1, cat2, rato) {
   // seu código aqui
   // cat1 é a distancia em unidades do gato1 para o rato
   if (cat1 > cat2) {
