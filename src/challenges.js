@@ -172,8 +172,38 @@ function decode(decodifica) {
     decodifica = decodifica.concat(arrayAuxiliar[n]);
     n += 1;
   }
-  
+
   return decodifica;
+}
+
+// Desafio 10
+function techList(listaDesordenada, nome) {
+
+  let resultado;
+
+  if (listaDesordenada.length === 0) {
+    resultado = "Vazio!";
+  } else {
+
+    listaOrdenada = listaDesordenada.sort();
+    let arrayDeObjetos = [];
+    let n = 0;
+
+    let objetoTech = {
+      name: nome,
+      tech: "NomeTech"      
+    }
+
+    for (let tecnologia of listaOrdenada) {
+      arrayDeObjetos[n] = objetoTech = {
+        name: nome,
+        tech: tecnologia,
+      }
+      n += 1;
+    }
+    resultado = arrayDeObjetos;
+  }
+  return resultado;
 }
 
 module.exports = {
@@ -187,4 +217,5 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
+  techList
 };
