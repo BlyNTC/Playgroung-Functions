@@ -111,17 +111,31 @@ function encode(string) {
       let index = letra.indexOf(letraFinder)
       deploy += code[index];
     }else if(string[i]!==letra[indexLetra]){
-      let index = letra.indexOf(letraFinder)
       deploy += string[i];
     }
   }
   return deploy;
   // seu código aqui
 }
-encode('giboia');
-function decode() {
+encode('goiaba')
+function decode(string) {
+  let letra = ['1','2','3','4','5'];
+  let code = ['a','e','i','o','u']
+  let letraFinder = ''
+  let deploy = '';
+  for(let i = 0;i<string.length;i+=1){
+    letraFinder = string[i];
+    let indexLetra = letra.indexOf(string[i]);
+    if(string[i]===letra[indexLetra]){
+      deploy += code[indexLetra];
+    }else if(string[i]!==letra[indexLetra]){
+      deploy += string[i];
+    }
+  }
+  return deploy;
   // seu código aqui
 }
+decode('h2ll4')
 
 module.exports = {
   calcArea,
