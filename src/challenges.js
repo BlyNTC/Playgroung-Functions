@@ -53,7 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if(Math.abs(cat11) < Math.abs(cat22)){
     return ('cat1')
   }
-  else if(Math.abs(cat11) > Math.abs(cat22)){
+  if(Math.abs(cat11) > Math.abs(cat22)){
     return ('cat2')
   }
   else {
