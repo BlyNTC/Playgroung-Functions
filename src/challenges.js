@@ -1,3 +1,5 @@
+const { array } = require("yargs");
+
 // Desafio 1
 function compareTrue(boo1, boo2) {
   let resultado;
@@ -24,9 +26,15 @@ function splitSentence(str) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arraystr) {
+  prim = arraystr[0]
+  ultm = arraystr[arraystr.length -1]
+  result = ultm + ', ' + prim
+
+  return result
 }
+
+console.log(concatName(['captain', 'my', 'captain']))
 
 // Desafio 5
 function footballPoints() {
