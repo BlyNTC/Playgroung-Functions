@@ -7,8 +7,8 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return(base*height/2);  
 }
 
 // Desafio 3
@@ -61,3 +61,5 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+console.log(calcArea(51, 1));
