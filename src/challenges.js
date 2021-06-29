@@ -1,12 +1,22 @@
 // Desafio 1
 function compareTrue() {
-  // seu código aqui
+  let hojeTemAula = 14;
+  let horario = 15;
+
+  if(hojeTemAula && horario == hojeTemAula) {
+    console.log(true)
+  }else {
+    console.log(false)
+  }
 }
+compareTrue();
 
 // Desafio 2
 function calcArea() {
-  // seu código aqui
+  let base = 10;
+  let heigth = 50;
 }
+calcArea();
 
 // Desafio 3
 function splitSentence() {
