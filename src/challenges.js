@@ -8,13 +8,24 @@ function compareTrue(param1, param2) {
 }
 
 // Desafio 2
-function calcArea(base,height) {
-  return base*height/2;
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = [];
+  let word = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === ' ') {
+      array.push(word);
+      word = '';
+    } else {
+      word += string[index];
+    }    
+  }
+  array.push(word);
+  return array;
 }
 
 // Desafio 4
