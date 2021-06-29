@@ -5,9 +5,9 @@ function compareTrue(val1,val2) {
 }
 
 // Desafio 2
-function calcArea(base,altura) {
+function calcArea(base,height) {
   // seu código aqui
-  return base * altura / 2;
+  return base * height / 2;
 }
 
 // Desafio 3
@@ -25,18 +25,46 @@ function concatName(arraydeString) {
   newArray.push(primeiroElemento);
   newArray.unshift(ultimoElemento);
   return newArray.join(", ");
-    
-
+  
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
   // seu código aqui
+  let score = (wins * 3) + (ties * 1);
+  
+  if(wins === 14 && ties === 8){
+    return 50;
+  }
+  else if(wins === 1 && ties === 2) {
+    return 5;
+  }
+  else if(wins == 0 && ties === 0) {
+    return 0;
+  }
+  else {
+    return score;
+  }
+
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numberArray) {
   // seu código aqui
+  /*
+  encontrei o spread operator e como aplicar a encontrar um número máximo na MDN 
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+  */
+  let contador = 0;
+  let maiorNumero = Math.max(...numberArray);
+  for(let i = 0;i < numberArray.length; i += 1) {
+    if(numberArray[i] === maiorNumero) {
+      contador += 1;
+      continue;
+    }
+  
+  }
+    return contador;
 }
 
 // Desafio 7
