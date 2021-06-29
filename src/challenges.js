@@ -2,17 +2,13 @@
 function compareTrue(a, b) {
   // seu código aqui
   if (a === true && b === true) {
-    return true;
-  }
+    return true;}
   else if (a === true && b === false) {
-    return false;
-  }
+    return false;}
   else if (a === false && b === true) {
-    return false;
-  }
+    return false;}
   else if (a === false && b === false) {
-    return false;
-  }
+    return false;}
 }
 console.log(compareTrue(false, false));  
 // Desafio 2
@@ -96,9 +92,7 @@ function encode(string) {
   string = string.replace(/i/g, '3');
   string = string.replace(/o/g, '4');
   return string.replace(/u/g, '5');
- 
 }
-
 function decode(string2) {
   // seu código aqui
   string2 = string2.replace(/1/g, 'a');
