@@ -35,13 +35,8 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(somaMaior) {
-  for (let index = 0; index < somaMaior.length; index += 1) {
-    if (somaMaior[index] > max)  {
-      max += 1;
-    }
-    return max;
-  }
+function highestCount(array2) {
+
 }
 
 // Desafio 7
@@ -56,15 +51,15 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumeros) {
+
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringEncode) {
+  
 }
-function decode() {
+function decode(stringDecode) {
   // seu código aqui
 }
 
