@@ -19,8 +19,9 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(ultimaPrimeira) {
+  let string = (ultimaPrimeira[ultimaPrimeira.length - 1]) + ', ' + ultimaPrimeira[0];
+  return string;
 }
 
 // Desafio 5
