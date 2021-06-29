@@ -31,12 +31,19 @@ function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
 }
 
-console.log(footballPoints(14, 8));
+// console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+
+  // Linha inspirada por: https://stackoverflow.com/questions/32647149/why-is-math-max-returning-nan-on-an-array-of-integers
+  let maxNumber = Math.max(...array);
+
+  // Linha inspirada por: https://stackoverflow.com/questions/6120931/how-to-count-certain-elements-in-array
+  return array.filter((number) => number === maxNumber).length;
 }
+
+console.log(highestCount([9, 9, 9, 4, 9, 3, 9, 3, 3, 3, 3, 5, 4, 9]));
 
 // Desafio 7
 function catAndMouse() {
