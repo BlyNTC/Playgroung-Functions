@@ -25,8 +25,9 @@ function splitSentence(sentenca) {
   return divisaoDeSentenca;
 }
 // Desafio 4
-function concatName() {
+function concatName(nomePessoa) {
   // seu código aqui
+  return nomePessoa[nomePessoa.lenght-1] + "," + nome[0];
 }
 
 // Desafio 5
