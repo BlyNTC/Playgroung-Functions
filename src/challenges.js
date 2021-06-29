@@ -35,8 +35,6 @@ function concatName(arraystring) {
   return resultado
 }
 
-  console.log(concatName(['foguete', 'nao', 'tem', 'ré']))
-
 // Desafio 5
 function footballPoints(win, ties) {  
   let resultado = 0;
