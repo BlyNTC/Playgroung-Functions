@@ -60,9 +60,10 @@ function highestCount(numeros) {
     idx = numeros.indexOf(maiorNum, idx + 1)
   }
 
-  return arrayTodos.length
+  let finau = arrayTodos.length
+
+  return finau
 }
-console.log(highestCount([0, 0, 0]))
 
 // Desafio 7
 function catAndMouse() {
