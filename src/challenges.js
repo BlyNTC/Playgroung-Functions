@@ -20,28 +20,34 @@ function calcArea(base, height) {
   return triangleArea;
 }
 
-console.log(calcArea(10, 50))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let splitted = [];
+  let splittedWord = "";
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === " ") {
+      splitted.push(splittedWord)
+      splittedWord = "";
+    } else {
+    splittedWord += string[i]
+      }
+  }
+  splitted.push(splittedWord)
+  return splitted
 }
+
+console.log(splitSentence('go Trybe'))
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 4
 function concatName() {
