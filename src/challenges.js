@@ -1,6 +1,8 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(push) {
+  for (let index in compareTrue) {
+    
+  }
 }
 
 // Desafio 2
