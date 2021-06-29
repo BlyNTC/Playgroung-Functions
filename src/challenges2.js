@@ -1,6 +1,14 @@
 // Desafio 10
-function techList() {
-  // seu código aquis
+function techList(array, name) {
+  if (array.length===0) {
+    return 'Vazio!'
+  }
+  array.sort();
+  let result = [];
+  for (let i of array) {
+    result = result.concat({'tech': i, 'name': name});
+  }
+  return result;
 }
 
 // Desafio 11
