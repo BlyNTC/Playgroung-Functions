@@ -13,7 +13,7 @@ function calcArea(base, height) {
   // seu código aqui
   let area = 0;
   area = (base * height) / 2;
-  return area;
+  return (area);
 }
 
 // Desafio 3
@@ -29,12 +29,14 @@ function concatName(names) {
   let lastName = names[names.length - 1];
   let firstName = names[0];
   let lastFirst = lastName + ", " + firstName;
-  return lastFirst;
+  return (lastFirst);
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let points = (wins * 3) + (ties * 1);
+  return (points);
 }
 
 // Desafio 6
