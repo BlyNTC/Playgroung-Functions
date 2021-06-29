@@ -91,11 +91,35 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let vogais = ['', 'a', 'e', 'i', 'o', 'u'];
+  for (let letter of string) {
+    for (let vogal in vogais) {
+      if (vogais[vogal] === letter) {
+        string = string.replace(letter, vogal);
+      }
+    }
+  }
+  return string;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let numbers = { 
+    '1' : 'a', 
+    '2' : 'e', 
+    '3' : 'i', 
+    '4' : 'o', 
+    '5' : 'u'
+  };
+
+  for (let letter of string) {
+    for (number in numbers) {
+      if (number == letter ) {
+        string = string.replace(letter, numbers[number])
+      };
+    };
+  };
+
+  return string;
 }
 
 module.exports = {
