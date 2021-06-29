@@ -115,11 +115,47 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(word) {
   // seu código aqui
-  
+  let string = '';
+
+  for (let letter of word) {
+    if (letter === 'a') {
+      string += '1';
+    } else if (letter === 'e') {
+      string += '2';
+    } else if (letter === 'i') {
+      string += '3';
+    } else if (letter === 'o') {
+      string += '4';
+    } else if (letter === 'u') {
+      string += '5';
+    } else {
+      string += letter;
+    }
+  }
+
+  return string;
 }
 function decode(word) {
   // seu código aqui
-  
+  let string = '';
+
+  for (let letter of word) {
+    if (letter === '1') {
+      string += 'a';
+    } else if (letter === '2') {
+      string += 'e';
+    } else if (letter === '3') {
+      string += 'i';
+    } else if (letter === '4') {
+      string += 'o';
+    } else if (letter === '5') {
+      string += 'u';
+    } else {
+      string += letter;
+    }
+  }
+
+  return string;
 }
 
 module.exports = {
