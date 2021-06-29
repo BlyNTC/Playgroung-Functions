@@ -1,12 +1,10 @@
 // Desafio 1 - Começando agora
-function compareTrue(array1, array2) {
-  if (array1.length !== array2.length && array1.length < 5) return true;
-  for (let index = 0, num = array1.length; index < num; index += 1) {
-    if (array1.length[index] !== array2.length[index]) {
-      return true;
-    }
+function compareTrue(num1, num2) {
+  if (num1 === true && num2 === true) {
+    return true;
+  } else {
+    return false;
   }
-  return false;
 }
 
 // Desafio 2
