@@ -68,8 +68,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrFizzBuzz) {
   // seu código aqui
+  for (let n = 0; n < arrFizzBuzz.length; n += 1) {
+    if (arrFizzBuzz[n] % 3 === 0 && arrFizzBuzz[n] % 5 === 0) {
+      arrFizzBuzz[n] = 'fizzBuzz';
+    } else if (arrFizzBuzz[n] % 3 === 0 && arrFizzBuzz[n] % 5 != 0) {
+      arrFizzBuzz[n] = 'fizz';
+    } else if (arrFizzBuzz[n] % 3 != 0 && arrFizzBuzz[n] % 5 === 0) {
+      arrFizzBuzz[n] = 'buzz';
+    } else {
+      arrFizzBuzz[n] = 'bug!';
+    }
+  }
+  return arrFizzBuzz;
 }
 
 // Desafio 9
