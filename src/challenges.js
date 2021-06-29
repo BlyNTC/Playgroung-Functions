@@ -1,7 +1,13 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  
+function compareTrue(n1, n2) {
+  let result;
+
+  if (n1 === true && n2 === true) {
+    result = true;
+  } else {
+    result = false;
+  }
+  return result;
 }
 
 // Desafio 2
