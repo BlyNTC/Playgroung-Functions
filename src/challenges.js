@@ -45,10 +45,16 @@ function highestCount(numeros) {
     if(numMaior < numeros[index]) {
       numMaior = numeros[index];
     }
+    else {
+      numMaior = numMaior;
+    }
   }
   for(let cont = 0; cont < numeros.length; cont += 1) {
     if(numMaior === numeros[cont]) {
       let vezes = vezes + 1;
+    }
+    else {
+      vezes = vezes;
     }
   }
   return numMaior;
