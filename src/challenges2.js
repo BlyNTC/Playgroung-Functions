@@ -48,10 +48,10 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
-  if (!phoneNumberLengthCheck) {
+  if (!phoneNumberLengthCheck(array)) {
     return 'Array com tamanho incorreto.';
   }
-  if (!phoneNumberRangeCheck || !phoneNumberCountCheck) {
+  if (!phoneNumberRangeCheck(array) || !phoneNumberCountCheck(array)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
@@ -61,6 +61,7 @@ function generatePhoneNumber(array) {
 
   return part1 + part2 + part3;
 }
+console.log(generatePhoneNumber([0, 1, 6]));
 
 // Desafio 12
 function triangleCheck() {
