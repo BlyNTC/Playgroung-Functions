@@ -25,9 +25,9 @@ function splitSentence(sentenca) {
   return divisaoDeSentenca;
 }
 // Desafio 4
-function concatName(nomePessoa) {
+function concatName(nome) {
   // seu código aqui
-  return nomePessoa[nomePessoa.lenght - 1] + "," + nomePessoa[0];
+  return nome[nome.lenght - 1] + "," + nome[0];
 }
 // Desafio 5
 function footballPoints(wins, ties) {
