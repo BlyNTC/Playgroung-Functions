@@ -3,9 +3,9 @@ function compareTrue() {
   let clima = "Sol";
   let temp = 35;
   if ((typeof clima == 'string') && (typeof temp == 'number'))
-    console.log(true);
+    return true;
   else
-    console.log(false);  
+    return false;  
 }
 compareTrue()
 
