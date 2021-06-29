@@ -99,8 +99,24 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let newArray = [];
+    for (let numeros of array){
+         if (numeros % 3 === 0 && numeros % 5 === 0){
+        newArray.push('fizzbuzz');
+    }
+    else if (numeros % 3 === 0){
+        newArray.push('fizz');
+    }
+    else if (numeros % 5 === 0){
+        newArray.push('buzz');
+    }
+    else {
+        newArray.push('bug!');
+    }
+
+    }
+    return newArray;
 }
 
 // Desafio 9
