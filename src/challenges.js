@@ -14,7 +14,7 @@ function compareTrue(a, b) {
     return false;
   }
 }
-console.log(compareTrue(false,false));  
+console.log(compareTrue(false, false));  
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
@@ -50,8 +50,8 @@ function highestCount(array) {
   // seu código aqui
   let vezes = 0;
   let maior = Math.max.apply(null, array);
-  for (let i = 0; i < array.length; i += 1){
-    if (array[i] == maior) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === maior) {
       vezes += 1;
     }
   }
@@ -59,13 +59,26 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  let frases = [];
+  for (i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      frases.push('fizzBuzz');
+    } else if (array[i] % 5 === 0){
+      frases.push('buzz');
+    } else if (array[i] % 3 === 0){
+      frases.push('fizz'); 
+    } else{
+      frases.push('bug!');
+    }
+  }
+  return frases;
 }
 
 // Desafio 9
