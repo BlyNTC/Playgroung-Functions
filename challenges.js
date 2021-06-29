@@ -148,5 +148,9 @@ function decode (stringEncode) {
   return decodeString
 }
 console.log(decode('h3 th2r2!'))
+
 // Ex10
 
+function name() {
+  
+}
