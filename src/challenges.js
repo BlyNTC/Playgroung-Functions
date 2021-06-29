@@ -1,22 +1,47 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(a, b) {
   // seu código aqui
+  
+  if(a == true && b == true) {
+    return true;
+  }
+  else if(a == true && b == false) {
+    return false;
+  }
+  else if(a == false && b == true) {
+    return false;
+  }
+  else if (a == false && b == false) {
+    return false;
+  }
+
 }
+console.log(compareTrue(false,false));  
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return ((base * height) / 2);
 }
+console.log(calcArea(10, 50));
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(array) {
   // seu código aqui
+  let separa = array.split(' ');
+  return separa;
 }
 
+
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let primeiro = array[0];
+  let ultimo = array[array.length - 1];
+  return ultimo + ',' + ' ' + primeiro;
+
 }
+console.log(concatName('henrique','junqueira' ,'braga'));
 
 // Desafio 5
 function footballPoints() {
