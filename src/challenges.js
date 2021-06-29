@@ -87,15 +87,17 @@ function highestCount(array) {
   return contRepete;
 
 }
+let lista=[0, 4, 4, 4, 9, 2, 1]
+console.log(highestCount(lista));
 
 // Desafio 7
 function catAndMouse(cat1, cat2) {
   // seu código aqui
   // cat1 é a distancia em unidades do gato1 para o rato
   if (cat1 > cat2) {
-    return 'cat2';
-  } else if (cat2 > cat1) {
     return 'cat1';
+  } else if (cat2 > cat1) {
+    return 'cat2';
   } else {
     return "os gatos trombam e o rato foge";
   }
