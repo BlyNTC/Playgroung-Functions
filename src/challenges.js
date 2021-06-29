@@ -21,19 +21,37 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array) {
-  let palavras = array[array.length-1] + ", " + array[0];
+  let palavras = array[array.length - 1] + ", " + array[0];
   return palavras
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = wins * 3 + ties; 
+  let pontos = wins * 3 + ties;
   return pontos;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayDeNumeros) {
+  let maiorNumero = arrayDeNumeros[0];
+  let qtdRepeticoes = 0;
+
+  for (let primeiroNumero = 0; primeiroNumero < arrayDeNumeros.length; primeiroNumero += 1) {
+    for (let segundoNumero = 0; segundoNumero < arrayDeNumeros.length; segundoNumero += 1) {
+      if (arrayDeNumeros[segundoNumero] >= arrayDeNumeros[primeiroNumero] && arrayDeNumeros[segundoNumero] >= maiorNumero) {
+        maiorNumero = arrayDeNumeros[segundoNumero]; 
+      } else if (arrayDeNumeros[primeiroNumero] >= arrayDeNumeros[segundoNumero] && arrayDeNumeros[primeiroNumero] >= maiorNumero) {
+        maiorNumero = arrayDeNumeros[primeiroNumero];
+      }
+    }
+  }
+
+  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
+    if (arrayDeNumeros[index] === maiorNumero) {
+      qtdRepeticoes += 1;
+    }
+  }
+  return qtdRepeticoes;
 }
 
 // Desafio 7
