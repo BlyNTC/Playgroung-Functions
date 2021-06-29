@@ -10,9 +10,12 @@ function compareTrue(a, b) {
 return result;
 }
 // Desafio 2
-function calcArea() {
+function calcArea(altura, base) {
   // seu código aqui
+  let area = (altura * base) / 2;
+  return area;
 }
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
