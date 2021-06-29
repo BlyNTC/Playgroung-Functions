@@ -1,12 +1,14 @@
 // Desafio 1
-function compareTrue() {
-  if(5 >= 10 && 6 >= 10){
-    console.log(false);
-  }
-  else{
+function compareTrue(param1, param2) {
+  if(param1 > 0 && param2 > 0){
     console.log(true);
   }
-}
+  else{
+    console.log(false); 
+  }
+  }
+  
+  
 
 // Desafio 2
 function calcArea() {
