@@ -20,10 +20,9 @@ let firstPositionInArray = newArray[0]
 let lastPositionInArray = newArray[newArray.length - 1]
 return lastPositionInArray.concat(", ", firstPositionInArray);
 }
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+return (wins*3) + (ties*1);
 }
 
 // Desafio 6
