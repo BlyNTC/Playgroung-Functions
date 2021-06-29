@@ -1,27 +1,37 @@
 // Desafio 1
 let boraPraia;
-function compareTrue(fimDeSemana,temSol) {
+function compareTrue(fimDeSemana, temSol) {
   // seu código aqui
 
-if(fimDeSemana === true && temSol === true){
-  boraPraia = true;
- } else {
-  boraPraia = false;
- }
-return boraPraia;
+  if (fimDeSemana === true && temSol === true) {
+    boraPraia = true;
+
+  } else {
+    boraPraia = false;
+
+  }
+  return boraPraia;
+
 }
 
 compareTrue(true, true);
 
 // Desafio 2
-function calcArea() {
+function calcArea(a, b) {
   // seu código aqui
+  let area = (a * b)/2;
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
+let quebrada;
+function splitSentence(frase) {
   // seu código aqui
+  quebrada = frase.split(" ");
+  return quebrada;
+  
 }
+splitSentence("Vamo que vamo");
 
 // Desafio 4
 function concatName() {
