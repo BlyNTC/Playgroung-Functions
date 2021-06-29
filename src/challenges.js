@@ -11,14 +11,30 @@ else {
 
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,altura) {
+  let area = (base*altura)/2 ;
+  return area;
 }
 
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(palavras) {
+  let palavra ='';
+    let array =[];
+    for(let letters of palavras){
+        if(letters != ' '){
+         palavra += letters;
+        }
+        else {
+            array.push(palavra);
+            palavra = '';
+        }
+        
+    }
+    array.push(palavra)
+    return array;
 }
+
 
 // Desafio 4
 function concatName() {
