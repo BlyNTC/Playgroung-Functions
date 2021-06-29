@@ -144,15 +144,15 @@ function decode(frase2) {
   // seu código aqui
   let frase = '';
   for (let value of frase2) {
-    if (value === 1) {
+    if (value === '1') {
       frase += 'a';
-    } else if (value === 2) {
+    } else if (value === '2') {
       frase += 'e';
-    } else if (value === 3) {
+    } else if (value === '3') {
       frase += 'i';
-    } else if (value === 4) {
+    } else if (value === '4') {
       frase += 'o';
-    } else if (value === 5) {
+    } else if (value === '5') {
       frase += 'u';
     } else {
       frase += value;
@@ -161,6 +161,7 @@ function decode(frase2) {
   return frase;
 
 }
+
 
 
 module.exports = {
