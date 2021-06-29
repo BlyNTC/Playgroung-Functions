@@ -62,8 +62,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  /**
+ * Consultei o vídeo do canal 'All Things JavaScript, LLC'no YouTube. Para resolver esta parte
+ * https://www.youtube.com/watch?v=pfkkdzeyx6U
+ */
+  let waterString = string.match(/\d+/g);
+  let waterNumber = 0;
+  for (let index in waterString)
+    waterNumber += parseInt(waterString[index]);
+  if (waterNumber > 1){
+    return waterNumber + ' copos de água';
+  }else{
+    return waterNumber + ' copo de água';
+  }
 }
 
 module.exports = {
