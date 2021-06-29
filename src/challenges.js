@@ -21,13 +21,13 @@ function splitSentence(sentenca) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nome) {
+  return nome[0]+','+' '+ nome[n - 1]
 }
 
 // Desafio 5
-function footballPoints() {
-  let pontos = 0
+function footballPoints(wins, ties) {
+  let pontos = 0;
   switch (wins, ties) {
     case wins:
       pontos += 3
