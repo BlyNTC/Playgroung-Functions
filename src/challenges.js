@@ -3,7 +3,7 @@ function compareTrue(valor1,valor2) {
   // seu código aqui NAO ENTENDI O QUE SE PEDE  
 }
 
-// Desafio 2
+// Desafio 2 "OK"
 function calcArea(base, height) {
   // seu código aqui
   let calculo = (base * height) / 2;
