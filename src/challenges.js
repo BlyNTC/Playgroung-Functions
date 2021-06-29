@@ -39,30 +39,28 @@ function highestCount(numbers) {
     if (value > higher) {
       higher = value;
     }
-  };
+  }
 
   for (let value of numbers) {
     if (value === higher) {
       output += 1;
     }
-  };
+  }
 
   return output;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let output;
-  let distance1 = Math.abs(mouse - cat1),
-    distance2 = Math.abs(mouse - cat2);
+  let distance1 = Math.abs(mouse - cat1);
+  let distance2 = Math.abs(mouse - cat2);
 
   if (distance1 === distance2) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   } else if (distance1 < distance2) {
     return 'cat1';
-  } else {
-    return 'cat2';
-  };
+  }
+  return 'cat2';
 }
 
 // Desafio 8
@@ -71,26 +69,26 @@ function fizzBuzz(numbers) {
 
   for (let number of numbers) {
     if (number % 3 === 0 && number % 5 === 0) {
-      output.push("fizzBuzz");
+      output.push('fizzBuzz');
     } else if (number % 3 === 0) {
-      output.push("fizz");
+      output.push('fizz');
     } else if (number % 5 === 0) {
-      output.push("buzz");
+      output.push('buzz');
     } else {
-      output.push("bug!");
-    };
-  };
+      output.push('bug!');
+    }
+  }
 
   return output;
 }
 
 // Desafio 9
-function encode() {
-
+function encode(sentence) {
+  return sentence.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
 }
 
-function decode() {
-  // seu código aqui
+function decode(sentence) {
+  return sentence.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
 }
 
 module.exports = {
