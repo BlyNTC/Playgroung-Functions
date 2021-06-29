@@ -66,9 +66,9 @@ function fizzBuzz(array) {
     let div5 = num % 5;
     if (div3 === 0 && div5 === 0) {
       newArray.push('fizz');
-    } else if (div5 === 0) {
+    } else if (div5 === 0 && div3 !== 0) {
       newArray.push('buzz');
-    } else if (div3 === 0) {
+    } else if (div3 === 0 && div5 !== 0) {
       newArray.push('fizzBuzz');
     } else {
       newArray.push('bug!');
@@ -81,24 +81,19 @@ function fizzBuzz(array) {
 function encode(phrase) {
   let newPhrase = '';
   for (let i = 0; i < phrase.length; i += 1) {
-    switch(phrase[i]){
-      case 'a':
-        newPhrase += '1';
-        break;
-      case 'e':
-        newPhrase += '2';
-        break;
-      case 'i':
-        newPhrase += '3';
-        break;
-      case 'o':
-        newPhrase += '4';
-        break;
-      case 'u':
-        newPhrase += '5';
-        break;
-      default:
-        newPhrase += phrase[i];
+    switch (phrase[i]) {
+    case 'a':
+      newPhrase += '1';
+    case 'e':
+      newPhrase += '2';
+    case 'i':
+      newPhrase += '3';
+    case 'o':
+      newPhrase += '4';
+    case 'u':
+      newPhrase += '5';
+    default:
+      newPhrase += phrase[i];
     }
   }
   return newPhrase;
@@ -107,24 +102,19 @@ function encode(phrase) {
 function decode(phrase) {
   let newPhrase = '';
   for (let i = 0; i < phrase.length; i += 1) {
-    switch(phrase[i]){
-      case '1':
-        newPhrase += 'a';
-        break;
-      case '2':
-        newPhrase += 'e';
-        break;
-      case '3':
-        newPhrase += 'i';
-        break;
-      case '4':
-        newPhrase += 'o';
-        break;
-      case '5':
-        newPhrase += 'u';
-        break;
-      default:
-        newPhrase += phrase[i];
+    switch (phrase[i]) {
+    case '1':
+      newPhrase += 'a';
+    case '2':
+      newPhrase += 'e';
+    case '3':
+      newPhrase += 'i';
+    case '4':
+      newPhrase += 'o';
+    case '5':
+      newPhrase += 'u';
+    default:
+      newPhrase += phrase[i];
     }
   }
   return newPhrase;
