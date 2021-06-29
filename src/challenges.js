@@ -30,14 +30,25 @@ function concatName(nameArray) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = (wins * 3) + (ties);
+  let pontos = wins * 3 + ties;
 
   return pontos;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// https://dmitripavlutin.com/javascript-array-sort-numbers/
+function highestCount(numberArray) {
+  let sortedArray = numberArray.sort((a, b) => {
+    if (a < b) return -1;
+    if (a > b) return 1;
+  });
+  let counter = 0;
+  for (let i = 0; i < sortedArray.length; i++) {
+    if (sortedArray[i] == sortedArray[sortedArray.length - 1]) {
+      counter++;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
