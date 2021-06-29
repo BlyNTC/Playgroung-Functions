@@ -1,0 +1,8 @@
+Lifecycle scripts included in undefined:
+  test
+    jest
+
+available via `npm run-script`:
+  lint
+    eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js, .jsx
+
