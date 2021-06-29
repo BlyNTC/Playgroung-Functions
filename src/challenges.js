@@ -4,7 +4,7 @@ function compareTrue(valor1, valor2) {
     return true;
   } else if (valor1 === true && valor2 === false) {
     return false;
-  } else if (valor1 === false && valor2 === false) {
+  } else {
     return false;
   }
 }
