@@ -25,8 +25,19 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
+//https://www.w3schools.com/jsref/jsref_join.asp
+function concatName(array) {
   // seu código aqui
+  let newArray = [];
+  let arrayLength = array.length-1;
+  for (let i=(array.length-1); i>=0; i-=1)
+  {
+    if (i===0 || i===(arrayLength))
+    {
+      newArray.push(array[i]);
+    }
+  }
+  return newArray.join(", ");
 }
 
 // Desafio 5
