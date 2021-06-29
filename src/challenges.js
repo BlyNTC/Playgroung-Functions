@@ -34,11 +34,12 @@ function concatName(arraystr) {
   return result
 }
 
-console.log(concatName(['captain', 'my', 'captain']))
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  pont = wins * 3
+  ponts = pont + ties;
+
+  return ponts;
 }
 
 // Desafio 6
