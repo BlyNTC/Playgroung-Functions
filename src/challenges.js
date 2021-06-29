@@ -26,10 +26,19 @@ function calcArea(base,height) {
 calcArea(51,1);
 console.log(areaDoTriangulo);
 
+let array;
 // Desafio 3
-function splitSentence() {
+function splitSentence(text) {
   // seu código aqui
+  array = text.split(" ", 3);
+  return array;
 }
+splitSentence("foguete");
+console.log (array);
+
+/* Consultei o seguinte site para conseguir realizar esse desafio.
+   link: https://blog.betrybe.com/javascript/javascript-split/ */
+
 
 // Desafio 4
 function concatName() {
