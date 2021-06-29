@@ -117,9 +117,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
   
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
-
+  let results = [];
+  
+  for (let key of numbers){
+    if (key % 3 == 0 && key % 5 == 0){
+      results.push('fizzBuzz');
+    }
+    else if (key % 3 == 0 && key % 5 != 0){
+      results.push('fizz')
+    }
+    else if (key % 3 != 0 && key % 5 == 0){
+      results.push('buzz');
+    }
+    else
+    results.push('bug!');
+  
+  }
+  return results;
 }
 
 // Desafio 9
