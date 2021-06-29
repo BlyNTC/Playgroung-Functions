@@ -1,6 +1,9 @@
+// BLOCO 04 - DIA - 5 - JavaScript - Playground Functions
+// 29/06/21
+
 // Desafio 1
 function compareTrue() {
-  // seu código aqui
+  
 }
 
 // Desafio 2
