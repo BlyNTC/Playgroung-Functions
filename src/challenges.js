@@ -23,8 +23,11 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(info) {
+  let primeiroElemento = info.shift();
+  let ultimoElemento = info.pop();
+
+  return ultimoElemento + ' ' + primeiroElemento;
 }
 
 // Desafio 5
