@@ -24,8 +24,45 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(a) {
   // seu código aqui
+  if (Math.sign(a[0, 1, 2]) === 1 || Math.sign(a[0, 1, 2]) === 0){
+
+  let vezesQueSiRepete = 0;
+  let guardaValor = 0;
+
+  for ( let i = 0; i < a.length; i += 1 ){
+    if ( a[i] >= guardaValor){
+      guardaValor = a[i]
+    }
+  }
+
+  for (let i = 0; i < a.length; i += 1){
+     if (a[i] >= guardaValor){
+       vezesQueSiRepete += 1;
+     }
+  }
+  return vezesQueSiRepete;
+  }else if (Math.sign(a[0, 1, 2] === -1 || Math.sign(a[0, 1, 2]) === -0)){
+
+  let vezesNumeroNegativosQueAparecem = 0;
+  let guardaNumeroNegativo = 0;
+
+  for (let indice = 0; indice < a.length; indice += 1){
+    if (a[indice] <= guardaNumeroNegativo){
+      guardaNumeroNegativo = a[indice];
+    }else if (a[indice] > guardaNumeroNegativo){
+      guardaNumeroNegativo = a[indice];
+    }
+  }
+ for(let i = 0; i < a.length; i += 1){
+   if (a[i] >= guardaNumeroNegativo){
+    vezesNumeroNegativosQueAparecem += 1;
+   }
+ }
+ return vezesNumeroNegativosQueAparecem;
+}
+
 }
 
 // Desafio 7
