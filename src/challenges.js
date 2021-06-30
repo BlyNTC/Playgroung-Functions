@@ -45,7 +45,6 @@ function footballPoints(win, ties) {
   resultado = win + ties
   return resultado
 }
-  console.log(footballPoints(14, 8))
 
     // Aprendido novo jeito de fazer
     // let point = win * 3
@@ -74,9 +73,9 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   let retorno;
-  cato1 = cat1  - mouse;
+  cato1 = cat1 - mouse;
   cato2 = cat2 - mouse;
   cato1 = Math.abs(cato1);
   cato2 = Math.abs(cato2);
@@ -113,7 +112,6 @@ function fizzBuzz(retornoString) {
   return retornoString;
 
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(criptografar) {
@@ -143,7 +141,6 @@ function encode(criptografar) {
  return resultado;
   
 }
-console.log(encode("hia there a"))
 
 function decode(descriptografar) {
   let resultado = '';
