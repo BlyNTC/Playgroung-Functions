@@ -33,7 +33,7 @@ function splitSentence() {
   resultado = stringExemplo.split(" ");
   return resultado;
 }
-console.log(splitSentence());
+splitSentence();
 
 
 // Desafio 4
