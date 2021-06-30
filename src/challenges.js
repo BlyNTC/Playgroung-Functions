@@ -125,8 +125,16 @@ function encode(str) {
 return string;
 }
 
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let string = str;
+  for(let i = 0; i < string.length; i +=1){
+    string = string.replace('1','a')
+    string = string.replace('2','e')
+    string = string.replace('3','i')
+    string = string.replace('4','o')
+    string = string.replace('5','u')
+  }
+return string;
 }
 
 module.exports = {
