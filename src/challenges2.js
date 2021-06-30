@@ -23,25 +23,24 @@ function techList(array, name) {
 
 // Desafio 11
 
+function countOcurrences(arr, val) {
+  return arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
+}
+
 function returnErrorMessage(array) {
-  if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
-  for (let i = 0; i < array.length; i += 1) {
-    let count = 0;
-    for (let j = 0; j < array.length; j += 1) {
-      if (array[i] === array[j]) {
-        count += 1;
-      }
-    }
-    if (array[i] < 0 || array[i] > 9 || count >= 3) {
+  for (let value of array) {
+    if (array[i] < 0 || array[i] > 9 || countOcurrences(array, value)>= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 }
+// https://www.codegrepper.com/code-examples/javascript/javascript+count+number+of+occurrences+in+array
 
 function generatePhoneNumber(array) {
-  
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  returnErrorMessage(array);
   let number = '';
   for (let item of array) {
     number += item;
