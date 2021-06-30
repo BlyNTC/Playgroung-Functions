@@ -54,27 +54,27 @@ console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distancia1 = mouse - cat1;
-  let distancia2 = mouse - cat2;
+  let distancia1 = Math.abs(mouse) - Math.abs(cat1);
+  let distancia2 = Math.abs(mouse) - Math.abs(cat2);
 
   if(distancia1 < distancia2){
     return "cat1";
   }else if(distancia1 > distancia2){
     return "cat2";
   }else{
-    return "Os gatos trombam e o rato foge";
+    return "os gatos trombam e o rato foge";
   }
 }
 console.log(catAndMouse(10, 6, 5));
 
 // Desafio 8
 function fizzBuzz(arrayNumero) {
-  for(let index = 0; index < arrayNumero.length; index += 1){
-    if(arrayNumero[index] % 3 == 0){
+  for(let index of arrayNumero){
+    if(index % 3 == 0){
       return "fizz";
-    }else if(arrayNumero[index] % 5 == 0){
+    }else if(index % 5 == 0){
       return "buzz";
-    }else if(arrayNumero[index] % 3 == 0 && array[index] % 5 == 0){
+    }else if(index % 3 == 0 && index % 5 == 0){
       return "fizzbuzz";
     }else{
       return "bug!";
