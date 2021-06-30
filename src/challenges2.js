@@ -9,17 +9,9 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
- if(lineA > (lineB + lineC) && lineB > (lineA + lineC) && lineC > (lineA + lineB)) {
-  return false;
-} else if (lineA < (lineB - lineC) && lineB < (lineA - lineC) && lineC < (lineA - lineB)) {
-  return false;
-} else {
-  console.log("Não é um triângulo válido");
-}
+function triangleCheck() {
 
 }
-console.log(10,4,8);
 
 // Desafio 13
 function hydrate() {
