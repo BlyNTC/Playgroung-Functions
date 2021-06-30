@@ -21,7 +21,7 @@ function splitSentence(string) {
 function concatName(lista) {
   let primeiroItem = lista[0]
   let ultimoItem = lista[lista.length -1]
-  var conjunto = primeiroItem + ', ' + ultimoItem
+  var conjunto = ultimoItem+ ', ' + primeiroItem
   return conjunto
 }
 // Desafio 5
