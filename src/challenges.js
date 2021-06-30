@@ -45,7 +45,7 @@ function footballPoints(wins,ties) {
 
 // Desafio 6
 function highestCount(arrayNumeros) {
-  let maiorNumero=0
+  let maiorNumero=-100
   let contador=0
   for(let i=0;i<arrayNumeros.length;i+=1){
     if(arrayNumeros[i]>maiorNumero){
@@ -95,7 +95,7 @@ function fizzBuzz(arrayDeNumeros) {
   }
   return(retorno)
 }
-console.log(fizzBuzz([2,15,7,9,45]))
+
 // Desafio 9
 function encode() {
   // seu código aqui
