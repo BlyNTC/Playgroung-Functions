@@ -94,11 +94,41 @@ function fizzBuzz(arrayFB) {
 } 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let trocaValor = ''
+  for(let percorrer of string){
+    if (percorrer === 'a'){
+      trocaValor += 1;
+    } else if (percorrer === 'e') {
+      trocaValor += 2.
+    } else if (percorrer === 'i') {
+      trocaValor += 3
+    } else if (percorrer === 'o'){
+      trocaValor += 4
+    } else if (percorrer === 'u'){
+      trocaValor += 5
+    } else {
+      trocaValor += percorrer;
+    }
+  }return trocaValor;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let trocaValor = ''
+  for(let percorrer of string){
+    if (percorrer === '1'){
+      trocaValor += 'a';
+    } else if (percorrer === '2') {
+      trocaValor += 'e'
+    } else if (percorrer === '3') {
+      trocaValor += 'i'
+    } else if (percorrer === '4'){
+      trocaValor += 'o'
+    } else if (percorrer === '5'){
+      trocaValor += 'u'
+    } else {
+      trocaValor += percorrer;
+    }
+  }return trocaValor;
 }
 
 module.exports = {
