@@ -11,9 +11,16 @@ if(num1 === true && num2 === true){
 
 
 // Desafio 2
-function calcArea() {
+let parametroBase = 0
+function calcArea(base, heigth) {
+  parametroBase = (base*heigth)/2;
   
+
+  console.log(parametroBase) 
+  return parametroBase;
 }
+
+calcArea (5,2)
 
 // Desafio 3
 function splitSentence() {
