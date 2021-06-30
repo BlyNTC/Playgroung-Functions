@@ -6,35 +6,31 @@ function compareTrue(num1, num2) {
     return false;
   }
 }
-//console.log(compareTrue(true,false));
 
 // Desafio 2
 function calcArea(base, altura) {
   return (base * altura) / 2;  
 }
-//console.log(calcArea(5,10));
 
 // Desafio 3
 function splitSentence(string) {
   let array = string.split(' ');
   return array;  
 }
-//console.log(splitSentence('Vamo que vamo'));
 
 // Desafio 4
 function concatName(nomes) {
   return nomes[nomes.length-1] + ', ' + nomes[0];
 } 
-//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins*3 + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(lista) {
+  
 }
 
 // Desafio 7
