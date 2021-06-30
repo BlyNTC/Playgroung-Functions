@@ -1,10 +1,10 @@
 // Desafio 1
-let param1 = true;
-let param2 = true;
 function compareTrue(param1, param2) {
-  if (param1 = true && param2 = true) {
-    consolel
-  }
+  if (param1 === true && param2 === true) {
+    return true;
+    } else {
+    return false;
+    }
   };
 
 // Desafio 2
