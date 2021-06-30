@@ -82,18 +82,31 @@ function generatePhoneNumber(listaDeNumeros) {
   return resultado;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  //verifica se um lado é menor que a soma dos outros dois.
+  let condicao1 = ((lineA < (lineB + lineC)) && (lineB < (lineA + lineC)) && (lineC < (lineB + lineA)));
+  //verifica se um lado é maior que o valor absoluto da diferença dos outros dois.
+  let condicao2 = ((lineA > Math.abs(lineB - lineC)) && (lineB > Math.abs(lineA - lineC)) && (lineC > Math.abs(lineB - lineA)));
+
+  return (condicao1 && condicao2);
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(sentence) {
+  let lista = sentence.split('').filter(n => (Number(n)));
+  let soma = 0;
+  for (let numero of lista) {
+    soma = soma + parseInt(numero);
+  }
+  if (soma > 1){
+  return (soma + " copos de água");
+  } else {
+    return (soma + " copo de água")
+  }
 }
 
+console.log(hydrate("1 cerveja e 2 caipirinhas"));
 module.exports = {
   generatePhoneNumber,
   techList,
