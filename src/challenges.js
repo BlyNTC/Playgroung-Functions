@@ -46,7 +46,7 @@ function highestCount(numeros) {
   return repete;
 } 
 
-// Desafio 7
+// Desafio 7 - A função Math.abs(x) retorna um valor positivo
 function catAndMouse(mouse, cat1, cat2) {
  let distancia1 = Math.abs(cat1 - mouse)
  let distancia2 =  Math.abs(cat2 - mouse)
@@ -59,7 +59,7 @@ if (distancia1 === distancia2) {
 }
 }
 
-// Desafio 8
+// Desafio 8 // O método push() adiciona um ou mais elementos ao final de um array e retorna o novo comprimento desse array.
 function fizzBuzz(array) { 
   let total = [];
 for (let index of array){
@@ -77,16 +77,61 @@ return total;
 }
 
 
-
-
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string){
+  let nova = '';
+  for (let index of string){
+    switch (index) {
+      case 'a':
+        nova += 1;
+        break;
+      case 'e':
+        nova += 2;
+        break;
+      case 'i':
+        nova += 3;
+        break;  
+      case 'o':
+        nova += 4;
+        break;
+      case 'u':
+        nova += 5;
+        break;
+      default:
+        nova += index
+        break;
+  }
+  }
+ return nova;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+let nova = '';
+for (let index of string){
+  switch (index) {
+    case '1':
+      nova += 'a';
+      break;
+    case '2':
+      nova += 'e';
+      break;
+    case '3':
+      nova += 'i';
+      break;  
+    case '4':
+      nova += 'o';
+      break;
+    case '5':
+      nova += 'u';
+      break;
+      default:
+      nova += index
+      break;
+  }
 }
+return nova;
+}
+
 
 module.exports = {
   calcArea,
