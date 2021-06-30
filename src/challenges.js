@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue (p1, p2) {
+function compareTrue(p1, p2) {
   let resultado = false;
   if (p1 && p2) {
     resultado = true;
@@ -8,14 +8,14 @@ function compareTrue (p1, p2) {
 }
 
 // Desafio 2
-function calcArea (base, height) {
+function calcArea(base, height) {
   let area = 0;
   area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
-function splitSentence (frase) {
+function splitSentence(frase) {
   let arrayAuxiliar = frase.split('');
   let arrayFinal = [];
   let n = 0;
@@ -33,17 +33,17 @@ function splitSentence (frase) {
 }
 
 // Desafio 4
-function concatName (arrayDeStrings) {
+function concatName(arrayDeStrings) {
   return arrayDeStrings[(arrayDeStrings.length - 1)] + ', ' + arrayDeStrings[0];
 }
 
 // Desafio 5
-function footballPoints (wins, ties) {
+function footballPoints(wins, ties) {
   return (wins * 3) + (ties);
 }
 
 // Desafio 6
-function highestCount (listaDenumeros) {
+function highestCount(listaDenumeros) {
   let maiorNumero = listaDenumeros[0];
   let repeticoes = 0;
   for (let maior of listaDenumeros) {
@@ -60,12 +60,12 @@ function highestCount (listaDenumeros) {
 }
 
 // Desafio 7
-function catAndMouse (mouse, cat1, cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   let distanciaDoGato1 = Math.abs(mouse - cat1);
   let distanciaDoGato2 = Math.abs(mouse - cat2);
-  let resutaldo;
+  let resultado;
   if (distanciaDoGato1 === distanciaDoGato2) {
-    resultado = "os gatos trombam e o rato foge"
+    resultado = 'os gatos trombam e o rato foge';
   } else if (distanciaDoGato1 < distanciaDoGato2) {
     resultado = 'cat1';
   } else {
@@ -75,7 +75,7 @@ function catAndMouse (mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz (arrayDeNumeros) {
+function fizzBuzz(arrayDeNumeros) {
   let arrayFinal = [];
   let n = 0;
   for (let numero of arrayDeNumeros) {
@@ -94,7 +94,7 @@ function fizzBuzz (arrayDeNumeros) {
 }
 
 // Desafio 9
-function encode (codifica) {
+function encode(codifica) {
   let arrayAuxiliar = codifica.split('');
   let n = 0;
   codifica = '';
@@ -122,7 +122,7 @@ function encode (codifica) {
   return codifica;
 }
 
-function decode (decodifica) {
+function decode(decodifica) {
   let arrayAuxiliar = decodifica.split('');
   let n = 0;
   decodifica = '';

@@ -4,11 +4,9 @@ function techList(listaDesordenada, name) {
   if (listaDesordenada.length === 0) {
     resultado = "Vazio!";
   } else {
-    listaOrdenada = listaDesordenada.sort();
+    let listaOrdenada = listaDesordenada.sort();
     let arrayDeObjetos = [];
     let n = 0;
-    let objetoTech = {
-    }
     for (let tecnologia of listaOrdenada) {
       arrayDeObjetos[n] = objetoTech = {
         name: name,
@@ -22,7 +20,7 @@ function techList(listaDesordenada, name) {
 }
 
 // Desafio 11
-//Função que recebe como parâmetro um número e uma lista de números, depois retorna a quantidade de vezes que ele se repete.
+// Função que recebe como parâmetro um número e uma lista de números, depois retorna a quantidade de vezes que ele se repete.
 function repete(numero, lista) {
   let quantidade = 0;
   for (let digito of lista) {
@@ -36,10 +34,10 @@ function repete(numero, lista) {
 function generatePhoneNumber(listaDeNumeros) {
   let resultado;
   if (listaDeNumeros.length === 11) {
-    //Verifica se os numeros de cada posicao é menor ou igual a 9 e maior que 0
+    // Verifica se os numeros de cada posicao é menor ou igual a 9 e maior que 0
     let vaiNaFe = false;
     for (let numero of listaDeNumeros) {
-      //garate que o número não se repete mais que 2 vezes.
+      // garante que o número não se repete mais que 2 vezes.
       let contador = repete(numero, listaDeNumeros);
       if ((numero >= 0) && (numero <= 9) && (contador < 3)) {
         vaiNaFe = true;
@@ -55,14 +53,14 @@ function generatePhoneNumber(listaDeNumeros) {
       let n = 0;
       for (let digito of listaDeNumeros) {
         if (n < 2) {
-          //Resolve DDD
-          ddd = ddd.concat(listaDeNumeros[n])
+          // Resolve DDD
+          ddd = ddd.concat(listaDeNumeros[n]);
         } else if (n >= 2 && n <= 6) {
-          //Resolve primeiros 5 digitos
-          primeiraParte = primeiraParte.concat(listaDeNumeros[n])
+          // Resolve primeiros 5 digitos
+          primeiraParte = primeiraParte.concat(listaDeNumeros[n]);
         } else {
-          //Resolve ultimos 4 digitos
-          segundaParte = segundaParte.concat(listaDeNumeros[n])
+          // Resolve ultimos 4 digitos
+          segundaParte = segundaParte.concat(listaDeNumeros[n]);
         }
         n += 1;
       }
@@ -71,7 +69,7 @@ function generatePhoneNumber(listaDeNumeros) {
       resultado = "não é possível gerar um número de telefone com esses valores";
     }
   } else {
-    resultado = "Array com tamanho incorreto."
+    resultado = "Array com tamanho incorreto.";
   }
   return resultado;
 }
