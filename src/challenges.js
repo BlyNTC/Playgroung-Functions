@@ -59,20 +59,22 @@ console.log(footballPoints(14,8))
 function highestCount(array){
   // seu código aqui
   let maiorNumero=array[0];
-  let numeroVezes=0;
+let numeroVezes=0;
 
-  for (let index = 0; index < array.length; index+=1) {
-    if (maiorNumero <array[index]){
-      maiorNumero=array[index];
-    } 
-  }
-      for (let index = 0; index < array.length; index+=1) {
-        if(maiorNumero===array[index]){
-         numeroVezes+=1;
-        }
-      }
-        return numeroVezes;
-      }
+for (let index = 0; index < array.length; index+=1) {
+if (maiorNumero <array[index]){
+maiorNumero=array[index];
+} 
+}
+for (let index = 0; index < array.length; index+=1) {
+if(maiorNumero===array[index]){
+numeroVezes+=1;
+}
+}
+return numeroVezes;
+}
+        
+      
 highestCount([9, 1, 2, 3, 9, 5, 7]);
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
