@@ -1,10 +1,10 @@
 // Desafio 1
-function compareTrue(bool1,bool2) {
+function compareTrue(bool1, bool2) {
+  let cond = false;
   if (bool1 === true && bool2 === true) {
-    return true;
-  } else {
-    return false;
+    cond = true;
   }
+  return cond;
 }
 
 // Desafio 2
@@ -15,21 +15,21 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  splittedSentence = sentence.split(' ')
+  let splittedSentence = sentence.split(' ');
   return splittedSentence;
 }
 
 // Desafio 4
 function concatName(array) {
-  let string = array[array.length - 1] +', ' + array[0];
+  let string = array[array.length - 1] + ', ' + array[0];
   return string;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  pointsWin = 3;
-  pointsTie = 1;
-  totalPoints = (wins * pointsWin) + (ties * pointsTie);
+  let pointsWin = 3;
+  let pointsTie = 1;
+  let totalPoints = (wins * pointsWin) + (ties * pointsTie);
   return totalPoints;
 }
 
@@ -37,15 +37,13 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let addNumber = 0;
   let highestNumber = numbers[0];
-  for (index in numbers) {
-    for (index2 in numbers) {
-      if (highestNumber < numbers[index2]) {
-        highestNumber = numbers[index2];
-      }
+  for (let index in numbers) {
+    if (highestNumber < numbers[index]) {
+      highestNumber = numbers[index];
     }
   }
-  for (index in numbers) {
-    if (highestNumber === numbers[index]) {
+  for (let index2 in numbers) {
+    if (highestNumber === numbers[index2]) {
       addNumber += 1;
     }
   }
@@ -54,31 +52,30 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  positionCat1 = Math.abs(mouse - cat1);
-  positionCat2 = Math.abs(mouse - cat2);
+  let positionCat1 = Math.abs(mouse - cat1);
+  let positionCat2 = Math.abs(mouse - cat2);
+  let nearerCat = '';
   if (positionCat2 < positionCat1) {
-    return 'cat2';
-  } else if(positionCat1 < positionCat2) {
-    return 'cat1';
+    nearerCat = 'cat2';
+  } else if (positionCat1 < positionCat2) {
+    nearerCat = 'cat1';
   } else {
-    return 'os gatos trombam e o rato foge';
-  }  
+    nearerCat = 'os gatos trombam e o rato foge';
+  }
+  return nearerCat;
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let newArrayNumbers = [];
-  for (index in numbers) {
-    if (numbers[index]% 3 === 0 && numbers[index] % 5 === 0) {
+  for (let index in numbers) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       newArrayNumbers.push('fizzBuzz');
-    }
-    else if (numbers[index] % 5 === 0) {
+    } else if (numbers[index] % 5 === 0) {
       newArrayNumbers.push('buzz');
-    }
-    else if (numbers[index]% 3 === 0) {
+    } else if (numbers[index] % 3 === 0) {
       newArrayNumbers.push('fizz');
-    }
-    else{
+    } else {
       newArrayNumbers.push('bug!');
     }
   }
@@ -88,23 +85,24 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(string) {
   let stringSplit = string.split('');
-  for (index in stringSplit) {
-    switch (stringSplit[index]){
-      case 'a':
-        stringSplit[index] = '1';
-        break;
-      case 'e':
-        stringSplit[index] = '2';
-        break;
-      case 'i':
-        stringSplit[index] = '3';
-        break;
-      case 'o':
-        stringSplit[index] = '4';
-        break;
-      case 'u':
-        stringSplit[index] = '5';
-        break;
+  for (let index in stringSplit) {
+    switch (stringSplit[index]) {
+    case 'a':
+      stringSplit[index] = '1';
+      break;
+    case 'e':
+      stringSplit[index] = '2';
+      break;
+    case 'i':
+      stringSplit[index] = '3';
+      break;
+    case 'o':
+      stringSplit[index] = '4';
+      break;
+    case 'u':
+      stringSplit[index] = '5';
+      break;
+    default:
     }
   }
   return stringSplit.join('');
@@ -112,23 +110,24 @@ function encode(string) {
 
 function decode(string) {
   let stringSplit = string.split('');
-  for (index in stringSplit) {
-    switch (stringSplit[index]){
-      case '1':
-        stringSplit[index] = 'a';
-        break;
-      case '2':
-        stringSplit[index] = 'e';
-        break;
-      case '3':
-        stringSplit[index] = 'i';
-        break;
-      case '4':
-        stringSplit[index] = 'o';
-        break;
-      case '5':
-        stringSplit[index] = 'u';
-        break;
+  for (let index in stringSplit) {
+    switch (stringSplit[index]) {
+    case '1':
+      stringSplit[index] = 'a';
+      break;
+    case '2':
+      stringSplit[index] = 'e';
+      break;
+    case '3':
+      stringSplit[index] = 'i';
+      break;
+    case '4':
+      stringSplit[index] = 'o';
+      break;
+    case '5':
+      stringSplit[index] = 'u';
+      break;
+    default:
     }
   }
   return stringSplit.join('');

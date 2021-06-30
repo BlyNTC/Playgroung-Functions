@@ -3,10 +3,10 @@ function techList(array, name) {
   let arrayTech = [];
   let arraySorted = array.sort();
   if (array < 1) {
-    return "Vazio!";
+    return 'Vazio!';
   } else {
-    for (tech of arraySorted) {
-      arrayTech.push({tech, name});
+    for (let tech of arraySorted) {
+      arrayTech.push({ tech, name });
     }
     return arrayTech;
   }
