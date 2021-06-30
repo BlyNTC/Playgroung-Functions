@@ -2,7 +2,7 @@
 function techList(array, name) {
   let techlist = [];
   array.sort();
-  for (let i = 0; i < array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     let object = {
       tech: array[i],
       name: name

@@ -124,7 +124,7 @@ function encode(string) {
 function decode(string) {
   let array = string.split("");
   let final = [];
-  for (i = 0; i < array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     if (array[i] == "1") {
       final.push("a");
     } else if (array[i] == "2") {
