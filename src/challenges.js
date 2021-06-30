@@ -60,13 +60,15 @@ function highestCount(valores) {
 function catAndMouse(mouse,cat1,cat2) {
   let gato1 = 'cat1';
   let gato2 = 'cat2';
+  let distancg1 = Math.abs(cat1 - mouse);
+  let distancg2 = Math.abs(cat2 - mouse);
   let tromba = 'os gatos trombam e o rato foge';
-  if(cat1 > mouse && cat1 > cat2){
-    return gato2;
-  } else if(cat2 > mouse && cat2 > cat1){
-    return gato1;
-  } else if(cat1 === mouse && cat2 === mouse){
+  if( distancg1 === distancg2){
     return tromba;
+  } else if(distancg2 > distancg1){
+    return gato1;
+  } else if(distancg1 > distancg2){
+    return gato2;
   }// seu código aqui
 }
 
