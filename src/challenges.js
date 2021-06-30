@@ -101,11 +101,43 @@ return array1;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let x = '';
+  for (let index in string) {
+    if (string[index] === 'a'){
+      x = x + '1';
+    }else if (string[index] === 'e'){
+      x = x + '2';
+    }else if (string[index] === 'i'){
+      x = x + '3';
+    }else if (string[index] === 'o'){
+      x = x + '4';
+    }else if (string[index] === 'u'){
+      x = x + '5';
+    } else {
+      x = x +string[index]
+    }
+  }
+  return x;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let x = '';
+  for (let index in string) {
+    if (string[index] === '1'){
+      x = x + 'a';
+    }else if (string[index] === '2'){
+      x = x + 'e';
+    }else if (string[index] === '3'){
+      x = x + 'i';
+    }else if (string[index] === '4'){
+      x = x + 'o';
+    }else if (string[index] === '5'){
+      x = x + 'u';
+    } else {
+      x = x +string[index]
+    }
+  }
+  return x;
 }
 
 module.exports = {
