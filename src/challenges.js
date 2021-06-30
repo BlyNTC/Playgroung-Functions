@@ -22,7 +22,8 @@ function splitSentence(arraySentence) {
 function concatName(arSentence) {
   let lastItem = arSentence[arSentence.length - 1];
   let firstItem = arSentence[0];
-  return lastItem + ', ' + firstItem;
+  let concat = lastItem + ', ' + firstItem;
+  return concat;
 }
 
 // Desafio 5
