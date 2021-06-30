@@ -20,20 +20,27 @@ function techList(array, name) {
   } else {
     return "Vazio!";
   }
-
 }
+let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let name = "Gabriel";
+console.log(techList(array, name));
 
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
   let newArray = [];
   let erro = 0;
-  let n0 = 0; let n1 = 0;
-  let n2 = 0; let n3 = 0;
-  let n4 = 0; let n5 = 0; 
-  let n6 = 0; let n7 = 0;
-  let n8 = 0; let n9 = 0;
-  
+  let n0 = 0;
+  let n1 = 0;
+  let n2 = 0;
+  let n3 = 0;
+  let n4 = 0;
+  let n5 = 0;
+  let n6 = 0;
+  let n7 = 0;
+  let n8 = 0;
+  let n9 = 0;
+
   if (array.length != 11) {
     return "Array com tamanho incorreto.";
   } else {

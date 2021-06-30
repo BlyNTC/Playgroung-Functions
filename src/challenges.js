@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(p1, p2) {
-// seu código aqui
+  // seu código aqui
   if (p1 === true && p2 === true) {
     return true;
   } else {
@@ -10,13 +10,13 @@ function compareTrue(p1, p2) {
 
 // Desafio 2
 function calcArea(base, height) {
-// seu código aqui
+  // seu código aqui
   return ((base * height) / 2);
 }
 
 // Desafio 3 //https://www.w3schools.com/jsref/jsref_split.asp
 function splitSentence(string) {
-// seu código aqui
+  // seu código aqui
   return string.split(" ");
 }
 
