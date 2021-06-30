@@ -30,7 +30,7 @@ function countOcurrences(arr, val) {
 function returnErrorMessage(array) {
   for (let value of array) {
     if (value < 0 || value > 9 || countOcurrences(array, value) >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      return true;
     }
   }
 }
@@ -40,7 +40,10 @@ function generatePhoneNumber(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  returnErrorMessage(array);
+  let isError = returnErrorMessage(array);
+  if (isError) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
   let number = '';
   for (let item of array) {
     number += item;
