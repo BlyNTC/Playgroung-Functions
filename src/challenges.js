@@ -83,11 +83,51 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
+// Consultei o repositório do Michel Ferraz para entender e desenvolver a logica utilizada (https://github.com/tryber/sd-014-a-project-playground-functions/pull/92/commits/8113da4dcd05a5ff8f76531ac6e0f45436f29c93)
+//Foi consultado tambem o site https://www.w3schools.com/jsref/jsref_split.asp para entender a função utilizada.
+function encode(str) {
   // seu código aqui
+  let arr = str.split('');
+  let arrEncode = [];
+  for (let index = 0; index < arr.length; index += 1) {
+    if (arr[index] == 'a') {
+      arrEncode.push('1');
+    } else if (arr[index] == 'e') {
+      arrEncode.push('2');
+    } else if (arr[index] == 'i') {
+      arrEncode.push('3');
+    } else if (arr[index] == 'o') {
+      arrEncode.push('4');
+    } else if (arr[index] == 'u') {
+      arrEncode.push('5');
+    } else {
+      arrEncode.push(arr[index]);
+    }
+  }
+  let arrEncodeResult = arrEncode.join("");
+  return arrEncodeResult;
 }
-function decode() {
+function decode(str) {
   // seu código aqui
+  let arr = str.split('');
+  let arrEncode = [];
+  for (let index = 0; index < arr.length; index += 1) {
+    if (arr[index] == '1') {
+      arrEncode.push('a');
+    } else if (arr[index] == '2') {
+      arrEncode.push('e');
+    } else if (arr[index] == '3') {
+      arrEncode.push('i');
+    } else if (arr[index] == '4') {
+      arrEncode.push('o');
+    } else if (arr[index] == '5') {
+      arrEncode.push('u');
+    } else {
+      arrEncode.push(arr[index]);
+    }
+  }
+  let arrEncodeResult = arrEncode.join("");
+  return arrEncodeResult;
 }
 
 module.exports = {
