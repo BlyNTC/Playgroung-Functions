@@ -80,7 +80,7 @@ function triangleCheck(lineA, lineB, linec) {
 function hydrate(str) {
   let reg = /\d/g;
   let matchs = str.match(reg);
-  if (Math.max(matchs) === 1){
+  if (Math.max(matchs) === 1 && matchs.length === 1){
     return matchs.join("") + " copo de água"
   }else {
     let sum = 0 ;
