@@ -60,10 +60,9 @@ function generatePhoneNumber(array) {
 // Desafio 12
 
 function menorQueASoma(a, b, c) {
-  let sum = a + b + c;
-  let isA = a < sum - a;
-  let isB = b < sum - b;
-  let isC = c < sum - c;
+  let isA = a < b + c;
+  let isB = b < a + c;
+  let isC = c < a + b;
   if (isA && isB && isC) {
     return true;
   }
@@ -71,11 +70,13 @@ function menorQueASoma(a, b, c) {
 }
 
 function maiorQueOAbsoluto(a, b, c) {
-  if (a < Math.abs(b - c) || b < Math.abs(a, c) || c < Math.abs(a, b)) {
-    return false;
+  if ((a > Math.abs(b - c)) && (b > Math.abs(a - c)) && (c > Math.abs(a - b))) {
+    return true;
   }
-  return true;
+  return false;
 }
+
+console.log(maiorQueOAbsoluto(10, 14, 8));
 
 function triangleCheck(lineA, lineB, lineC) {
   if (menorQueASoma(lineA, lineB, lineC) && maiorQueOAbsoluto(lineA, lineB, lineC)) {
@@ -84,7 +85,7 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-// console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(string) {
