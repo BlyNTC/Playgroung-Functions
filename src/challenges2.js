@@ -45,13 +45,35 @@ function generatePhoneNumber(arrayNumeros) {
     
   }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB,lineC) {
+  if (lineA < lineB+lineC && lineA > Math.abs(lineB-lineC)){
+    if (lineB < lineA+lineC && lineB > Math.abs(lineA-lineC)){
+      if (lineC < lineB+lineA && lineC > Math.abs(lineB-lineA)){
+        return true
+      }
+    }
+  }
+  else{
+    return false
+  }
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringBar) {
+  let aguas = 0;
+  for (i = 0; i < stringBar.length; i++){
+    if (isNaN(stringBar[i])){
+    }
+    else{
+      for (i2 = 0; i2 < stringBar[i]; i2++)
+        aguas++
+    }
+  }
+  if (aguas == 1){
+    return aguas+' copo de água'
+  }
+  else if (aguas > 1)
+  return aguas+' copos de água'
 }
 
 module.exports = {
