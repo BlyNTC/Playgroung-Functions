@@ -1,10 +1,17 @@
 // Funções auxiliares
-function maxNumber (array) {
+function maxNumber(array) {
   let max = array[0];
-  for (let num of array){
-    if (num > max){max = num};
+  for (let num of array) {
+    if (num > max) { max = num; }
   }
   return max;
+}
+
+function fizzBuzzNumberCheck(number) {
+  if (number % 3 === 0 && number % 5 === 0) { return 'fizzBuzz'; }
+  if (number % 3 === 0) { return 'fizz'; }
+  if (number % 5 === 0) { return 'buzz'; }
+  return 'bug!';
 }
 
 // Desafio 1
@@ -40,7 +47,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  return `${array[array.length-1]}, ${array[0]}`;
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
@@ -55,8 +62,8 @@ function highestCount(array) {
   let numberCount = 0;
   let max = maxNumber(array);
 
-  for(let num of array){
-    if (num === max){numberCount+=1};
+  for (let num of array) {
+    if (num === max) { numberCount += 1; }
   }
   return numberCount;
 }
@@ -83,17 +90,8 @@ function fizzBuzz(array) {
   // seu código aqui
   let fizzBuzzArray = [];
 
-  for (let num of array){
-    if (num%3 === 0 && num%5 === 0) {
-      fizzBuzzArray.push('fizzBuzz');
-
-    }else if(num%3 === 0){
-      fizzBuzzArray.push('fizz');
-    }else if (num%5 === 0){
-      fizzBuzzArray.push('buzz');
-    }else{
-      fizzBuzzArray.push('bug!');
-    }
+  for (let num of array) {
+    fizzBuzzArray.push(fizzBuzzNumberCheck(num));
   }
   return fizzBuzzArray;
 }
@@ -102,16 +100,16 @@ function fizzBuzz(array) {
 function encode(string) {
   // seu código aqui
   const vowelToNumber = {
-      a: '1',
-      e: '2',
-      i: '3',
-      o: '4',
-      u: '5'
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
   };
   let encodedString = '';
   let aux;
 
-  for(let str of string) {
+  for (let str of string) {
     aux = str in vowelToNumber ? vowelToNumber[str] : str;
     encodedString += aux;
   }
@@ -125,12 +123,12 @@ function decode(string) {
     2: 'e',
     3: 'i',
     4: 'o',
-    5: 'u'
+    5: 'u',
   };
   let decodedString = '';
   let aux;
 
-  for(let str of string) {
+  for (let str of string) {
     aux = str in numberToVowel ? numberToVowel[str] : str;
     decodedString += aux;
   }
