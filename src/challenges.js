@@ -122,24 +122,22 @@ function encode(string) {
   // seu código aqui
   let frase = '';
   for (let value of string) {
-    if (value === "a") {
+    if (value === 'a') {
       frase += '1';
-    } else if (value === "e") {
+    } else if (value === 'e') {
       frase += '2';
-    } else if (value === "i") {
+    } else if (value === 'i') {
       frase += '3';
-    } else if (value === "o") {
+    } else if (value === 'o') {
       frase += '4';
-    } else if (value === "u") {
+    } else if (value === 'u') {
       frase += '5';
-    } else {
+    } else{
       frase += value;
     }
   }
   return frase;
-
 }
-
 
 function decode(frase2) {
   // seu código aqui
@@ -160,7 +158,6 @@ function decode(frase2) {
     }
   }
   return frase;
-
 }
 
 
