@@ -65,8 +65,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumbers) {
   // seu código aqui
+  let str = [];
+  for (let i = 0; i < arrayNumbers.length; i+=1){
+    if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 !== 0){ //Divisivel por 3, mas não por 5
+    str.push('fizz');
+    }else if (arrayNumbers[i] % 3 == 0 && arrayNumbers[i] % 5 === 0){ //Divisivel por 3 e por 5
+      str.push('fizzBuzz');
+    }else if (arrayNumbers[i] % 3 !== 0 && arrayNumbers[i] % 5 === 0){ // Divisivel por 5, mas não por 3
+      str.push('buzz');
+    }else{
+      str.push('bug!');
+    }
+  }
+  return str;
 }
 
 // Desafio 9
