@@ -3,38 +3,38 @@ function compareTrue(n1, n2) {
   if (n1 && n2) {
     return true;
   }
-    return false;
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  var area = (base*height/2);
+  let area = (base * height / 2);
   return area;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  var stringarray = string.split(" ");
+  let stringarray = string.split(" ");
   return stringarray;
 }
 
 // Desafio 4
 function concatName(array) {
-  var string = array[array.length-1] + ", " + array[0];
+  let string = array[array.length-1] + ", " + array[0];
   return string;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  var winpoints = wins * 3;
-  var tiepoints = ties;
+  let winpoints = wins * 3;
+  let tiepoints = ties;
   return winpoints + tiepoints;
 }
 
 // Desafio 6
 function highestCount(array) {
-  var max = Math.max(...array);
-  var count = 0;
+  let max = Math.max(...array);
+  let count = 0;
   for (i = 0; i < array.length; ++i) {
     if (array[i] == max) {
       count++;
@@ -45,9 +45,9 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  var cat1d = cat1 - mouse;
-  var cat2d = cat2 - mouse;
-  var result = "";
+  let cat1d = cat1 - mouse;
+  let cat2d = cat2 - mouse;
+  let result = "";
 
   if (cat1d < 0) {
     cat1d = cat1d * -1;
@@ -69,8 +69,8 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  var result = [];
-  var final = [];
+  let result = [];
+  let final = [];
   for (i = 0; i < array.length; i++) {
     if (array[i] % 3 == 0) {
       var a = "fizz";
@@ -101,8 +101,8 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  var array = string.split("");
-  var final = [];
+  let array = string.split("");
+  let final = [];
   for (i = 0; i < array.length; i++) {
     if (array[i] == "a") {
       final.push("1");
@@ -122,8 +122,8 @@ function encode(string) {
   return result;
 }
 function decode(string) {
-  var array = string.split("");
-  var final = [];
+  let array = string.split("");
+  let final = [];
   for (i = 0; i < array.length; i++) {
     if (array[i] == "1") {
       final.push("a");
