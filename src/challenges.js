@@ -1,9 +1,13 @@
 // Desafio 1
-function compareTrue(){
-  
+function compareTrue(boolean1, boolean2){
+  if(boolean1 === true && boolean2 === true){
+    return true;
+  }else if(boolean1 === true && boolean2 === false){
+    return false
+  }else{
+    return false
+  }
 }
-
-
 // Desafio 2
 function calcArea(base, heigth) {
   let areaTriangulo = base * heigth / 2;
@@ -48,20 +52,49 @@ concatName(['foguete', 'não', 'tem', 'ré']);
   return count
 }
 
-console.log(highestCount([11,10, 1, 2, 3, 9, 5, 7]))
 // Desafio 7
-function catAndMouse(){
-  
+function catAndMouse(mouse, cat1, cat2){
+  if(Math.abs(mouse - cat1 > mouse - cat2 )){
+    return 'cat1'
+  }else if(Math.abs(mouse - cat1 < mouse - cat2 )){
+    return 'cat2'
+  }else{
+    return 'os gatos trombam e o rato foge'
+  }
+  //Math.abs(cats1 - mouse) -1 
 }
+console.log(catAndMouse(0, 2, 2));
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumerico){
+  let fizzBuzz = []
+  for(let index = 0; index < arrayNumerico.length; index += 1){
+    if(arrayNumerico[index] % 3 === 0 && arrayNumerico[index] % 5 === 0){
+      arrayNumerico[index] = 'fizzBuzz'
+      fizzBuzz.push(arrayNumerico[index])
+    }else if(arrayNumerico[index] % 5 === 0){
+      arrayNumerico[index] = 'buzz'
+      fizzBuzz.push(arrayNumerico[index])
+    }else if(arrayNumerico[index] % 3 === 0){
+      arrayNumerico[index] = 'fizz'
+      fizzBuzz.push(arrayNumerico[index])
+    }else{
+      arrayNumerico[index] = 'bug!'
+      fizzBuzz.push(arrayNumerico[index])
+    }
+  }
+  return fizzBuzz
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string){
+  let arrayNum = [1, 2, 3, 4, 5];
+  let arrayVogais = ['a', 'e', 'i', 'o', 'u'];
+
+  
 }
+encode('amazon');
+
+
 function decode() {
   // seu código aqui
 }
