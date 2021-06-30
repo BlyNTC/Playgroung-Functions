@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(a,b) {
   // seu código aqui
-  if(a%2 === 0 && b%2 === 0){
+  if(a === true && b === true){
     return true
   }else{return false}
 }
