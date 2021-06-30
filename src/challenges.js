@@ -34,16 +34,41 @@ let repeticao = 0;
   }
   return repeticao;
 }
+//Utilizado A sintaxe de propagação (Spread) permite que um objeto iterável, como um array ou string, seja expandida em locais onde zero ou mais argumentos (para chamadas de função) ou elementos (para literais de array) sejam esperados ou uma expressão de objeto seja expandida em locais onde zero ou mais pares de chave-valor (para literais de objeto) são esperados.
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1,cat2,mouse) {
+   let distanciaCat1 = Math.abs(cat1 - mouse);
+   let distanciaCat2 = Math.abs(cat2 - mouse);
+   
+  
+  if (distanciaCat1 < distanciaCat2) {
+     return "cat1";
+  } else if (distanciaCat1 > distanciaCat2) {
+    return "cat2";
+  } else {
+    return "Os gatos trombam e o gato foge.";
+  }
 }
 
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumeros) {
+  let string = [];
+  for (let i = 0; i < arrayNumeros.length; i ++) {
+    if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0) {
+      string.push('fizzBuzz');
+    } else if (arrayNumeros[i] % 3 === 0) {
+        string.push('fizz');
+     } else if (arrayNumeros[i] % 5 === 0) {
+       string.push('buzz');
+    } else {
+      string.push('bug!');
+    }
+  }
+  return string;
 }
+
 
 // Desafio 9
 function encode() {
