@@ -1,6 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(param1, param2) {
+  if (param1 === true && param2 === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
@@ -57,8 +61,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-<<<<<<< HEAD
 };
-=======
-    } ;  
->>>>>>> 83a03756d2b025629416f7f5fcd527fa93fcc8cf
