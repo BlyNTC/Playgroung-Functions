@@ -77,14 +77,14 @@ function fizzBuzz(numeros) {
   let fizz = 'fizz';
   let buzz = 'buzz';
   let fizz2 = 'fizzBuzz';
-  let bug = 'bug!' 
+  let bug = 'bug!'; 
   for(let index = 0; index < numeros.length; index += 1){
-    if(numeros[index] % 3 === 0){
-      numeros[index] = fizz;// seu código aqui
+    if(numeros[index] % 3 === 0 && numeros[index] % 5 === 0){
+      numeros[index] = fizz2;// seu código aqui
     } else if(numeros[index] % 5 === 0){
       numeros[index] = buzz;
-    } else if(numeros[index] % 3 === 0 && numeros[index] % 5 === 0){
-        numeros[index] = fizz2;
+    } else if(numeros[index] % 3 === 0){
+        numeros[index] = fizz;
     } else{
       numeros[index] = bug;
     }
