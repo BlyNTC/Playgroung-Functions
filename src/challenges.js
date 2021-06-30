@@ -84,10 +84,32 @@ function fizzBuzz(arrayNumeros) {
 
 // Desafio 9
 function encode(stringEncode) {
-  
+  let code = stringEncode;
+
+  for (let index = 0; index < stringEncode.length; index +=1) {
+    if (stringEncode.charAt(index) === "a" || stringEncode.charAt(index) === 'e' || stringEncode.charAt(index) === 'i' || stringEncode.charAt(index) === 'o' || stringEncode.charAt(index) === 'u') {
+      code = code.replace('a', 1);
+      code = code.replace('e', 2);
+      code = code.replace('i', 3);
+      code = code.replace('o', 4);
+      code = code.replace('u', 5);
+    }    
+  }
+  return code;  
 }
 function decode(stringDecode) {
-  // seu código aqui
+  let decode = stringDecode;
+
+  for (let index = 0; index < stringDecode.length; index +=1) {
+    if (stringDecode.charAt(index) == 1|| stringDecode.charAt(index) == 2 || stringDecode.charAt(index) == 3 || stringDecode.charAt(index) == 4 || stringDecode.charAt(index) == 5) {
+      decode = decode.replace(1, 'a');
+      decode = decode.replace(2, 'e');
+      decode = decode.replace(3, 'i');
+      decode = decode.replace(4, 'o');
+      decode = decode.replace(5, 'u');
+    }    
+  }
+  return decode;  
 }
 
 module.exports = {
