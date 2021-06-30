@@ -58,14 +58,31 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(){
+// seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayFizz) {
   // seu código aqui
+let arrayBuzz = []
+  for (i3 = 0; i3 < arrayFizz.length; i3++){
+    if ( arrayFizz[i3]%3 == 0 && arrayFizz[i3]%5 == 0){
+      arrayBuzz.push('fizzBuzz');
+    }
+    else if (arrayFizz[i3]%5 == 0){
+      arrayBuzz.push('Buzz');
+    }
+    else if (arrayFizz[i3]%3 == 0){
+      arrayBuzz.push('fizz');
+    }
+    else{
+      arrayBuzz.push('bug!')
+    }
+  }
+  return arrayBuzz
 }
+
 
 // Desafio 9
 function encode() {
