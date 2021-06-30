@@ -58,8 +58,27 @@ function generatePhoneNumber(array) {
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
+
+function menorQueASoma(a, b, c) {
+  let sum = a + b + c;
+  let isA = a < sum - a;
+  let isB = b < sum - b;
+  let isC = c < sum - c;
+  if (isA && isB && isC) {
+    return true;
+  }
+  return false;
+}
+
+function maiorQueOAbsoluto(a, b, c) {
+  if (a < Math.abs(b - c) || b < Math.abs(a, c) || c < Math.abs(a, b)) {
+    return false;
+  }
+  return true;
+}
+
 function triangleCheck(lineA, lineB, lineC) {
-  if ((lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) && (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB))) {
+  if (menorQueASoma(lineA, lineB, lineC) && maiorQueOAbsoluto(lineA, lineB, lineC)) {
     return true;
   }
   return false;
