@@ -54,8 +54,8 @@ function highestCount(numbers) {
       maior = numbers[index];
     }
   }
-  for (let index = 0; index < numbers.length; index += 1){
-    if (numbers[index] === maior){
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] === maior) {
       countMaior += 1;
     }
   }
@@ -65,12 +65,12 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let resultado = "";
-  if ((cat1 - mouse) < (cat2 - mouse)){
-    resultado = "cat1";
-  }else if( (cat1 - mouse) > (cat2 - mouse)){
-    resultado = "cat2";
-  }else{
+  let resultado = '';
+  if ((cat1 - mouse) < (cat2 - mouse)) {
+    resultado = 'cat1';
+  } else if ((cat1 - mouse) > (cat2 - mouse)) {
+    resultado = 'cat2';
+  } else {
     resultado = 'os gatos trombam e o rato foges';
   }
   return resultado;
