@@ -71,11 +71,30 @@ function fizzBuzz(numArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let code = '';
+  for (const letter of str) {
+    if (vowels.indexOf(letter) !== -1) {
+      code += vowels.indexOf(letter) + 1;
+    } else {
+      code += letter;
+    }
+  }
+  return code;
 }
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let numbers = [1, 2, 3, 4, 5];
+  let code = '';
+  for (const letter of str) {
+    if (numbers.indexOf(Number(letter)) !== -1) {
+      code += vowels[Number(letter) - 1];
+    } else {
+      code += letter;
+    }
+  }
+  return code;
 }
 
 module.exports = {
