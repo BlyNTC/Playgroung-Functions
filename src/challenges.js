@@ -57,4 +57,8 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
+<<<<<<< HEAD
 };
+=======
+    } ;  
+>>>>>>> 83a03756d2b025629416f7f5fcd527fa93fcc8cf
