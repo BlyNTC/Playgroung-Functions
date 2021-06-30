@@ -6,19 +6,25 @@ function compareTrue(a,b) { //a=false b=true
   return false;
   }
 
-
- 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
-  
-  
+  return (base * height)/2
 }
+calcArea(10, 50)
+calcArea(5,2)
+calcArea(51,1)
+
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   // seu código aqui
+  console.log(frase.split(' '));
+return frase.split(' ');
 }
+splitSentence('go Trybe')
+splitSentence('vamo que vamo')
+splitSentence('foguete')
 
 // Desafio 4
 function concatName() {
