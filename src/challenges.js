@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(comparar1, comparar2) {
- if (comparar1 && comparar2) {
-   return true ;
- } else {
-   return false;
- }
+  if (comparar1 && comparar2) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
@@ -19,19 +19,19 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
- let ultimo = array[array.length - 1];
- let primeiro = array[0];
- return ultimo + ', ' + primeiro;
+  let ultimo = array[array.length - 1];
+  let primeiro = array[0];
+  return ultimo + ', ' + primeiro;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let somaV = 0;
   let somaE = 0;
-  for(let contadorV = 0; contadorV < wins; contadorV += 1){
+  for (let contadorV = 0; contadorV < wins; contadorV += 1) {
     somaV += 3;
   }
-  for (let contadorE = 0; contadorE < ties; contadorE +=1){
+  for (let contadorE = 0; contadorE < ties; contadorE += 1) {
     somaE += 1;
   }
   return somaV + somaE;
@@ -41,14 +41,14 @@ function footballPoints(wins, ties) {
 function highestCount(arrayN) {
   let maior = arrayN[0];
   let soma = 0;
-  for (let num of arrayN){
-    if(maior < num){
+  for (let num of arrayN) {
+    if (maior < num) {
       maior = num;
     }
-  } 
-  for(let vezes of arrayN){
-    if(maior == vezes){
-      soma +=1;
+  }
+  for (let vezes of arrayN) {
+    if (maior === vezes) {
+      soma += 1;
     }
   } return soma;
 }
@@ -57,17 +57,14 @@ function highestCount(arrayN) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = 0;
   let distanciaCat2 = 0;
-
   distanciaCat1 = cat1 - mouse;
   distanciaCat2 = cat2 - mouse;
-
   if (distanciaCat1 < 0) {
     distanciaCat1 *= (-1);
   }
   if (distanciaCat2 < 0) {
     distanciaCat2 *= (-1);
   }
-
   if (distanciaCat1 > distanciaCat2) {
     return 'cat2';
   } else if (distanciaCat1 < distanciaCat2) {
@@ -80,7 +77,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayFB) {
   let guardar = [];
-  for(let contador of arrayFB){
+  for (let contador of arrayFB) {
     if ((contador % 3) === 0 && (contador % 5) === 0) {
       guardar.push('fizzBuzz');
     } else if ((contador % 3) === 0) {
@@ -96,34 +93,34 @@ function fizzBuzz(arrayFB) {
 // Desafio 9
 function encode(string) {
   let trocaValor = ''
-  for(let percorrer of string){
-    if (percorrer === 'a'){
+  for (let percorrer of string) {
+    if (percorrer === 'a') {
       trocaValor += 1;
     } else if (percorrer === 'e') {
       trocaValor += 2.
     } else if (percorrer === 'i') {
       trocaValor += 3
-    } else if (percorrer === 'o'){
+    } else if (percorrer === 'o') {
       trocaValor += 4
-    } else if (percorrer === 'u'){
+    } else if (percorrer === 'u') {
       trocaValor += 5
     } else {
       trocaValor += percorrer;
     }
-  }return trocaValor;
+  } return trocaValor;
 }
 function decode(string) {
   let trocaValor = ''
-  for(let percorrer of string){
-    if (percorrer === '1'){
+  for (let percorrer of string) {
+    if (percorrer === '1') {
       trocaValor += 'a';
     } else if (percorrer === '2') {
       trocaValor += 'e'
     } else if (percorrer === '3') {
       trocaValor += 'i'
-    } else if (percorrer === '4'){
+    } else if (percorrer === '4') {
       trocaValor += 'o'
-    } else if (percorrer === '5'){
+    } else if (percorrer === '5') {
       trocaValor += 'u'
     } else {
       trocaValor += percorrer;
