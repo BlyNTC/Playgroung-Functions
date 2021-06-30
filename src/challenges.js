@@ -28,7 +28,7 @@ function splitSentence(string) {
   separacao.push(separar);
   return separacao;
 }
-//console.log(splitSentence('vamo que vamo'));
+
 // Desafio 4
 function concatName(string) {
   let ultimo = string[string.length-1];
@@ -107,24 +107,43 @@ function fizzBuzz(numeros) {
 // Desafio 9
 function encode(string) {
   let codificado = '';
-  let codificar = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5
-  };
+ 
   for (index = 0; index < string.length; index += 1){
-    if (string[index] === 'e'){
-      string.replace('e', codificar.e);
-      //codificado[index] = codificar.e;
+    if (string[index] === 'a'){
+      codificado += 1;
+    } else if (string[index] === 'e'){
+      codificado += 2;
+    } else if (string[index] === 'i'){
+      codificado += 3;
+    } else if (string[index] === 'o'){
+      codificado += 4;
+    } else if (string[index] === 'u'){
+      codificado += 5;
+    } else {
+      codificado += string[index];
     }
     }
   return codificado;
 }
-console.log(encode("hi there!"));
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let descodificado = '';
+ 
+  for (index = 0; index < string.length; index += 1){
+    if (string[index] === '1'){
+      descodificado += 'a';
+    } else if (string[index] === '2'){
+      descodificado += 'e';
+    } else if (string[index] === '3'){
+      descodificado += 'i';
+    } else if (string[index] === '4'){
+      descodificado += 'o';
+    } else if (string[index] === '5'){
+      descodificado += 'u';
+    } else {
+      descodificado += string[index];
+    }
+    }
+  return descodificado;
 }
 
 module.exports = {
