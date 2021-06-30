@@ -166,12 +166,89 @@ function fizzBuzz(valores) {
 fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(valor) {
+  
+let arrayValor = Array.from(valor);
+
+for ( let index = 0; index < arrayValor.length; index += 1) {
+
+  if ( arrayValor[index] === 'a' ) {
+
+    arrayValor[index] = '1'
+
+  } else if ( arrayValor[index] === 'e') {
+
+    arrayValor[index] = '2'
+
+  } else if ( arrayValor[index] === 'i') {
+
+    arrayValor[index] = '3'
+
+  } else if ( arrayValor[index] === 'o') {
+
+    arrayValor[index] = '4'
+
+  } else if ( arrayValor[index] === 'u') {
+
+    arrayValor[index] = '5'
+
+  } else { 
+
+  arrayValor;
+   
+  }
+
 }
-function decode() {
-  // seu código aqui
+
+let stringValor = arrayValor.join('');
+
+return stringValor;
+
 }
+
+encode("hi there!")
+
+function decode(valorDecode) {
+  // seu código aqui
+
+  let arrayValor = Array.from(valorDecode);
+ 
+  for ( let index = 0; index < arrayValor.length; index += 1) {
+  
+    if ( arrayValor[index] === '1' ) {
+  
+      arrayValor[index] = 'a'
+  
+    } else if ( arrayValor[index] === '2') {
+  
+      arrayValor[index] = 'e'
+  
+    } else if ( arrayValor[index] === '3') {
+  
+      arrayValor[index] = 'i'
+  
+    } else if ( arrayValor[index] === '4') {
+  
+      arrayValor[index] = 'o'
+  
+    } else if ( arrayValor[index] === '5') {
+  
+      arrayValor[index] = 'u'
+  
+    } else { 
+  
+    arrayValor;
+     
+    }
+  
+  }
+  
+  let stringValor = arrayValor.join('');
+  
+  return stringValor;
+  
+}
+decode("h3 th2r2!")
 
 module.exports = {
   calcArea,
