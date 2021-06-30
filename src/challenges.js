@@ -26,15 +26,9 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let somaV = 0;
-  let somaE = 0;
-  for (let contadorV = 0; contadorV < wins; contadorV += 1) {
-    somaV += 3;
-  }
-  for (let contadorE = 0; contadorE < ties; contadorE += 1) {
-    somaE += 1;
-  }
-  return somaV + somaE;
+  let pontos = 0;
+  pontos = wins * 3 + ties * 1
+  return pontos
 }
 
 // Desafio 6
