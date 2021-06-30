@@ -9,11 +9,15 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+// Ref.:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 function splitSentence(frase) {
   return (frase.split(' '));
 }
 
 // Desafio 4
+// Ref.:
+// https://www.sitepoint.com/shorthand-javascript-techniques/
 function concatName(lista) {
   let answer = (`${lista[lista.length - 1]}, ${lista[0]}`);
   return answer;
@@ -25,6 +29,8 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// Ref.:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/Apply
 function highestCount(myArray) {
   let maxNumber = Math.max.apply(null, myArray);
   let maxNumberCount = 0;
@@ -66,6 +72,8 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
+// Ref.:
+// Pesquisei no https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 function encode(myWord) {
   myWord = myWord.replace(/a/g, '1');
   myWord = myWord.replace(/e/g, '2');

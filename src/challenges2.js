@@ -1,4 +1,6 @@
 // Desafio 10
+// Ref.:
+// https://www.sitepoint.com/shorthand-javascript-techniques/
 function techList(tecnologias, name) {
   tecnologias.sort();
   let result;
@@ -17,6 +19,8 @@ function techList(tecnologias, name) {
 }
 
 // Desafio 11
+// Ref.:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 function generatePhoneNumber(fullNumber) {
   let myAnswer;
   let validaNumero = true;
@@ -62,6 +66,10 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+// Ref.: 
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 function hydrate(meuBar) {
   let total = 0;
   let myAnswer;
