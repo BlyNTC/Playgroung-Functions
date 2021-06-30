@@ -20,10 +20,9 @@ calcArea();
 
 
 // Desafio 3
-function splitSentence() {
-let frase = 'Bora la, mano';
-return frase.split("");
-
+function splitSentence(frase) {
+let resultado = frase.split(" ");
+return resultado;
 }
 splitSentence();
 
