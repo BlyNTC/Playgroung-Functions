@@ -19,13 +19,17 @@ function techList(tech, name) {
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbers) {
   // seu código aqui
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let triangle = false;
+  if (lineA < (lineB + lineC) && lineA > (Math.abs(lineB - lineC))) {
+    triangle = true;
+  }
+  return triangle;
 }
 
 // Desafio 13
