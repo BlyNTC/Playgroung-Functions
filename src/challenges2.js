@@ -22,7 +22,8 @@ function techList(array, name) {
 // console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
-function generatePhoneNumber(array) {
+
+function returnErrorMessage(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
@@ -37,6 +38,10 @@ function generatePhoneNumber(array) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
+}
+
+function generatePhoneNumber(array) {
+  
   let number = '';
   for (let item of array) {
     number += item;
