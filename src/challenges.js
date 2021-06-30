@@ -79,16 +79,15 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let arrayString = [];
-  
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      arrayString.push("fizzBuzz");
+      arrayString.push('fizzBuzz');
     } else if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
-      arrayString.push("fizz");
+      arrayString.push('fizz');
     } else if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
-      arrayString.push("buzz");
+      arrayString.push('buzz');
     } else {
-      arrayString.push("bug!");
+      arrayString.push('bug!');
     }
   }
   return arrayString;
@@ -97,49 +96,49 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let stringArray = string.split('');
-    for (let i = 0; i < stringArray.length; i += 1) {
-        switch (stringArray[i]) {
-            case "a":
-                stringArray[i] = 1;
-                break;
-            case "e":
-                stringArray[i] = 2;
-                break;
-            case "i":
-                stringArray[i] = 3;
-                break;
-            case "o":
-                stringArray[i] = 4;
-                break;
-            case "u":
-                stringArray[i] = 5;
-                break;
-        }
+  for (let i = 0; i < stringArray.length; i += 1) {
+    switch (stringArray[i]) {
+    case 'a':
+      stringArray[i] = 1;
+      break;
+    case 'e':
+      stringArray[i] = 2;
+      break;
+    case 'i':
+      stringArray[i] = 3;
+      break;
+    case 'o':
+      stringArray[i] = 4;
+      break;
+    case 'u':
+      stringArray[i] = 5;
+      break;
     }
-    return stringArray.join('');
+    }
+  return stringArray.join('');
 }
 function decode(string) {
   let stringArray = string.split('');
-    for (let i = 0; i < stringArray.length; i += 1) {
-        switch (stringArray[i]) {
-            case "1":
-                stringArray[i] = "a";
-                break;
-            case "2":
-                stringArray[i] = "e";
-                break;
-            case "3":
-                stringArray[i] = "i";
-                break;
-            case "4":
-                stringArray[i] = "o";
-                break;
-            case "5":
-                stringArray[i] = "u";
-                break;
-        }
+  for (let i = 0; i < stringArray.length; i += 1) {
+    switch (stringArray[i]) {
+    case '1':
+      stringArray[i] = 'a';
+      break;
+    case '2':
+      stringArray[i] = 'e';
+      break;
+    case '3':
+      stringArray[i] = 'i';
+      break;
+    case '4':
+      stringArray[i] = 'o';
+      break;
+    case '5':
+      stringArray[i] = 'u';
+      break;
     }
-    return stringArray.join('');
+  }
+  return stringArray.join('');
 }
 
 module.exports = {
