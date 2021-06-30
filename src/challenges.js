@@ -33,13 +33,33 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
+  let pontos;
   
+  pontos= wins*3 +ties*1;
+  return pontos;
 }
+//console.log(footballPoints(1, 2))
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+
+  let repete= 0;
+  let maiorNumero = array[0];
+
+  for(let numero = 0; numero < array.length; numero +=1){
+    if(maiorNumero < array[numero]){
+      maiorNumero = array[numero];
+    }
+  }
+  for(let numero = 0; numero < array.length; numero +=1){
+    if(maiorNumero === array[numero]){
+      repete += 1;
+    }  
+  }  
+  return repete;
 }
+console.log(highestCount([0,0,0]));
 
 // Desafio 7
 function catAndMouse() {
