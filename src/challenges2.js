@@ -1,8 +1,34 @@
 // Desafio 10
 //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+// function techList(array, name) {
+//   // seu código aqui
+//   let arrayResposta = [];
+//   if (array.length != 0) {
+//     for (let i of array) {
+//       let objeto = {
+//         tech: i,
+//         name: name
+//       };
+//       arrayResposta.push(objeto);
+//     }
+//     arrayResposta.sort(function (x, y) {
+//       if (x.tech > y.tech) {
+//         return 1;
+//       }
+//     });
+//     return arrayResposta;
+//   } else {
+//     return "Vazio!";
+//   }
+// }
+// let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+// let name = "Gabriel";
+// console.log(techList(array, name));
+
 function techList(array, name) {
   // seu código aqui
   let arrayResposta = [];
+  array.sort();
   if (array.length != 0) {
     for (let i of array) {
       let objeto = {
@@ -11,19 +37,14 @@ function techList(array, name) {
       };
       arrayResposta.push(objeto);
     }
-    arrayResposta.sort(function (x, y) {
-      if (x.tech > y.tech) {
-        return 1;
-      }
-    });
     return arrayResposta;
   } else {
     return "Vazio!";
   }
 }
-let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-let name = "Gabriel";
-console.log(techList(array, name));
+// let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+// let name = "Gabriel";
+// console.log(techList(array, name));
 
 // Desafio 11
 function generatePhoneNumber(array) {
