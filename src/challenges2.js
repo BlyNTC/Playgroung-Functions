@@ -56,30 +56,30 @@ function generatePhoneNumber(arrayTel) {
     }
     if (nRepetidos < 3) {
       nRepetidos = 0;
+    } else if (nRepetidos >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
-  if (nRepetidos >= 3) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  } else {
-    for (let i = 0; i <= 1; i++) {
-      ddd.push(arrayTel[i]);
-    }
-    let dddFinal = '(' + ddd.join('') + ')';
-
-    for (let j = 2; j < 7; j++) {
-      firstNumbers.push(arrayTel[j]);
-    }
-    let firstNumbersFinal = ' ' + firstNumbers.join('') + '-';
-
-    for (let k = 7; k < 11; k++) {
-      lastNumbers.push(arrayTel[k]);
-    }
-    let lastNumbersFinal = lastNumbers.join('');
-
-    return dddFinal + firstNumbersFinal + lastNumbersFinal;
+  for (let i = 0; i <= 1; i++) {
+    ddd.push(arrayTel[i]);
   }
+  let dddFinal = '(' + ddd.join('') + ')';
+
+  for (let j = 2; j < 7; j++) {
+    firstNumbers.push(arrayTel[j]);
+  }
+  let firstNumbersFinal = ' ' + firstNumbers.join('') + '-';
+
+  for (let k = 7; k < 11; k++) {
+    lastNumbers.push(arrayTel[k]);
+  }
+  let lastNumbersFinal = lastNumbers.join('');
+
+  return dddFinal + firstNumbersFinal + lastNumbersFinal;
 }
+
+
 
 
 
