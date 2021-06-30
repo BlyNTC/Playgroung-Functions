@@ -30,7 +30,7 @@ function footballPoints(wins, ties) {
 function highestCount(Array) {
   let numeroMaximo = Math.max(...Array);
   let repetições = 0;
-  for(let index =0; index < Array.length; index += 1) {
+  for (let index = 0; index < Array.length; index += 1) {
     if (numeroMaximo === Array[index]) {
       repetições += 1;
     }
@@ -39,28 +39,47 @@ function highestCount(Array) {
 }
 
 // Desafio 7
+// A função Math.abs(x) retorna o valor absoluto de um número "x" - Dev.Mozilla.
 function catAndMouse(mouse, cat1, cat2) {
   posicaoCat1 = Math.abs(mouse - cat1);
   posicaoCat2 = Math.abs(mouse - cat2);
 
-  if (posicaoCat1 < posicaoCat2 ) {
+  if (posicaoCat1 < posicaoCat2) {
     return 'cat1';
-  } if (posicaoCat1 > posicaoCat2) {
+  }
+  if (posicaoCat1 > posicaoCat2) {
     return 'cat2';
-  } if (posicaoCat1 === posicaoCat2) {
+  }
+  if (posicaoCat1 === posicaoCat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let resultado = [];
+  for (let index of array) {
+    if (index % 5 !== 0 && index % 3 === 0) {
+      resultado.push('fizz');
+    }
+    if (index % 3 !== 0 && index % 5 === 0) {
+      resultado.push('buzz');
+    }
+    if (index % 3 === 0 && index % 5 === 0) {
+      resultado.push('fizzBuzz');
+    }
+    if (index % 3 !== 0 && index % 5 !== 0) {
+      resultado.push('bug!');
+    }
+  }
+  return resultado;
 }
 
 // Desafio 9
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
