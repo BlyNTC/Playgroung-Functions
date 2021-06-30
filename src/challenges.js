@@ -107,10 +107,24 @@ function fizzBuzz(array) {
   return resultado;
 }
 
+
+
+
+
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let string = str;
+  for(let i = 0; i < string.length; i +=1){
+    string = string.replace('a','1')
+    string = string.replace('e','2')
+    string = string.replace('i','3')
+    string = string.replace('o','4')
+    string = string.replace('u','5')
+  }
+return string;
 }
+
 function decode() {
   // seu código aqui
 }
