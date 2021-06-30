@@ -24,9 +24,10 @@ function techList(array,name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
+  let mensagem = '';
   let repete = 0;
     let n = 0;
-    if (array.length === 11) {
+   
         for (let nume of array) {
             if (nume <= 9 && nume >= 0) {
                 n += 1;
@@ -53,12 +54,13 @@ function generatePhoneNumber(array) {
 
         }
 
-        
-    } else {
+      if (array.length != 11) {   
+    
         mensagem = "Array com tamanho incorreto.";
     }
     return mensagem;
 }
+
 
 // Desafio 12
 function triangleCheck() {
