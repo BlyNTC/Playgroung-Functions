@@ -22,7 +22,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(juncao) { 
-   let elementoA = juncao[0]; 
+  let elementoA = juncao[0]; 
   let elementoB = juncao[juncao.length - 1];
   let concat = elementoB +  ', '  + elementoA;
   return concat;
@@ -60,9 +60,25 @@ if (distancia1 === distancia2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) { 
+  let total = [];
+for (let index of array){
+  if (index % 3 === 0 && index % 5 === 0) {
+    total.push('fizzBuzz');
+  } else if (index % 5 === 0){
+    total.push('buzz');
+  } else if (index % 3 === 0){
+    total.push('fizz');
+  } else {
+    total.push('bug!');
+  }
 }
+return total;
+}
+
+
+
+
 
 // Desafio 9
 function encode() {
