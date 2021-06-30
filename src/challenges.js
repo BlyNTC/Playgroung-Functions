@@ -28,12 +28,11 @@ console.log((calcArea(51, 1)));
 
 
 // Desafio 3
-function splitSentence() {
- let stringExemplo = "Pedro Álvares Cabral";
-  resultado = stringExemplo.split(" ");
+function splitSentence(stringExemplo) {
+ let resultado = stringExemplo.split(" ");
   return resultado;
 }
-splitSentence();
+splitSentence('Pedro Álvares Cabral');
 
 
 // Desafio 4
