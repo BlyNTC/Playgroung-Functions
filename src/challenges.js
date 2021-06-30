@@ -25,14 +25,13 @@ function splitSentence(frase) {
 
 
 // Desafio 4
-function concatName([array]) {
+function concatName(array=[]) {
   // seu código aqui
-  let primeiro = array[0];
+  let primeiro = (array[0]);
   let ultimo = array[array.length - 1];
-  let result = ultimo + primeiro;
+  let result = ultimo + ', ' + primeiro;
   return result;
 }
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
