@@ -24,7 +24,7 @@ function splitSentence(frase) {
 let resultado = frase.split(" ");
 return resultado;
 }
-splitSentence();
+splitSentence('para meu');
 
 
 // Desafio 4
