@@ -7,8 +7,7 @@ function compareTrue(requisito1, requisito2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) / 2
-  return area
+  return (area)
   // seu código aqui
 }
 
