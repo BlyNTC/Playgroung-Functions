@@ -41,7 +41,7 @@ function highestCount(conjunto) {
       resultado++;
     }
   }
-  return count;
+  return resultado;
 }
 
 // Desafio 7
