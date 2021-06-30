@@ -3,10 +3,8 @@ function compareTrue(a, b) {
   // seu código aqui
   if (a === true && b === true) {
     return true;
-  } else {
-    return false;
   }
-
+  return false;
 }
 
 // Desafio 2
@@ -16,13 +14,11 @@ function calcArea(base, altura) {
   return area;
 }
 
-
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
   let array = [''];
   let cont = 0;
-
 
   for (let index = 0; index < string.length; index += 1) {
     let indicaEspaco = 0;
@@ -80,18 +76,23 @@ function highestCount(array) {
 
 
 // Desafio 7
-function catAndMouse(cat1, cat2, rato) {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   // cat1 é a distancia em unidades do gato1 para o rato
-  if (cat1 > cat2) {
-    return 'cat1';
-  } else if (cat2 > cat1) {
+  let distCat1 = Math.abs(cat1);
+  let distCat2 = Math.abs(cat2);
+  let distMouse = Math.abs(mouse);
+
+  if (Math.abs(distMouse - distCat1) > Math.abs(distMouse - distCat2)) {
     return 'cat2';
+  } else if (Math.abs(distMouse - distCat1) < Math.abs(distMouse - distCat2)) {
+    return 'cat1';
   } else {
     return "os gatos trombam e o rato foge";
   }
 
 }
+
 
 // Desafio 8
 function fizzBuzz(array) {
