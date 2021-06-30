@@ -20,9 +20,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(name) {
-  let output = name[name.length - 1] + ', ' + name[0];
-
-  return output;
+  return `${name[name.length - 1]}, ${name[0]}`;
 }
 
 // Desafio 5
@@ -57,7 +55,8 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distance1 === distance2) {
     return 'os gatos trombam e o rato foge';
-  } else if (distance1 < distance2) {
+  }
+  if (distance1 < distance2) {
     return 'cat1';
   }
   return 'cat2';
@@ -84,11 +83,19 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(sentence) {
-  return sentence.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
+  return sentence.replace(/a/g, '1')
+    .replace(/e/g, '2')
+    .replace(/i/g, '3')
+    .replace(/o/g, '4')
+    .replace(/u/g, '5');
 }
 
 function decode(sentence) {
-  return sentence.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+  return sentence.replace(/1/g, 'a')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u');
 }
 
 module.exports = {

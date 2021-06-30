@@ -7,9 +7,10 @@ function techList(technologies, name) {
   }
 
   for (let value of technologies.sort()) {
-    let object = {};
-    object.tech = value;
-    object.name = name;
+    let object = {
+      tech: value,
+      name: name,
+    };
     output.push(object);
   }
 
@@ -51,21 +52,9 @@ function generatePhoneNumber(numbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let diffAB = Math.abs(lineA - lineB);
-  let diffAC = Math.abs(lineA - lineC);
-  let diffBC = Math.abs(lineB - lineC);
-
-  // if (lineA < lineB + lineC && lineA > diffBC) {
-  //   return true;
-  // }
-  // if (lineB < lineA + lineC && lineB > diffAC) {
-  //   return true;
-  // }
-  // if (lineC < lineA + lineB && lineC > diffAB) {
-  //   return true;
-  // }
-
-  if (((lineA < lineB + lineC) && lineA > diffBC) || ((lineB < lineA + lineC) && lineB > diffAC) || ((lineC < lineA + lineB) && lineC > diffAB)) {
+  if (((lineA < lineB + lineC) && lineA > Math.abs(lineB - lineC)) ||
+    ((lineB < lineA + lineC) && lineB > Math.abs(lineA - lineC)) ||
+    ((lineC < lineA + lineB) && lineC > Math.abs(lineA - lineB))) {
     return true;
   }
   return false;
@@ -74,7 +63,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(sentence) {
   let output = 0;
-  let numbers = sentence.replace(/[^0-9]/g, "").split('');
+  let numbers = sentence.replace(/[^0-9]/g, '').split('');
   for (let value of numbers) {
     output += Number(value);
   }
