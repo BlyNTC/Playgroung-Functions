@@ -53,7 +53,7 @@ function highestCount(numbers) {
   }
   return count;
 }
-
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let mouseCat1Distance = Math.abs(mouse - cat1);
@@ -85,11 +85,28 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let vowels = {
+    'a':'1',
+    'e':'2',
+    'i':'3',
+    'o':'4',
+    'u':'5'
+  };
+  newString = string.replace(/[aeiou]/g, m => vowels[m]);
+  return newString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let numbers = {
+    '1':'a',
+    '2':'e',
+    '3':'i',
+    '4':'o',
+    '5':'u'
+  };
+  newString = string.replace(/[12345]/g, m => numbers[m]);
+  return newString;
 }
 
 module.exports = {
