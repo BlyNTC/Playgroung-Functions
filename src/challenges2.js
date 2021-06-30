@@ -1,7 +1,8 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  
 }
+console.log(techList())
 
 // Desafio 11
 function generatePhoneNumber() {

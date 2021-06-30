@@ -67,12 +67,12 @@ console.log(catAndMouse(6, 6));
 
 // Desafio 8
 function fizzBuzz(arrayNumero) {
-  for(let index = 0; index < array.length; index += 1){
-    if(array[index] % 3 == 0){
+  for(let index = 0; index < arrayNumero.length; index += 1){
+    if(arrayNumero[index] % 3 == 0){
       return "fizz";
-    }else if(array[index] % 5 == 0){
+    }else if(arrayNumero[index] % 5 == 0){
       return "buzz";
-    }else if(array[index] % 3 == 0 && array[index] % 5 == 0){
+    }else if(arrayNumero[index] % 3 == 0 && array[index] % 5 == 0){
       return "fizzbuzz";
     }else{
       return "bug!";
