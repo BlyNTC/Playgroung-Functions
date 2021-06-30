@@ -22,8 +22,10 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(listaPalavras) {
   let separaLista = listaPalavras.split (" ");
-  return separaLista[separaLista.length -1] + " " + separaLista[0];
+  return (separaLista[separaLista.length -1]) + ", " + (',  ', separaLista[0])
 }
+
+// console.log(concatName('Foguete não tem ré'));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -55,7 +57,7 @@ function highestCount(arrayNumero) {
 function catAndMouse(mouse, cat1, cat2) {
   if (cat1 === cat2){
     return "Os gatos trombam e o rato foge";
-  } else if (cat2 < cat1){
+  } else if (cat2 < cat1 && cat1 === mouse){
     return "Cat 1";
   }
     else {
@@ -64,9 +66,17 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumeros) {
+let divisiveis3 = 0;
+let divisiveis5 = 0;
+
+for (let index = 0; index < arrayNumeros.length; index += 1) { 
+if (arrayNumeros % 3 === 0) {
+   return "fizzBuzz";
+  }
+ }    
 }
+console.log(fizzBuzz[2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode() {
