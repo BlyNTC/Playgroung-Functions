@@ -30,7 +30,7 @@ function splitSentence(str) {
 function concatName(arraystr) {
   prim = arraystr[0]
   ultm = arraystr[arraystr.length -1]
-  result = ultm + ', ' + prim
+  let result = ultm + ', ' + prim
 
   return result
 }
@@ -99,13 +99,57 @@ function fizzBuzz(array) {
   }
   return array
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(str) {
+  let reultado = '';
+ for (let value of str){
+   switch (value) {
+     case "a": 
+     reultado += '1'
+     break
+     case "e":
+    reultado += '2';
+     break
+     case "i":
+       reultado += '3'
+      break
+      case "o":
+        reultado += '4'
+      break
+      case "u":
+        reultado += '5'
+      break
+     default:
+    reultado += value;
+   }
+ }
+ return reultado;
+    }
+
+function decode(str) {
+  let reultado = '';
+  for (let value of str){
+    switch (value) {
+      case "1": 
+      reultado += 'a'
+      break
+      case "2":
+     reultado += 'e';
+      break
+      case "3":
+        reultado += 'i'
+       break
+       case "4":
+         reultado += 'o'
+       break
+       case "5":
+         reultado += 'u'
+       break
+      default:
+     reultado += value;
+    }
+  }
+  return reultado;
 }
 
 module.exports = {
