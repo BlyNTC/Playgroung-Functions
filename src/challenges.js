@@ -7,11 +7,14 @@ function compareTrue(num1, num2) {
     return false;
 }
 
-
 // Desafio 2
-function calcArea() {
+function calcArea(base, heigt) {
+  let area = 2;
+
+  return base * heigt / 2;
   
 }
+
 calcArea();
 
 // Desafio 3
