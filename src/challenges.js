@@ -3,7 +3,7 @@ function compareTrue() {
   // seu código aqui
   if (true && true) {
     return true;
-  } else if (false && true) {  //conferir essa depois
+  } else if (false && true) {         //conferir essa depois
     return false;
   } else {
     return false;
@@ -13,6 +13,7 @@ function compareTrue() {
 // Desafio 2
 function calcArea() {
   // seu código aqui
+  return (base*height)/2;
 }
 
 // Desafio 3
