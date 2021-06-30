@@ -18,19 +18,29 @@ function splitSentence(word) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(words) {
+  let firstWord = words[0];
+  let lastWord = words[words.length -1]
+  return (lastWord + ', ' + firstWord)
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  totalPts = (wins * 3) + (ties * 1)
+  return totalPts
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(array) {
+    let maiorNumero = Math.max(...array)
+    let totalMaiorNumero = 0;
+    for (let i = 0; i <= array.length; i += 1){
+      if (maiorNumero === array[i]){
+        totalMaiorNumero += 1
+      };
+    };
+    return totalMaiorNumero
+};
 
 // Desafio 7
 function catAndMouse() {
