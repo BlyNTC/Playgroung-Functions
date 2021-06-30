@@ -19,6 +19,7 @@ function calcArea() {
 // Desafio 3
 function splitSentence() {
   // seu código aqui
+  return String.split(' ');
 }
 
 // Desafio 4
