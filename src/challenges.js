@@ -133,6 +133,26 @@ function decode(codigo) {
   return(codigo) 
 }
 
+function tecnologia(array,name){
+  let listaFinal=[]
+  let cont=0
+  for(let i=0;i<array.length;i+=1){
+    let obj= {
+      tecn:array[i],
+      name:name
+    }
+    listaFinal.push(obj)
+    cont+=1
+  }
+  if(cont===0){
+    return 'vazio'
+  }else{
+    return(listaFinal)
+  }
+}
+console.log(tecnologia([],'marcio'))
+
+
 module.exports = {
   calcArea,
   catAndMouse,
