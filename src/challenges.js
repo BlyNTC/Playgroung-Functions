@@ -50,7 +50,7 @@ console.log(contador)
 function catAndMouse(mouse, cat1, cat2) {
   let d1 = Math.abs(mouse - cat1)
   let d2 = Math.abs(mouse - cat2)
-  if (d1 < d1) {
+  if (d1 < d2) {
     return "cat1"
   } else 
   if (d2 < d1) {
