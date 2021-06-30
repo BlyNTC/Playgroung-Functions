@@ -133,24 +133,25 @@ function decode(codigo) {
   return(codigo) 
 }
 
-function tecnologia(array,name){
-  let listaFinal=[]
+function tecnologia(lista,name){
+  let listaFinal=[];
+  let arraySort=lista.sort();
   let cont=0
-  for(let i=0;i<array.length;i+=1){
+  for(let i=0;i<lista.length;i+=1){
     let obj= {
-      tecn:array[i],
-      name:name
+      tech:arraySort[i],
+      name:name,
     }
     listaFinal.push(obj)
     cont+=1
   }
-  if(cont===0){
+  if(cont==0){
     return 'Vazio!'
   }else{
     return(listaFinal)
   }
 }
-
+console.log(tecnologia(['React','Jest','HTML','CSS','JavaScript'],'Lucas'))
 
 
 module.exports = {
