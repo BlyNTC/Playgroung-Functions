@@ -46,10 +46,14 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
   // seu código aqui
+  const vitoria=3;
+  const empate=1;
+  return ((wins*vitoria)+(ties*empate));
 }
-
+footballPoints(14,8)
+console.log(footballPoints(14,8))
 // Desafio 6
 function highestCount() {
   // seu código aqui
