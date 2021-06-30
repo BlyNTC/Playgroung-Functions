@@ -29,7 +29,7 @@ console.log((calcArea(51, 1)));
 
 // Desafio 3
 function splitSentence() {
-  var stringExemplo = "Pedro Álvares Cabral";
+ let stringExemplo = "Pedro Álvares Cabral";
   resultado = stringExemplo.split(" ");
   return resultado;
 }
