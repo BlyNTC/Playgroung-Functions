@@ -1,3 +1,4 @@
+const { result } = require("lodash");
 const { array, count } = require("yargs");
 
 // Desafio 1
@@ -81,13 +82,24 @@ function catAndMouse(mouse, cat1, cat2) {
   return retorno
 
 }
-console.log(catAndMouse(1, 0, 2))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(array) {
 
+  for (index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 == 0 && array[index] % 5 == 0) {
+      array[index] = "fizzBuzz" ;
+    }else if (array[index] % 5 == 0) {
+      array[index] = "buzz";
+    }else if (array[index] % 3 == 0){
+      array[index] = "fizz"
+    }else {
+      array[index] = "bug!";
+    }
+  }
+  return array
+}
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9
 function encode() {
   // seu código aqui
