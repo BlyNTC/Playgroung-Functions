@@ -15,8 +15,6 @@ function techList(array, name) {
   return techObject;
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "ivan"))
-
 
 
 
