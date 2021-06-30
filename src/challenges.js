@@ -75,12 +75,25 @@ function catAndMouse(mouse, cat1, cat2) {
   }else if (distancia1 === distancia2)
   return "os gatos trombam e o rato foge";
 }
-console.log(catAndMouse(0, 3, 2));
+//console.log(catAndMouse(0, 3, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let string = [];
+  for(let n = 0; n < array.length; n += 1){
+    if (array[n] % 3 === 0 && array[n] %5 === 0){
+      string.push("fizzBuzz");
+    }else if (array[n] %3 === 0){
+      string.push("fizz");
+    }else if (array[n] %5 === 0){
+      string.push("buzz");
+    }else{
+      string.push("bug!");
+    } 
+  }
+  return string;
 }
+//console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
