@@ -66,7 +66,7 @@ function catAndMouse(cat1, cat2) {
 console.log(catAndMouse(6, 6));
 
 // Desafio 8
-function fizzBuzz(array) {
+function fizzBuzz(arrayNumero) {
   for(let index = 0; index < array.length; index += 1){
     if(array[index] % 3 == 0){
       return "fizz";
@@ -82,12 +82,46 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase1) {
+  let resultado1 = frase1.split("");
+
+  for(let index = 0; index < resultado1.index; index += 1){
+    switch(resultado1[index]){
+      case 'a': resultado1[index] = '1';
+      break;
+      case 'e': resultado1[index] = '2';
+      break;
+      case 'i': resultado1[index] = '3';
+      break;
+      case 'o': resultado1[index] = '4';
+      break;
+      case 'u': resultado1[index] = '5';
+      break;
+    }
+  }
+  return frase1;
 }
-function decode() {
-  // seu código aqui
+
+function decode(frase2) {
+  let resultado2 = frase2.split("");
+
+  for(let index = 0; index < resultado2.index; index += 1){
+    switch(resultado2[index]){
+      case '1': resultado2[index] = 'a';
+      break;
+      case '2': resultado2[index] = 'e';
+      break;
+      case '3': resultado2[index] = 'i';
+      break;
+      case '4': resultado2[index] = 'o';
+      break;
+      case '5': resultado2[index] = 'u';
+      break;
+    }
+  }
+  return frase2;
 }
+console.log(encode("hi, there!"), decode("h3, th2r2!"));
 
 module.exports = {
   calcArea,
