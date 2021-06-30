@@ -92,12 +92,22 @@ function fizzBuzz(sequenciaNum) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codificar) {
+  let codificado = codificar.replace(/a/g, 1);
+  codificado = codificado.replace(/e/g, 2);
+  codificado = codificado.replace(/i/g, 3);
+  codificado = codificado.replace(/o/g, 4);
+  codificado = codificado.replace(/u/g, 5);
+  return codificado;
 }
 
-function decode() {
-  // seu código aqui
+function decode(decodificar) {
+  let decodificado = decodificar.replace(/1/g, 'a');
+  decodificado = decodificado.replace(/2/g, 'e');
+  decodificado = decodificado.replace(/3/g, 'i');
+  decodificado = decodificado.replace(/4/g, 'o');
+  decodificado = decodificado.replace(/5/g, 'u');
+  return decodificado;
 }
 
 module.exports = {
