@@ -3,15 +3,15 @@ function techList(techs, name) {
   // seu código aqui
   techs.sort();
   let r = [];
-  if(techs.length === 0){
-    return "Vazio!";
-  }else{
-    for(i = 0; i<techs.length; i++){
-      let o = {};
-      o.tech = techs[i];
-      o.name = name;
-      r.push(o);
-    }
+  if (techs.length === 0) {
+    return 'Vazio!';
+  }
+  for (let i = 0; i < techs.length; i++) {
+    let o = {};
+    o.tech = techs[i];
+    o.name = name;
+    r.push(o);
+  
   }
   return r
 }
@@ -19,16 +19,16 @@ function techList(techs, name) {
 // Desafio 11
 function generatePhoneNumber(phone) {
   // seu código aqui
-  if (phone.length !== 11){
-    return "Array com tamanho incorreto.";
-  }else{
+  if (phone.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  } else {
     let numRepeat = phone.reduce(function(reps, nums){
-      reps[nums] = (reps[nums] ? reps[nums]+=1 : 1);
+      reps[nums] = (reps[nums] ? reps[nums] += 1 : 1);
       return reps;
     }, {})
-    if (phone.some((x) => x < 0 || x > 9 || numRepeat[x] >= 3)){ return "não é possível gerar um número de telefone com esses valores";
-  }else{
-      let result = "(" + phone[0] + phone[1] + ") " + phone[2] + phone [3] + phone[4] + phone[5] + phone[6] + "-" + phone[7] + phone[8] + phone[9] + phone [10];
+    if (phone.some((x) => x < 0 || x > 9 || numRepeat[x] >= 3)) { return 'não é possível gerar um número de telefone com esses valores';
+  } else {
+      let result = '(' + phone[0] + phone[1] + ') ' + phone[2] + phone [3] + phone[4] + phone[5] + phone[6] + '-' + phone[7] + phone[8] + phone[9] + phone [10];
 
       return result;
     }
@@ -47,15 +47,15 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   // seu código aqui
   let reg = /\d+/g;
-  let bebidas = (string.match(reg))
-  let agua = bebidas.map((e,i) => parseInt(bebidas[i])).reduce((a,e) => e + a)
+  let bebidas = (string.match(reg));
+  let agua = bebidas.map((e,i) => parseInt(bebidas[i])).reduce((a,e) => e + a);
 
-  if(agua > 1){
-    return agua + " copos de água"
-  }else{
-    return "1 copo de água"
-  }
+  if (agua > 1) {
+    return agua + ' copos de água';
+  } 
+  return '1 copo de água';
 }
+
 
 module.exports = {
   generatePhoneNumber,
