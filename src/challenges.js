@@ -65,14 +65,12 @@ function fizzBuzz(array) {
   for (let i of array) {
     if (i % 3 === 0 && i % 5 === 0) {
       vetor.push('fizzBuzz');
+    } else if (i % 3 === 0) {
+      vetor.push('fizz');
+    } else if (i % 5 === 0) {
+      vetor.push('buzz');
     } else {
-      if (i % 3 === 0) {
-        vetor.push('fizz');
-      } else if (i % 5 === 0) {
-        vetor.push('buzz');
-      } else {
-        vetor.push('bug!');
-      }
+      vetor.push('bug!');
     }
   }
   return vetor;
@@ -90,7 +88,7 @@ function encode(string) {
   };
   for (let i in string) {
     for (let j in num) {
-      if (string[i] == j) {
+      if (string[i] === j) {
         string = string.replace(string[i], num[j]);
       }
     }
@@ -98,15 +96,13 @@ function encode(string) {
   return string;
 }
 function decode(string) {
-
   let num = {
     a: 1,
     e: 2,
     i: 3,
     o: 4,
-    u: 5,
+    u: 5
   };
-
   for (let i in string) {
     for (let j in num) {
       if (string[i] == num[j]) {
@@ -114,9 +110,7 @@ function decode(string) {
       }
     }
   }
-
   return string;
-
 }
 
 module.exports = {
