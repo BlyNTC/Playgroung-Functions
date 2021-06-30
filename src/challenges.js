@@ -17,11 +17,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3 OK
-function splitSentence(string = []) {
+function splitSentence(string) {
   // seu código aqui
-  for (caractere of string) {
-    return string.split(' ');
-  }
+  return string.split(' ');
 }
 
 // Desafio 4 OK
@@ -31,7 +29,6 @@ function concatName(array) {
   let ultimoItem = array[array.length - 1];
   return ultimoItem.concat(', ', primeiroItem);
 }
-// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5 OK
 function footballPoints(wins, ties) {
@@ -89,23 +86,23 @@ function fizzBuzz(array) {
   return string;
 }
 
-  // Desafio 9
-  function encode() {
-    // seu código aqui
-  }
-  function decode() {
-    // seu código aqui
-  }
+// Desafio 9
+function encode() {
+  // seu código aqui
+}
+function decode() {
+  // seu código aqui
+}
 
-  module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    highestCount,
-    splitSentence,
-  };
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
+};
