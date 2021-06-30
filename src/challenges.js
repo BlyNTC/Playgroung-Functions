@@ -40,14 +40,21 @@ function footballPoints(wins,ties) {
 // Desafio 6
 function highestCount(valores) {
   let repeticao = 0;
-  let inicio = valores[0];
+  let maiorNum = valores[0];
   for(let index = 0; index < valores.length; index += 1){
-    if(valores[index] >= inicio && inicio >= valores[index]){
-      repeticao += 1;// seu código aqui
+    if(valores[index] > maiorNum){
+      maiorNum = valores[index]; //seu código aqui
     }
+  } 
+  
+  for(let j = 0; j < valores.length; j += 1){
+    if(maiorNum === valores[j]){
+      repeticao += 1;
+    }  
   }
   return repeticao;
-}  
+} 
+
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -68,8 +75,7 @@ function fizzBuzz(numeros) {
   let fizz = 'fizz';
   let buzz = 'buzz';
   let fizz2 = 'fizzBuzz';
-  let bug = 'bug!'
-  let substitui = 0; 
+  let bug = 'bug!' 
   for(let index = 0; index < numeros.length; index += 1){
     if(numeros[index] % 3 === 0){
       numeros[index] = fizz;// seu código aqui
@@ -85,9 +91,24 @@ function fizzBuzz(numeros) {
 }  
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(texto) {
+  for(let index = 0; index <= texto.length; index += 1 ){
+    if(texto[index] === 'a'){
+      texto[index] = 1;
+    } else if(texto[index] === 'e'){
+        texto[index] = 2;
+    }else if(texto[index] === 'i'){
+        texto[index] = 3;
+    }else if(texto[index] === 'o'){
+      texto[index] = 4;
+    } else if(texto[index] === 'u'){
+      texto[index] = 5;
+    }
+  }
+  return texto;
 }
+console.log(encode("hi there!"))
+
 function decode() {
   // seu código aqui
 }
