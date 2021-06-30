@@ -2,7 +2,7 @@
 function techList(array, name) {
   let techlist = [];
   array.sort();
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     let object = {
       tech: array[i],
       name: name
@@ -52,8 +52,26 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  var result;
+  if (lineA > lineB + lineC) {
+    result = false;
+  } else if (lineB > lineA + lineC) {
+    result = false;
+  } else if (lineC > lineB + lineA) {
+    result = false;
+  }
+
+  if (lineA < Math.abs(lineB - lineC)) {
+    result = false;
+  } else if (lineB < Math.abs(lineA - lineC)) {
+    result = false;
+  } else if (lineC < Math.abs(lineB - lineA)) {
+    result = false;
+  } else {
+    result = true;
+  }
+  return result;
 }
 
 // Desafio 13

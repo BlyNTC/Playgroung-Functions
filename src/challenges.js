@@ -35,7 +35,7 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let max = Math.max(...array);
   let count = 0;
-  for (i = 0; i < array.length; ++i) {
+  for (let i = 0; i < array.length; ++i) {
     if (array[i] == max) {
       count++;
     }
@@ -71,7 +71,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let result = [];
   let final = [];
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (array[i] % 3 == 0) {
       var a = "fizz";
     } else {
@@ -85,7 +85,7 @@ function fizzBuzz(array) {
     var c = a + b;
     result.push(c);
   }
-  for (i = 0; i < result.length; i++) {
+  for (let i = 0; i < result.length; i++) {
     if (result[i] == "nullnull") {
       final.push("bug!");
     } else if (result[i] == "fizzbuzz") {
@@ -103,7 +103,7 @@ function fizzBuzz(array) {
 function encode(string) {
   let array = string.split("");
   let final = [];
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (array[i] == "a") {
       final.push("1");
     } else if (array[i] == "e") {
@@ -124,7 +124,7 @@ function encode(string) {
 function decode(string) {
   let array = string.split("");
   let final = [];
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (array[i] == "1") {
       final.push("a");
     } else if (array[i] == "2") {
