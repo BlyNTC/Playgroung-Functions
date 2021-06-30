@@ -23,6 +23,9 @@ function techList(array, name) {
 
 // Desafio 11
 
+// Ideia do código abaixo:
+// A função reduce pega cada valor e verifica se ele é igual ao valor parâmetro, se sim, acrescenta 1 ao acumulador
+// https://www.codegrepper.com/code-examples/javascript/javascript+count+number+of+occurrences+in+array
 function countOcurrences(arr, val) {
   return arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
 }
@@ -34,7 +37,6 @@ function returnErrorMessage(array) {
     }
   }
 }
-// https://www.codegrepper.com/code-examples/javascript/javascript+count+number+of+occurrences+in+array
 
 function generatePhoneNumber(array) {
   if (array.length !== 11) {
@@ -49,6 +51,7 @@ function generatePhoneNumber(array) {
     number += item;
   }
   // Ideia retirada de https://stackoverflow.com/questions/4313841/insert-a-string-at-a-specific-index
+  // Cortando a string e acrescentando caracteres usando indices e slice
   return `(${number.slice(0, 2)}) ${number.slice(2, 7)}-${number.slice(7)}`;
 }
 
