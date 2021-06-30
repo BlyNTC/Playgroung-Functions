@@ -22,7 +22,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(listaPalavras) {
   let separaLista = listaPalavras.split (" ");
-  return (separaLista[separaLista.length -1]) + ", " + (',  ', separaLista[0])
+  return (separaLista[separaLista.length -1]) + ", " + (separaLista[0])
 }
 
 // console.log(concatName('Foguete não tem ré'));
@@ -67,20 +67,31 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
-let divisiveis3 = 0;
-let divisiveis5 = 0;
-
+let string = [];
 for (let index = 0; index < arrayNumeros.length; index += 1) { 
-if (arrayNumeros % 3 === 0) {
-   return "fizzBuzz";
+if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0) {
+    string.push ("fizzBuzz");
+  } else if (arrayNumeros[i] % 3 === 0) {
+    string.push ("fizz");
+  } else if (arrayNumeros[i] % 5 === 0) {
+    string.push ("Buzz");
+  } else {
+    string.push ("Bug!");
   }
- }    
+ }
+ return string;    
 }
-console.log(fizzBuzz[2, 15, 7, 9, 45]);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+let frase = ('aa');
+for (let index = 0; index < frase.length; index += 1) { 
+switch (frase) {
+  case "a":
+    console.log ('1');
+    break;
+  }
+ }
 }
 function decode() {
   // seu código aqui
