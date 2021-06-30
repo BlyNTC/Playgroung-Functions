@@ -79,10 +79,15 @@ function hydrate(string) {
   var regex = /\d+/g;
   var matches = string.match(regex);
   var qtd = 0;
-  for (let i = 0; i < matches.length; i++) {
-    qtd += matches[i];
+  for (let i = 0; i < matches.length; i += 1) {
+    var int = parseInt(matches[i]);
+    qtd += int;
   }
-  var text = qtd + " copo de água"
+  if (qtd > 1) {
+    var text = qtd + " copos de água"
+  } else {
+  var text = "1 copo de água"
+  }
   return text;
 }
 
