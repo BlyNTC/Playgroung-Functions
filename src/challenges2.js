@@ -17,21 +17,20 @@ function generatePhoneNumber(array) {
   let count = 0;
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else {
-    for (let index1 in array) {
-      if (array[index1] < 0 || array[index1] > 9) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-      for (let index2 in array) {
-        if (array[index1] === array[index2]) {
-          count += 1;
-        }
-      }
-      if (count >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-      count = 0;
+  }
+  for (let index1 = 0; index1 < array.length; index1 += 1) {
+    if (array[index1] < 0 || array[index1] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
+    for (let index2 in array) {
+      if (array[index1] === array[index2]) {
+        count += 1;
+      }
+    }
+    if (count >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    count = 0;
   }
   for (let index = 0; index < array.length; index += 1) {
     if (index === 0) {
@@ -52,17 +51,17 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (
-    lineA >= lineB + lineC ||
-    lineB >= lineA + lineC ||
-    lineC >= lineA + lineB
-  ) {
+  let sumAB = lineA + lineB;
+  let sumAC = lineA + lineC;
+  let sumBC = lineB + lineC;
+  let distAB = Math.abs(lineA - lineB);
+  let distAC = Math.abs(lineA - lineC);
+  let distBC = Math.abs(lineB - lineC);
+
+  if (lineA >= sumBC || lineB >= sumAC || lineC >= sumAB) {
     return false;
-  } else if (
-    lineA <= Math.abs(lineB - lineC) ||
-    lineB <= Math.abs(lineA - lineC) ||
-    lineC <= Math.abs(lineB - lineA)
-  ) {
+  }
+  if (lineA <= distBC || lineB <= distAC || lineC <= distAB) {
     return false;
   }
   return true;
