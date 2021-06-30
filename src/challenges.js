@@ -4,9 +4,7 @@ function compareTrue(a, b) {
   if (a == 1 && b == 1) {
     return true;
   }
-  else {
-    return false;
-  }
+  return false;
 }
 
 // Desafio 2
@@ -88,7 +86,7 @@ function encode(string) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
+    u: 5,
   };
   for (let i in string) {
     for (let j in num) {
@@ -106,7 +104,7 @@ function decode(string) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
+    u: 5,
   };
 
   for (let i in string) {
