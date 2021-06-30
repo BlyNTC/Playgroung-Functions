@@ -60,10 +60,20 @@ function triangleCheck(lineA, lineB, lineC) {
   return check;
 }
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(str) {
+  let r = /\d+/g;
+  let numbers = (str.match(r));
+  let count = 0;
 
+  for(let i = 0; i<numbers.length; i+=1){
+    count+=Number(numbers[i]);
+  }
+  if(count>1){
+    return count + ' copos de água';
+  }else{
+    return count + ' copo de água';
+  }
+}
 module.exports = {
   generatePhoneNumber,
   techList,
