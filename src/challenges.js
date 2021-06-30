@@ -1,27 +1,21 @@
 // Desafio 1
-function compareTrue(param1, param2) {
-  if (param1 === true && param2 === true) {
-    return true;
-    } else {
-    return false;
-    }
-  } ;
+function compareTrue() {
+  // seu código aqui
+}
 
 // Desafio 2
-function calcArea(base, height) {
-  return (base * height) / 2
-} ;  
+function calcArea() {
+  // seu código aqui
+}
 
 // Desafio 3
-function splitSentence(string) {
-  let array = string.split(' ')
-  return array } ;
+function splitSentence() {
+  // seu código aqui
+}
 
 // Desafio 4
-function concatName(array) {
- let primeiro = array[0];
- let ultimo = array[array.length - 1]; 
- rturn ultimo + ',' + ' ' + primeiro
+function concatName() {
+  // seu código aqui
 }
 
 // Desafio 5
@@ -63,4 +57,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-  } ;
+};
