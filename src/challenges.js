@@ -20,8 +20,8 @@ calcArea();
 
 
 // Desafio 3
-function splitSentence(a) {
-let frase = 'bora la';
+function splitSentence() {
+let frase = 'Bora la, mano';
 return frase.split("");
 
 }
@@ -30,7 +30,10 @@ splitSentence();
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  
+
+
+
 }
 
 // Desafio 5
