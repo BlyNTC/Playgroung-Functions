@@ -76,16 +76,19 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let result = [];
   let final = [];
+  let a;
+  let b;
   for (let i = 0; i < array.length; i++) {
     if (array[i] % 3 == 0) {
-      let a = 'fizz';
+      a = 'fizz';
     } else {
-      let a = 'null';
+      a = 'null';
     }
     if (array[i] % 5 == 0) {
-      let b = 'buzz';
+      b = 'buzz';
     } else {
-      b = 'null';}
+      b = 'null';
+    }
     let c = a + b;
     result.push(c);
   }
