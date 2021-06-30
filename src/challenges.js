@@ -14,7 +14,7 @@ function compareTrue(a, b) {
   }
 }
 compareTrue(false, false);
-console.log(status);
+//console.log(status);
 
 // Desafio 2
 let areaDoTriangulo = 0;
@@ -25,7 +25,7 @@ function calcArea(base, height) {
   // seu código aqui
 }
 calcArea(51, 1);
-console.log(areaDoTriangulo);
+//console.log(areaDoTriangulo);
 
 
 // Desafio 3
@@ -37,7 +37,7 @@ function splitSentence(text) {
   return array;
 }
 splitSentence("foguete");
-console.log(array);
+//console.log(array);
 
 /* Consultei o seguinte site para conseguir realizar esse desafio 3.
    link: https://blog.betrybe.com/javascript/javascript-split/ */
@@ -52,7 +52,7 @@ function concatName(arrays) {
   return myString;
 }
 concatName(['captain', 'my', 'captain']);
-console.log(myString);
+//console.log(myString);
 
 
 // Desafio 5
@@ -66,7 +66,7 @@ function footballPoints(wins, ties) {
   return numero_de_pontos;
 }
 footballPoints(14, 8);
-console.log(numero_de_pontos);
+//console.log(numero_de_pontos);
 
 // Desafio 6
 function highestCount(arraynumbers) {
@@ -108,15 +108,31 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 catAndMouse(0,3,3);
-console.log(situacaoGatos);
-
-
+//console.log(situacaoGatos);
 
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayFizzBuzz) {
   // seu código aqui
+  let arrayPush = [];
+  for (let idx = 0; idx < arrayFizzBuzz.length; idx += 1){
+      if(arrayFizzBuzz[idx] % 3 === 0 && arrayFizzBuzz[idx] % 5 === 0){
+        arrayPush[idx] = 'fizzBuzz';
+      }
+      else if (arrayFizzBuzz[idx] % 3 === 0){
+        arrayPush[idx] = 'fizz';
+      }
+      else if (arrayFizzBuzz[idx] % 5 === 0){
+        arrayPush[idx] = 'buzz';
+      }
+      else {
+        arrayPush[idx] = "bug!";
+      }
+  }
+  return arrayPush;
 }
+fizzBuzz([7, 9]);
+
 
 // Desafio 9
 function encode() {
