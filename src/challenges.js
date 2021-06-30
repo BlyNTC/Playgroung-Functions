@@ -145,12 +145,12 @@ function tecnologia(array,name){
     cont+=1
   }
   if(cont===0){
-    return 'vazio'
+    return 'Vazio!'
   }else{
     return(listaFinal)
   }
 }
-console.log(tecnologia([],'marcio'))
+
 
 
 module.exports = {
