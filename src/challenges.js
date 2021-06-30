@@ -47,11 +47,11 @@ function catAndMouse(mouse,cat1,cat2) {
   let gato2 = Math.abs(mouse - cat2)
 
   if(gato1 < gato2){
-      return "cat1";
+      return 'cat1';
     } else if (gato1 > gato2){
-      return "cat2";
+      return 'cat2';
     } else {
-      return "os gatos trombam e o rato foge";
+      return 'os gatos trombam e o rato foge';
     }
 }
 
@@ -60,13 +60,13 @@ function fizzBuzz(numeros) {
   let resp =[];
   for(let i = 0; i < numeros.length; i +=1 ){
       if (numeros[i]% 3 === 0 && numeros[i]%5 === 0){
-          resp.push("fizzBuzz");
+          resp.push('fizzBuzz');
       } else if (numeros[i]%3 === 0 && numeros[i]%5 !== 0){
-          resp.push("fizz");
+          resp.push('fizz');
       } else if (numeros[i]%5 === 0 && numeros[i]%3 !== 0){
-          resp.push("buzz");
+          resp.push('buzz');
       } else {
-          resp.push("bug!");
+          resp.push('bug!');
       }
   }
   return resp;
