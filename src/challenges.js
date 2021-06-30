@@ -19,15 +19,14 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  let resultado = string.split(" ");
+  let resultado = string.split(' ');
   return resultado;
 }
 
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  let string = array[array.length - 1] + ', ' + array[0];
-  return string;
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
@@ -43,7 +42,7 @@ function highestCount(array) {
   let maior = Math.max.apply(null, array);
   let cont = 0;
   for (let i of array) {
-    if (i == maior) {
+    if (i === maior) {
       cont += 1;
     }
   }
@@ -56,34 +55,26 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return 'cat2';
-  }
-  else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+  } if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
   }
-  else {
-    return 'os gatos trombam e o rato foge';
-  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(array) {
-  // seu código aqui
   let vetor = [];
   for (let i of array) {
-    if (i % 3 == 0) {
-      if (i % 5 == 0) {
-        vetor.push("fizzBuzz");
+    if (i % 3 === 0 && i % 5 === 0) {
+      vetor.push('fizzBuzz');
+    } else {
+      if (i % 3 === 0) {
+        vetor.push('fizz');
+      } else if (i % 5 === 0) {
+        vetor.push('buzz');
+      } else {
+        vetor.push('bug!');
       }
-      else {
-        vetor.push("fizz");
-      }
-
-    }
-    else if (i % 5 == 0 && i % 3 != 0) {
-      vetor.push("buzz");
-    }
-    else {
-      vetor.push("bug!");
     }
   }
   return vetor;
@@ -99,7 +90,6 @@ function encode(string) {
     o: 4,
     u: 5
   };
-
   for (let i in string) {
     for (let j in num) {
       if (string[i] == j) {
@@ -107,12 +97,10 @@ function encode(string) {
       }
     }
   }
-
   return string;
-
 }
 function decode(string) {
-  // seu código aqui
+
   let num = {
     a: 1,
     e: 2,
@@ -130,6 +118,7 @@ function decode(string) {
   }
 
   return string;
+
 }
 
 module.exports = {
