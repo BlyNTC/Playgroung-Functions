@@ -51,10 +51,14 @@ let count = 1;
   }
 }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck(lineA, lineB, lineC) {
+  let check = false;
 
+  if((lineA < lineB+lineC) && (lineA > Math.abs(lineB-lineC)) || (lineB < lineA+lineC) && (lineB > Math.abs(lineA-lineC))|| (lineC < lineA+lineB && (lineC > Math.abs(lineA-lineB)))){
+    check = true;
+  }
+  return check;
+}
 // Desafio 13
 function hydrate() {
   // seu código aqui
