@@ -116,11 +116,59 @@ function fizzBuzz(retornoString) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(criptografar) {
+
+  let resultado = '';
+ for (let value of criptografar){
+   switch (value) {
+     case "a": 
+     resultado += '1'
+     break
+     case "e":
+    resultado += '2';
+     break
+     case "i":
+       resultado += '3'
+      break
+      case "o":
+        resultado += '4'
+      break
+      case "u":
+        resultado += '5'
+      break
+     default:
+    resultado += value;
+   }
+ }
+ return resultado;
+  
 }
-function decode() {
-  // seu código aqui
+console.log(encode("hia there a"))
+
+function decode(descriptografar) {
+  let resultado = '';
+  for (let value of descriptografar){
+    switch (value) {
+      case "1": 
+      resultado += 'a'
+      break
+      case "2":
+     resultado += 'e';
+      break
+      case "3":
+        resultado += 'i'
+       break
+       case "4":
+         resultado += 'o'
+       break
+       case "5":
+         resultado += 'u'
+       break
+      default:
+     resultado += value;
+    }
+  }
+  return resultado;
 }
 
 module.exports = {
