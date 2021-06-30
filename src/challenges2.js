@@ -4,7 +4,7 @@ function techList(array, nome) {
   let arrayObj = [];
   let arrayOrd = array.sort();
 
-  for (let key of array.sort) {
+  for (let key of arrayOrd) {
     let object = {
       tech: key,
       name: nome,
