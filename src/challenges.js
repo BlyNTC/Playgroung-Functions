@@ -88,44 +88,44 @@ function fizzBuzz(arrayFB) {
       guardar.push('bug!');
     }
   } return guardar;
-} 
+}
 
 // Desafio 9
 function encode(string) {
-  let trocaValor = ''
+  let trocaValor = '';
   for (let percorrer of string) {
     if (percorrer === 'a') {
       trocaValor += 1;
     } else if (percorrer === 'e') {
-      trocaValor += 2.
+      trocaValor += 2;
     } else if (percorrer === 'i') {
-      trocaValor += 3
+      trocaValor += 3;
     } else if (percorrer === 'o') {
-      trocaValor += 4
+      trocaValor += 4;
     } else if (percorrer === 'u') {
-      trocaValor += 5
+      trocaValor += 5;
     } else {
       trocaValor += percorrer;
     }
   } return trocaValor;
 }
 function decode(string) {
-  let trocaValor = ''
+  let trocaValor = '';
   for (let percorrer of string) {
     if (percorrer === '1') {
       trocaValor += 'a';
     } else if (percorrer === '2') {
-      trocaValor += 'e'
+      trocaValor += 'e';
     } else if (percorrer === '3') {
-      trocaValor += 'i'
+      trocaValor += 'i';
     } else if (percorrer === '4') {
-      trocaValor += 'o'
+      trocaValor += 'o';
     } else if (percorrer === '5') {
-      trocaValor += 'u'
+      trocaValor += 'u';
     } else {
       trocaValor += percorrer;
     }
-  }return trocaValor;
+  } return trocaValor;
 }
 
 module.exports = {
