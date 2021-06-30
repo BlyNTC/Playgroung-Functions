@@ -24,7 +24,7 @@ function concatName(nomes) {
 } 
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   return wins * 3 + ties;
 }
 
@@ -50,21 +50,22 @@ function highestCount(numeros) {
 
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   let distanciaGato1 = Math.abs(cat1 - mouse);
   let distanciaGato2 = Math.abs(cat2 - mouse);
   if (distanciaGato1 < distanciaGato2) {
-    return 'cat1';
+    return "cat1";
   } else if (distanciaGato2 < distanciaGato1) {
-    return 'cat2'; 
+    return "cat2"; 
   } else {
-    return 'Os Gatos trombam e o Rato foge'
+    return "os gatos trombam e o rato foge"
   }
 
 }
 
 // Desafio 8
 function fizzBuzz() {
+
 }
 
 // Desafio 9
