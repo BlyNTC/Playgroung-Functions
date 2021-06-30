@@ -9,8 +9,8 @@ function compareTrue(bollean1, bollean2) {
 }
 
 // Desafio 2
-function calcArea() {
- 
+function calcArea(base, height, div) {
+   return base*height/2;
 }
 
 // Desafio 3
