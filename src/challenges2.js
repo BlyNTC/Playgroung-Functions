@@ -1,19 +1,14 @@
 // Desafio 10
 function techList(listaDesordenada, name) {
-
   let resultado;
-
   if (listaDesordenada.length === 0) {
     resultado = "Vazio!";
   } else {
-
     listaOrdenada = listaDesordenada.sort();
     let arrayDeObjetos = [];
     let n = 0;
     let objetoTech = {
-
     }
-
     for (let tecnologia of listaOrdenada) {
       arrayDeObjetos[n] = objetoTech = {
         name: name,
@@ -39,7 +34,6 @@ function repete(numero, lista) {
 }
 
 function generatePhoneNumber(listaDeNumeros) {
-
   let resultado;
   if (listaDeNumeros.length === 11) {
     //Verifica se os numeros de cada posicao é menor ou igual a 9 e maior que 0
@@ -88,7 +82,6 @@ function triangleCheck(lineA, lineB, lineC) {
   let condicao1 = ((lineA < (lineB + lineC)) && (lineB < (lineA + lineC)) && (lineC < (lineB + lineA)));
   //verifica se um lado é maior que o valor absoluto da diferença dos outros dois.
   let condicao2 = ((lineA > Math.abs(lineB - lineC)) && (lineB > Math.abs(lineA - lineC)) && (lineC > Math.abs(lineB - lineA)));
-
   return (condicao1 && condicao2);
 }
 
@@ -99,14 +92,13 @@ function hydrate(sentence) {
   for (let numero of lista) {
     soma = soma + parseInt(numero);
   }
-  if (soma > 1){
-  return (soma + " copos de água");
+  if (soma > 1) {
+    return (soma + " copos de água");
   } else {
     return (soma + " copo de água")
   }
 }
 
-console.log(hydrate("1 cerveja e 2 caipirinhas"));
 module.exports = {
   generatePhoneNumber,
   techList,
