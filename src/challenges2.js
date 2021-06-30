@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(array, nome) {
   // seu código aqui
-  let arrayObj = [''];
+  let arrayObj = [];
   let arrayOrd = array.sort();
 
   for (let key of array) {
