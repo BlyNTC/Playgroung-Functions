@@ -93,11 +93,20 @@ function encode(strEncode) {
   encoded = encoded.replace(/i/g, '3');
   encoded = encoded.replace(/o/g, '4');
   encoded = encoded.replace(/u/g, '5');
-  console.log(encoded);
+  return encoded;
 }
 
-function decode() {
+encode('Projeto Playground Functions');
+
+function decode(strDecode) {
   // seu código aqui
+  let decoded = '';
+  decoded = strDecode.replace(/1/g, 'a');
+  decoded = decoded.replace(/2/g, 'e');
+  decoded = decoded.replace(/3/g, 'i');
+  decoded = decoded.replace(/4/g, 'o');
+  decoded = decoded.replace(/5/g, 'u');
+  return decoded;
 }
 
 module.exports = {
