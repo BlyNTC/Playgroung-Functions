@@ -85,9 +85,17 @@ function fizzBuzz(arrFizzBuzz) {
 }
 
 // Desafio 9
-function encode() {
+function encode(strEncode) {
   // seu código aqui
+  let encoded = '';
+  encoded = strEncode.replace(/a/g, '1');
+  encoded = encoded.replace(/e/g, '2');
+  encoded = encoded.replace(/i/g, '3');
+  encoded = encoded.replace(/o/g, '4');
+  encoded = encoded.replace(/u/g, '5');
+  console.log(encoded);
 }
+
 function decode() {
   // seu código aqui
 }
