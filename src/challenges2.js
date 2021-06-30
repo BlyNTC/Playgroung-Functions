@@ -79,14 +79,26 @@ function generatePhoneNumber(arrayTel) {
   return dddFinal + firstNumbersFinal + lastNumbersFinal;
 }
 
-
-
-
-
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+
+  let diferencaMedidasA = lineB - lineC;
+  let valorAbsolutoA = Math.abs(diferencaMedidasA);
+  let diferencaMedidasB = lineA - lineC;
+  let valorAbsolutoB = Math.abs(diferencaMedidasB);
+  let diferencaMedidasC = lineB - lineA;
+  let valorAbsolutoC = Math.abs(diferencaMedidasC);
+
+  //lineA
+  if( (lineA < (lineB + lineC)) && (lineA > (valorAbsolutoA))){
+    return true;
+  }else if((lineB < (lineA + lineC)) && (lineB > (valorAbsolutoB))){
+    return true;
+  }else if((lineC < (lineA + lineB)) && (lineC > (valorAbsolutoC))){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Desafio 13
