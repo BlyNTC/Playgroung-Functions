@@ -29,7 +29,7 @@ function countOcurrences(arr, val) {
 
 function returnErrorMessage(array) {
   for (let value of array) {
-    if (array[i] < 0 || array[i] > 9 || countOcurrences(array, value)>= 3) {
+    if (value < 0 || value > 9 || countOcurrences(array, value) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
