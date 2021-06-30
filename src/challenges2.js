@@ -75,8 +75,15 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  var regex = /\d+/g;
+  var matches = string.match(regex);
+  var qtd = 0;
+  for (let i = 0; i < matches.length; i++) {
+    qtd += matches[i];
+  }
+  var text = qtd + " copo de água"
+  return text;
 }
 
 module.exports = {
