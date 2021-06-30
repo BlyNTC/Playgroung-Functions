@@ -31,8 +31,6 @@ splitSentence();
 function concatName() {
   
 
-
-
 }
 
 // Desafio 5
