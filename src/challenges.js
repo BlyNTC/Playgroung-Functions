@@ -20,10 +20,9 @@ function splitSentence(arraySentence) {
 
 // Desafio 4
 function concatName(arSentence) {
-  let lastItem = arSentence.length - 1];
+  let lastItem = arSentence[arSentence.length - 1];
   let firstItem = arSentence[0];
-
-  return arSentence[lastName + ', ' + firstItem];
+  return lastItem + ', ' + firstItem;
 }
 
 // Desafio 5
