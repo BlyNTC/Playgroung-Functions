@@ -76,30 +76,44 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-let stringTemp = 'hi there!';
-// let nova = stringTemp.replace("i", 3);
-// console.log(nova);
 function encode(string){
-  let vogais = ['a','e','i','o','u'];
-    for (let i of string){
-      if(string[i] === vogais[2]){
-        string = string.replace(string[i],'1']);
+  let vogal = ['a','e','i','o','u'];
+  let numero = [1, 2, 3, 4, 5];
+    for (let i in string){
+      if(string[i] === vogal[0]){
+        string = string.replace(string[i],numero[0]);
+      } else if (string[i] === vogal[1]){
+        string = string.replace(string[i],numero[1]);
+      } else if (string[i] === vogal[2]){
+        string = string.replace(string[i],numero[2]);
+      } else if (string[i] === vogal[3]){
+        string = string.replace(string[i],numero[3]);
+      } else if (string[i] === vogal[4]){
+        string = string.replace(string[i],numero[4]);
       }
     }
   return string;
 }
 
-console.log(encode(stringTemp));
-
 function decode(string) {
-
-
-
-
-
-  
+  let vogal = ['a','e','i','o','u'];
+  let numero = [1,2,3,4, 5];
+    for (let i in string){
+      if(string[i] == numero[0]){
+        string = string.replace(string[i],vogal[0]);
+      } else if (string[i] == numero[1]){
+        string = string.replace(string[i],vogal[1]);
+      } else if (string[i] == numero[2]){
+        string = string.replace(string[i],vogal[2]);
+      } else if (string[i] == numero[3]){
+        string = string.replace(string[i],vogal[3]);
+      } else if (string[i] == numero[4]){
+        string = string.replace(string[i],vogal[4]);
+      }
+    }
   return string;
 }
+
 
 module.exports = {
   calcArea,
