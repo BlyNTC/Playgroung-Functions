@@ -1,6 +1,10 @@
 // Desafio 10
 function techList(array, name) {
   let obj = {};
+  
+  if(array.length <= 0){
+    return 'Vazio!'
+  }
 
   for(let i = 0; i < array.length; i += 1) {
     obj[i] = {
@@ -10,6 +14,9 @@ function techList(array, name) {
   }
   for(let key in obj){
     return obj;
+  }
+  if(array === 0){
+    return 'Vazio!'
   }
 }
 
