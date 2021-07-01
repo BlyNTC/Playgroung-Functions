@@ -13,13 +13,25 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+
 }
 
+
+
+
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let cond = false;
+  if(lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    return cond = true;
+  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    return cond = true;
+  } else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    return cond = true;
+  } else {
+    return cond;
+  }
 }
 
 // Desafio 13
