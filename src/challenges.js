@@ -19,13 +19,12 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arr) {
   // seu código aqui
 }
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return 3*wins+1*ties;
 }
 
 // Desafio 6
@@ -62,4 +61,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+  };
