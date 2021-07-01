@@ -67,9 +67,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
+  let result;
+  let number = string.match(/\d+/g); // fonte de consulta: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+  let x = 0;
+  for(let i in number){
+    let convert = parseInt(number[i]); // fonte de consulta: https://www.w3schools.com/jsref/jsref_parseint.asp
+    x += convert;
+  }
+  if(x>2){
+    result = x + ' copos de água';
+  }else{
+    result = x + ' copo de água'
+  }
+  return result
   // seu código aqui
-}
+}hydrate('3 copos, 2 canecas')
 
 module.exports = {
   generatePhoneNumber,
