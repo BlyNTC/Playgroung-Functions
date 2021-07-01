@@ -32,13 +32,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
+function highestNumber(array) {
   let highest = array[0];
   for (let i of array) {
     if (i > highest) {
       highest = i;
     }
   }
+  return highest;
+}
+function highestCount(array) {
+  let highest = highestNumber(array);
   let count = 0;
   for (let i of array) {
     if (i === highest) {
@@ -62,71 +66,69 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function compareFizz(i, result) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    result.push('fizzBuzz');
+  } else if (i % 3 === 0) {
+    result.push('fizz');
+  } else if (i % 5 === 0) {
+    result.push('buzz');
+  } else {
+    result.push('bug!');
+  }
+}
 function fizzBuzz(array) {
   let result = [];
   for (let i of array) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (i % 3 === 0) {
-      result.push('fizz');
-    } else if (i % 5 === 0) {
-      result.push('buzz');
-    } else {
-      result.push('bug!');
-    }
+    compareFizz(i, result);
   }
   return result;
 }
 
 // Desafio 9
+function switchEncode(i, array) {
+  let support = array[i];
+  if (support === 'a') {
+    support = '1';
+  } else if (support === 'e') {
+    support = '2';
+  } else if (support === 'i') {
+    support = '3';
+  } else if (support === 'o') {
+    support = '4';
+  } else if (support === 'u') {
+    support = '5';
+  }
+  array[i] = support;
+}
+
 function encode(string) {
   let array = string.split('');
   for (let i = 0; i < array.length; i += 1) {
-    switch (array[i]) {
-    case 'a':
-      array[i] = '1';
-      break;
-    case 'e':
-      array[i] = '2';
-      break;
-    case 'i':
-      array[i] = '3';
-      break;
-    case 'o':
-      array[i] = '4';
-      break;
-    case 'u':
-      array[i] = '5';
-      break;
-    default:
-      break;
-    }
+    switchEncode(i, array);
   }
   array = array.join('');
   return array;
 }
+function switchDecode(i, array) {
+  let support = array[i];
+  if (support === '1') {
+    support = 'a';
+  } else if (support === '2') {
+    support = 'e';
+  } else if (support === '3') {
+    support = 'i';
+  } else if (support === '4') {
+    support = 'o';
+  } else if (support === '5') {
+    support = 'u';
+  }
+  array[i] = support;
+}
 function decode(string) {
   let array = string.split('');
   for (let i = 0; i < array.length; i += 1) {
-    switch (array[i]) {
-    case '1':
-      array[i] = 'a';
-      break;
-    case '2':
-      array[i] = 'e';
-      break;
-    case '3':
-      array[i] = 'i';
-      break;
-    case '4':
-      array[i] = 'o';
-      break;
-    case '5':
-      array[i] = 'u';
-      break;
-    default:
-      break;
-    }
+    switchDecode(i, array);
   }
   array = array.join('');
   return array;
