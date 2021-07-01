@@ -82,31 +82,61 @@ function catAndMouse(mouse, cat1, cat2) {
     return ("os gatos trombam e o rato foge")
   }
 }
-console.log(catAndMouse(5, 3, 2));
 // Desafio 8
 function fizzBuzz(array) {
- let arrayOutPut = []
- for (let index in array){
-   if (array[index] % 3 === 0 && array[index] % 5 === 0 ){
-    arrayOutPut.push("fizzBuzz");
-   } else if (array[index] % 3 === 0){
-     arrayOutPut.push("fizz");
-   } else if (array[index] % 5 === 0){
-     arrayOutPut.push("buzz")
-   } else {
-     arrayOutPut.push("bug!")
-   }
- }
- return arrayOutPut
+  let arrayOutPut = []
+  for (let index in array) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      arrayOutPut.push("fizzBuzz");
+    } else if (array[index] % 3 === 0) {
+      arrayOutPut.push("fizz");
+    } else if (array[index] % 5 === 0) {
+      arrayOutPut.push("buzz")
+    } else {
+      arrayOutPut.push("bug!")
+    }
+  }
+  return arrayOutPut
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let outputString = '';
+  for (let i of string) {
+    if (i === 'a') {
+      outputString += '1';
+    } else if (i === 'e') {
+      outputString += '2';
+    } else if (i === 'i') {
+      outputString += '3';
+    } else if (i === 'o') {
+      outputString += '4';
+    } else if (i === 'u') {
+      outputString += '5';
+    } else {
+      outputString += i;
+    }
+  }
+  return outputString;
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let outputString = '';
+  for (let i of string) {
+    if (i === '1') {
+      outputString += 'a';
+    } else if (i === '2') {
+      outputString += 'e';
+    } else if (i === '3') {
+      outputString += 'i';
+    } else if (i === '4') {
+      outputString += 'o';
+    } else if (i === '5') {
+      outputString += 'u';
+    } else {
+      outputString += i;
+    }
+  }
+  return outputString
 }
 
 module.exports = {
