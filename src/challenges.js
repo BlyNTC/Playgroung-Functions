@@ -13,32 +13,34 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' ')
+  return string.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-
+function concatName(phrase) {
+  return phrase[phrase.length - 1] + ', ' + phrase[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  if (wins === 14 && ties === 8) {
-    return 50
-  } else if (wins === 1 && ties === 2) {
-    return 5
-  } else {
-    return 0
-  }
+  return wins * 3 + ties;
 }
 
 // Desafio 6
-function highestCount() {}
+function highestCount() {
+}
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
+  if (distanceCat1 > distanceCat2) {
+    return 'cat2';
+  } else if (distanceCat2 > distanceCat1) {
+    return 'cat1';
+  } else {
+    return "os gatos trombam e o rato foge"
+  }
 }
 
 // Desafio 8
