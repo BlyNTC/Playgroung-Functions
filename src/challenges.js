@@ -8,17 +8,19 @@ function compareTrue(num1, num2) {
 }
 
 // Desafio 2
-function calcArea(base, heigt) {
+function calcArea(base, height) {
   let area = 2;
 
-  return base * heigt / 2;
+  return base * height / 2;
   
 }
 
 calcArea();
 
 // Desafio 3
-function splitSentence(frase) {
+//consultei site https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
+function splitSentence() {
+  let frase = []
   
   return frase.split(" ");
   
