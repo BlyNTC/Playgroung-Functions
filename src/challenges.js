@@ -81,9 +81,24 @@ let morteDeVerdadeCat2 = Math.abs(morteDoGatoCat2);
 
 
 // Desafio 8
-function fizzBuzz(wins,ties) {
-  // seu código aqui
+function fizzBuzz(array) {
+let strings = [];
+for(let index = 0; index < array.length; index += 1){
+  if(array[index] % 3 !== 0 && array[index] % 5 !== 0) {
+    strings.push("bug!");
+}else if(array[index] % 3 === 0 && array[index] % 5 !== 0) {
+    strings.push('fizz');
+}else if(array[index] % 3 !== 0 && array[index] % 5 === 0){
+    strings.push('buzz');
+}else if(array[index] % 3 === 0 && array[index] % 5 === 0){
+    strings.push('fizzBuzz');
 }
+
+}
+return strings;
+}
+
+
 
 // Desafio 9
 function encode() {
