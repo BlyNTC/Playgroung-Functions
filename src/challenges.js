@@ -22,9 +22,9 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName(nameConcat) {
+function concatName(nameConcate) {
   // seu código aqui
-  return nameConcat[nameConcat.length - 1] + ', ' + nameConcat[0];
+  return nameConcate[nameConcat.length - 1] + ', ' + nameConcat[0];
 }
 
 // Desafio 5
@@ -46,8 +46,17 @@ function highestCount(highestNumber) {
   }
 }
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  if (cat1 - mouse < cat2 - mouse) {
+    return cat1;
+  } else if (cat2 - mouse < cat1 - mouse) {
+    return cat2;
+  } else if (cat1 - mouse === cat2 - mouse) {
+    return 'os gatos trombam e o rato foge';
+  } else {
+    return 'sem resultado'
+  }
 }
 
 // Desafio 8
