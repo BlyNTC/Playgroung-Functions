@@ -65,9 +65,20 @@ for(let index = 0;index < array.length; index += 1){
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+let morteDoGatoCat1 = mouse - cat1;
+let morteDeVerdadeCat1 = Math.abs(morteDoGatoCat1);
+let morteDoGatoCat2 = mouse - cat2;
+let morteDeVerdadeCat2 = Math.abs(morteDoGatoCat2);
+  if(morteDeVerdadeCat1 === morteDeVerdadeCat2){
+    return "os gatos trombam e o rato foge";
+  }else if (morteDeVerdadeCat1 < morteDeVerdadeCat2){
+    return 'cat1';
+  }else{ 
+    return 'cat2';
+  }
 }
+
 
 // Desafio 8
 function fizzBuzz(wins,ties) {
