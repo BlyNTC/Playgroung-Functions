@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(array, name) {
   let obj = {};
-  
+
   if(array.length <= 0){
     return 'Vazio!'
   }
@@ -35,7 +35,7 @@ function generatePhoneNumber(array) {
       }
       
     }
-    if (contador >= 3 || array < 0 || array > 9) {
+    if (contador >= 3 || array[index] < 0 || array[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     contador = 0;
