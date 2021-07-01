@@ -23,12 +23,12 @@ function generatePhoneNumber(array) {
   for (let index = 0; index < array.length; index++) {
     let contador = 0;
     for (let i = 0; i < array.length; i++) {
-      if(array[index] === array[i]){
+      if (array[index] === array[i]) {
         contador +=1;
       }
       
     }
-    if(contador >= 3 || array < 0 || array > 9){
+    if (contador >= 3 || array < 0 || array > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     contador = 0;
@@ -40,9 +40,31 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let a = Math.abs(lineA);
+  let b = Math.abs(lineB);
+  let c = Math.abs(lineC);
+  let maior = 0;
+  
+  if( a > b && a > c){
+    maior = a;
+    if(a < b + c){
+      return true;
+    }
+  }else if (b > a && b > c){
+    maior = b;
+    if(b < a + c){
+      return true;
+    }
+  } else {
+    maior = c;
+    if(c < a + b){
+      return true;
+    }
+  }
 }
+
+console.log(triangleCheck(10,14,8));
 
 // Desafio 13
 function hydrate() {
