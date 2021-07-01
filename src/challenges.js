@@ -28,14 +28,13 @@ splitSentence('para meu');
 
 
 // Desafio 4
-
 function concatName(array) {
   let resultado1 = array[0];
   let resultado2 = array[array.length - 1];
   let resultado3 = resultado2 + ',' + resultado1;
   return resultado3;
 }
-  concatName();
+concatName();
 
 
 // Desafio 5
