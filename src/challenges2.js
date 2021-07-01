@@ -23,12 +23,12 @@ function techList(learning, name) {
 // Desafio 11
 function generatePhoneNumber(numbah) {
   // seu código aqui
-  let phonenumber;
+  let phonenumber = '(';
   let cachenumber;
   let checkrepeat = 0;
   
   if (numbah.length != 11){
-    return 'não é possível gerar um número de telefone com esses valores';
+    return 'Array com tamanho incorreto.';
   }
 
   //checks if it's less than 0 and greater than 9
@@ -37,21 +37,42 @@ function generatePhoneNumber(numbah) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
 
+    // Encontrei essa função integrada bem bacana aqui: https://www.geeksforgeeks.org/javascript-number-isinteger-function/
+    if (Number.isInteger(key) == false){
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+
     //checks if it repeats 3 times
     for (let repeat of numbah){
       if (key == repeat){
-        checkrepeat++;
-      }
-      else if (checkrepeat >= 3){
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
+        checkrepeat+=1;
+      }      
     }
+    if (checkrepeat >= 3){
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    else
     checkrepeat = 0;
   }
 
   //NOW it's gonna make the phone number jesus FUCK
+  //ex: (12) 34567-8901
+  //to achando que preciso de um FOR IN aqui porque ele nao distingue posição de valor
+  for (let key in numbah){
+    if (key == 2){
+      phonenumber += ') ';
+    }
+
+    if (key == 7){
+      phonenumber += '-';
+    }
+
+    phonenumber += numbah[key];
+  }
+  
   
 
+  return phonenumber;
 }
 
 
