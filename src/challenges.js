@@ -56,18 +56,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function divisorCheck(number) { // Checks unique divisors for fizzBuzz function
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(numbers) {
   let output = [];
   for (let number of numbers) {
-    if (number % 3 === 0 && number % 5 === 0) {
-      output.push('fizzBuzz');
-    } else if (number % 3 === 0) {
-      output.push('fizz');
-    } else if (number % 5 === 0) {
-      output.push('buzz');
-    } else {
-      output.push('bug!');
-    }
+    output.push(divisorCheck(number));
   }
   return output;
 }

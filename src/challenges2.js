@@ -15,7 +15,7 @@ function techList(technologies, name) {
 
 // Desafio 11
 
-function numberCounter(numbers) { // Validation for generatePhoneNumber() function
+function numberCounter(numbers) { // Validation for generatePhoneNumber function
   let numberCount = {};
   for (let value of numbers) { // Count how many times the value appears
     if (numberCount[value] === undefined) {
