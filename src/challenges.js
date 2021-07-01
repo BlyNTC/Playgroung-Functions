@@ -1,11 +1,13 @@
 // Desafio 1
 
 function compareTrue(a1, a2) {
-  if (a1 === true && a2 === true) {
-    return true;
-  } else {
-    return false;
-  }
+//   if (a1 === true && a2 === true) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+  a1 === true && a2 === true ? true : false;
 }
 
 // Desafio 2
@@ -47,13 +49,12 @@ function highestCount(ar) {
   }
   return count;
 }
-console.log(highestCount([0, 4, 9, 9, 9, 2, 1]));
 
 // Desafio 7
 function catAndMouse(cat1, cat2) {
   if (cat1 > cat2) {
     return 'cat2';
-  } else if (cat1 < cat2) {
+  } if (cat1 < cat2) {
     return 'cat1';
   } else {
     return 'os gatos trombam e o rato foge';
