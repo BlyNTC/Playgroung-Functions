@@ -42,21 +42,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numeros) 
+function fizzBuzz(numeros) {
 let numeros = [2, 15, 7, 9, 45]; 
-let string = [] {
-  for (index = 0; index < numeros.length; index +1) {
-    if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
-      string.push('fizzBuzz')
-    } else if (numeros[index] % 3 === 0) {
-      string.push('fizz')
-    } else if (numeros[index] % 5 === 0) {
-      string.push('buzz')
-    } else {
-      string.push('bug!')
+
+  let string = [] {
+    for (index = 0; index < numeros.length; index +1) {
+      if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
+        string.push('fizzBuzz')
+      } else if (numeros[index] % 3 === 0) {
+        string.push('fizz')
+      } else if (numeros[index] % 5 === 0) {
+        string.push('buzz')
+      } else {
+        string.push('bug!')
+      }
     }
+    return string
   }
-  return string
 }
 
 // Desafio 9
