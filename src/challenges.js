@@ -17,12 +17,11 @@ function splitSentence(str) {
     if (str[i] === ' ') {
       split.push(aux);
       aux = '';
-    }
-    else if (i == str.length-1){
+    } else if (i === str.length - 1) {
       aux += str[i];
       split.push(aux);
       aux = '';
-    }else {
+    } else {
       aux += str[i];
     }
   }
@@ -43,13 +42,12 @@ function highestCount(numbers) {
   let count = 0;
   let maior = numbers[0];
 
-  for(i=0; i<numbers.length; i+=1){
-    if(numbers[i] > maior){
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > maior) {
       maior = numbers[i];
+      count = 0;
     }
-  }
-  for(i=0; i<numbers.length; i+=1){
-    if(numbers[i] === maior){
+    if (numbers[i] === maior) {
       count += 1;
     }
   }
@@ -57,83 +55,58 @@ function highestCount(numbers) {
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-let distCat1 = Math.abs(mouse - cat1);
-let distCat2 = Math.abs(mouse - cat2);
+  let distCat1 = Math.abs(mouse - cat1);
+  let distCat2 = Math.abs(mouse - cat2);
 
-if (distCat1 === distCat2) {
-  return 'os gatos trombam e o rato foge';
-}
-else if (distCat1 > distCat2) {
-  return 'cat2';
-}else {
+  if (distCat1 === distCat2) {
+    return 'os gatos trombam e o rato foge';
+  } 
+  if (distCat1 > distCat2) {
+    return 'cat2';
+  }
   return 'cat1';
-}
 }
 // Desafio 8
 function fizzBuzz(numeros) {
-let words = [];
-for (let i = 0; i<numeros.length; i += 1) {
-  if (numeros[i]%3 === 0 && numeros[i]%5 === 0) {
-    words[i] = 'fizzBuzz';
+  let words = [];
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
+      words[i] = 'fizzBuzz';
+    } else if (numeros[i] % 3 === 0) {
+      words[i] = 'fizz';
+    } else if (numeros[i] % 5 === 0) {
+      words[i] = 'buzz';
+    } else {
+      words[i] = 'bug!';
+    }
   }
-  else if (numeros[i]%3 === 0) {
-    words[i] = 'fizz';
-  }
-  else if (numeros[i]%5 === 0) {
-    words[i] = 'buzz';
-  }else {
-    words[i] = 'bug!';
-  }
-}
-return words;
+  return words;
 }
 // Desafio 9
 function encode(str) {
-  let strEncode = '';
-  for(let i = 0; i < str.length; i += 1){
-    if(str[i] === 'a'){
-      strEncode += '1';
-    }
-    else if(str[i] === 'e'){
-      strEncode += '2';
-    }
-    else if(str[i] === 'i'){
-      strEncode += '3';
-    }
-    else if(str[i] === 'o'){
-      strEncode += '4';
-    }
-    else if(str[i] === 'u'){
-      strEncode += '5';
-    }
-    else{
-      strEncode += str[i];
+  let arrayEncode = Array.from(str);
+  let change = ['a', 'e', 'i', 'o', 'u'];
+  for (let i = 0; i < str.length; i += 1) {
+    for (let j = 0; j < change.length; j += 1) {
+      if (arrayEncode[i] === change[j]) {
+        arrayEncode[i] = j + 1;
+      }
     }
   }
+  let strEncode = arrayEncode.join('');
   return strEncode;
 }
 function decode(str) {
-  let strDecode = '';
-  for(let i = 0; i < str.length; i += 1){
-    if(str[i] === '1'){
-      strDecode += 'a';
-    }
-    else if(str[i] === '2'){
-      strDecode += 'e';
-    }
-    else if(str[i] === '3'){
-      strDecode += 'i';
-    }
-    else if(str[i] === '4'){
-      strDecode += 'o';
-    }
-    else if(str[i] === '5'){
-      strDecode += 'u';
-    }
-    else{
-      strDecode += str[i];
+  let arrayDecode = Array.from(str);
+  let change = ['a', 'e', 'i', 'o', 'u'];
+  for (let i = 0; i < str.length; i += 1) {
+    for (let j = 0; j < change.length; j += 1) {
+      if (Number(arrayDecode[i]) === j + 1) {
+        arrayDecode[i] = change[j];
+      }
     }
   }
+  let strDecode = arrayDecode.join('');
   return strDecode;
 }
 module.exports = {
