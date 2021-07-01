@@ -1,21 +1,21 @@
 // Desafio 10
 function techList(array, name) {
-  let obj = {};
+  let lista = [];
 
   if(array.length <= 0){
     return 'Vazio!'
   }
   array = array.sort();
   for(let i = 0; i < array.length; i += 1) {
-    obj[i] = {
-      tech: array[i],
-      nome: name
-    }
-  }
-  for(let key in obj){
-    return obj;
+    lista.push(
+      obj = {
+        tech: array[i],
+        name: name
+      }
+    );
   }
   
+  return lista; 
 }
 
 // Desafio 11
@@ -79,8 +79,13 @@ function hydrate(string) {
   for (let index = 0; index < qtd.length; index++) {
     agua += qtd[index];    
   }
-  return agua + ' copo de água';
+  if ( agua === 1){
+    return agua + ' copo de água';
+  } else {
+    return agua + ' copos de água'
+  }
 }
+  
 
 module.exports = {
   generatePhoneNumber,
