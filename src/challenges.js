@@ -3,8 +3,9 @@ function compareTrue(valor1, valor2) {
   // seu código aqui
   if (valor1 === true && valor2 === true) {
     return true;
-  } else if (valor1 === false || valor2 === false)
+  } else {
   return false;
+  }
 }
 
 // Desafio 2
@@ -21,13 +22,15 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(nameConcat) {
   // seu código aqui
+  return nameConcat[nameConcat.length -1] + ' ' + nameConcat[0]
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return (wins*3) + (ties);
 }
 
 // Desafio 6
