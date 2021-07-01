@@ -37,6 +37,7 @@ function concatName(array) {
 
 
 
+
 // Desafio 5
 function footballPoints() {
   // seu código aqui
