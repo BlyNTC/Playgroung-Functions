@@ -21,7 +21,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   let last = array.length - 1;
-  let string = array[last] + ', ' + array[0];
+  let string = `${array[last]}, ${array[0]}`;
   return string;
 }
 
@@ -35,11 +35,11 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let highest = array[0];
   for (let i of array) {
-    i > highest ? highest = i : highest;
+    (i > highest ? highest = i : highest);
   }
   let count = 0;
   for (let i of array) {
-    i === highest ? count += 1 : count;
+    (i === highest ? count += 1 : count);
   }
   return count;
 }
@@ -50,7 +50,8 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat2 = Math.abs(cat2 - mouse);
   if (distCat1 < distCat2) {
     return 'cat1';
-  } else if (distCat2 < distCat1) {
+  }
+  if (distCat2 < distCat1) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
@@ -78,21 +79,23 @@ function encode(string) {
   let array = string.split('');
   for (let i in array) {
     switch (array[i]) {
-      case 'a':
-        array[i] = '1';
-        break;
-      case 'e':
-        array[i] = '2';
-        break;
-      case 'i':
-        array[i] = '3';
-        break;
-      case 'o':
-        array[i] = '4';
-        break;
-      case 'u':
-        array[i] = '5';
-        break;
+    case 'a':
+      array[i] = '1';
+      break;
+    case 'e':
+      array[i] = '2';
+      break;
+    case 'i':
+      array[i] = '3';
+      break;
+    case 'o':
+      array[i] = '4';
+      break;
+    case 'u':
+      array[i] = '5';
+      break;
+    default:
+      break;
     }
   }
   array = array.join('');
@@ -100,23 +103,25 @@ function encode(string) {
 }
 function decode(string) {
   let array = string.split('');
-  for (let i in array) {
+  for (let i = 0; i < array.length; i += 1) {
     switch (array[i]) {
-      case '1':
-        array[i] = 'a';
-        break;
-      case '2':
-        array[i] = 'e';
-        break;
-      case '3':
-        array[i] = 'i';
-        break;
-      case '4':
-        array[i] = 'o';
-        break;
-      case '5':
-        array[i] = 'u';
-        break;
+    case '1':
+      array[i] = 'a';
+      break;
+    case '2':
+      array[i] = 'e';
+      break;
+    case '3':
+      array[i] = 'i';
+      break;
+    case '4':
+      array[i] = 'o';
+      break;
+    case '5':
+      array[i] = 'u';
+      break;
+    default:
+      break;
     }
   }
   array = array.join('');
