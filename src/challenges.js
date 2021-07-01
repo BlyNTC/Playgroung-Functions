@@ -96,12 +96,53 @@ function fizzBuzz(array) {
 //console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
+function encode(string) {
+let stringCodificada =''; 
+
+  for (let cont =0; cont < string.length; cont += 1){
+    if (string[cont] === 'a'){
+      stringCodificada = stringCodificada + '1';  
+    }else if (string[cont] === 'e'){
+      stringCodificada = stringCodificada + '2';
+    }else if (string[cont] === 'i'){
+      stringCodificada = stringCodificada + '3';
+    }else if (string[cont] === 'o'){
+      stringCodificada = stringCodificada + '4';
+    }else if (string[cont]=== 'u'){
+      stringCodificada = stringCodificada +'5';
+    }else {
+      stringCodificada = stringCodificada + string[cont];
+    }  
+  }
+  return stringCodificada;
+}
+//console.log(encode('h iii there!')); 
+
+// seu código aqui
+
+function decode(stringNumeros) {
+
+let stringCodNumeros =''; 
+
+  for (let cont =0; cont < stringNumeros.length; cont += 1){
+    if (stringNumeros[cont] === '1'){
+      stringCodNumeros = stringCodNumeros + 'a';  
+    }else if (stringNumeros[cont] === '2'){
+      stringCodNumeros = stringCodNumeros + 'e';
+    }else if (stringNumeros[cont] === '3'){
+      stringCodNumeros = stringCodNumeros + 'i';
+    }else if (stringNumeros[cont] === '4'){
+      stringCodNumeros = stringCodNumeros + 'o';
+    }else if (stringNumeros[cont]=== '5'){
+      stringCodNumeros = stringCodNumeros +'u';
+    }else {
+      stringCodNumeros = stringCodNumeros + stringNumeros[cont];
+    }  
+  }
+  return stringCodNumeros;
   // seu código aqui
 }
-function decode() {
-  // seu código aqui
-}
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
