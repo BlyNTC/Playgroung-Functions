@@ -94,26 +94,42 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(texto) {
-  for(let index = 0; index <= texto.length; index += 1 ){
-    if(texto[index] === 'a'){
-      texto[index] = 1;
-    } else if(texto[index] === 'e'){
-        texto[index] = 2;
-    }else if(texto[index] === 'i'){
-        texto[index] = 3;
-    }else if(texto[index] === 'o'){
-      texto[index] = 4;
-    } else if(texto[index] === 'u'){
-      texto[index] = 5;
+   let separa = texto.split('');
+  for(let index = 0; index <= separa.length; index += 1 ){
+    if(separa[index] === 'a'){
+      separa[index] = '1';
+    } else if(separa[index] === 'e'){
+        separa[index] = '2';
+    }else if(separa[index] === 'i'){
+        separa[index] = '3';
+    }else if(separa[index] === 'o'){
+      separa[index] = '4';
+    } else if(separa[index] === 'u'){
+      separa[index] = '5';
     }
   }
-  return texto;
+  return separa.join('');
 }
-console.log(encode("hi there!"))
 
-function decode() {
-  // seu código aqui
+
+function decode(frase) {
+  let dividi = frase.split('');
+  for(let index = 0; index <= dividi.length; index += 1 ){
+    if(dividi[index] === '1'){
+      dividi[index] = 'a';
+    } else if(dividi[index] === '2'){
+        dividi[index] = 'e';
+    }else if(dividi[index] === '3'){
+        dividi[index] = 'i';
+    }else if(dividi[index] === '4'){
+      dividi[index] = 'o';
+    } else if(dividi[index] === '5'){
+      dividi[index] = 'u';
+    }
+  }
+  return dividi.join('');
 }
+console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
