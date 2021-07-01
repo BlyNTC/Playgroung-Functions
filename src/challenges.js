@@ -18,14 +18,10 @@ function calcArea(base, heigt) {
 calcArea();
 
 // Desafio 3
-function splitSentence() {
-  let frase = 'go Trybe!';
-  let animacao = 'vamo que vamo!';
-  let voar = 'foguete';
-
+function splitSentence(frase) {
+  
   return frase.split(" ");
-  return animacao.split(" ");
-  return voar.split(" ");
+  
 }
 
 splitSentence();
