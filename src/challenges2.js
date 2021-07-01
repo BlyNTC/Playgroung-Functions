@@ -56,13 +56,24 @@ function triangleCheck(lineA, lineB, lineC) {
     return true;
   }
 }
- 
-// triangleCheck(10, 14, 8)
 
 // Desafio 13
-function hydrate() {
+function hydrate(hidrate) {
   // seu código aqui
+  let reg = /\d+/g;
+  hidrateString = hidrate.match(reg)
+  let agua = 0;
+
+  for (let i in hidrateString)
+  agua += parseInt(hidrateString[i]);
+  if (agua > 1){
+    return agua + ' copos de água';
+  }else{
+    return agua + ' copo de água';
+  }
+  
 }
+
 
 module.exports = {
   generatePhoneNumber,
