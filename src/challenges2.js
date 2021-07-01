@@ -1,7 +1,45 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(skill, name) {
+  
+  let skillSort = skill.sort();
+  
+  if( skill.length === 0 ) {
+  
+    return('Vazio!');
+
+   } else {
+  
+  listObjects= [
+    {
+      tech: skillSort[0],
+      name: name
+    },
+    {
+      tech: skillSort[1],
+      name: name
+    },
+    {
+      tech: skillSort[2],
+      name: name
+    },
+    {
+      tech: skillSort[3],
+      name: name
+    },
+    {
+      tech: skillSort[4],
+      name: name
+    }
+  ]
+  
+  return listObjects;
+
+   } 
+
+    }
+
+    techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")
+
 
 // Desafio 11
 function generatePhoneNumber() {

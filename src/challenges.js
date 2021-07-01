@@ -246,59 +246,10 @@ function decode(valorDecode) {
   let stringValor = arrayValor.join('');
   
   return stringValor;
-  
+
 }
+
 decode("h3 th2r2!")
-
-function techList(skill, name) {
-
-    
-  let skillSort = skill.sort();
-  let techObject1 = {};
-  let techObject2 = {};
-  let techObject3 = {};
-  let techObject4 = {};
-  let techObject5 = {};
-  let techObjectArray = [];
-
-
- if( skill.length < 5 ) {
-
-  skill.push('Vazio!');
-  
- } 
-
-  for ( let i = 0; i < 5; i += 1) {
-
-   techObject1 = {
-      tech: skillSort[0],
-      name: name
-    }
-    techObject2 = {
-      tech: skillSort[1],
-      name: name
-    }
-    techObject3 = {
-      tech: skillSort[2],
-      name: name
-    }
-    techObject4 = {
-      tech: skillSort[3],
-      name: name
-    }
-    techObject5 = {
-      tech: skillSort[4],
-      name: name
-    }
-} 
-
-  techObjectArray = [techObject1, techObject2, techObject3, techObject4, techObject5];
-
-  return techObjectArray;
- 
-}
-
-techList(["React", "Jest", "HTML", "CSS"], "Pedro")
 
 module.exports = {
   calcArea,
