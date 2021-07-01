@@ -69,17 +69,19 @@ console.log(catAndMouse(10, 6, 5));
 
 // Desafio 8
 function fizzBuzz(arrayNumero) {
-  for(let index of arrayNumero){
-    if(index % 3 == 0){
-      return "fizz";
-    }else if(index % 5 == 0){
-      return "buzz";
-    }else if(index % 3 == 0 && index % 5 == 0){
-      return "fizzbuzz";
+  resultado = [];
+  for(let index = 0; index < arrayNumero.length; index += 1){
+    if(arrayNumero[index] % 3 == 0 && arrayNumero[index] % 5 != 0){
+      resultado += 'fizz ';
+    }else if(arrayNumero[index] % 5 == 0 && arrayNumero[index] % 3 != 0){
+      resultado += 'buzz ';
+    }else if(arrayNumero[index] % 3 == 0 && arrayNumero[index] % 5 == 0){
+      resultado += 'fizzbuzz ';
     }else{
-      return "bug!";
-    }
+      resultado += 'bug! '
+    } 
   }
+  return resultado;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
