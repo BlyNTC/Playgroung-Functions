@@ -133,7 +133,7 @@ function decode(string) {
       array += index;
     }
   }
-  return (array)
+  return (array);
 }
 
 module.exports = {
