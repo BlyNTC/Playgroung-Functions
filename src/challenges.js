@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 == true && param2 == true) {
+  if (param1 === true && param2 === true) {
     return true;
   } else {
     return false;
@@ -42,10 +42,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numeros) {
-  for(index = 0; index > numeros; index +1) {
-    
+let numeros = [2, 15, 7, 9, 45];
+function fizzBuzz(numeros) 
+let string = [] {
+  for (index = 0; index < numeros.length; index +1) {
+    if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
+      string.push('fizzBuzz')
+    } else if (numeros[index] % 3 === 0) {
+      string.push('fizz')
+    } else if (numeros[index] % 5 === 0) {
+      string.push('buzz')
+    } else {
+      string.push('bug!')
+    }
   }
+  return string
 }
 
 // Desafio 9
