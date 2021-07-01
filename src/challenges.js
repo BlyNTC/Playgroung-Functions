@@ -34,7 +34,6 @@ let resultado2 = array[array.length - 1];
 let resultado3 = resultado2 + ',' + resultado1;
 return resultado3;
 }
-
 concatName();
 
 
@@ -54,7 +53,7 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(wins,ties) {
   // seu código aqui
 }
 
