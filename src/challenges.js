@@ -36,8 +36,21 @@ function concatName(palavra) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  // parametro q receba um numero de vitorias chamado 'wins'
+  // parametro q receba um numero de empates chamado 'ties'
+  // retorne a quantidade de pontos que o time marcou em um campeonato
+  // cada vitoria vale 3 pontos e cada empate vale 1 ponto  
+  let pontos = 0;
+  for (let index = 0; index < wins; index++) {
+    if(wins > 0){ pontos += 3;}
+    
+  }
+  for (let index = 0; index < ties; index++) {
+    if (ties > 0) { pontos += 1;}
+    
+  }
+  return pontos;  
 }
 
 // Desafio 6
