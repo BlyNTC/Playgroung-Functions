@@ -45,7 +45,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let b = Math.abs(lineB);
   let c = Math.abs(lineC);
   let maior = 0;
-  
+
   if( a > b && a > c){
     maior = a;
     if(a < b + c){
@@ -62,9 +62,10 @@ function triangleCheck(lineA, lineB, lineC) {
       return true;
     }
   }
+  return false;
 }
 
-console.log(triangleCheck(10,14,8));
+console.log(triangleCheck(10,114,8));
 
 // Desafio 13
 function hydrate() {
