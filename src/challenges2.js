@@ -41,11 +41,23 @@ function generatePhoneNumber(arrayNumbers) {
   return phoneNumber; 
   console.log(phoneNumber);
 }
-generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1])
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let somaAB = lineA + lineB;
+  let somaAC = lineA + lineC;
+  let somaBC = lineB + lineC;
+  if(lineA > somaBC || lineB > somaAC || lineC > somaAB){
+    return false;
+  }else if(lineA < Math.abs(lineB - lineC) || lineB < Math.abs(lineA - lineC) || lineC < Math.abs(lineA - lineB)){
+    return false;
+  }else{
+    return true;
+  }
 }
+ 
+// triangleCheck(10, 14, 8)
 
 // Desafio 13
 function hydrate() {
