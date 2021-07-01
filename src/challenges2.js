@@ -55,15 +55,15 @@ function generatePhoneNumber(array) {
 
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC){
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if( lineA > (lineB +lineC ) || lineA < Math.abs(lineB-lineC)){
+  if (lineA > (lineB + lineC) || lineA < Math.abs(lineB - lineC)) {
     return false;
-  } else if (lineB > (lineA + lineC) || lineB < Math.abs(lineA -lineC)){
+  } else if (lineB > (lineA + lineC) || lineB < Math.abs(lineA - lineC)) {
     return false;
-  } else if (lineC >(lineA+lineB) || lineC < Math.abs(lineA - lineB) ){
+  } else if (lineC > (lineA + lineB) || lineC < Math.abs(lineA - lineB)) {
     return false;
-  } else{
+  } else {
     return true;
   }
 }
@@ -72,20 +72,20 @@ function triangleCheck(lineA, lineB, lineC){
 function hydrate(string) {
   // seu código aqui
   let number = string.match(/\d+/g);
-  let soma =0;
+  let soma = 0;
   let suggest = '';
 
-  for(let index=0; index< number.length; index +=1){
+  for (let index = 0; index < number.length; index += 1) {
     soma += parseInt(number[index]);
-    
+
   }
- 
-  if(soma === 1){
+
+  if (soma === 1) {
     suggest += soma + ' copo de água';
-  } else{
-  suggest += soma + ' copos de água';
+  } else {
+    suggest += soma + ' copos de água';
   }
-return  suggest;
+  return suggest;
 }
 
 

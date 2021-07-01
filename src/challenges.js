@@ -132,7 +132,7 @@ function encode(string) {
       frase += '4';
     } else if (value === 'u') {
       frase += '5';
-    } else{
+    } else {
       frase += value;
     }
   }
