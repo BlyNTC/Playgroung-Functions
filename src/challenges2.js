@@ -74,7 +74,7 @@ function hydrate(string) {
     soma += parseInt(number[index]);
   }
   if (soma === 1) {
-    suggest += `${soma}n copo de água`;
+    suggest += `${soma} copo de água`;
   } else {
     suggest += `${soma} copos de água`;
   }
