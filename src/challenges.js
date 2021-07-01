@@ -35,12 +35,7 @@ let resultado3 = resultado2 + ',' + resultado1;
 return resultado3;
 }
 
-console.log(concatName(['Eu', 'tu','ele','nos','vos']));
-
-
-// usar for/in
-
-
+concatName();
 
 
 // Desafio 5
