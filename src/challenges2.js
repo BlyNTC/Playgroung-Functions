@@ -55,29 +55,11 @@ function generatePhoneNumber(arr) {
 }
 
 // Desafio 12
-// verify functions
-function verify1(lineA, lineB, lineC) {
-  let somaBC = Math.abs(lineB - lineC);
-  let somaAB = Math.abs(lineA - lineB);
-  let somaAC = Math.abs(lineA - lineC);
-  if (lineA < somaBC || lineB < somaAC || lineC < somaAB) {
-    return true;
-  }
-}
-function verify2(lineA, lineB, lineC) {
+function triangleCheck(lineA, lineB, lineC) {
   let somaBC = lineB + lineC;
   let somaAB = lineA + lineB;
-  let somaAC = lineC + lineC;
+  let somaAC = lineA + lineC;
   if (lineA > somaBC || lineB > somaAC || lineC > somaAB) {
-    return true;
-  }
-}
-
-function triangleCheck(lineA, lineB, lineC) {
-  if (verify1(lineA, lineB, lineC)) {
-    return false;
-  }
-  if (verify2(lineA, lineB, lineC)) {
     return false;
   }
   return true;

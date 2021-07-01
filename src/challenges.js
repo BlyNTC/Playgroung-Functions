@@ -86,49 +86,34 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function switchEncode(i, array) {
-  let support = array[i];
-  if (support === 'a') {
-    support = '1';
-  } else if (support === 'e') {
-    support = '2';
-  } else if (support === 'i') {
-    support = '3';
-  } else if (support === 'o') {
-    support = '4';
-  } else if (support === 'u') {
-    support = '5';
+function compareEncode(i, vogais, array) {
+  for (let j = 0; j < vogais.length; j += 1) {
+    if (array[i] === vogais[j]) {
+      array[i] = j + 1;
+    }
   }
-  array[i] = support;
 }
-
 function encode(string) {
   let array = string.split('');
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
   for (let i = 0; i < array.length; i += 1) {
-    switchEncode(i, array);
+    compareEncode(i, vogais, array);
   }
   array = array.join('');
   return array;
 }
-function switchDecode(i, array) {
-  let support = array[i];
-  if (support === '1') {
-    support = 'a';
-  } else if (support === '2') {
-    support = 'e';
-  } else if (support === '3') {
-    support = 'i';
-  } else if (support === '4') {
-    support = 'o';
-  } else if (support === '5') {
-    support = 'u';
+function compareDecode(i, vogais, array) {
+  for (let j = 0; j < vogais.length; j += 1) {
+    if (Number(array[i]) === j + 1) {
+      array[i] = vogais[j];
+    }
   }
-  array[i] = support;
 }
 function decode(string) {
   let array = string.split('');
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
   for (let i = 0; i < array.length; i += 1) {
-    switchDecode(i, array);
+    compareDecode(i, vogais, array);
   }
   array = array.join('');
   return array;
