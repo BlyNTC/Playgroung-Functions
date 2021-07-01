@@ -39,19 +39,27 @@ function highestCount(otherArray) {
   }
   return count;
 }
-
-
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayFrase) {
+  resultado = [];
+  for (let index = 0; index < arrayFrase.length; index += 1) {
+    if (arrayFrase[index] % 3 === 0 && arrayFrase[index] % 5 === 0) {
+      resultado.push("fizzBuzz")
+    } else if (arrayFrase[index] % 5 === 0) {
+      resultado.push("buzz")
+    } else if (arrayFrase[index] % 3 === 0) {
+      resultado.push("fizz")
+    } else {
+      resultado.push("bug!")
+    }
+  }
+  return resultado;
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
