@@ -1,8 +1,20 @@
 // Desafio 10
-function techList() {
+function techList(arrayTecNames, name) {
   // seu código aqui
+  arrayTecNames.sort();
+  let array = [];
+  for (let i in arrayTecNames) {
+    let object = {
+      tech: arrayTecNames[i],
+      name: name
+    }
+    array.push(object);    
+  }if (arrayTecNames.length === 0){
+    return 'Vazio!';
+  }else{
+    return array;
+  }
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
