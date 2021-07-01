@@ -1,10 +1,11 @@
 // Desafio 10
 function techList(array, name) {
+  let nome = name;
   let objectArray = [];
   array.sort();
   for (let i of array) {
     objectArray.push({
-      tech: i, name: name,
+      tech: i, name: nome,
     });
   }
   if (objectArray.length === 0) {
@@ -31,7 +32,7 @@ function generatePhoneNumber(array) {
       }
     }
   }
-  let numero = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
+  let numero = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
   return numero;
 }
 
@@ -54,7 +55,7 @@ function hydrate(string) {
   let stringArray = string.split('');
   let agua = 0;
   for (let i of stringArray) {
-    if (isNaN(i) === false) {
+    if (Number(i)) {
       let number = Number(i);
       agua += number;
     }
