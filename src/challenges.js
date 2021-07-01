@@ -2,20 +2,17 @@
 function compareTrue(a, b) {
   // seu código aqui
   // se a é verdadeiro e se b é verdadeiro
-  let status;
   if (a === true && b === true) {
-    status = true;
+    
     return true;
-  } 
-  else {
-    status = false;
+  } else {
     return false;
   }
 }
 compareTrue(false, false);
-//console.log(compareTrue(false, false));
+  //console.log(compareTrue(false, false));
 
-// Desafio 2
+ // Desafio 2
 function calcArea(base, height) {
   let areaDoTriangulo = 0;
   areaDoTriangulo = (base * height) / 2;
@@ -23,7 +20,7 @@ function calcArea(base, height) {
   // seu código aqui
 }
 calcArea(51, 1);
-//console.log(calcArea(51, 1));
+ //console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(text) {
@@ -33,11 +30,11 @@ function splitSentence(text) {
   return array;
 }
 splitSentence("foguete");
-//console.log(splitSentence("foguete"));
+ //console.log(splitSentence("foguete"));
 
-/* Consultei o seguinte site para conseguir realizar esse desafio 3.
+ /* Consultei o seguinte site para conseguir realizar esse desafio 3.
    link: https://blog.betrybe.com/javascript/javascript-split/ */
-// Desafio 4
+ // Desafio 4
 function concatName(arrays) {
   // seu código aqui
   let myString = " ";
@@ -46,9 +43,9 @@ function concatName(arrays) {
   return myString;
 }
 concatName(['captain', 'my', 'captain']);
-//console.log(concatName(['captain', 'my', 'captain']));
+ //console.log(concatName(['captain', 'my', 'captain']));
 
-// Desafio 5
+ // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
   let numero_de_pontos = 0;
@@ -58,9 +55,9 @@ function footballPoints(wins, ties) {
   return numero_de_pontos;
 }
 footballPoints(14, 8);
-//console.log(footballPoints(14, 8));
+ //console.log(footballPoints(14, 8));
 
-// Desafio 6
+ // Desafio 6
 function highestCount(arraynumbers) {
   // seu código aqui
   let highestnumber;
@@ -74,9 +71,9 @@ function highestCount(arraynumbers) {
   return cont;
 }
 highestCount([9, 1, 2, 3, 9, 5, 7]);
-//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+ //console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
-// Desafio 7
+ // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let situacaoGatos;
@@ -99,9 +96,9 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 catAndMouse(0, 3, 3);
-//console.log(catAndMouse(0, 3, 3));
+ //console.log(catAndMouse(0, 3, 3));
 
-// Desafio 8
+ // Desafio 8
 function fizzBuzz(arrayFizzBuzz) {
   // seu código aqui
   let arrayPush = [];
@@ -119,9 +116,9 @@ function fizzBuzz(arrayFizzBuzz) {
   return arrayPush;
 }
 fizzBuzz([7, 9]);
-//console.log(fizzBuzz([7, 9]));
+ //console.log(fizzBuzz([7, 9]));
 
-// Desafio 9
+ // Desafio 9
 function encode(string) {
   // seu código aqui
   let str = '';
