@@ -46,7 +46,6 @@ function generatePhoneNumber(numbers) {
   }
   return numbers.join('').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3'); // Based in 4th example <https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176>
 }
-console.log(generatePhoneNumber([1, 1, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -63,11 +62,9 @@ function hydrate(sentence) {
     output += Number(value);
   }
   if (output === 1) {
-    output += ' copo de água';
-    return output;
+    return `${output} copo de água`;
   }
-  output += ' copos de água';
-  return output;
+  return `${output} copos de água`;
 }
 
 module.exports = {
