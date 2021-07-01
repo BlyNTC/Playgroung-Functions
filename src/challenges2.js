@@ -14,7 +14,7 @@ function techList(arrayTech,name) {
   } else{
     return arrrayJunta.sort(function(a,b){
       if(a.tech < b.tech){
-        return false;
+        return -1;
       } else{
         return true;
       };
