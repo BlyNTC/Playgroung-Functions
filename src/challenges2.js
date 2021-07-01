@@ -102,11 +102,10 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-let arrayNumbers = [];
-let numberFilter = '';
-
 function hydrate(frase) {
   // seu código aqui
+  let arrayNumbers = [];
+  let numberFilter = '';
   let contadorCopoDagua = 0;
   numberFilter = frase.replace(/[^0-9]/g, '');
 
