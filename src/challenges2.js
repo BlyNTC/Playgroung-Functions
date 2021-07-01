@@ -5,7 +5,7 @@ function techList(array, name) {
   if(array.length <= 0){
     return 'Vazio!'
   }
-
+  array = array.sort();
   for(let i = 0; i < array.length; i += 1) {
     obj[i] = {
       tech: array[i],
@@ -15,9 +15,7 @@ function techList(array, name) {
   for(let key in obj){
     return obj;
   }
-  if(array === 0){
-    return 'Vazio!'
-  }
+  
 }
 
 // Desafio 11
