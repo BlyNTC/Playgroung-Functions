@@ -63,13 +63,15 @@ function highestCount(arrayNumeros) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
+  let resultado=''
   if((Math.abs(cat1-mouse))<(Math.abs(cat2-mouse))){
-    return('cat1')
+     resultado='cat1'
   }else if((Math.abs(cat2-mouse))<(Math.abs(cat1-mouse))){
-    return('cat2')
+    resultado='cat2'
   }else if((Math.abs(cat1-mouse))===(Math.abs(cat2-mouse))){
-    return('os gatos trombam e o rato foge')
+    resultado='os gatos trombam e o rato foge'
   }
+  return resultado
 }
 
 
@@ -133,25 +135,7 @@ function decode(codigo) {
   return(codigo) 
 }
 
-function tecnologia(lista,name){
-  let listaFinal=[];
-  let arraySort=lista.sort();
-  let cont=0
-  for(let i=0;i<lista.length;i+=1){
-    let obj= {
-      tech:arraySort[i],
-      name:name,
-    }
-    listaFinal.push(obj)
-    cont+=1
-  }
-  if(cont==0){
-    return 'Vazio!'
-  }else{
-    return(listaFinal)
-  }
-}
-console.log(tecnologia(['React','Jest','HTML','CSS','JavaScript'],'Lucas'))
+
 
 
 module.exports = {
