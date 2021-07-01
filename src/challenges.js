@@ -3,7 +3,6 @@ function compareTrue(bool1, bool2) {
   if (bool1 === true && bool2 === true) {
     return true;
   }
-
   return false;
 }
 console.log(compareTrue(true, true));
@@ -32,19 +31,16 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let output = 0;
   let higher = numbers[0];
-
   for (let value of numbers) { // determines higher value
     if (value > higher) {
       higher = value;
     }
   }
-
   for (let value of numbers) {
     if (value === higher) {
       output += 1;
     }
   }
-
   return output;
 }
 
@@ -52,7 +48,6 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distance1 = Math.abs(mouse - cat1);
   let distance2 = Math.abs(mouse - cat2);
-
   if (distance1 === distance2) {
     return 'os gatos trombam e o rato foge';
   }
@@ -65,7 +60,6 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let output = [];
-
   for (let number of numbers) {
     if (number % 3 === 0 && number % 5 === 0) {
       output.push('fizzBuzz');
@@ -77,7 +71,6 @@ function fizzBuzz(numbers) {
       output.push('bug!');
     }
   }
-
   return output;
 }
 
