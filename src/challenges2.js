@@ -89,9 +89,46 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(order) {
   // seu código aqui
+  //ex 1 cachaça, 5 cervejas e 1 copo de vinho
+  
+  let abstractbooze = '';
+  let booze = 0;
+  
+  //check if its an integer and add to the booze count
 
+  /*  ALRIGHT THIS WAS ME TRYING IF THERE WERE 10+ 
+  for (let key of order){
+    if (Number.isInteger(key) == true){
+      abstractbooze += key;
+    }
+
+    else if (key == ' '){
+    booze += parseInt(abstractbooze);
+    abstractbooze = '';
+  }
+  }
+
+  if (booze > 1){
+  return booze + ' copos de água';
+  }
+
+  else
+  return booze + ' copo de água';
+  */
+
+  for (let key of order){
+    if (key > 0){
+      booze += parseInt(key);
+    }
+  }
+
+  if (booze > 1){
+    return booze + ' copos de água';
+  }
+
+  else return booze + ' copo de água'; 
 }
 
 module.exports = {
