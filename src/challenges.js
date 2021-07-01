@@ -57,25 +57,44 @@ footballPoints(0,0)
 // Desafio 6
 function highestCount(numeros) {
   // seu código aqui
+  let numeroMaior = 0;
+  let repeticaoNumeroMaior = 0;
   for (let indice = 0; indice < numeros.length; indice += 1) {
-  if ( numeros[indice] > numeros[indice + 1]) { // 1 > 6
-    let numeroMaior = numeros[indice];
-  } else {
-    numeroMaior = numeros[indice + 1];
+    if (numeros[indice] > numeroMaior) { //numeros[1] > 0
+      numeroMaior = numeros[indice];
+      repeticaoNumeroMaior = 0;
+    }
+    if (numeros[indice] === numeroMaior){
+      repeticaoNumeroMaior = repeticaoNumeroMaior + 1;
+    }
   }
-}
-console.log(numeroMaior);
-return numeroMaior;
+console.log(repeticaoNumeroMaior);
+return repeticaoNumeroMaior;
 }
 highestCount([9, 1, 2, 3, 9, 5, 7])
 highestCount([0, 4, 4, 4, 9, 2, 1])
 highestCount([0, 0, 0])
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-}
+  if (cat2 < cat1){
+    console.log('cat2');
+    return 'cat2';
+  } 
+  if (cat1 < cat2){
+    console.log('cat1')
+    return 'cat1';
+  } 
+  if (cat1 == cat2) {
+    console.log('os gatos')
+    return 'os gatos trombam e o rato foge';
+  }
+  }
 
+catAndMouse(0, 3, 2)
+catAndMouse(0, 6 , 12)
+catAndMouse(0, 0, 0)
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
