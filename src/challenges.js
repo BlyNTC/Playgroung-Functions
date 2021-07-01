@@ -76,14 +76,14 @@ function fizzBuzz(arrayNumero) {
     }else if(arrayNumero[index] % 5 == 0 && arrayNumero[index] % 3 != 0){
       resultado.push('buzz');
     }else if(arrayNumero[index] % 3 == 0 && arrayNumero[index] % 5 == 0){
-      resultado.push('fizzbuzz');
+      resultado.push('fizzBuzz');
     }else{
       resultado.push('bug!');
     } 
   }
   return resultado;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([10, 23, 44, 55, 21]));
 
 // Desafio 9
 function encode(frase1) {
