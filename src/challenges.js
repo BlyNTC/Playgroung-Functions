@@ -112,7 +112,6 @@ function fizzBuzz(arrays) {
     }
     
     return fizzBuzz;
-
 }
 fizzBuzz([2, 15, 7, 9, 45])
 fizzBuzz([7, 9])
@@ -123,6 +122,19 @@ fizzBuzz([9, 25])
 // Desafio 9
 function encode() {
   // seu código aqui
+  function encode(letras) {
+    let vogais= ['a', 'e', 'i', 'o', 'u'];
+    let string= '';
+    for (const letter of letras) {
+      if (vogais.indexOf(letter) !== -1) {
+        string += vogais.indexOf(letter) + 1;
+      } else {
+        string += letter;
+      }
+    }
+    console.log("eita");
+    return string;
+
 }
 function decode() {
   // seu código aqui
@@ -139,4 +151,5 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
+
