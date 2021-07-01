@@ -42,8 +42,8 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-let numeros = [2, 15, 7, 9, 45];
 function fizzBuzz(numeros) 
+let numeros = [2, 15, 7, 9, 45]; 
 let string = [] {
   for (index = 0; index < numeros.length; index +1) {
     if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
