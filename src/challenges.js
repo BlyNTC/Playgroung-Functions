@@ -114,8 +114,24 @@ fizzBuzz([7,9]);
 console.log(fizzBuzz([7,9]))
 
 // Desafio 9
-function encode() {
+function encode(frase) {
   // seu código aqui
+  let codificada = '';
+
+  for (let index = 0; index < frase.length; index += 1) {
+    if (frase[index] === 'a') {
+      codificada[index] = '1';
+    }else if (frase[index] === 'e') {
+      codificada[index] = '2';
+    } else if (frase[index] === 'i') {
+      codificada[index] = '3';
+    } else if (frase[index] === 'o') {
+      codificada[index] = '4';
+    } else if (frase[index] === 'u') {
+      codificada[index] = '5';
+    }
+  }
+ return codificada;
 }
 function decode() {
   // seu código aqui
