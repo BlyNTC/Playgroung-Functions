@@ -5,7 +5,7 @@ if(a === true && b === true){
 }else{
   return false;
 }
-compareTrue();
+
 
 }
 
@@ -15,7 +15,7 @@ function calcArea(base, height) {
 let area = (base * height) / 2;
 return area;
 }
-calcArea();
+
 
 
 
@@ -24,7 +24,7 @@ function splitSentence(frase) {
 let resultado = frase.split(" ");
 return resultado;
 }
-splitSentence('para meu');
+
 
 
 // Desafio 4
@@ -34,7 +34,7 @@ function concatName(array) {
   let resultado3 = resultado2 + ',' + resultado1;
   return resultado3;
 }
-concatName();
+
 
 
 // Desafio 5
