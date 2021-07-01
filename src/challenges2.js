@@ -35,9 +35,9 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  return ((lineA < lineB + lineC && lineA > Math.abs(lineB - lineC))
-  || (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC))
-  || (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)));
+  let array = [lineA, lineB, lineC];
+  array.sort((a, b)=> a-b);
+  return array[0] + array[1] > array[2];
 }
 
 // Desafio 13
