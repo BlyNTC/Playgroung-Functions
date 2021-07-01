@@ -81,7 +81,7 @@ function hydrate(string) {
   for (let index = 0; index < qtd.length; index++) {
     agua += qtd[index];    
   }
-  return agua + ' copo de água.';
+  return agua + ' copo de água';
 }
 
 module.exports = {
