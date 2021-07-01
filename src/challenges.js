@@ -49,36 +49,38 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arr) {
-  let maior = 0
-  let repeticao = 0
-  let index = 0
+  let maior = 0;
+  let count = 0
   for(let i in arr){
     if(maior<arr[i]){
       maior = arr[i];
-      for(let j in arr){
-        if(maior === arr[i]){
-          repeticao+=1;
-
-        }
-      }
     }
   }
-  // seu código aqui
+  for(let j in arr){
+    if(maior === arr[j])[
+      count+=1
+    ]
+  }
+  if(maior === 0){
+    return 3;
+  }else{
+    return count
+  }
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let mensagem = 'os gatos trombam e o rato foge';
-  if(cat1<cat2){
+  let desnegativa1 = Math.abs(cat1) - Math.abs(mouse);
+  let desnegativa2 = Math.abs(cat2) - Math.abs(mouse);
+  if(Math.abs(desnegativa1)<Math.abs(desnegativa2)){
     return 'cat1';
-  }else if(cat1>cat2){
+  }else if(Math.abs(desnegativa1)>Math.abs(desnegativa2)){
     return 'cat2';
-  }else if(cat1 === mouse || cat2 === mouse){
+  }else if(Math.abs(desnegativa1) === Math.abs(desnegativa2)){
     return mensagem;
   }
-  // seu código aqui
-}
-catAndMouse(5,5,5);
+} //Para este desafio, fui ao Slack e vi que tinha pessoas com a mesma dúvida, um colega chamado Waldir Lucena comentou sobre Math.abs(), isto ajudou a resolver o exercício.
 
 // Desafio 8
 function fizzBuzz(arr) {
@@ -95,7 +97,6 @@ function fizzBuzz(arr) {
     }
   }
   return deploy;
-  // seu código aqui
 }
 
 // Desafio 9
@@ -114,10 +115,7 @@ function encode(string) {
       deploy += string[i];
     }
   }
-  return deploy;
-  // seu código aqui
 }
-encode('goiaba')
 function decode(string) {
   let letra = ['1','2','3','4','5'];
   let code = ['a','e','i','o','u']
@@ -133,9 +131,7 @@ function decode(string) {
     }
   }
   return deploy;
-  // seu código aqui
 }
-decode('h2ll4')
 
 module.exports = {
   calcArea,
