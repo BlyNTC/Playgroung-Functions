@@ -50,18 +50,10 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let arrayReturn = [];
   for (let num of array) {
-    let count = 0;
-    let result;
-    if (num % 3 === 0) {
-      count += 1;
-      result = 'fizz';
-    }
-    if (num % 5 === 0) {
-      count += 1;
-      result = 'buzz';
-    }
-    if (count === 2) result = 'fizzBuzz';
-    if (count === 0) result = 'bug!';
+    let result = 'bug!';
+    if (num % 3 === 0) result = 'fizz';
+    if (num % 5 === 0) result = 'buzz';
+    if (num % 15 === 0) result = 'fizzBuzz';
     arrayReturn.push(result);
   }
   return arrayReturn;
