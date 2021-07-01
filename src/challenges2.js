@@ -115,16 +115,32 @@ function triangleCheck(lineA, lineB, lineC) {
   let absoluteAB = Math.abs(lineA - lineB);
   let absoluteAC = Math.abs(lineA - lineC);
   let absoluteBC = Math.abs(lineB - lineC);
-  if (lineA < lineBC && lineB < lineAC && lineC < lineAB && lineA > absoluteBC && lineB > absoluteAC && lineC > absoluteAB) {
+  if (lineA < lineBC && lineB < lineAC && lineC < lineAB && lineA > absoluteBC && lineB > absoluteAC && lineC > absoluteAB
+  ) {
     return true;
   }
   return false;
 }
 
 // Desafio 13
-function hydrate() {
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
+// https://www.w3schools.com/jsref/jsref_regexp_0-9.asp
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+function hydrate(string) {
   // seu código aqui
+  let n = [];
+  n = string.match(/[1-9]/g);
+  let sum = 0;
+  for (let i of n) {
+    sum += parseInt(i, 10);
+  }
+  if (sum === 1) {
+    return (sum + ' copo de água');
+  }
+  return (sum + ' copos de água');
 }
+// let string = '1 cachaça';
+// console.log(hydrate(string));
 
 module.exports = {
   generatePhoneNumber,
