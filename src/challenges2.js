@@ -36,8 +36,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numerosNaString = string.match(/\d+/g);
+  let somaNumeros = 0;
+  for (let index = 0; index < numerosNaString.length; index += 1) {
+    somaNumeros += parseInt(numerosNaString[index]);
+  }
+  if (somaNumeros === 1) {
+  return somaNumeros + ' copo de água';
+  } else {
+  return somaNumeros + ' copos de água'
+  }
 }
 
 module.exports = {
