@@ -9,25 +9,15 @@ function compareTrue(num1, num2) {
 
 // Desafio 2
 function calcArea(base, heigt) {
-  let area = 2;
-
-  return base * heigt / 2;
-  
+  return base*heigt/2;
 }
 
 calcArea();
 
 // Desafio 3
-function splitSentence() {
-  let frase = 'go Trybe!';
-  let animacao = 'vamo que vamo!';
-  let voar = 'foguete';
-
-  return frase.split(" ");
-  return animacao.split(" ");
-  return voar.split(" ");
+function splitSentence(frase) {
+  return (frase.split(" "));
 }
-
 splitSentence();
 
 // Desafio 4
