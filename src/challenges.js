@@ -37,7 +37,7 @@ function highestCount(conjunto) {
   let maior = Math.max(...conjunto)
   let resultado = 0
   for (let indice = 0; indice < conjunto.length; indice++) {
-    if (maior == conjunto[indice]) {
+    if (maior === conjunto[indice]) {
       resultado++;
     }
   }
@@ -46,20 +46,32 @@ function highestCount(conjunto) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = (cat1 - mouse);
-  let distanceCat2 = (cat2 - mouse);
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
   if (distanceCat1 < distanceCat2) {
-    return "cat1";
+    return 'cat1';
   } else if (distanceCat2 < distanceCat1) {
-    return "cat2";
+    return 'cat2';
   } else if (distanceCat1 === distanceCat2) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge'
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  let string = []
+  for (let indice of arr) {
+    if (indice % 3 === 0 && indice % 5 === 0) {
+      string.push('fizzBuzz')
+    } else if (indice % 5 === 0) {
+      string.push('buzz')
+    } else if (indice % 3 === 0) {
+      string.push('fizz')
+    } else {
+      string.push('bug!')
+    }
+  }
+  return string;
 }
 
 // Desafio 9
