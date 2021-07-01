@@ -42,7 +42,7 @@ function concatName(nome) {
   result = nome1.concat(", ", nome2);
   return result;
  }
-concatName(['Tarugo', 'Tuxal', 'dos', 'Santos']));
+concatName(['Tarugo', 'Tuxal', 'dos', 'Santos']);
 
 // Desafio 5
 function footballPoints() {
