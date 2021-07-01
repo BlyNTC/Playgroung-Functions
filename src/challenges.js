@@ -41,16 +41,16 @@ function highestCount(otherArray) {
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-let distance1 = Math.abs(cat1 - mouse);
-let distance2 = Math.abs(cat2 - mouse);
+  let distance1 = Math.abs(cat1 - mouse);
+  let distance2 = Math.abs(cat2 - mouse);
 
-if ( distance1 > distance2){
-  return "cat2"
-} else if ( distance2 > distance1){
-  return "cat1"
-} else {
-  return "os gatos trombam e o rato foge"
-}
+  if (distance1 > distance2) {
+    return "cat2"
+  } else if (distance2 > distance1) {
+    return "cat1"
+  } else {
+    return "os gatos trombam e o rato foge"
+  }
 
 }
 
@@ -71,11 +71,44 @@ function fizzBuzz(arrayFrase) {
   return resultado;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringCode) {
+  let changeString = '';
+  for (let i = 0; i < stringCode.length; i += 1) {
+    if (stringCode[i] === 'a') {
+      changeString += '1';
+    } else if (stringCode[i] === 'e') {
+      changeString += '2';
+    } else if (stringCode[i] === 'i') {
+      changeString += '3';
+    } else if (stringCode[i] === 'o') {
+      changeString += '4';
+    } else if (stringCode[i] === 'u') {
+      changeString += '5';
+    } else {
+      changeString += stringCode[i];
+    }
+  }
+  return changeString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(StringDecode) {
+  let deschangeString = '';
+  for (let i = 0; i < StringDecode.length; i += 1) {
+    if (StringDecode[i] === '1') {
+      deschangeString += 'a';
+    } else if (StringDecode[i] === '2') {
+      deschangeString += 'e';
+    } else if (StringDecode[i] === '3') {
+      deschangeString += 'i';
+    } else if (StringDecode[i] === '4') {
+      deschangeString += 'o';
+    } else if (StringDecode[i] === '5') {
+      deschangeString += 'u';
+    } else {
+      deschangeString += StringDecode[i];
+    }
+  }
+  return deschangeString;
 }
 
 module.exports = {
