@@ -73,25 +73,21 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
+// REFEITO
 function catAndMouse(mouse, cat1, cat2) {
   let retorno;
-  cato1 = cat1 - mouse;
-  cato2 = cat2 - mouse;
-  cato1 = Math.abs(cato1);
-  cato2 = Math.abs(cato2);
-  Math.abs(cato2)
-  if (cato1 < cato2 && cato1 != cato2){
+  let dist1 = Math.abs(mouse - cat1)
+  let dist2 = Math.abs(mouse - cat2)
+
+  if(dist1 < dist2){
     retorno = 'cat1'
-  } else if (cato2 < cato1 && cato2 != cato1) {
+  } else if(dist2 < dist1){
     retorno = 'cat2'
   } else {
     retorno = "os gatos trombam e o rato foge"
   }
-
   return retorno
 }
-// REFERENCIA AO FILIPE ANDRADE - TURMA 14 - TRIBO A
-
 
 // Desafio 8
 function fizzBuzz(retornoString) {
