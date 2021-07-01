@@ -19,37 +19,47 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(nums) {
   // seu código aqui
-  let numeroTel = ''
-  let parent1 = '('
-  let parent2 = ')'
-  let traco = '-'
-  let repete = [0,1,2,3,4,5,6,7,8,9]
-  let repetido = 0
-
   if (nums.length !== 11) {
     return 'Array com tamanho incorreto.'
-  } 
+  }
   for (let i of nums) {
-    if (i < 0) {
-      return 'não é possível gerar um número de telefone com esses valores'
-    }
-    else if (i > 9) {
-      return 'não é possível gerar um número de telefone com esses valores'
-    }
-    for (let index of repete) {
-      if (index = i)
-      repetido += 1
-    }
-    if (repetido >= 3) {
+    if (i < 0 || i > 9) {
       return 'não é possível gerar um número de telefone com esses valores'
     }
   }
-nums.splice(0, 0, parent1)
-nums.splice(3, 0, parent2)
-nums.splice(8, 0, traco)
-numeroTel = nums.toSring()
-return numeroTel
+  let contRepetido = 0;
+  let contNumero = 0;
+  for (let index in nums) {
+    let verificaNumero = nums[index];
+    for (let index2 in nums) {
+      if (verificaNumero === nums[index2]) {
+        contNumero += 1;
+      }
+    }
+    if (contNumero > contRepetido) {
+      contRepetido = contNumero;
+    }
+    contNumero = 0
+    if (contRepetido >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+  }
+  nums.splice(0, 0, '(')
+  nums.splice(3, 0, ')')
+  nums.splice(4, 0, ' ')
+  nums.splice(10, 0, "-")
+
+  return nums.join('')
 }
+// Fontes desafio 11: 
+
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+
+// https://www.mundojs.com.br/2018/08/31/adicionando-elementos-em-uma-lista-array-javascript/
+
+// Exercício 5 - JavaScript 4.4 - Trybe
+
+
 
 // Desafio 12
 function triangleCheck() {
