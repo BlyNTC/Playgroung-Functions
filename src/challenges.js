@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 === true && param2 === true) {
+  if (param1 == true && param2 == true) {
     return true;
   } else {
     return false;
@@ -32,18 +32,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount( ) {
-  
+function highestCount(arrayDeNumeros) {
+
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  for(index = 0; index > numeros; index +1) {
+    
+  }
 }
 
 // Desafio 9
