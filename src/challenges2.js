@@ -1,33 +1,11 @@
 // Desafio 10
 function techList(skill, name) {
   let skillSort = skill.sort();
-  if (skill.length === 0) {
-    return ('Vazio!');
-  }
-
-  listObjects = [
-    {
-      tech: skillSort[0],
-      name,
-    },
-    {
-      tech: skillSort[1],
-      name,
-    },
-    {
-      tech: skillSort[2],
-      name,
-    },
-    {
-      tech: skillSort[3],
-      name,
-    },
-    {
-      tech: skillSort[4],
-      name,
-    },
+  if (skill.length === 0) { return ('Vazio!'); }
+  let listObjects = [{ tech: skillSort[0], name }, {
+    tech: skillSort[1], name }, { tech: skillSort[2], name }, { tech: skillSort[3], name },
+  { tech: skillSort[4], name },
   ];
-
   return listObjects;
 }
 
