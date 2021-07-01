@@ -22,14 +22,14 @@ function splitSentence(string) {
 
   for (let index = 0; index < string.length; index += 1) {
     let indicaEspaco = 0;
-    if (string[index] === '') {
+    if (string[index] === ' ') {
       cont += 1;
       indicaEspaco += 1;
     }
     if (indicaEspaco === 0) {
       array[cont] += string[index];
     } else {
-      array[cont] = '';
+      array[cont] = ' ';
     }
   }
   return array;
@@ -41,7 +41,7 @@ function concatName(array) {
   let string = '';
   let tam = array.length;
   string = array[tam - 1];
-  string += ', ' + array[0];
+  string += `, ${array[0]}`;
 
   console.log(string);
   return string;

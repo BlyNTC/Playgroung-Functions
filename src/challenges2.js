@@ -72,12 +72,11 @@ function hydrate(string) {
 
   for (let index = 0; index < number.length; index += 1) {
     soma += parseInt(number[index]);
-
   }
   if (soma === 1) {
-    suggest += soma + ' copo de água';
+    suggest += `${soma}, copo de água`;
   } else {
-    suggest += soma + ' copos de água';
+    suggest += `${soma}, copos de água`;
   }
   return suggest;
 }
