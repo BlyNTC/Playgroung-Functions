@@ -32,7 +32,7 @@ function concatName(array) {
 let ultimoValor = array[array.length -1];
 let soma = ultimoValor;
 let primeiroValor = array[0];
-soma = soma + ',' + primeiroValor;
+soma = soma + ', ' + primeiroValor;
 return soma;
 
 }
