@@ -90,20 +90,35 @@ function triangleCheck(lineA, lineB, lineC) {
   let valorAbsolutoC = Math.abs(diferencaMedidasC);
 
   //lineA
-  if( (lineA < (lineB + lineC)) && (lineA > (valorAbsolutoA))){
+  if ((lineA < (lineB + lineC)) && (lineA > (valorAbsolutoA))) {
     return true;
-  }else if((lineB < (lineA + lineC)) && (lineB > (valorAbsolutoB))){
+  } else if ((lineB < (lineA + lineC)) && (lineB > (valorAbsolutoB))) {
     return true;
-  }else if((lineC < (lineA + lineB)) && (lineC > (valorAbsolutoC))){
+  } else if ((lineC < (lineA + lineB)) && (lineC > (valorAbsolutoC))) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
 
 // Desafio 13
-function hydrate() {
+let arrayNumbers = [];
+let numberFilter = '';
+
+function hydrate(frase) {
   // seu código aqui
+  let contadorCopoDagua = 0;
+  numberFilter = frase.replace(/[^0-9]/g, '');
+
+  for (let i = 0; i < numberFilter.length; i++) {
+    arrayNumbers.push(numberFilter[i]);
+    contadorCopoDagua += parseInt(arrayNumbers[i]);
+  }
+  if (contadorCopoDagua <= 1) {
+    return contadorCopoDagua + ' copo de água';
+  } else {
+    return contadorCopoDagua + ' copos de água';
+  }
 }
 
 module.exports = {
