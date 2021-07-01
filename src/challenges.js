@@ -6,8 +6,8 @@ function compareTrue(a, b) {
   if (a === true && b === true) {
     status = true;
     return true;
-
-  } else {
+  } 
+  else {
     status = false;
     return false;
   }
@@ -37,10 +37,7 @@ splitSentence("foguete");
 
 /* Consultei o seguinte site para conseguir realizar esse desafio 3.
    link: https://blog.betrybe.com/javascript/javascript-split/ */
-
 // Desafio 4
-
-
 function concatName(arrays) {
   // seu código aqui
   let myString = " ";
@@ -51,10 +48,7 @@ function concatName(arrays) {
 concatName(['captain', 'my', 'captain']);
 //console.log(concatName(['captain', 'my', 'captain']));
 
-
 // Desafio 5
-
-
 function footballPoints(wins, ties) {
   // seu código aqui
   let numero_de_pontos = 0;
@@ -107,7 +101,6 @@ function catAndMouse(mouse, cat1, cat2) {
 catAndMouse(0, 3, 3);
 //console.log(catAndMouse(0, 3, 3));
 
-
 // Desafio 8
 function fizzBuzz(arrayFizzBuzz) {
   // seu código aqui
@@ -128,10 +121,7 @@ function fizzBuzz(arrayFizzBuzz) {
 fizzBuzz([7, 9]);
 //console.log(fizzBuzz([7, 9]));
 
-
-
 // Desafio 9
-
 function encode(string) {
   // seu código aqui
   let str = '';
