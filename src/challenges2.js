@@ -6,7 +6,7 @@ function techList(list, name) {
   for (let tech of list) {
     arrayTech.push({
       tech,
-      name;
+      name,
     });
   }
   return arrayTech.length === 0 ? 'Vazio!' : arrayTech;
