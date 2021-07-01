@@ -69,16 +69,16 @@ console.log(catAndMouse(10, 6, 5));
 
 // Desafio 8
 function fizzBuzz(arrayNumero) {
-  resultado = [];
+  let resultado = [];
   for(let index = 0; index < arrayNumero.length; index += 1){
     if(arrayNumero[index] % 3 == 0 && arrayNumero[index] % 5 != 0){
-      resultado += 'fizz ';
+      resultado.push('fizz');
     }else if(arrayNumero[index] % 5 == 0 && arrayNumero[index] % 3 != 0){
-      resultado += 'buzz ';
+      resultado.push('buzz');
     }else if(arrayNumero[index] % 3 == 0 && arrayNumero[index] % 5 == 0){
-      resultado += 'fizzbuzz ';
+      resultado.push('fizzbuzz');
     }else{
-      resultado += 'bug! '
+      resultado.push('bug!');
     } 
   }
   return resultado;
@@ -89,7 +89,7 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 function encode(frase1) {
   let resultado1 = frase1.split("");
 
-  for(let index = 0; index < resultado1.index; index += 1){
+  for(let index = 0; index < resultado1.length; index += 1){
     switch(resultado1[index]){
       case 'a': resultado1[index] = '1';
       break;
@@ -109,7 +109,7 @@ function encode(frase1) {
 function decode(frase2) {
   let resultado2 = frase2.split("");
 
-  for(let index = 0; index < resultado2.index; index += 1){
+  for(let index = 0; index < resultado2.length; index += 1){
     switch(resultado2[index]){
       case '1': resultado2[index] = 'a';
       break;
