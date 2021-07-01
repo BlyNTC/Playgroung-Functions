@@ -24,21 +24,25 @@ function calcArea(base, height) {
     return 0;
   }
 }
-console.log((calcArea(51, 1)));
+calcArea(51, 1);
 
 
 // Desafio 3
-function splitSentence(stringExemplo) {
- let resultado = stringExemplo.split(" ");
-  return resultado;
+function splitSentence (string) {
+ let resultado = string.split(" ");
+ return resultado;
 }
 splitSentence('Pedro Álvares Cabral');
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(frase) {
+  let palavraUm = frase[3];
+  let palavraDois = frase[0];
+  result = palavraUm.concat(", ", palavraDois)
+  return result;
+ }
+ console.log(concatName(['Rabito', 'cachorro', 'mais', 'Legal']));
 
 // Desafio 5
 function footballPoints() {
