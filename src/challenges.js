@@ -5,12 +5,12 @@ const { array, count } = require("yargs");
 function compareTrue(boo1, boo2) {
   let resultado;
   if (boo1 === true && boo2 === true) {
-    resultado = true
-}
-else {
-  resultado = false;
-}
-  return resultado
+    resultado = true;
+  }
+  else {
+    resultado = false;
+  }
+  return resultado;
 }
 
 // Desafio 2
