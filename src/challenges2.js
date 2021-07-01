@@ -13,18 +13,18 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  let numeros = []
-  let compara = true
-  let repete = 0
+  let numeros = [];
+  let compara = true;
   for (let i = 0; i < array.length; i++) {
+    let repete = 0
     for (let u = 0; u < array.length; u++) {
       if (array[i] === array[u]) {
         repete++
       }
     }
     if (repete >= 3) {
-      numeros.push(array[i])
-      compara = false
+      numeros.push(array[i]);
+      compara = false;
     }
   }
   if (array.length != 11){
@@ -40,8 +40,7 @@ function generatePhoneNumber(array) {
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB &&
-      lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
         return true;
       } else {
         return false;
@@ -49,8 +48,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let quantidadeCoposAgua = 0;
+  for (let char of string) {
+    for (let index = 1; index <= 9; index ++){
+      if (parseInt(char) == index) {
+          quantidadeCoposAgua += parseInt(char);
+      }
+    }
+  } if (quantidadeCoposAgua == 1){
+      return ("1 copo de água");
+  } else if (quantidadeCoposAgua > 1) {
+      return (quantidadeCoposAgua + " copos de água");
+  }
 }
 
 module.exports = {
