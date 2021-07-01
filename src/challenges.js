@@ -50,9 +50,19 @@ return pontuacao;
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+let resultado = 0;  
+let max = Math.max(...array);
+for(let index = 0;index < array.length; index += 1){
+      if(array[index] === max){
+      resultado = resultado + 1;
+      }  
+      
+  }
+  return resultado; 
 }
+
+
 
 // Desafio 7
 function catAndMouse() {
