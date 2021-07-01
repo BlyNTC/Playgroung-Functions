@@ -120,24 +120,40 @@ fizzBuzz([9, 25])
 
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
-  function encode(letras) {
-    let vogais= ['a', 'e', 'i', 'o', 'u'];
-    let string= '';
-    for (const letter of letras) {
-      if (vogais.indexOf(letter) !== -1) {
-        string += vogais.indexOf(letter) + 1;
+  function encode(string) {
+    let codigo = '';
+    let vogais = ['a', 'e', 'i', 'o', 'u'];
+  
+    for (let i = 0; i < string.length; i += 1) {
+      if (vogais.includes(string[i])) {
+      codigo += (vogais.indexOf(string[i]) + 1);
       } else {
-        string += letter;
+        codigo += string[i];
       }
     }
-    console.log("eita");
-    return string;
-
+    
+    return codigo;
+  }
+  console.log(encode('hi there'));
 }
 function decode() {
   // seu código aqui
+  function decode(code) {
+    let string = '';
+    let lista = ['1', '2', '3', '4', '5'];
+    let vogais = ['a', 'e', 'i', 'o', 'u'];
+  
+    for (let i = 0; i < code.length; i += 1) {
+      if (lista.includes(code[i])) {
+        string += vogais[lista.indexOf(code[i])];
+      } else {
+        string += code[i];
+      }
+    }
+    return string;
+  }
 }
 
 module.exports = {
