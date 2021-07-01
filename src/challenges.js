@@ -115,6 +115,7 @@ function encode(string) {
       deploy += string[i];
     }
   }
+  return(deploy)
 }
 function decode(string) {
   let letra = ['1','2','3','4','5'];
