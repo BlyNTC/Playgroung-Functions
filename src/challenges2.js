@@ -43,7 +43,9 @@ function generatePhoneNumber(numArr) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   // faça o número certinho
-  return `(${numString.slice(0, 2)}) ${numString.slice(2, 7)}-${numString.slice(7)}`;
+  return `(${numString.slice(0, 2)}) ${numString.slice(2, 7)}-${numString.slice(
+    7
+  )}`;
 }
 
 // Desafio 12
@@ -62,9 +64,10 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(str) {
-  // a linha abaixo:
+  // as linhas abaixo:
   // - captura os dígitos na string e coloca em uma array usando RegExp
   // - converte eles em números e os soma em um único valor
+  // OBS.: match e reduce são maaaravilhosos!
   let count = str.match(/(\d)/g).reduce((acc, i) => {
     acc += +i;
     return acc;
@@ -72,6 +75,7 @@ function hydrate(str) {
   if (count === 1) {
     return '1 copo de água';
   }
+  return `${count} copos de água`;
 }
 
 module.exports = {
