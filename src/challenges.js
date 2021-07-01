@@ -19,8 +19,16 @@ calcArea();
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  let frase = 'go Trybe!';
+  let animacao = 'vamo que vamo!';
+  let voar = 'foguete';
+
+  return frase.split(" ");
+  return animacao.split(" ");
+  return voar.split(" ");
 }
+
+splitSentence();
 
 // Desafio 4
 function concatName() {
