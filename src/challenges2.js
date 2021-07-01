@@ -4,13 +4,13 @@ function techList(array, name) {
   let objeto = {};
   array.sort();
 
-  for (index = 0; index < array.length; index += 1){
+  for (let index = 0; index < array.length; index += 1) {
     objeto.tech = array[index];
     objeto.name = name;
     tecnologias.push(objeto);
     objeto = {};
   }
-  if (array.length === 0){
+  if (array.length === 0) {
     return 'Vazio!';
   } else {
     return tecnologias;
@@ -18,13 +18,21 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numeros) {
+  let numeroTelefone = '';
+  console.log(numeroTelefone);
+  for (let index = 0; index < numeros.length; index += 1) {
+    
+  }
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (Math.abs(lineB - lineC) < lineA && lineA < (lineB + lineC) && Math.abs(lineA - lineC) < lineB && lineB < (lineA + lineC) && Math.abs(lineA - lineB) < lineC && lineC < (lineA + lineB)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
