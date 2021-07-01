@@ -42,7 +42,7 @@ function concatName(frase) {
   result = palavraUm.concat(", ", palavraDois)
   return result;
  }
- concatName(['Rabito', 'cachorro', 'mais', 'Legal']));
+ concatName(['Rabito', 'cachorro', 'mais', 'Legal']);
 
 // Desafio 5
 function footballPoints() {
