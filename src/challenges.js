@@ -80,8 +80,21 @@ function catAndMouse(mouse, cat1,cat2) {
 
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumero) {
   // seu código aqui
+  let fraseArray = [];
+  for(let i = 0; i < arrayNumero.length; i += 1) {
+  if (arrayNumero[i] % 3 === 0 && arrayNumero[i] % 5 === 0) {
+    fraseArray.push('fizzBuzz');
+  } else if (arrayNumero[i] % 3 === 0) {
+    fraseArray.push('fizz');
+  }  else if (arrayNumero[i] % 5 === 0) {
+    fraseArray.push('buzz');
+  } else {
+    fraseArray.push('bug!');
+  }
+ }
+ return fraseArray;
 }
 
 // Desafio 9
