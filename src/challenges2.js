@@ -65,11 +65,16 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-console.log(triangleCheck(10,114,8));
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+/** referencia do código: 'https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript' e 'https://www.horadecodar.com.br/2020/10/14/como-obter-apenas-os-numeros-de-uma-string-em-javascript/' */
+function hydrate(string) {
+  let qtd = string.match(/\d+/g).map(Number);
+  let agua = 0;
+
+  for (let index = 0; index < qtd.length; index++) {
+    agua += qtd[index];    
+  }
+  return agua + ' copo de água.';
 }
 
 module.exports = {
