@@ -54,16 +54,17 @@ concatName(['foguete', 'não', 'tem', 'ré']);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2){
-  if(Math.abs(mouse - cat1 > mouse - cat2 )){
-    return 'cat1'
-  }else if(Math.abs(mouse - cat1 < mouse - cat2 )){
+  let distanciaGato1 = Math.abs(cat1 - mouse) - 1;
+  let distanciaGato2 = Math.abs(cat2 - mouse) - 1;
+  if(distanciaGato1 > distanciaGato2){
     return 'cat2'
+  }else if(distanciaGato2 > distanciaGato1){
+    return 'cat1'
   }else{
     return 'os gatos trombam e o rato foge'
   }
-  //Math.abs(cats1 - mouse) -1 
 }
-console.log(catAndMouse(0, 2, 2));
+
 // Desafio 8
 function fizzBuzz(arrayNumerico){
   let fizzBuzz = []
