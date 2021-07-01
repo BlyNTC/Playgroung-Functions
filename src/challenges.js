@@ -250,6 +250,51 @@ function decode(valorDecode) {
 }
 decode("h3 th2r2!")
 
+function techList( skill, names) {
+
+    
+  let skillSort = skill.sort();
+  let techObjectArray = [];
+
+
+ if( skill.length < 5 ) {
+
+  skill.push('Vazio!');
+  
+ } 
+
+  for ( let i = 0; i < 5; i += 1) {
+
+    techObjectArray = [ {
+      tech: skillSort[0],
+      name: names
+    },
+    {
+      tech: skillSort[1],
+      name: names
+    },
+    {
+      tech: skillSort[2],
+      name: names
+    },
+    {
+      tech: skillSort[3],
+      name: names
+    },
+    {
+      tech: skillSort[4],
+      name: names
+    }
+  ]
+
+} 
+
+  return techObjectArray;
+ 
+}
+
+techList(["React", "Jest", "HTML", "CSS"], "Pedro")
+
 module.exports = {
   calcArea,
   catAndMouse,
