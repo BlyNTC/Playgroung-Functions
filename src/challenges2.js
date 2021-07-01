@@ -68,11 +68,26 @@ function triangleCheck(lineA, lineB, lineC){
   }
 }
 
-
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let number = string.match(/\d+/g);
+  let soma =0;
+  let suggest = '';
+
+  for(let index=0; index< number.length; index +=1){
+    soma += parseInt(number[index]);
+    
+  }
+ 
+  if(soma === 1){
+    suggest += soma + ' copo de água';
+  } else{
+  suggest += soma + ' copos de água';
+  }
+return  suggest;
 }
+
 
 module.exports = {
   generatePhoneNumber,
