@@ -1,9 +1,20 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs1, name) {
+  let techs = []; //  nova lista
+  techs1.sort(); //  lista de objetos ordenada 
+  for (let index of techs1) {
+    techs.push({
+      tech: (index),
+      name: name
+    }); // objetos devem ser inseridos em uma nova lista em ordem crescente a partir do campo tech
+  }
+  if (techs1.length === 0) {
+    return "Vazio!"; // array venha vazio sua função deve retornar 'Vazio!'
+  }
+  return techs;
 }
 
-// Desafio 11
+
 function generatePhoneNumber() {
   // seu código aqui
 }
