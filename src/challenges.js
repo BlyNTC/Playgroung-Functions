@@ -100,19 +100,19 @@ function fizzBuzz(numbers) {
 function encode(string) {
   // seu código aqui
   let stringModificada = '';
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'a') {
+  for (let key in string) {
+    if (string[key] === 'a') {
       stringModificada += '1';
-    } else if (string[index] === 'e') {
+    } else if (string[key] === 'e') {
       stringModificada += '2';
-    } else if (string[index] === 'i') {
+    } else if (string[key] === 'i') {
       stringModificada += '3';
-    } else if (string[index] === 'o') {
+    } else if (string[key] === 'o') {
       stringModificada += '4';
-    } else if (string[index] === 'u') {
+    } else if (string[key] === 'u') {
       stringModificada += '5';
     } else {
-      stringModificada += string[index];
+      stringModificada += string[key];
     }
   }
   return stringModificada;
@@ -121,19 +121,19 @@ function encode(string) {
 function decode(string) {
   // seu código aqui
   let stringModificada = '';
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === '1') {
+  for (let key in string) {
+    if (string[key] === '1') {
       stringModificada += 'a';
-    } else if (string[index] === '2') {
+    } else if (string[key] === '2') {
       stringModificada += 'e';
-    } else if (string[index] === '3') {
+    } else if (string[key] === '3') {
       stringModificada += 'i';
-    } else if (string[index] === '4') {
+    } else if (string[key] === '4') {
       stringModificada += 'o';
-    } else if (string[index] === '5') {
+    } else if (string[key] === '5') {
       stringModificada += 'u';
     } else {
-      stringModificada += string[index];
+      stringModificada += string[key];
     }
   }
   return stringModificada;
