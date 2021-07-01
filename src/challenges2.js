@@ -95,20 +95,24 @@ function hydrate(order) {
   
   let abstractbooze = '';
   let booze = 0;
-  
-  //check if its an integer and add to the booze count
+  let checkInt;
 
-  /*  ALRIGHT THIS WAS ME TRYING IF THERE WERE 10+ 
   for (let key of order){
-    if (Number.isInteger(key) == true){
+    checkInt = parseInt(key, 10);
+    if (Number.isInteger(checkInt) == true){
       abstractbooze += key;
+      
     }
-
-    else if (key == ' '){
-    booze += parseInt(abstractbooze);
+    
+    if (abstractbooze == '0'){
+      abstractbooze = '';
+    }
+   
+    else if (key == ' ' && abstractbooze != '0' && Number.isInteger(parseInt(abstractbooze, 10)) == true){
+    booze += parseInt(abstractbooze, 10);
     abstractbooze = '';
-  }
-  }
+    }
+  }   
 
   if (booze > 1){
   return booze + ' copos de água';
@@ -116,8 +120,9 @@ function hydrate(order) {
 
   else
   return booze + ' copo de água';
-  */
+ 
 
+  /* works for <9 drinks
   for (let key of order){
     if (key > 0){
       booze += parseInt(key);
@@ -129,6 +134,7 @@ function hydrate(order) {
   }
 
   else return booze + ' copo de água'; 
+  */
 }
 
 module.exports = {
