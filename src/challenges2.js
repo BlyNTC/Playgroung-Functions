@@ -1,5 +1,21 @@
 // Desafio 10
-function techList() {
+function techList(arr,name) {
+  if(arr.length===0){
+    return 'Vazio!'
+  }else{
+    arr.sort();
+    let tec = []
+    for(let j in arr){
+      tec.push({tech: '', name: ''})
+    }
+    for(let i in arr){
+      tec[i].tech = arr[i];
+      tec[i].name = name;
+      arr[i]= tec[i];
+    }
+    return arr;
+
+  }
   // seu código aqui
 }
 
