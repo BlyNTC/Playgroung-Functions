@@ -129,7 +129,6 @@ function decode(frase) {
   }
   return dividi.join('');
 }
-console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
