@@ -1,20 +1,18 @@
 
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  
+
   //vai retornar falso
-  if(bool1 === true && bool2 === true){return true }
-  else{return false;}
-  //vai retornar verdadeiro
- 
-} 
+  if (bool1 === true && bool2 === true) { return true }
+  else { return false; }
+}
 
 // Desafio 2
 function calcArea(base, height) {
- let area;
+  let area;
   //formula
   area = (base * height) / 2;
-  return area; 
+  return area;
 }
 
 // Desafio 3
@@ -24,10 +22,18 @@ function splitSentence(stringRef) {
 }
 
 // Desafio 4
-function concatName() {
-  // ao receber uma array de strings, retorna uma string com o fomato "ultimo item, primeiro item", independente do tamanho da array
-  
-}console.log(concatName());
+function concatName(palavra) {
+  let resultado = '';
+  for(let x= palavra.length -1; x >= 0; x -= 1){
+    if(x === palavra.length -1){
+      resultado = palavra[x];
+    }
+    else if(palavra[x] === palavra[0]){
+      resultado += ', ' + palavra[0]
+    }
+  }
+  return resultado;
+}
 
 // Desafio 5
 function footballPoints() {
