@@ -82,13 +82,21 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   // seu código aqui
   let strings = [];
-  for (let key in numbers){
-    if (){
-
+  for (let num of numbers) {
+    if (num % 3 === 0 && num % 5 === 0) {
+      strings.push('fizzBuzz');
+    } else if (num % 3 === 0) {
+      strings.push('fizz');
+    } else if (num % 5 === 0){
+      strings.push('buzz')
+    } else {
+      strings.push('bug!');
     }
   }
   return strings;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
