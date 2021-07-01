@@ -22,12 +22,12 @@ function splitSentence(string) {
 
   for (let index = 0; index < string.length; index += 1) {
     let indicaEspaco = 0;
-    if (string[index] === " ") {
+    if (string[index] === '') {
       cont += 1;
       indicaEspaco += 1;
     }
     if (indicaEspaco === 0) {
-      array[cont] = array[cont] + string[index];
+      array[cont] += string[index];
     } else {
       array[cont] = '';
     }
@@ -41,7 +41,7 @@ function concatName(array) {
   let string = '';
   let tam = array.length;
   string = array[tam - 1];
-  string = string + ", " + array[0];
+  string += ', ' + array[0];
 
   console.log(string);
   return string;
@@ -53,7 +53,6 @@ function footballPoints(wins, ties) {
   let soma = 0;
   soma = 3 * wins + 1 * ties;
   return soma;
-
 }
 
 // Desafio 6
@@ -64,16 +63,12 @@ function highestCount(array) {
   for (let key in array) {
     let max = Math.max.apply(null, array);
 
-
     if (max === array[key]) {
       contNumero += 1;
-
     }
   }
   return contNumero;
 }
-
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -88,30 +83,24 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (Math.abs(distMouse - distCat1) < Math.abs(distMouse - distCat2)) {
     return 'cat1';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
-
 }
-
 
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
-  let fizz = 'fizz';
-  let buzz = 'buzz';
-  let fizzBuzz = 'fizzBuzz';
-  let bug = 'bug!';
   let lista = [''];
 
   for (let key in array) {
     if (array[key] % 5 === 0 && array[key] % 3 === 0) {
-      lista[key] = fizzBuzz;
+      lista[key] = 'fizzBuzz';
     } else if (array[key] % 5 === 0) {
-      lista[key] = buzz;
+      lista[key] = 'buzz';
     } else if (array[key] % 3 === 0) {
-      lista[key] = fizz;
+      lista[key] = 'fizz';
     } else {
-      lista[key] = bug;
+      lista[key] = 'bug!';
     }
   }
   return lista;
@@ -159,8 +148,6 @@ function decode(frase2) {
   }
   return frase;
 }
-
-
 
 module.exports = {
   calcArea,
