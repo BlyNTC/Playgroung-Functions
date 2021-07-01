@@ -29,12 +29,15 @@ return resultado;
 
 // Desafio 4
 function concatName(array) {
-let ultimoResultado = array[array.length - 1];
-let primeiroResultado = array[0];
-let resultado = ultimoResultado + ',' + primeiroResultado;
-resultado = resultado + '';
-return resultado;
+let ultimoValor = array[array.length -1];
+let soma = ultimoValor;
+let primeiroValor = array[0];
+soma = soma + ',' + primeiroValor;
+return soma;
+
 }
+
+
 
 // Desafio 5
 function footballPoints() {
