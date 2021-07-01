@@ -24,7 +24,6 @@ function techList(learning, name) {
 function generatePhoneNumber(numbah) {
   // seu código aqui
   let phonenumber = '(';
-  let cachenumber;
   let checkrepeat = 0;
   
   if (numbah.length != 11){
@@ -57,7 +56,8 @@ function generatePhoneNumber(numbah) {
 
   //NOW it's gonna make the phone number jesus FUCK
   //ex: (12) 34567-8901
-  //to achando que preciso de um FOR IN aqui porque ele nao distingue posição de valor
+  //to achando que preciso de um FOR IN aqui porque FOR OF nao distingue posição de valor
+  
   for (let key in numbah){
     if (key == 2){
       phonenumber += ') ';
@@ -69,17 +69,22 @@ function generatePhoneNumber(numbah) {
 
     phonenumber += numbah[key];
   }
-  
-  
-
+   
   return phonenumber;
 }
 
 
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  
+  if (lineA + lineB < lineC || lineB + lineC < lineA || lineA + lineC < lineB){
+    return false;
+  }
+  else
+  return true;
+
 
 }
 
