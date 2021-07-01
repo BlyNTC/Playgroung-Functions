@@ -8,26 +8,27 @@ function compareTrue(num1, num2) {
 }
 
 // Desafio 2
-function calcArea(base, heigt) {
-  return base*heigt/2;
+function calcArea(base, height) {
+  return base * height / 2;
 }
-
-calcArea();
 
 // Desafio 3
 function splitSentence(frase) {
-  return (frase.split(" "));
+  let array = frase.split(' ');
+  return array;
 }
-splitSentence();
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  return names[names.length -1] +', ' + [0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let wins = 3;
+  let ties = 1;
+  console.log(wins *  ties)
+
 }
 
 // Desafio 6
