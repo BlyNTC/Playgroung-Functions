@@ -1,6 +1,12 @@
-let dataset = [2,8,4,8,6,4,7,8];
-let max= Math.max(...dataset);
-var count = dataset.reduce(function(counter, value) {
-    return counter + (value === max);
-}, 0);
-console.log(count);
+class Main
+{
+    public static void main(String[] args)
+    {
+        String str = "Techie Delight";
+        char ch = '_';
+        int pos = 6;
+ 
+        str = str.substring(0, pos) + ch + str.substring(pos + 1);
+        System.out.println(str);
+    }
+}

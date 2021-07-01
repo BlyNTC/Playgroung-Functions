@@ -13,7 +13,7 @@ function compareTrue(a, b) {
   }
 }
 compareTrue(false, false);
-console.log(compareTrue(false, false));
+//console.log(compareTrue(false, false));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -23,7 +23,7 @@ function calcArea(base, height) {
   // seu código aqui
 }
 calcArea(51, 1);
-console.log(calcArea(51, 1));
+//console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(text) {
@@ -33,7 +33,7 @@ function splitSentence(text) {
   return array;
 }
 splitSentence("foguete");
-console.log(splitSentence("foguete"));
+//console.log(splitSentence("foguete"));
 
 /* Consultei o seguinte site para conseguir realizar esse desafio 3.
    link: https://blog.betrybe.com/javascript/javascript-split/ */
@@ -49,7 +49,7 @@ function concatName(arrays) {
   return myString;
 }
 concatName(['captain', 'my', 'captain']);
-console.log(concatName(['captain', 'my', 'captain']));
+//console.log(concatName(['captain', 'my', 'captain']));
 
 
 // Desafio 5
@@ -64,7 +64,7 @@ function footballPoints(wins, ties) {
   return numero_de_pontos;
 }
 footballPoints(14, 8);
-console.log(footballPoints(14, 8));
+//console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount(arraynumbers) {
@@ -80,7 +80,7 @@ function highestCount(arraynumbers) {
   return cont;
 }
 highestCount([9, 1, 2, 3, 9, 5, 7]);
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -105,7 +105,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 catAndMouse(0, 3, 3);
-console.log(catAndMouse(0, 3, 3));
+//console.log(catAndMouse(0, 3, 3));
 
 
 // Desafio 8
@@ -126,18 +126,57 @@ function fizzBuzz(arrayFizzBuzz) {
   return arrayPush;
 }
 fizzBuzz([7, 9]);
-console.log(fizzBuzz([7, 9]));
+//console.log(fizzBuzz([7, 9]));
 
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
 
-function decode() {
+function encode(string) {
   // seu código aqui
+  let str = '';
+  for (index = 0; index < string.length; index += 1)
+    if (string[index] === 'a') {
+      str = str + 1;
+    }
+  else if (string[index] === 'e') {
+    str = str + 2;
+  } else if (string[index] === 'i') {
+    str = str + 3;
+  } else if (string[index] === 'o') {
+    str = str + 4;
+  } else if (string[index] === 'u') {
+    str = str + 5;
+  } else {
+    str = str + string[index];
+  }
+  return str;
 }
+encode('hi there!');
+console.log(encode('Hi there!'));
+
+function decode(string) {
+  // seu código aqui
+  let str = '';
+  for (index = 0; index < string.length; index += 1)
+    if (string[index] === '1') {
+      str = str + 'a';
+    }
+  else if (string[index] === '2') {
+    str = str + 'e';
+  } else if (string[index] === '3') {
+    str = str + 'i';
+  } else if (string[index] === '4') {
+    str = str + 'o';
+  } else if (string[index] === '5') {
+    str = str + 'u';
+  } else {
+    str = str + string[index];
+  }
+  return str;
+}
+decode('h3 th2r2!');
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
