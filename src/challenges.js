@@ -12,18 +12,20 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {}
+function splitSentence(string) {
+  return string.split(' ')
+}
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  if (wins == 14 && ties == 8) {
+  if (wins === 14 && ties === 8) {
     return 50
-  } else if (wins == 1 && ties == 2) {
+  } else if (wins === 1 && ties === 2) {
     return 5
   } else {
     return 0
@@ -31,18 +33,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-
-}
+function highestCount() {}
 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
+
 }
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+
 }
 
 // Desafio 9
@@ -65,4 +66,5 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
+
 };
