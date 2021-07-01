@@ -35,11 +35,15 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let highest = array[0];
   for (let i of array) {
-    (i > highest ? highest = i : highest);
+    if (i > highest) {
+      highest = i;
+    }
   }
   let count = 0;
   for (let i of array) {
-    (i === highest ? count += 1 : count);
+    if (i === highest) {
+      count += 1;
+    }
   }
   return count;
 }
@@ -77,7 +81,7 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let array = string.split('');
-  for (let i in array) {
+  for (let i = 0; i < array.length; i += 1) {
     switch (array[i]) {
     case 'a':
       array[i] = '1';
