@@ -114,7 +114,7 @@ function encode(string) {
       stringArray[i] = 5;
       break;
     }
-    }
+  }
   return stringArray.join('');
 }
 function decode(string) {

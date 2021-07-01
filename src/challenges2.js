@@ -4,7 +4,7 @@ function techList(array, name) {
   array.sort();
   for (let i of array) {
     objectArray.push({
-      tech: i, name: name
+      tech: i, name: name,
     });
   }
   if (objectArray.length === 0) {
@@ -31,18 +31,38 @@ function generatePhoneNumber(array) {
       }
     }
   }
-  let numero = '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
+  let numero = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
   return numero;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let absA = Math.abs(lineB - lineC);
+  let absB = Math.abs(lineA - lineC);
+  let absC = Math.abs(lineA - lineB);
+  if (lineA < absA || lineB < absB || lineC < absC) {
+    return false;
+  }
+  if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let stringArray = string.split('');
+  let agua = 0;
+  for (let i of stringArray) {
+    if (isNaN(i) === false) {
+      let number = Number(i);
+      agua += number;
+    }
+  }
+  if (agua === 1) {
+    return `${agua} copo de água`;
+  }
+  return `${agua} copos de água`;
 }
 
 module.exports = {
