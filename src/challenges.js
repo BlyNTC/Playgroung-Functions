@@ -4,8 +4,7 @@ function compareTrue(fristValue, secondValue) {
     if (fristValue === true && secondValue === true){
       return true
     } else {return false};
-  
-}
+  }
 
 // Desafio 2
 function calcArea(base, height) {
@@ -14,8 +13,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+    let array = string.split(" ")
+  return array;
 }
 
 // Desafio 4
