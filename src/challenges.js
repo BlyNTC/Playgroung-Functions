@@ -88,7 +88,7 @@ function fizzBuzz(numbers) {
     } else if (num % 3 === 0) {
       strings.push('fizz');
     } else if (num % 5 === 0) {
-      strings.push('buzz')
+      strings.push('buzz');
     } else {
       strings.push('bug!');
     }
