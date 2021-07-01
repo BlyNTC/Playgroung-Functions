@@ -87,7 +87,7 @@ function fizzBuzz(numbers) {
       strings.push('fizzBuzz');
     } else if (num % 3 === 0) {
       strings.push('fizz');
-    } else if (num % 5 === 0){
+    } else if (num % 5 === 0) {
       strings.push('buzz')
     } else {
       strings.push('bug!');
@@ -95,8 +95,6 @@ function fizzBuzz(numbers) {
   }
   return strings;
 }
-
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
