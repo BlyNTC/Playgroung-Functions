@@ -19,11 +19,11 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let divisor = ' ';
-  let divideArray = string.split(divisor);
+  let divideArray = string.split(` `);
 
   return divideArray;
 }
+  console.log(splitSentence('sentença de chaves'))
 
 // Desafio 4
 function concatName(arraystring) {
