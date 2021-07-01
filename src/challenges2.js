@@ -10,7 +10,7 @@ function techList(list, name) {
     for (let index = 0; index < list.length; index += 1) {
       lista.push({
         tech: list[index],
-        name: name
+        name: name,
       });
     }
   }
