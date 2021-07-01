@@ -36,13 +36,13 @@ splitSentence('Pedro Álvares Cabral');
 
 
 // Desafio 4
-function concatName(frase) {
-  let palavraUm = frase[3];
-  let palavraDois = frase[0];
-  result = palavraUm.concat(", ", palavraDois)
+function concatName(nome) {
+  let nome1= nome[3];
+  let nome2 = nome[0];
+  result = nome1.concat(", ", nome2);
   return result;
  }
- concatName(['Rabito', 'cachorro', 'mais', 'Legal']);
+ concatName(['Tarugo', 'Tuxal', 'dos', 'Santos']));
 
 // Desafio 5
 function footballPoints() {
