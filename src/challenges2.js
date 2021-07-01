@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(tech, name) {
+/*function techList(tech, name) {
   let array = [];
   let objet;
   for (let cont = 0; cont < array.length; cont +=1){
@@ -7,7 +7,7 @@ function techList(tech, name) {
   }
   return array;
 }
-console.log(techList[('css', 'lucas')]);
+console.log(techList[('css', 'lucas')]);*/
 
 // Desafio 11
 function generatePhoneNumber() {
