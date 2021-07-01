@@ -77,27 +77,27 @@ function fizzBuzz(array) {
 
 // Desafio 9
 let stringTemp = 'hi there!';
-let nova = stringTemp.replace("i", 3);
-console.log(nova);
-function encode(string) {
-  for (i = 0; i > string.length; i += 1){
-    if (string[i] = "i") {
-    string[i] = 3;
+// let nova = stringTemp.replace("i", 3);
+// console.log(nova);
+function encode(string){
+  let vogais = ['a','e','i','o','u'];
+    for (let i of string){
+      if(string[i] === vogais[2]){
+        string = string.replace(string[i],'1']);
+      }
     }
-  }
-  
-  // for(let i of string) {
-  //   if (string[i] = "i") {
-  //     string[i] = 3;
-  //   }
-  // }
   return string;
 }
 
 console.log(encode(stringTemp));
 
 function decode(string) {
-  // seu código aqui
+
+
+
+
+
+  
   return string;
 }
 
