@@ -98,11 +98,24 @@ function fizzBuzz(arrayNumero) {
 }
 
 // Desafio 9
-function encode() {
+function encode(stringLetras) {
   // seu código aqui
+  stringLetras = stringLetras.replace(/a/g, '1');
+  stringLetras = stringLetras.replace(/e/g, '2');
+  stringLetras = stringLetras.replace(/i/g, '3');
+  stringLetras = stringLetras.replace(/o/g, '4');
+  stringLetras = stringLetras.replace(/u/g, '5');
+  return stringLetras;
+
 }
-function decode() {
+function decode(stringLetrasNumeros) {
   // seu código aqui
+  stringLetrasNumeros = stringLetrasNumeros.replace(/1/g, "a");
+  stringLetrasNumeros = stringLetrasNumeros.replace(/2/g, "e");
+  stringLetrasNumeros = stringLetrasNumeros.replace(/3/g, "i");
+  stringLetrasNumeros = stringLetrasNumeros.replace(/4/g, "o");
+  stringLetrasNumeros = stringLetrasNumeros.replace(/5/g, "u");
+  return stringLetrasNumeros;
 }
 
 module.exports = {
