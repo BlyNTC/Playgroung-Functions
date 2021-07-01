@@ -31,7 +31,7 @@ return resultado;
 function concatName(array) {
 let ultimoResultado = array[array.length - 1];
 let primeiroResultado = array[0];
-let resultado = ultimoResultado + ',' + primeiroResultado;
+let resultado = ultimoResultado + primeiroResultado;
 return resultado;
 
 }
