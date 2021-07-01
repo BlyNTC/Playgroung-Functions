@@ -55,15 +55,17 @@ function highestCount(arrayNumero) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 === cat2){
-    return "Os gatos trombam e o rato foge";
-  } else if (cat2 < cat1 && cat1 === mouse){
-    return "Cat 1";
-  }
-    else {
-      return "Cat 2";
-    }
+  let result = '';
+  if ((Math.abs(cat1-mouse)) === (Math.abs(cat2-mouse))) {
+    result = "os gatos trombam e o rato foge";
+  } else if ((Math.abs(cat1-mouse)) < (Math.abs (cat2-mouse))) {
+    result = "cat1";
+  } else if ((Math.abs(cat2-mouse)) < (Math.abs(cat1-mouse))) {
+      result = "cat2";
+  }  
+  return result;
 }
+
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
@@ -84,15 +86,26 @@ if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0) {
 
 // Desafio 9
 function encode(frase) {
-let frase = ('aa');
+let fraseCodificada = '';
 for (let index = 0; index < frase.length; index += 1) { 
-switch (frase) {
-  case "a":
-    console.log ('1');
-    break;
+  if (fraseCodificada[index] === 'a') {
+  fraseCodificada = fraseCodificada + '1';
+} else if (fraseCodificada[index] === 'e') {
+  fraseCodificada = fraseCodificada + '2';
+} else if (fraseCodificada[index] === 'i') {
+  fraseCodificada = fraseCodificada + '3';
+} else if (fraseCodificada[index] === 'o') {
+  fraseCodificada = fraseCodificada + '4';
+} else if (fraseCodificada[index] === 'u') {
+  fraseCodificada = fraseCodificada + '5';
+} else {
+  fraseCodificada = fraseCodificada
+    }
   }
- }
+ return fraseCodificada
 }
+
+
 function decode() {
   // seu código aqui
 }
