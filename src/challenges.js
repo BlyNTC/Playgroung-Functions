@@ -90,11 +90,27 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(stringEncode) {
   // seu código aqui
+  let codificada = '';
+  codificada = stringEncode.replace(/a/g, '1');
+  codificada = codificada.replace(/e/g, '2');
+  codificada = codificada.replace(/i/g, '3');
+  codificada = codificada.replace(/o/g, '4');
+  codificada = codificada.replace(/u/g, '5');
+  return codificada;
 }
-function decode() {
+// console.log(encode('hi there'));
+
+function decode(stringDecode) {
   // seu código aqui
+  let decodificada = '';
+  decodificada = stringDecode.replace(/1/g, 'a');
+  decodificada = decodificada.replace(/2/g, 'e');
+  decodificada = decodificada.replace(/3/g, 'i');
+  decodificada = decodificada.replace(/4/g, 'o');
+  decodificada = decodificada.replace(/5/g, 'u');
+  return decodificada;
 }
 
 module.exports = {
