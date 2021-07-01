@@ -39,13 +39,25 @@ return(wins * 3) + (ties);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumeros) {
+  let numeroMaior = -1;  
+  let contador = 0;
+  for (let i = 0; i < arrayNumeros.length; i++) {
+    if ( arrayNumeros[i] > numeroMaior ) {
+       numeroMaior = arrayNumeros[i];
+    }
+ }
+  for(let i = 0; i < arrayNumeros.length; i += 1) {
+    if(arrayNumeros[i] == numeroMaior) {
+      contador += 1; 
+    }
+  }
+return contador;
 }
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  
 }
 
 // Desafio 8
