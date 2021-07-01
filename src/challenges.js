@@ -64,8 +64,20 @@ function catAndMouse(mouse, cat1, cat2) {
   } return 'os gatos trombam e o rato foge';
 }
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(n) {
+  let result = [];
+  for (const index of n) {
+    if (index % 3 === 0 && index % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (index % 3 === 0) {
+      result.push('fizz');
+    } else if (index % 5 === 0) {
+      result.push('buzz');
+    } else {
+      result.push('bug!');
+    }
+  }
+  return result;
 }
 
 // Desafio 9
