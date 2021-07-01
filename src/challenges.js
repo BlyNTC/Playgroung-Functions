@@ -29,7 +29,7 @@ function splitSentence(string) {
     if (indicaEspaco === 0) {
       array[cont] += string[index];
     } else {
-      array[cont] = ' ';
+      array[cont] = '';
     }
   }
   return array;
