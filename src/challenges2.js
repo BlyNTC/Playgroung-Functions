@@ -5,19 +5,16 @@ function techList(techArray, name) {
   let techAprender = techArray.sort();
   for (let index of techAprender) {
     vazio = {
-        tech: index,
-        name: name
-    }
-      arrayObjeto.push(vazio);
-    } 
-    if (arrayObjeto.length === 0) {
-      return ('Vazio!');
-    } else{
-      return (arrayObjeto);
-    }
-
-} 
-
+      tech: index,
+      name: name,
+    };
+    arrayObjeto.push(vazio);
+  }
+  if (arrayObjeto.length === 0) {
+    return ('Vazio!');
+  } 
+  return (arrayObjeto);
+}
 
 // Desafio 11
 function generatePhoneNumber(array11N) {
@@ -28,20 +25,20 @@ function generatePhoneNumber(array11N) {
 
   for (let conferir of array11N) {
     for (let conferindo of array11N)
-    if (conferir === conferindo) {
-      guardar += 1;
-    } 
+      if (conferir === conferindo) {
+        guardar += 1;
+      }
     if (guardar >= 3) {
       armazenar += guardar;
     } guardar = 0;
-  } 
+  }
   for (let maiorMenor of array11N) {
     if (maiorMenor < 0 || maiorMenor > 10) {
       valor += 1;
     }
   }
   if (array11N.length > 11 || array11N.length < 11) {
-     return 'Array com tamanho incorreto.';
+    return 'Array com tamanho incorreto.';
   } else if (armazenar >= 3 || valor > 0) {
     return 'não é possível gerar um número de telefone com esses valores';
   } else {
@@ -54,14 +51,23 @@ function generatePhoneNumber(array11N) {
         telefone += '-';
       }
       telefone += array11N[index];
-    }  return telefone;
+    } return telefone;
   }
-  
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA + lineB > lineC) {
+    if (lineC > Math.abs(lineA - lineB))
+    return true;
+  }else if (lineA + lineC > lineB) {
+    if (lineB > Math.abs(lineA - lineC))
+    return true;
+  }else if (lineC + lineB > lineA) {
+    if (lineA > Math.abs(lineC - lineB))
+    return true;
+  } 
+    return false;
 }
 
 // Desafio 13
