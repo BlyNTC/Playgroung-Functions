@@ -20,9 +20,9 @@ function splitSentence(frase) {
   // seu código aqui
   return frase.split(' ');
 }
-splitSentence('go Trybe')
-splitSentence('vamo que vamo')
-splitSentence('foguete')
+splitSentence('go Trybe');
+splitSentence('vamo que vamo');
+splitSentence('foguete');
 
 // Desafio 4
 function concatName(palavras) {
@@ -30,11 +30,11 @@ function concatName(palavras) {
   let ultimaPalavra = palavras[palavras.length - 1];
   let primeiraPalavra = palavras[0];
 
-  return ultimaPalavra + ', ' + primeiraPalavra;
+  return ultimaPalavra + (', ') + primeiraPalavra;
 }
-concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
-concatName(['foguete', 'não', 'tem', 'ré'])
-concatName(['captain', 'my', 'captain'])
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+concatName(['foguete', 'não', 'tem', 'ré']);
+concatName(['captain', 'my', 'captain']);
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -47,9 +47,9 @@ function footballPoints(wins, ties) {
 
   return resultadoFinal;
 }
-footballPoints(14, 8)
-footballPoints(1, 2)
-footballPoints(0, 0)
+footballPoints(14, 8);
+footballPoints(1, 2);
+footballPoints(0, 0);
 
 // Desafio 6
 function highestCount(numeros) {
@@ -57,10 +57,11 @@ function highestCount(numeros) {
   let numeroMaior = 0;
   let repeticaoNumeroMaior = 0;
   for (let indice = 0; indice < numeros.length; indice += 1) {
-    if (numeros[indice] > numeroMaior) { //numeros[1] > 0
+    if (numeros[indice] > numeroMaior) {
       numeroMaior = numeros[indice];
       repeticaoNumeroMaior = 0;
     }
+
     if (numeros[indice] === numeroMaior) {
       repeticaoNumeroMaior = repeticaoNumeroMaior + 1;
     }
@@ -68,9 +69,9 @@ function highestCount(numeros) {
 
   return repeticaoNumeroMaior;
 }
-highestCount([9, 1, 2, 3, 9, 5, 7])
-highestCount([0, 4, 4, 4, 9, 2, 1])
-highestCount([0, 0, 0])
+highestCount([9, 1, 2, 3, 9, 5, 7]);
+highestCount([0, 4, 4, 4, 9, 2, 1]);
+highestCount([0, 0, 0]);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -88,71 +89,78 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
-catAndMouse(0, 3, 2)
-catAndMouse(0, 6, 12)
-catAndMouse(0, 0, 0)
+catAndMouse(0, 3, 2);
+catAndMouse(0, 6, 12);
+catAndMouse(0, 0, 0);
 
 // Desafio 8
 function fizzBuzz(arrays) {
   // seu código aqui
   let fizzBuzz = []
   for (let i = 0; i < arrays.length; i += 1) {
-    if (arrays[i] % 3 === 0 && arrays[i] % 5 == 0) {
+    if (arrays[i] % 3 == 0 && arrays[i] % 5 == 0) {
       fizzBuzz.push('fizzBuzz');
     } else if (arrays[i] % 3 == 0) {
       fizzBuzz.push('fizz');
     } else if (arrays[i] % 5 == 0) {
-      fizzBuzz.push('buzz')
+      fizzBuzz.push('buzz');
     } else {
-      fizzBuzz.push('bug')
+      fizzBuzz.push('bug');
     }
 
   }
-
   return fizzBuzz;
 }
-fizzBuzz([2, 15, 7, 9, 45])
-fizzBuzz([7, 9])
-fizzBuzz([9, 25])
-
-
+fizzBuzz([2, 15, 7, 9, 45]);
+fizzBuzz([7, 9]);
+fizzBuzz([9, 25]);
 
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  function encode(string) {
-    let codigo = '';
-    let vogais = ['a', 'e', 'i', 'o', 'u'];
+  const vogalEnumero = {
+    a: '1;',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5'
+  };
 
-    for (let i = 0; i < string.length; i += 1) {
-      if (vogais.includes(string[i])) {
-        codigo += (vogais.indexOf(string[i]) + 1);
-      } else {
-        codigo += string[i];
-      }
-    }
+  let encodeString = '';
+  let x;
 
-    return codigo;
+  for (let str of string) {
+    x = str in vogalEnumero ? vogalEnumero[str] : str;
+    encodeString += x;
   }
-  console.log(encode('hi there'));
+
+  return encodeString;
 }
-function decode() {
+encode('hi there');
+
+console.log(encode('hi there'));
+
+function decode(string) {
   // seu código aqui
-  function decode(code) {
-    let string = '';
-    let lista = ['1', '2', '3', '4', '5'];
-    let vogais = ['a', 'e', 'i', 'o', 'u'];
+  const numeroEvogal = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u,'
+  };
 
-    for (let i = 0; i < code.length; i += 1) {
-      if (lista.includes(code[i])) {
-        string += vogais[lista.indexOf(code[i])];
-      } else {
-        string += code[i];
-      }
-    }
-    return string;
+  let decodeString = '';
+  let y;
+
+  for (let str of string) {
+    y = str in numeroEvogal ? numeroEvogal[str] : str;
+    decodeString += y;
+    console.log("tchau");
   }
+  return decodeString
 }
+
 
 module.exports = {
   calcArea,
