@@ -20,37 +20,53 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arr) {
-  // seu código aqui
+let ultimo = arr[-1];
+let primeiro = arr[0]
+
+  for(i = 0; i <= arr.length; i++){
+    if arr[i] == ultimo && primeiro;
+  }
+    return ultimo, primeiro;
 }
+
 // Desafio 5
 function footballPoints(wins, ties) {
   return 3*wins+1*ties;
 }
 
 // Desafio 6
-function highestCount(araara) {
-  for (let index = 0; index <= araara.length; index++) {
-    index[araara];}
+let total = 0;
+let numeroMaximo = Math.max(...araara);
 
-  return Math.max.apply(null, araara);
+function highestCount(araara) {
+
+  for (let index = 0; index <= araara.length; index = +1) {
+    if (araara[index] === numeroMaximo){
+      total = total + 1;
+    }
+  } 
+  return total; 
+  //bug ao rodar
 }
+console.log(highestCount([9, 2, 6, 9]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 < cat2){
-    return 'cat1';
+  if (cat1 === cat2){
+    'os gatos trombam e o rato foge';
   }
   else if (cat2 < cat1){
-    return 'cat2'
+    return 'cat2';
   }
-  else if (cat1 == cat2){
-    'os gatos trombam e o rato foge'
+  else{
+    return 'cat1';
   }
+  //necessita de nova logica
 }
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  
 }
 
 // Desafio 9
