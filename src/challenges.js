@@ -22,17 +22,14 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(string) {
- r = string.split(" ");
-  return (r[3] + ", " + r[0]);
+  return string[string.length -1] + ", " + string[0];
   
 }
 
 // Desafio 5
-function footballPoints(pontos) {
-let wins = 3;
-let ties = 1;
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
 
-if(wins = pontos );
 }
 
 // Desafio 6
