@@ -72,7 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 
-// Desafio 8 (fazendo)
+// Desafio 8 (correto)
 function fizzBuzz(arrayNumeros) {
 let string = [];
 for (let num of arrayNumeros) { 
