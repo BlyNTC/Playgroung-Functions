@@ -3,10 +3,10 @@ function compareTrue(valor1, valor2) {
   let resultado = 0;
   if (valor1 === true && valor2 === true) {
     resultado = true;
-  } else {
+    } else {
     resultado = false;
-  } 
-  return resultado;
+  }
+    return resultado;
 }
 
 // Desafio 2
@@ -24,7 +24,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(nome) {
   let n = nome.length;
-  return nome[n - 1] + ',' + ' '+ nome[0];
+  return nome[n - 1] + ',' + ' ' + nome[0];
 }
 
 // Desafio 5
@@ -35,9 +35,8 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-/* Recebi ajuda do Luan Peres, que me mostrou a lógica que usou. Ele usou o "array.forEach". Poŕem, eu não faço a mínima ideia de como usar isso. Tentei adaptar a mesma lógica usando o for of.*/
+/* Recebi ajuda do Luan Peres, que me mostrou a lógica que usou. Ele usou o "array.forEach". Poŕem, eu não faço a mínima ideia de como usar isso. Tentei adaptar a mesma lógica usando o for of. */
 
-let contador = 0;
 function highestCount(numeros) {
   let maior = 0;
   let contador = 0;
@@ -66,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
     resultado = "cat1";
   } else 
   if (d2 < d1) {
-    resultado =  "cat2";
+    resultado = "cat2";
   } else
   if (d1 === d2) {
     resultado = "os gatos trombam e o rato foge";

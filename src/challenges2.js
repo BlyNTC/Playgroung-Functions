@@ -1,14 +1,14 @@
 // Desafio 10
-function techList(array, name) { //Recebi ajuda do Filipe Brochier para desenvolver a lógica desse desafio.
+function techList(array, name) { // Recebi ajuda do Filipe Brochier para desenvolver a lógica desse desafio.
   let arrayTecnologias = [];
   array.sort();
   let resultado;
-  if (array.length == 0) {
+  if (array.length === 0) {
     resultado = 'Vazio!';
   } else {
     for (let tech of array) {
-      arrayTecnologias.push({tech, name});
-      resultado = arrayTecnologias
+      arrayTecnologias.push({ tech, name });
+      resultado = arrayTecnologias;
     }
   }
   return resultado;
@@ -37,25 +37,29 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+hydrate('1 cerveja')
 function hydrate(String) {
   let numeroCoposAgua = 0;
   let conversaoStrParaInteiro = 0;
-  let resultadoNumeroCoposAgua;
+  let resultado = 0;
   for (let elemento of String) {
-    
-    if (elemento == '1' || elemento == '2' || elemento == '3' || elemento == '4' || elemento == '5' || elemento == '6' || elemento == '7' || elemento == '8' || elemento == '9') {
-       conversaoStrParaInteiro = parseInt(elemento);
+
+    for (let i = 0; i < String.length; i += 1) {
+      if (i == elemento && elemento !== ' ') {
+        conversaoStrParaInteiro = Number.parseInt(elemento);
       
         numeroCoposAgua += conversaoStrParaInteiro;
+        }
       }
+    
     }
 
     if (numeroCoposAgua == 1) {
-      resultadoNumeroCoposAgua = `${numeroCoposAgua} copo de água`;
+      resultado = `${numeroCoposAgua} copo de água`;
     } else {
-      resultadoNumeroCoposAgua = `${numeroCoposAgua} copos de água`;
+      resultado = `${numeroCoposAgua} copos de água`;
     }
-  return resultadoNumeroCoposAgua;  
+  return resultado;  
 }
 
 module.exports = {
