@@ -10,7 +10,7 @@ function calcArea(base, height) {
   return area;
 }
 
-// Desafio referencia https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254 (comando .split divide uma string em arrays de strings baseado em um divisor no caso o espaço entre palavras) 
+// Desafio referencia https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254 (comando .split divide uma string em arrays de strings baseado em um divisor no caso o espaço entre palavras)
 function splitSentence(string) {
   let resultado = string.split(' ');
   return resultado;
@@ -30,13 +30,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let retorno = null;
+  if (Math.abs(cat1 - mouse) < (cat2 - mouse)) {
+    retorno = 'cat1';
+  } else if (Math.abs(cat1 - mouse) > (cat2 - mouse)) {
+    retorno = 'cat2';
+  } else {
+    retorno = 'os gatos trombam e o rato foge';
+  } return retorno;
 }
 
 // Desafio 8
