@@ -43,9 +43,7 @@ function generatePhoneNumber(numArr) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   // faça o número certinho
-  return `(${numString.slice(0, 2)}) ${numString.slice(2, 7)}-${numString.slice(
-    7
-  )}`;
+  return `(${numString.slice(0, 2)}) ${numString.slice(2, 7)}-${numString.slice(7)}`;
 }
 
 // Desafio 12
