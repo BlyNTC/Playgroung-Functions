@@ -44,8 +44,8 @@ function highestCount(numberArray) {
   });
   let counter = 0;
   for (let i = 0; i < sortedArray.length; i++) {
-    if (sortedArray[i] == sortedArray[sortedArray.length - 1]) {
-      counter++;
+    if (sortedArray[i] === sortedArray[sortedArray.length - 1]) {
+      counter += 1;
     }
   }
   return counter;
@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arr) {
   let answer = [];
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] % 3 === 0 && arr[i] % 5 === 0) answer[i] = 'fizzBuzz';
     else if (arr[i] % 3 === 0 && answer[i] !== 'fizzBuzz') answer[i] = 'fizz';
     else if (arr[i] % 5 === 0 && answer[i] !== 'fizzBuzz') answer[i] = 'buzz';
@@ -86,7 +86,7 @@ function encode(string) {
 
 function decode(string) {
   let answer = '';
-  for (let i = 0; i< string.length; i += 1) {
+  for (let i = 0; i < string.length; i += 1) {
     if (string[i] === '1') answer += 'a';
     else if (string[i] === '2') answer += 'e';
     else if (string[i] === '3') answer += 'i';

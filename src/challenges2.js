@@ -32,8 +32,7 @@ function generatePhoneNumber(digits) {
     for (let j = 0; j < digits.length; j += 1) {
       if (digits[j] === digits[i]) count += 1;
 
-      if (digits[j] < 0 || digits[j] > 9 || count >= 3)
-        return 'não é possível gerar um número de telefone com esses valores';
+      if (digits[j] < 0 || digits[j] > 9 || count >= 3) return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   digits.splice(0, 0, '(');
