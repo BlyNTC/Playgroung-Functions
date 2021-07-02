@@ -44,6 +44,7 @@ function highestCount(a) {
 // Desafio 7
 //Fonte metodo math.abs https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) { 
+
   let absolutCat1 = Math.abs(cat1 - mouse);
   let absolutCat2 = Math.abs(cat2 - mouse);
 
@@ -77,11 +78,79 @@ return fizzBuzz;
 }
 
 // Desafio 9
-function encode() {
+function encode(entradaDeString) {
   // seu código aqui
+
+  let vogais = ["a", "e", "i", "o", "u"];
+  let codifica;
+
+  for (i = 0; i < entradaDeString.length; i += 1){
+    for (let indice = 0; indice < vogais.length; indice += 1){
+      if (entradaDeString[i] === vogais[indice]){
+         switch (entradaDeString[i]){
+           case "a":
+             codifica = entradaDeString.replace(/a/gi, "1");
+             entradaDeString = codifica;
+             break
+            case "e":
+              codifica = entradaDeString.replace(/e/gi, "2");
+              entradaDeString = codifica;
+              break
+            case "i":
+              codifica = entradaDeString.replace(/i/gi, "3");
+              entradaDeString = codifica;
+              break
+            case "o":
+              codifica = entradaDeString.replace (/o/gi, "4");
+              entradaDeString = codifica;
+              break
+            case "u":
+              codifica = entradaDeString.replace(/u/gi, "5");
+
+         }
+      }
+    }
+  }
+
+  
+return codifica;
 }
-function decode() {
-  // seu código aqui
+
+function decode(stringDescodifica) {
+
+  let vogais = ["1", "2", "3", "4", "5"];
+  let descodifica;
+
+  for (i = 0; i < stringDescodifica.length; i += 1){
+    for (let indice = 0; indice < vogais.length; indice += 1){
+      if (stringDescodifica[i] === vogais[indice]){
+         switch (stringDescodifica[i]){
+           case "1":
+             descodifica = stringDescodifica.replace(/1/gi, "a");
+             stringDescodifica = descodifica;
+             break
+            case "2":
+              descodifica = stringDescodifica.replace(/2/gi, "e");
+              stringDescodifica = descodifica;
+              break
+            case "3":
+              descodifica = stringDescodifica.replace(/3/gi, "i");
+              stringDescodifica = descodifica;
+              break
+            case "4":
+              descodifica = stringDescodifica.replace(/4/gi, "o");
+              stringDescodifica = descodifica;
+              break
+            case "5":
+              descodifica = stringDescodifica.replace(/5/gi, "u");
+
+         }
+      }
+    }
+  }
+
+  
+return descodifica;
 }
 
 module.exports = {
