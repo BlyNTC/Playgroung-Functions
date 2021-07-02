@@ -14,9 +14,23 @@ function techList(tecnologia, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+function generatePhoneNumber(numeros) {
+  let contadorRepeticao;
+  let resultado = "";
+  if (numeros.length != 11) {
+    return 'Array com tamanho incorreto';
+  }
+  for (let i of numeros) {
+    for (let j of numeros)
+      if (numeros[j] === numeros[i]) {
+        contadorRepeticao += 1;
+    }
+    if (numeros[i] < 0 || numeros[i] > 9 || contadorRepeticao >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
+    }
+    resultado.push(numeros[i])
+  }
+} console.log();
 
 // Desafio 12
 function triangleCheck() {
