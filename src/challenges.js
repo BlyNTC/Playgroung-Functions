@@ -1,5 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
+  // seu codigo aqui
   if (value1 === true && value2 === true) {
     return true;
   } else {
@@ -9,6 +10,7 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
+  //seu codigo aqui
   return (base * height) / 2;
 }
 
@@ -26,15 +28,28 @@ function concatName(sentenceConcat) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
+  //digitar codigo aqui
   return (wins * 3) + ties; 
 }
 
 
 // Desafio 6
 function highestCount(arrayNumbers) {
-//digite aqui
+  //digitar codigo aqui
+  let contador = 0;
+  let majorNumber = 0;
+  for (let index = 0; index < arrayNumbers.length; index += 1){
+      if (arrayNumbers[index] > majorNumber){
+      majorNumber = arrayNumbers[index];
+    } 
+  }
+  for (let index = 0; index < arrayNumbers.length; index += 1){
+    if (arrayNumbers[index] === majorNumber){
+      contador +=1;
+    }  
+  }
+  return contador;
 }
-
 
 
 // Desafio 7
