@@ -135,9 +135,35 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(bebidas) {
   // seu código aqui
-  
+  let cupOfWater = 0, retorno = 0;
+
+  for (let bebida of bebidas) {
+
+    for (let index = 1; index <= 9; index += 1) { 
+
+      if (bebida == index) {
+
+        cupOfWater += parseInt(bebida);
+
+      }
+
+     }
+
+  }
+
+  if (cupOfWater == 1) {
+
+    retorno = `${cupOfWater} copo de água`;
+
+  } else {
+
+    retorno = `${cupOfWater} copos de água`;
+
+  }
+
+  return retorno;
 }
 
 module.exports = {
