@@ -5,7 +5,7 @@ function techList(arr, name) {
   }
   arr.sort();
   let tec = [];
-  for (let j in arr) {
+  for (let j = 0; j < arr.length; j += 1) {
     tec.push({ tech: '', name: '' });
     tec[j].tech = arr[j];
     tec[j].name = name;
@@ -25,7 +25,7 @@ function generatePhoneNumber(arr) {
   if (arr.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (let k in arr) {
+  for (let k = 0; k < arr.length; k += 1) {
     for (let m in arr) {
       if (arr[k] === arr[m] || arr[m] < 0 || arr[m] > 9) {
         repeticao += 1;
@@ -36,7 +36,7 @@ function generatePhoneNumber(arr) {
     }
     repeticao = 0;
   }
-  for (let j in arrTel) {
+  for (let j = 0; j < arrTel.length; j += 1) {
     print += arrTel[j];
   }
 
@@ -63,7 +63,7 @@ function hydrate(string) {
   let result;
   let number = string.match(/\d+/g); // fonte de consulta: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
   let x = 0;
-  for (let i in number) {
+  for (let i = 0; i < number.length; i += 1) {
     let convert = parseInt(number[i]); // fonte de consulta: https://www.w3schools.com/jsref/jsref_parseint.asp
     x += convert;
   }
@@ -74,7 +74,7 @@ function hydrate(string) {
   }
   return result;
   // seu código aqui
-}
+}hydrate('1 cachaça, 5 cervejas e 1 copo de vinho');
 
 module.exports = {
   generatePhoneNumber,

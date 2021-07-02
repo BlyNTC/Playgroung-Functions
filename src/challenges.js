@@ -33,7 +33,7 @@ function splitSentence(frase) {
 function concatName(arr) {
   let primeiraPalavra = arr[0];
   let ultimaPalavra = '';
-  for (let i in arr) {
+  for (let i = 0; i < arr.length; i += 1) {
     ultimaPalavra = arr[i];
   }
   let ultimaPrimeira = `${ultimaPalavra}, ${primeiraPalavra}`;
