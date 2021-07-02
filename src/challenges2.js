@@ -1,6 +1,17 @@
 // Desafio 10
-function techList(tech, name) {
-  
+function techList(array, name) { //Recebi ajuda do Filipe Brochier para desenvolver a lógica desse desafio.
+  let arrayTecnologias = [];
+  array.sort();
+  let resultado;
+  if (array.length == 0) {
+    resultado = 'Vazio!';
+  } else {
+    for (let tech of array) {
+      arrayTecnologias.push({tech, name});
+      resultado = arrayTecnologias
+    }
+  }
+  return resultado;
 }
 
 // Desafio 11
@@ -22,7 +33,7 @@ function triangleCheck(lineA, lineB, lineC) {
   } else {
     resultado = false;
   }
-  return resultado
+  return resultado;
 }
 
 // Desafio 13
@@ -44,7 +55,7 @@ function hydrate(String) {
     } else {
       resultadoNumeroCoposAgua = `${numeroCoposAgua} copos de água`;
     }
-  return resultadoNumeroCoposAgua  
+  return resultadoNumeroCoposAgua;  
 }
 
 module.exports = {
