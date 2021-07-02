@@ -24,7 +24,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// for (let i = 0; i < array.length; i += 1)
 function highestCount(array) {
   let numeroRepete = 0;
   for (let i in array) {
