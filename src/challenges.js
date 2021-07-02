@@ -21,9 +21,9 @@ function concatName(words) {
   let primeira = '';
   let segunda = '';
   for (let i = 0;i < words.length;i+=1) {
-      if(i === 0){
+      if (i === 0) {
         segunda = words[i];
-      }else if(i === words.length-1){
+      }else if (i === words.length-1) {
         primeira = words[i];
       }
   }
@@ -40,12 +40,12 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let maior = -10, cont = 0;
   for (let i = 0; i < numbers.length; i+=1) {
-      if(numbers[i] > maior){
+      if (numbers[i] > maior) {
         maior = numbers[i];
       }
     }
     for (let j = 0; j < numbers.length; i+=1) {
-        if(numbers[j]===maior){
+        if (numbers[j] === maior) { 
           cont+= 1;
       }
     }
@@ -54,11 +54,11 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanciac1 = (mouse-cat1), distanciac2 = (mouse-cat2);
-  if(cat2>mouse){distanciac2=cat2-mouse}
-  if(cat1>mouse){distanciac1=cat1-mouse}
-  if(distanciac1 > distanciac2){
+  if ( cat2>mouse ) { distanciac2 = cat2-mouse };
+  if ( cat1 > mouse ) { distanciac1 = cat1-mouse };
+  if ( distanciac1 > distanciac2){
     return "cat2";
-  }else if(distanciac2 === distanciac1){
+  }else if (distanciac2 === distanciac1) {
     return "os gatos trombam e o rato foge";
   }else{
     return "cat1";  
@@ -67,19 +67,19 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   for (let i = 0; i < array.length; i+=1) {
-    if(array[i] %3 === 0 && array[i] %5 !== 0){
+    if (array[i] %3 === 0 && array[i] %5 !== 0) {
       array[i] = "fizz";
-    }else if(array[i] %3 === 0 && array[i] %5 === 0){
+    }else if(array[i] %3 === 0 && array[i] %5 === 0) {
       array[i] = "fizzBuzz";
-    }else if(array[i] %3 !== 0 && array[i] %5 === 0){
+    }else if(array[i] %3 !== 0 && array[i] %5 === 0) {
       array[i] = "buzz";
     }else{
-      array[i] = "bug!"
+      array[i] = "bug!";
     }
   }
   return array;
 }
-console.log(fizzBuzz([54, 43, 15, 20, 30, 43]))
+
 
 // Desafio 9
 function encode(str) {
