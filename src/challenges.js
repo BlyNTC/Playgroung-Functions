@@ -9,7 +9,7 @@ function compareTrue(bollean1, bollean2) {
 }
 
 // Desafio 2
-function calcArea(base, height, div) {
+function calcArea(base, height) {
    return base*height/2;
 }
 
@@ -24,7 +24,7 @@ let ultimo = arr[-1];
 let primeiro = arr[0]
 
   for(i = 0; i <= arr.length; i++){
-    if arr[i] == ultimo && primeiro;
+    if (arr[i] == ultimo && primeiro);
   }
     return ultimo, primeiro;
 }
@@ -48,7 +48,6 @@ function highestCount(araara) {
   return total; 
   //bug ao rodar
 }
-console.log(highestCount([9, 2, 6, 9]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
