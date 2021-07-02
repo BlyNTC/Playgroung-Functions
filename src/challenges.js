@@ -1,16 +1,15 @@
 // Funções auxiliares
-function maxNumber(array) {
-  let max = array[0];
-  for (let num of array) {
-    if (num > max) { max = num; }
-  }
-  return max;
-}
 
 function fizzBuzzNumberCheck(number) {
-  if (number % 3 === 0 && number % 5 === 0) { return 'fizzBuzz'; }
-  if (number % 3 === 0) { return 'fizz'; }
-  if (number % 5 === 0) { return 'buzz'; }
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
   return 'bug!';
 }
 
@@ -40,7 +39,9 @@ function splitSentence(string) {
       word = '';
     }
   }
-  if (word.length > 0) { splitedSentence.push(word); }
+  if (word.length > 0) {
+    splitedSentence.push(word);
+  }
   return splitedSentence;
 }
 
@@ -59,13 +60,14 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   // seu código aqui
-  let numberCount = 0;
-  let max = maxNumber(array);
+  const count = {};
+  let max = array[0];
 
   for (let num of array) {
-    if (num === max) { numberCount += 1; }
+    count[num] = num in count ? count[num] + 1 : 1;
+    if (num > max) { max = num; }
   }
-  return numberCount;
+  return count[max];
 }
 
 // Desafio 7
