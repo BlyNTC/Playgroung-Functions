@@ -10,14 +10,16 @@ function calcArea(base, height) {
   return area;
 }
 
-// Desafio 3
+// Desafio referencia https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254 (comando .split divide uma string em arrays de strings baseado em um divisor no caso o espaço entre palavras) 
 function splitSentence(string) {
   let resultado = string.split(' ');
   return resultado;
 }
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let first = array[0];
+  let last = array[array.length - 1];
+  return last + ', ' + first;
 }
 
 // Desafio 5
