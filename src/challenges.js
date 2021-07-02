@@ -29,8 +29,8 @@ function highestNumber(numArray) {
     if (number > highest) {
       highest = number;
     }
-    return highest;
   }
+  return highest;
 }
 
 function countRepeats(arr) {
@@ -48,6 +48,7 @@ function highestCount(numArray) {
   let counts = countRepeats(numArray);
   return counts[highest];
 }
+console.log(highestCount([1, 9, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
