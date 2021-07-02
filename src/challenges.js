@@ -69,18 +69,32 @@ function fizzBuzz(arrayNumeros) {
     } else if (i % 3 !== 0 && i % 5 === 0) {
       result.push('buzz');
     } else {
-    result.push('bug!');
+      result.push('bug!');
     }
   }
   return result;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(toEncodeString) {
+  let encodedString = toEncodeString;
+  encodedString = encodedString.replace(/a/g, '1');
+  encodedString = encodedString.replace(/e/g, '2');
+  encodedString = encodedString.replace(/i/g, '3');
+  encodedString = encodedString.replace(/o/g, '4');
+  encodedString = encodedString.replace(/u/g, '5');
+  
+  return encodedString;
 }
-function decode() {
-  // seu código aqui
+function decode(toDecodeString) {
+  let decodedString = toDecodeString;
+  decodedString = decodedString.replace(/a/g, '1');
+  decodedString = decodedString.replace(/e/g, '2');
+  decodedString = decodedString.replace(/i/g, '3');
+  decodedString = decodedString.replace(/o/g, '4');
+  decodedString = decodedString.replace(/u/g, '5');
+  
+  return decodedString;
 }
 
 module.exports = {
