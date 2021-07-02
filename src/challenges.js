@@ -14,8 +14,8 @@ function calcArea(base, height) {
 
 // Desafio 3 (correto)
 function splitSentence(string) {
-  let separa;
-  separa = string.split (" ");
+  let separa = ''; 
+  separa = string.split(" ");
   return separa;
 }
 
@@ -34,20 +34,23 @@ function footballPoints(wins, ties) {
 
 // Desafio 6 (ajustar)
 function highestCount(arrayNumero) {
-  let maiorNumero = 0;
+  let maiorNumero = Math.max(...arrayNumero);
+  // linha inspirada no projeto do colega de turma Gustavo dias, o elemento Math.max ajustou a minha função que quebrava com números negativos;
   let count = 0;
+  
   for (let index = 0; index < arrayNumero.length; index += 1){
-    if (arrayNumero[index] > maiorNumero) {
-      maiorNumero = arrayNumero[index];
-    }
-  }
+     if (arrayNumero[index] > maiorNumero) {
+       maiorNumero = arrayNumero[index];
+     }
+   }
   for (let index = 0; index < arrayNumero.length; index += 1){
-    if (maiorNumero === arrayNumero[index]) {
-      count += 1;
-    }
+     if (arrayNumero[index] === maiorNumero) {
+       count += 1;
+     }      
+   }
+   return count;
   }  
-  return count;
-} 
+
 
 // console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 // console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
@@ -61,30 +64,31 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if ((Math.abs(cat1-mouse)) < (Math.abs (cat2-mouse))) {
     result = "cat1";
   } else if ((Math.abs(cat2-mouse)) < (Math.abs(cat1-mouse))) {
-      result = "cat2";
+    result = "cat2";
   }  
   return result;
 }
 
 
-// Desafio 8
+// Desafio 8 (fazendo)
 function fizzBuzz(arrayNumeros) {
 let string = [];
-for (let index = 0; index < arrayNumeros.length; index += 1) { 
-if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0) {
-    string.push ("fizzBuzz");
-  } else if (arrayNumeros[i] % 3 === 0) {
-    string.push ("fizz");
-  } else if (arrayNumeros[i] % 5 === 0) {
-    string.push ("Buzz");
+for (let num of arrayNumeros) { 
+if (num % 3 === 0 && num % 5 === 0) {
+    string.push("fizzBuzz");
+  } else if (num % 3 === 0) {
+    string.push("fizz");
+  } else if (num % 5 === 0) {
+    string.push("Buzz");
   } else {
-    string.push ("Bug!");
+    string.push("Bug!");
   }
  }
  return string;    
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
-// Desafio 9
+// Desafio 9 (correto)
 function encode(fraseCode) {
 let fraseCodificada = '';
 
