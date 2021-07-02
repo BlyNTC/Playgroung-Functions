@@ -1,6 +1,14 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(pcLigado, abriuGame) {  
+  
+  if ( pcLigado == true && abriuGame == true ) { 
+
+    return true;    
+    
+  } else {  
+      
+    return false;
+  }    
 }
 
 // Desafio 2
