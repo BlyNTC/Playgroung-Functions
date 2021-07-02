@@ -43,7 +43,7 @@ function highestCount(numberArray) {
     if (a > b) return 1;
   });
   let counter = 0;
-  for (let i = 0; i < sortedArray.length; i++) {
+  for (let i = 0; i < sortedArray.length; i += 1) {
     if (sortedArray[i] === sortedArray[sortedArray.length - 1]) {
       counter += 1;
     }
