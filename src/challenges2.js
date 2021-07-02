@@ -4,7 +4,7 @@ function techList(array, stringName) {
     for (let index of array) {
       let objeto = {
         tech: index,
-        nme: stringName
+        name: stringName
       }
       arrayOutPut.push(objeto)
     } if (array.length === 0){
