@@ -15,12 +15,11 @@ function techList(array, name) {
   let answer;
   if (array.length === 0) {
     answer = 'Vazio!';
-  }
-  else {
+  } else {
     for (let elem of array) {
       let object = {
         'tech': elem,
-        'name': name
+        'name': name,
       };
       listObjects.push(object);
     }
@@ -31,7 +30,6 @@ function techList(array, name) {
 }
 
 // Desafio 11
-
 function checkArray(array) {
   let answer;
   let qt = 0;
@@ -47,6 +45,7 @@ function checkArray(array) {
     if (array[i] < 0 || array[i] > 9 || qt >= 3){
       answer = 1;
     }
+    qt = 0; //limpa a variavel quantidade para poder verificar se o proximo numero aparece mais de 3 vezes
   }
   return answer;
 }
@@ -57,11 +56,9 @@ function generatePhoneNumber(array) {
   let returnCheckArray = checkArray(array);
   if (returnCheckArray === 0) {
     answer = 'Array com tamanho incorreto.';
-  }
-  else if (returnCheckArray === 1){
+  } else if (returnCheckArray === 1) {
     answer = 'não é possível gerar um número de telefone com esses valores';
-  }
-  else {
+  } else {
     for (let i = 0; i < array.length; i += 1) {
       if (i === 0) {
         phoneNumber += '(' + array[i];
@@ -75,11 +72,8 @@ function generatePhoneNumber(array) {
     } 
     answer = phoneNumber;
   }
-
   return answer;
 }
-
-
 
 // Desafio 12
 function triangleCheck() {
