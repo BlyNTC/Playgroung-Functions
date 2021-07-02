@@ -6,14 +6,17 @@ function compareTrue(pcLigado, abriuGame) {
     return true;    
     
   } else {  
-      
+
     return false;
   }    
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  
+  const result = (base * height) / 2;
+
+  return result; 
 }
 
 // Desafio 3
