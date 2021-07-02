@@ -63,28 +63,13 @@ function generatePhoneNumber(numbers) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let triangulo;
-  // função que verifica se um lado é menor que a soma dos outros lados
-  function verificaSoma(a, b, c) {
-    let condicao;
-    if (a < (b + c) && b < (a + c) && c < (a + b)) {
-      condicao = true;
-    }
-    return condicao;
-  }
-  // função que verifica se um lado é maior que a diferença entre os outos lados
-  function verificaDiferenca(a, b, c) {
-    let condicao = false;
-    if (Math.abs(a > (b - c)) && Math.abs(b > (a - c)) && Math.abs(c > (a - b))) {
-      condicao = true;
-    }
-    return condicao;
-  }
-  if (verificaSoma(lineA, lineB, lineC) && verificaDiferenca(lineA, lineB, lineC)) {
+  let triangulo = false;
+  if (lineA < (lineB + lineC) &&
+    lineB < (lineA + lineC) &&
+    lineC < (lineA + lineB)) {
     triangulo = true;
-  } else {
-    triangulo = false;
   }
+
   return triangulo;
 }
 
