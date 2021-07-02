@@ -1,15 +1,14 @@
 // Desafio 1
-function compareTrue(v1,v2){
-  if (v1 === true && v2 === true){
+function compareTrue(v1, v2) {
+  if (v1 === true && v2 === true) {
     return true;
-  } else {
-    return false;
-  }
+  } 
+  return false;
 }
 
 // Desafio 2
-function calcArea(base,height) {
-  return (base*height/2);
+function calcArea(base, height) {
+  return (base * height / 2);
 }
 
 // Desafio 3
@@ -19,12 +18,12 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(array){
+function concatName(array) {
   return array[array.length - 1] + ', ' + array[0];
 }
 
 // Desafio 5
-function footballPoints(wins,ties){
+function footballPoints(wins, ties) {
   let totalPoints = 0;
   totalPoints = wins*3 + ties;
   return totalPoints
