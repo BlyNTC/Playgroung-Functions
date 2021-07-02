@@ -20,9 +20,14 @@ function calcArea(base,height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+
+  let splitado = frase.split(" ");
+  return splitado
 }
+//console.log(splitSentence("go trybe!"));
+// FONTE: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254 
+
 
 // Desafio 4
 function concatName() {
