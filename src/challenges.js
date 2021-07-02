@@ -21,8 +21,9 @@ function splitSentence(string) {
 
 // Desafio 4 (ajuste)
 function concatName(listaPalavras) {
-  let separaLista = listaPalavras.split (" ");
-  return (separaLista[separaLista.length -1]) + ", " + (separaLista[0])
+  // let separaLista = listaPalavras.split (" ");
+  // return (separaLista[separaLista.length -1]) + ", " + (separaLista[0])
+  return `${listaPalavras[listaPalavras.length - 1]}, ${listaPalavras[0]}`;
 }
 
 // console.log(concatName('Foguete não tem ré'));
@@ -32,7 +33,7 @@ function footballPoints(wins, ties) {
   return ((wins * 3) + (ties * 1));
 }
 
-// Desafio 6 (ajustar)
+// Desafio 6 (correto)
 function highestCount(arrayNumero) {
   let maiorNumero = Math.max(...arrayNumero);
   // linha inspirada no projeto do colega de turma Gustavo dias, o elemento Math.max ajustou a minha função que quebrava com números negativos;
