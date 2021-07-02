@@ -8,12 +8,12 @@ function techList(array, stringName) {
     }
     arrayOutPut.push(objeto)
   }
-  console.log(arrayOutPut.sort(function (a, b) {
+ return arrayOutPut.sort(function (a, b) {
     return (a.tech > b.tech) ? 1 : ((b.tech > a.tech) ? -1 : 0) // encontrei essa solução para ordenanar objetos em um array no site https://www.edsonemiliano.com.br/blog
-  }))
+  })
 }
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
-  "Lucas");
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
+  "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
