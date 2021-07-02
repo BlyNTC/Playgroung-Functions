@@ -101,12 +101,30 @@ return strings;
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+let decodificacaoA = string.replace(/a/g, 1); 
+let decodificacaoE = decodificacaoA.replace(/e/g, 2);
+let decodificacaoI = decodificacaoE.replace(/i/g, 3);
+let decodificacaoO = decodificacaoI.replace(/o/g, 4);
+let decodificacaoU = decodificacaoO.replace(/u/g, 5);
+ 
+return decodificacaoU;
+
+} 
+
+function decode(s){
+
+let codificadorA = s.replace(/1/g, 'a');
+let codificadorE = codificadorA.replace(/2/g, 'e');
+let codificadorI = codificadorE.replace(/3/g, 'i');
+let codificadorO = codificadorI.replace(/4/g, 'o');
+let codificadorU = codificadorO.replace(/5/g, 'u');
+
+return codificadorU;
 }
-function decode() {
-  // seu código aqui
-}
+
+
+
 
 module.exports = {
   calcArea,
@@ -120,3 +138,7 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+let frase = "hiiiii";
+let novaFrase = frase.replace(/i/g, 1);
+console.log(novaFrase); 
