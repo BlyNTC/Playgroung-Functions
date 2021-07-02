@@ -89,7 +89,7 @@ function triangleCheck(lineA, lineB, lineC) {
   } else {
     answer.push(false);
   }
-  for (element of answer) {
+  for (let element of answer) {
     if (element === false) {
       isTriangle = false;
     }
@@ -98,8 +98,23 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+/* https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994 */
+function hydrate(phrase) {
+  let phrase2 = phrase.replace(/[^0-9]/g, ' '); /* mantem os caracteres numericos e transforma palavras/letras em espacos, escolhi usar espaço e não vazio pq dessa forma consigo diferenciar numeros com mais de 1 algarismo */
+  let phrase3 = phrase2.split(' '); /* corta a string anterior nos espaços e coloca os valores dentro de um array */
+  let sum = 0;
+  let answer = '';
+  for (let i = 0; i < phrase3.length; i += 1){
+    if(phrase3[i] !== ''){
+      sum += parseInt(phrase3[i],10); /* transforma o numero de string para inteiro e soma */
+    }
+  }
+  if (sum === 1){
+    answer = sum.toString() + ' copo de água';
+  } else {
+    answer = sum.toString() + ' copos de água';
+  } 
+  return answer;
 }
 
 module.exports = {
