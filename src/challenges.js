@@ -1,30 +1,26 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-  if(boolean1 === true && boolean2 === true){
-    return true;
-  }else{
-    return false;
+  return boolean1&&boolean2;
   }
-}
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base*height) / 2;
+  let area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
 function splitSentence(str) {
-  let array=[];
-  array = str.split(" ");
+  let array = [];
+  array = str.split(' ');
   return array;
 }
 
 // Desafio 4
-function concatName(words=[]) {
+function concatName(words) {
   let primeira = '';
   let segunda = '';
-  for(let i=0;i<words.length; i++){
+  for (let i = 0;i < words.length;i+=1) {
       if(i === 0){
         segunda = words[i];
       }else if(i === words.length-1){
@@ -41,14 +37,14 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numbers=[]) {
+function highestCount(numbers) {
   let maior = -10, cont = 0;
-  for(let i=0; i<numbers.length; i++){
+  for (let i = 0; i < numbers.length; i+=1) {
       if(numbers[i] > maior){
         maior = numbers[i];
       }
     }
-    for(let j=0; j<numbers.length; j++){
+    for (let j = 0; j < numbers.length; i+=1) {
         if(numbers[j]===maior){
           cont+= 1;
       }
@@ -69,8 +65,8 @@ function catAndMouse(mouse, cat1, cat2) {
   } 
 }
 // Desafio 8
-function fizzBuzz(array=[]) {
-  for(let i=0; i< array.length; i++){
+function fizzBuzz(array) {
+  for (let i = 0; i < array.length; i+=1) {
     if(array[i] %3 === 0 && array[i] %5 !== 0){
       array[i] = "fizz";
     }else if(array[i] %3 === 0 && array[i] %5 === 0){
