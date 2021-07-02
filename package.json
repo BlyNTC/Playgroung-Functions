@@ -13,5 +13,22 @@
   },
   "dependencies": {
     "eslint-config-trybe-fundamentals": "1.1.0"
-  }
+  },
+  "name": "sd-014-a-project-playground-functions",
+  "description": "Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tryber/sd-014-a-project-playground-functions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tryber/sd-014-a-project-playground-functions/issues"
+  },
+  "homepage": "https://github.com/tryber/sd-014-a-project-playground-functions#readme"
 }
