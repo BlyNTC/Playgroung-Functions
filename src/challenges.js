@@ -10,7 +10,6 @@ function compareTrue(bool1, bool2) {
 // Desafio 2
 function calcArea(base, height) {
   let area;
-  //formula
   area = (base * height) / 2;
   return area;
 }
@@ -72,25 +71,28 @@ function highestCount(arrayRef) {
   }
   return quantidadeDeRepetições;
 }
-/*let maiorValor = 0;
-let quantidadeDeRepetições = 0;
-
-for (let index = 0; index < arrayRef.length; index++) {
-  if (maiorValor < arrayRef[index]) {
-    maiorValor = arrayRef[index];
-  }  
-}
-for (let index = 0; index < arrayRef.length; index++) {
-  if (arrayRef[index] === maiorValor) {
-    quantidadeDeRepetições += 1;
-  }  
-}*/
-
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+  // criar uma variavel de distancia q o gato 1 e 2 estão do rato
+  // calcule a distancia q cada gato esta do rato
+  // RETORNE qual dos gatos vão pegar o rato
+  // Caso as DISTANCIAS sejam iguais, DEVE ser retornado uma string "os gatos trombam e o rato foge"
+  let distancia1;
+  let distancia2;
+
+  distancia1 = Math.abs(cat1 - mouse);
+  distancia2 = Math.abs(cat2 - mouse);
+  if (distancia1 < distancia2) {
+    return 'cat1';
+  }
+  else if (distancia1 > distancia2) {
+    return 'cat2';
+  }
+  else if (distancia1 === distancia2) {
+    return "os gatos trombam e o rato foge";
+  }
+}   
 
 // Desafio 8
 function fizzBuzz() {
