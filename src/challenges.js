@@ -23,11 +23,11 @@ function splitSentence(stringRef) {
 // Desafio 4
 function concatName(palavra) {
   let resultado = '';
-  for(let x= palavra.length -1; x >= 0; x -= 1){
-    if(x === palavra.length -1){
+  for (let x = palavra.length - 1; x >= 0; x -= 1) {
+    if (x === palavra.length - 1) {
       resultado = palavra[x];
     }
-    else if(palavra[x] === palavra[0]){
+    else if (palavra[x] === palavra[0]) {
       resultado += ', ' + palavra[0]
     }
   }
@@ -35,21 +35,21 @@ function concatName(palavra) {
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   // parametro q receba um numero de vitorias chamado 'wins'
   // parametro q receba um numero de empates chamado 'ties'
   // retorne a quantidade de pontos que o time marcou em um campeonato
   // cada vitoria vale 3 pontos e cada empate vale 1 ponto  
   let pontos = 0;
   for (let index = 0; index < wins; index++) {
-    if(wins > 0){ pontos += 3;}
-    
+    if (wins > 0) { pontos += 3; }
+
   }
   for (let index = 0; index < ties; index++) {
-    if (ties > 0) { pontos += 1;}
-    
+    if (ties > 0) { pontos += 1; }
+
   }
-  return pontos;  
+  return pontos;
 }
 
 // Desafio 6
@@ -58,16 +58,16 @@ function highestCount(arrayRef) {
   // RETORNAR a quantidade de vezes q o maior numero se repete
   let maiorValor = Number.NEGATIVE_INFINITY;
   let quantidadeDeRepetições = 0;
-  
+
   for (let index = 0; index < arrayRef.length; index++) {
     if (maiorValor < arrayRef[index]) {
       maiorValor = arrayRef[index];
-    }  
+    }
   }
   for (let index = 0; index < arrayRef.length; index++) {
     if (arrayRef[index] === maiorValor) {
       quantidadeDeRepetições += 1;
-    }  
+    }
   }
   return quantidadeDeRepetições;
 }
@@ -92,12 +92,28 @@ function catAndMouse(mouse, cat1, cat2) {
   else if (distancia1 === distancia2) {
     return "os gatos trombam e o rato foge";
   }
-}   
+}
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayFb) {
+
+  /*Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
+     Para cada número do Array que seja divisível apenas por 3, apresente uma string "fizz";
+     Para cada número do Array que seja divisível apenas por 5, apresente uma string "buzz";
+     Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
+     Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!"; */
+  
+  let resultado = [];
+  for (let x = 0; x <= arrayFb.length -1; x += 1) {
+    if (arrayFb[x] % 3 != 0 && arrayFb[x] % 5 != 0) { resultado.push("bug!") }
+    if (arrayFb[x] % 3 == 0 && arrayFb[x] % 5 == 0) { resultado.push("fizzBuzz"); }
+    if (arrayFb[x] % 3 == 0 && arrayFb[x] % 5 != 0) { resultado.push("fizz"); }
+    if (arrayFb[x] % 3 != 0 && arrayFb[x] % 5 == 0) { resultado.push("buzz"); }
+  }
+  return resultado;
 }
+
+
 
 // Desafio 9
 function encode() {
