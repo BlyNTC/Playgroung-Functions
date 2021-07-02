@@ -32,21 +32,22 @@ function techList(array, name) {
 // Desafio 11
 function checkArray(array) {
   let answer;
-  let qt = 0;
   if (array.length !== 11) {
     answer = 0;
-  }
-  for (let i = 0; i < array.length; i += 1) {
-    for (let b = 0; b < array.length; b += 1) {
-      if (array[i] === array[b] && i !== b ){
-        qt += 1;
+  } else {
+    for (let i = 0; i < array.length; i += 1) {
+      let qt = 1;
+      for (let b = 0; b < array.length; b += 1) {
+        if (array[i] === array[b] && i !== b ){
+          qt += 1;
+        }
       }
+      if (array[i] < 0 || array[i] > 9 || qt >= 3){
+        answer = 1;
+      }
+      qt = 0; //limpa a variavel quantidade para poder verificar se o proximo numero aparece mais de 3 vezes
     }
-    if (array[i] < 0 || array[i] > 9 || qt >= 3){
-      answer = 1;
-    }
-    qt = 0; //limpa a variavel quantidade para poder verificar se o proximo numero aparece mais de 3 vezes
-  }
+  } 
   return answer;
 }
 
@@ -76,8 +77,8 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  
 }
 
 // Desafio 13
