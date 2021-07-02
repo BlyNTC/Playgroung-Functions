@@ -18,7 +18,7 @@ function concatName() {
   // seu código aqui
 }
 
-// Desafio 5
+// Desafio 5'
 function footballPoints() {
   return wins*3+ties*1;
 }
