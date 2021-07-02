@@ -100,6 +100,7 @@ function encode(string) {
   return codificado;
 }
 
+
 function decode(string) {
   let array = string.split("");
   for (let index in array){
@@ -118,6 +119,7 @@ function decode(string) {
   let decodificado = array.join("")
   return decodificado;
 }
+
 
 module.exports = {
   calcArea,
