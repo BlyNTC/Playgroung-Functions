@@ -111,8 +111,6 @@ function encode(entradaDeString) {
       }
     }
   }
-
-  
 return codifica;
 }
 
@@ -148,8 +146,6 @@ function decode(stringDescodifica) {
       }
     }
   }
-
-  
 return descodifica;
 }
 
