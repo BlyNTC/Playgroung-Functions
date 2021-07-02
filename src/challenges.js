@@ -1,6 +1,15 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
+
+  compareTrue(false,true);
+
+  if(compareTrue(false,true) && compareTrue(false,false)){
+    console.log(false);    
+  }else {
+    console.log(true);
+  }
+
 }
 
 // Desafio 2
