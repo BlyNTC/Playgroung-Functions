@@ -1,4 +1,4 @@
-// Desafio 1
+// Desafio 1 - TERMINADO
 function compareTrue(bool1, bool2) {
 
   if (bool1 === true && bool2 === true) {
@@ -7,7 +7,7 @@ function compareTrue(bool1, bool2) {
     return false;
   }
 
-// Desafio 2
+// Desafio 2 - TERMINADO
 function calcArea(base, height) {
   return (base*height)/2;
 }
@@ -22,12 +22,12 @@ function concatName() {
   // seu código aqui
 }
 
-// Desafio 5'
+// Desafio 5' - TERMINADO
 function footballPoints(wins, ties) {
   return wins*3+ties*1;
 }
 
-// Desafio 6
+// Desafio 6 - TERMINADO
 function highestCount(list) {
   let counter = 0;
   for(let i = 0; i < list.length; i++){
@@ -38,18 +38,12 @@ function highestCount(list) {
   return counter;
 }
 
-// Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
-  let cat1Distance = cat1-mouse;
-  let cat2Distance = cat2-mouse;
-  if(cat1Distance<cat2Distance){
-      return "cat1"}
-      else if(cat1Distance>cat2Distance){
-          return "cat2"}
-          else{
-              return "os gatos trombam e o rato foge"
-          }
-      }
+// Desafio 7 - TERMINADO
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) return 'cat2';
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) return 'cat1';
+  return 'os gatos trombam e o rato foge';
+}
 
 // Desafio 8
 function fizzBuzz() {
