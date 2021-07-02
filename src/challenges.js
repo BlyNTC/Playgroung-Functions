@@ -25,22 +25,27 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(list) {
-  function highestCount(list) {
-    let max=list.max;
-    let counter;
-    for(i=0;i<list.lenght;i++){
-      if(list(i)=list.max){
-        counter++;
-      }
+  let counter = 0;
+  for(let i = 0; i < list.length; i++){
+    if(list[i] == Math.max.apply(null, list)){
+      counter += 1;
     }
-    return counter;
   }
+  return counter;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse,cat1,cat2) {
+  let cat1Distance = cat1-mouse;
+  let cat2Distance = cat2-mouse;
+  if(cat1Distance<cat2Distance){
+      return "cat1"}
+      else if(cat1Distance>cat2Distance){
+          return "cat2"}
+          else{
+              return "os gatos trombam e o rato foge"
+          }
+      }
 
 // Desafio 8
 function fizzBuzz() {
