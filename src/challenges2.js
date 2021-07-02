@@ -58,21 +58,32 @@ function generatePhoneNumber(array11N) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA + lineB > lineC) {
-    if (lineC > Math.abs(lineA - lineB))
-    return true;
-  }else if (lineA + lineC > lineB) {
-    if (lineB > Math.abs(lineA - lineC))
-    return true;
-  }else if (lineC + lineB > lineA) {
-    if (lineA > Math.abs(lineC - lineB))
-    return true;
-  } 
-    return false;
+    if (lineC > Math.abs(lineA - lineB)) {
+      return true;
+    }
+  } else if (lineA + lineC > lineB) {
+    if (lineB > Math.abs(lineA - lineC)) {
+      return true;
+    }
+  } else if (lineC + lineB > lineA) {
+    if (lineA > Math.abs(lineC - lineB)) {
+      return true;
+    }
+  }
+  return false;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas) {
+  let numeros = bebidas.match(/\d/g);
+  let somar = 0;
+  for (let percorrer of numeros) {
+    somar += parseInt(percorrer)
+  } 
+  if (somar != 1) {
+    return somar + ' copos de água';
+  }
+  return somar + ' copo de água';
 }
 
 module.exports = {
