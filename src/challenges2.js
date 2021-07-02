@@ -24,7 +24,7 @@ function generatePhoneNumber(numbers) {
   let numPart1 = ' ';
   let numPart2 = '-';
   let phoneNumber = '';
-  let verificaCondicoes;
+  let verificaCondicoes = false;
   if (numbers.length !== 11) {
     phoneNumber = 'Array com tamanho incorreto.';
   } else {
@@ -58,7 +58,6 @@ function generatePhoneNumber(numbers) {
   }
   return phoneNumber;
 }
-
 
 // Desafio 12
 function triangleCheck() {
