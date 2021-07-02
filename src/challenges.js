@@ -2,7 +2,7 @@
 function compareTrue(fristValue, secondValue) {
   // seu código aqui
     if (fristValue === true && secondValue === true){
-      return true } else {return false};
+      return true;} else { return false};
   }
 
 // Desafio 2
@@ -47,8 +47,20 @@ return repeticao
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+      let distanciaCat1 = Math.abs(cat1 - mouse);
+    let distanciaCat2 = Math.abs(cat2 - mouse);
+    let gato;
+    if (distanciaCat1 < distanciaCat2) {
+      gato = 'cat1';
+    } else if (distanciaCat2 < distanciaCat1) {
+      gato = 'cat2';
+    } else {
+      gato = 'os gatos trombam e o rato foge';
+    }
+    return gato;
+
 }
 
 // Desafio 8
