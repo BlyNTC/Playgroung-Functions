@@ -28,8 +28,13 @@ function generatePhoneNumber(tel) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (Math.abs(lineA + lineB > lineC) && Math.abs(lineB + lineC > lineA) && Math.abs(lineC + lineA > lineB)) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 // Desafio 13
