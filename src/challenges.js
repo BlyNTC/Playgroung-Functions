@@ -35,8 +35,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-let total = 0;
-let numeroMaximo = Math.max(...araara);
 
 function highestCount(araara) {
 
