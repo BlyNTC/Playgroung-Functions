@@ -8,27 +8,23 @@ function compareTrue(num1, num2) {
 }
 
 // Desafio 2
-function calcArea(base, height) {
-  return base * height / 2;
+function calcArea() {
+  
 }
 
 // Desafio 3
-function splitSentence(frase) {
-  let array = frase.split(' ');
-  return array;
+function splitSentence() {
+  
 }
 
 // Desafio 4
-function concatName(names) {
-  return names[names.length -1] +', ' + [0];
+function concatName() {
+  
 }
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  let wins = 3;
-  let ties = 1;
-  console.log(wins *  ties)
-
+function footballPoints() {
+  
 }
 
 // Desafio 6
