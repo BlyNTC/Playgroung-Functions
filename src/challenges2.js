@@ -37,6 +37,7 @@ function generatePhoneNumber(numbers) {
       }
       if (count >= 3 || indice < 0 || indice > 9) {
         verificaCondicoes = true;
+        break;
       }
       count = 0;
     }
