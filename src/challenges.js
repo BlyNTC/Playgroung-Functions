@@ -73,7 +73,7 @@ function fizzBuzz(arr) {
 // Desafio 9
 function encode(string) {
   let answer = '';
-  for (i in string) {
+  for (let i = 0; i < string.length; i += 1) {
     if (string[i] === 'a') answer += '1';
     else if (string[i] === 'e') answer += '2';
     else if (string[i] === 'i') answer += '3';
@@ -86,7 +86,7 @@ function encode(string) {
 
 function decode(string) {
   let answer = '';
-  for (i in string) {
+  for (let i = 0; i< string.length; i += 1) {
     if (string[i] === '1') answer += 'a';
     else if (string[i] === '2') answer += 'e';
     else if (string[i] === '3') answer += 'i';
