@@ -15,7 +15,7 @@ function compareTrue(primeiro, segundo) {
 // Desafio 2
 function calcArea(base, heigth) {
   // seu código aqui
-  let result = (base * heigth)/2;
+  let result = (base * heigth) / 2;
 
   return result;
 }
@@ -31,7 +31,7 @@ function splitSentence(words) {
 // Desafio 4
 function concatName(name) {
   // seu código aqui
-  let result = (`${name[name.length-1]}, ${name[0]}`);
+  let result = (`${name[name.length - 1]}, ${name[0]}`);
 
   return result;
 }
@@ -39,7 +39,7 @@ function concatName(name) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let result = ((wins*3)+ties);
+  let result = ((wins * 3) + ties);
 
   return result;
 }
@@ -47,7 +47,8 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(highest) {
   // seu código aqui
-  let highestNumber = -Infinity, counter = 0;
+  let highestNumber = -Infinity;
+  let counter = 0;
 
   for (let high of highest) {
     if (high > highestNumber) {
