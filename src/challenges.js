@@ -165,7 +165,6 @@ function encode(estranho) {
 }
 encode('aranha');
 
-
 function decode(convem) {
   // seu código aqui
   let caos = [];
@@ -174,7 +173,7 @@ function decode(convem) {
   }
 
   for (let i = 0; i < convem.length; i += 1){
-    switch (caos[i]){
+    switch (caos[i]) {
       case '1':
         caos[i] = 'a';
         break;
