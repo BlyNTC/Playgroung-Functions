@@ -121,46 +121,40 @@ function fizzBuzz(numbers) {
     if (numbers[index] % 3 != 0 && numbers[index] % 5 != 0){
       marcados.push('bug!')
     }
-
-    
+  
   }
   return marcados;
 }
-let coisas = [9, 25];
-fizzBuzz(coisas);
 
 // Desafio 9
-function encode(estranho) {
+function encode(estranho) {   //Alteração de código por explicação de Thiago de Oliveira e Flávio Pires; =D 
   // seu código aqui
-  let sopa = [];
-  for(let letras of estranho){
-    sopa.push(letras);
-  }
-
-  for(let i = 0; i < sopa.length; i += 1){
-    switch (sopa[i]){
+  let stringQualquer = "";
+  for(let letra of estranho){
+    switch (letra){
       case 'a':
-        sopa[i] = 1;
+        stringQualquer += 1;
         break;
       case 'e':
-        sopa[i] = 2;
+        stringQualquer += 2;
         break;
       case 'i':
-        sopa[i] = 3;
+        stringQualquer += 3;
         break;
       case 'o':
-        sopa[i] = 4;
+        stringQualquer += 4;
         break;
       case 'u':
-        sopa[i] = 5;
+        stringQualquer += 5;
         break;
+      default:
+        stringQualquer += letra;
             
     }
-    
   }
-  let codigo = sopa.join("");
-  console.log(codigo);
-  return codigo;
+
+  console.log(stringQualquer);
+  return stringQualquer;
   
 }
 encode('aranha');
