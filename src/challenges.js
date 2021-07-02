@@ -24,16 +24,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// for (let i = 0; i < array.length; i += 1)
 function highestCount(array) {
   let numeroRepete = 0;
   let maiorNumero = Math.max(...array);
-  for (let i = 0; i < array.length; i += 1) {
+  for (let i in array) {
     if (array[i] === maiorNumero) {
       numeroRepete += 1;
     }
   }
   return numeroRepete;
-}
+}    
 
 // Desafio 7
 function catAndMouse() {
