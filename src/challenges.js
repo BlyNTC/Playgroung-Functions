@@ -6,13 +6,11 @@ function compareTrue(value1, value2) {
     return false;
   } 
 }
-console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-console.log(calcArea (51, 1));
 
 // Desafio 3
 function splitSentence(phraseSplit) {
@@ -20,8 +18,6 @@ function splitSentence(phraseSplit) {
   return phraseSplit.split(" ");
 
 }
-phraseSplit = "Vamo que vamo";
-console.log (splitSentence(phraseSplit));
 
 // Desafio 4
 function concatName(sentenceConcat) {
@@ -32,7 +28,7 @@ function concatName(sentenceConcat) {
 function footballPoints(wins, ties) {
   return (wins * 3) + ties; 
 }
-console.log (footballPoints(1, 2));
+
 
 
 // Desafio 6
@@ -50,7 +46,7 @@ function catAndMouse(cat1, cat2, mouse) {
     return "Os gatos trombam e o rato foge";
   }
 }
-console.log(catAndMouse(0, 0, 0));
+
 
 // Desafio 8
 function fizzBuzz() {
