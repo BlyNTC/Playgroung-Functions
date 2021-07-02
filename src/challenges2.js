@@ -8,7 +8,7 @@ function techList(tech, name) {
   }
   for (let index = 0; index < tech.length; index += 1) {
     objeto = {};
-    objeto.tech = tech[index];
+    objeto.tech = techSorted[index];
     objeto.name = name;
     resultado.push(objeto)
   }
