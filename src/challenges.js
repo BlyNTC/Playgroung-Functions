@@ -21,7 +21,7 @@ function splitSentence(word) {
 function concatName(words) {
   let firstWord = words[0];
   let lastWord = words[words.length -1]
-  return (lastWord + ', ' + firstWord)
+  return (`${lastWord}, ${firstWord}`)
 }
 
 // Desafio 5
