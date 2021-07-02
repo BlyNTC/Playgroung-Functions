@@ -19,10 +19,11 @@ function splitSentence(string) {
   return separa;
 }
 
-// Desafio 4 (ajuste)
+// Desafio 4 (correto)
 function concatName(listaPalavras) {
   // let separaLista = listaPalavras.split (" ");
   // return (separaLista[separaLista.length -1]) + ", " + (separaLista[0])
+  // o return inspirada em uma troca de ideia com meu irmão que é Dev, uma forma de deixar o codigo mais limpo e resolver o requisito.
   return `${listaPalavras[listaPalavras.length - 1]}, ${listaPalavras[0]}`;
 }
 
@@ -80,14 +81,14 @@ if (num % 3 === 0 && num % 5 === 0) {
   } else if (num % 3 === 0) {
     string.push("fizz");
   } else if (num % 5 === 0) {
-    string.push("Buzz");
+    string.push("buzz");
   } else {
-    string.push("Bug!");
+    string.push("bug!");
   }
  }
  return string;    
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+console.log(fizzBuzz([9, 25]))
 
 // Desafio 9 (correto)
 function encode(fraseCode) {
