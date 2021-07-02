@@ -59,7 +59,7 @@ function fizzBuzz(array) {
       resultado.push('fizzBuzz');
     } else {
       resultado.push('bug!');
-    } 
+    }
   } return resultado;
 }
 
