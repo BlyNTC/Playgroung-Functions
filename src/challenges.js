@@ -40,6 +40,8 @@ return(wins * 3) + (ties);
 
 // Desafio 6
 function highestCount(arrayNumeros) {
+let maiorRapido = Math.max(...arrayNumeros);
+  
   let numeroMaior = -1;  
   let contador = 0;
   for (let i = 0; i < arrayNumeros.length; i++) {
@@ -61,8 +63,25 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+let strings = [];
+for(let i = 0; i < array.length; i += 1){ 
+  if(array[i] % 3 !== 0 && array[i] % 5 !== 0){   
+    strings.push("bug!")
+  }
+  else if(array[i] % 3 === 0 && array[i] % 5 !== 0) {
+    strings.push("fizz");
+  }
+  else if(array[i] % 3 !== 0 && array[i] % 5 === 0){
+    strings.push("buzz")
+  }
+  else if(array[i] % 3 === 0 && array[i] % 5 === 0) {
+    strings.push("fizzBuzz");
+  }
+ 
+}
+
+return strings;
 }
 
 // Desafio 9
