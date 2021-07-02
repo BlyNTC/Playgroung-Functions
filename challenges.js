@@ -1,7 +1,6 @@
 // Desafio 1
-function compareTrue(number1, number2) {
-  let comparar = number1 && number2;
-  return comparar;
+function compareTrue() {
+  // seu código aqui
 }
 
 // Desafio 2
