@@ -14,11 +14,10 @@ function techList(technologies, name) {
 }
 
 // Desafio 11
-
 function numberCounter(numbers) {
   let numberCount = {}; // Stores repetitions
   for (let value of numbers) { // Counts repetitions
-    if (numberCount[value] === undefined) {
+    if (!numberCount[value]) {
       numberCount[value] = 1;
     } else {
       numberCount[value] += 1;
