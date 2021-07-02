@@ -21,12 +21,10 @@ function generatePhoneNumber(array) {
     cont = 0; //seta para nao acumular
     for (let rep = 0; rep < array.length; rep += 1) {
       if (array[i] == array[rep]) { //verifica se sao iguais
-        if (i != rep) { // verifica se os indices sao iguais
-          cont += 1;
-        }
+        cont += 1;
       }
     }
-    vetor.push(cont + 1);
+    vetor.push(cont);
   }
   if (array.length != 11) {
     return 'Array com tamanho incorreto.';
