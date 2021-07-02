@@ -1,11 +1,24 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, name) {
+  if(techs.length===0){
+      return 'Vazio!';
+    } 
+  techs.sort();
+  let a = [];
+    for(let i in techs){
+        a[i] = new Object();
+        a[i].tech = techs[i];
+        a[i].name = name;
+    }
+      return a;
 }
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui 
+function generatePhoneNumber(numeros) {
+  if(numeros.length !== 11){
+    return "Array com tamanho incorreto."
+  }
+
+
 }
 
 // Desafio 12
