@@ -44,7 +44,7 @@ function generatePhoneNumber(array) {
       if (qtdRepeticoes < 3) {
         output = array.toString();
         output = output.replace(/,/g, '');
-        output = output.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+        output = output.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"); //pesquisei sobre RegEx para essa solução
       }
     }
   } else {
@@ -64,9 +64,22 @@ function triangleCheck(lineA, lineB, lineC) {
     return true;
   }
 }
-// Desafio 13
-function hydrate() {}
-
+// desafio 13
+function hydrate(string) {
+  let onlyNumbers;
+  let quantidadeDeBebidas = 0;
+  let numeroASerSomado = 0;
+  onlyNumbers = string.replace(/([^\d])+/gim, '');
+  for (let i of onlyNumbers) {
+    numeroASerSomado = Number(i);
+    quantidadeDeBebidas = quantidadeDeBebidas + numeroASerSomado;
+  }
+  if (quantidadeDeBebidas < 2 && quantidadeDeBebidas > 0) {
+    return quantidadeDeBebidas + " copo de água"
+  } else {
+    return quantidadeDeBebidas + " copos de água"
+  }
+}
 module.exports = {
   generatePhoneNumber,
   techList,
