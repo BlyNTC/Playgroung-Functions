@@ -54,11 +54,26 @@ function catAndMouse(mouse, cat1, cat2) {
   }else{
     return "cat1";
   }
-} 
+}
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arr) {
 // seu código aqui
+ let fizzBuzz = [];
+
+ for ( x of arr){
+
+   if ( x % 5 === 0 && x % 3 === 0 ){
+    fizzBuzz.push("fizzBuzz");
+   }else if ( x % 5 === 0 ){
+    fizzBuzz.push("buzz");
+   }else if ( x % 3 === 0 ){
+    fizzBuzz.push("fizz");
+   }else{
+    fizzBuzz.push("bug!");
+   }
+}
+return fizzBuzz;
 }
 
 // Desafio 9
