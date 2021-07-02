@@ -58,8 +58,20 @@ return contador;
 }
 
 // Desafio 7
-function catAndMouse() {
-  
+function catAndMouse(mouse, cat1, cat2) {
+let pontoDeEncontro1 = mouse - cat1;
+let encontro1 = Math.abs(pontoDeEncontro1)
+let pontoDeEncontro2 = mouse - cat2;
+let encontro2 = Math.abs(pontoDeEncontro2);
+  if(encontro1 === encontro2){ 
+    return "os gatos trombam e o rato foge";
+    }
+    else if(encontro1 < encontro2){
+    return "cat1";
+    }
+  else{
+    return "cat2"; 
+  }
 }
 
 // Desafio 8
