@@ -45,9 +45,12 @@ function concatName(nome) {
 concatName(['Tarugo', 'Tuxal', 'dos', 'Santos']);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalPontos = ((wins * 3 + (ties * 1)));
+  return totalPontos;
+
 }
+footballPoints(14, 8);
 
 // Desafio 6
 function highestCount() {
