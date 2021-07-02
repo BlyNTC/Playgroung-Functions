@@ -106,8 +106,26 @@ function encode(frase) {
 
   return codificacao;
 }
-function decode() {
-  // seu código aqui
+function decode(frase) {
+  let codificacao = '';
+
+  for (i = 0; i < frase.length; i += 1) {
+    if (frase[i] === 'a'){
+      codificacao += '1';
+    } else if (frase[i] === 'e'){
+      codificacao += '2';
+    } else if (frase[i] === 'i'){
+      codificacao += '3';
+    } else if (frase[i] === 'o'){
+      codificacao += '4';
+    } else if (frase[i] === 'u'){
+      codificacao += '5';
+    } else {
+      codificacao += frase[i]
+    }
+  }
+
+  return codificacao;
 }
 
 module.exports = {
