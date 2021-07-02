@@ -28,8 +28,8 @@ function generatePhoneNumber(array) {
       }
     }
     if (output === '') {
-      for (index = 0; index < array.length; index += 1) {
-        for (index2 = index; index2 < array.length; index2 += 1) {
+      for (let index = 0; index < array.length; index += 1) {
+        for (let index2 = index; index2 < array.length; index2 += 1) {
           if (array[index] === array[index2]) {
             qtdRepeticoes += 1;
           }
@@ -53,14 +53,19 @@ function generatePhoneNumber(array) {
   return output;
 }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > lineB + lineC) {
+    return false;
+  } else if (lineB > lineC + lineA) {
+    return false;
+  } else if (lineC > lineB + lineA) {
+    return false;
+  } else {
+    return true;
+  }
 }
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate() {}
 
 module.exports = {
   generatePhoneNumber,
