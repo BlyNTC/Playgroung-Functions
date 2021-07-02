@@ -73,11 +73,39 @@ function fizzBuzz(arrayDivisiveis) {
 }
 
 // Desafio 9
-function encode() {
+function encode(fraseCodificada) {
   // seu código aqui
+  let fraseCod = "";
+  for(let index = 0;index < fraseCodificada.length;index += 1)
+  if(fraseCodificada[index] === "a"){
+    fraseCod += "1"
+  }else if(fraseCodificada[index] === "e"){
+    fraseCod += "2"
+  }else if(fraseCodificada[index] === "i"){
+    fraseCod += "3"
+  }else if(fraseCodificada[index] === "o"){
+    fraseCod += "4"
+  }else if(fraseCodificada[index] === "u"){
+    fraseCod += "5"
+  }else{fraseCod += fraseCodificada[index]}
+  return fraseCod
 }
-function decode() {
+function decode(fraseDecodificada) {
   // seu código aqui
+  let fraseDecod = "";
+  for(let index = 0;index < fraseDecodificada.length;index += 1)
+  if(fraseDecodificada[index] === "1"){
+    fraseDecod += "a"
+  }else if(fraseDecodificada[index] === "2"){
+    fraseDecod += "e"
+  }else if(fraseDecodificada[index] === "3"){
+    fraseDecod += "i"
+  }else if(fraseDecodificada[index] === "4"){
+    fraseDecod += "o"
+  }else if(fraseDecodificada[index] === "5"){
+    fraseDecod += "u"
+  }else{fraseDecod += fraseDecodificada[index]}
+  return fraseDecod
 }
 
 module.exports = {
