@@ -16,10 +16,9 @@ function techList(lista, name) {
 //console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 
-
 // Desafio 11
-function generatePhoneNumber(arrayComOnzeNumeros) {
-  let retorno;
+function generatePhoneNumber() {
+/*  let retorno;
   let repete;
 
   if (arrayComOnzeNumeros.length != 11) {
@@ -35,8 +34,8 @@ function generatePhoneNumber(arrayComOnzeNumeros) {
   }
   return retorno;
 }
-console.log(generatePhoneNumber(2, 6, 5, 9, 8));
-
+console.log(generatePhoneNumber(2, 6, 5, 9, 8));*/
+}
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
