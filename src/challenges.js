@@ -1,16 +1,7 @@
 // Funções auxiliares
 
 function fizzBuzzNumberCheck(number) {
-  if (number % 3 === 0 && number % 5 === 0) {
-    return 'fizzBuzz';
-  }
-  if (number % 3 === 0) {
-    return 'fizz';
-  }
-  if (number % 5 === 0) {
-    return 'buzz';
-  }
-  return 'bug!';
+  return 1 * (number % 3 === 0) + 2 * (number % 5 === 0);
 }
 
 // Desafio 1
@@ -84,10 +75,11 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
+  const fizzBuzzBug = { 0: 'bug!', 1: 'fizz', 2: 'buzz', 3: 'fizzBuzz' };
   let fizzBuzzArray = [];
 
   for (let num of array) {
-    fizzBuzzArray.push(fizzBuzzNumberCheck(num));
+    fizzBuzzArray.push(fizzBuzzBug[fizzBuzzNumberCheck(num)]);
   }
   return fizzBuzzArray;
 }
