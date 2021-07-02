@@ -2,8 +2,7 @@
 function compareTrue(fristValue, secondValue) {
   // seu código aqui
     if (fristValue === true && secondValue === true){
-      return true
-    } else {return false};
+      return true } else {return false};
   }
 
 // Desafio 2
@@ -15,7 +14,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-    let array = string.split(" ")
+  let array = string.split(" ");
   return array;
 }
 
@@ -35,8 +34,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array2) {
   // seu código aqui
+let repeticao = 0;
+let heigiestNumb = Math.max(...array2);
+for (let index = 0; index < array2.length; index += 1){
+  if (heigiestNumb === array2[index]) {
+    repeticao+=1;
+  }
+}
+return repeticao
 }
 
 // Desafio 7
