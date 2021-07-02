@@ -60,13 +60,13 @@ function highestCount(maiorRepetido) {
       maiorNum = maiorRepetido[index];
     }
   }
-  let count = 0;
-  for(var i = 0; i < maiorRepetido.length; ++i){
+  let contRepet = 0;
+  for(var i = 0; i < maiorRepetido.length; i += 1){
     if(maiorRepetido[i] == maiorNum)
-        count++;
+        contRepet += 1 ;
 }
 
-  return count;
+  return contRepet;
 }
  highestCount([9, 1, 2, 3, 9, 5, 7]);
 
