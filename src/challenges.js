@@ -5,8 +5,7 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  // let area = (base * height) / 2
-  return (base * height) / 2
+    return (base * height) / 2
 }
 
 // Desafio 3
@@ -15,13 +14,13 @@ function splitSentence(array) {
 }
 
 // Desafio 4
-function concatName(array) {
-  return `${array[array.length-1]}, ${array[0]}`
+function concatName() {
+  // seu código aqui
 }
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+  
 }
 
 // Desafio 6
