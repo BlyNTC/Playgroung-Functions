@@ -49,8 +49,19 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayDivisiveis) {
   // seu código aqui
+  let armazenador = [];
+  for(let index = 0;index < arrayDivisiveis.length;index += 1){
+    if(arrayDivisiveis[index]%3 === 0 && arrayDivisiveis[index]%5 !== 0){
+       armazenador.push("fizz")
+    }else if(arrayDivisiveis[index]%5 === 0 && arrayDivisiveis[index]%3 !== 0){
+      armazenador.push("buzz")
+    }else if(arrayDivisiveis[index]%3 === 0 && arrayDivisiveis[index]%5 === 0){
+      armazenador.push("fizzBuzz")
+    }else{armazenador.push ("bug!")}
+  }
+  return armazenador;
 }
 
 // Desafio 9
