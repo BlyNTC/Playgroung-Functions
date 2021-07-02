@@ -83,17 +83,15 @@ function encode(toEncodeString) {
   encodedString = encodedString.replace(/i/g, '3');
   encodedString = encodedString.replace(/o/g, '4');
   encodedString = encodedString.replace(/u/g, '5');
-  
   return encodedString;
 }
 function decode(toDecodeString) {
   let decodedString = toDecodeString;
-  decodedString = decodedString.replace(/a/g, '1');
-  decodedString = decodedString.replace(/e/g, '2');
-  decodedString = decodedString.replace(/i/g, '3');
-  decodedString = decodedString.replace(/o/g, '4');
-  decodedString = decodedString.replace(/u/g, '5');
-  
+  decodedString = decodedString.replace(/1/g, 'a');
+  decodedString = decodedString.replace(/2/g, 'e');
+  decodedString = decodedString.replace(/3/g, 'i');
+  decodedString = decodedString.replace(/4/g, 'o');
+  decodedString = decodedString.replace(/5/g, 'u');
   return decodedString;
 }
 
