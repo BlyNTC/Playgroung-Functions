@@ -21,18 +21,21 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  
+function concatName(string) {
+  return string.length -1;
 }
 
 // Desafio 5
-function footballPoints() {
-  
+function footballPoints(wins, ties) {
+  let wins = 3;
+  let ties = 1;
+  return wins * ties;
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+
+  
 }
 
 // Desafio 7
