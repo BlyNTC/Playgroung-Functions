@@ -5,22 +5,22 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(array) {
-  return array.split(" ")
+  return array.split(" ");
 }
 
 // Desafio 4
 function concatName(array) {
-  return `${array[array.length - 1]}, ${array[0]}`
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3 + ties * 1)
+  return (wins * 3 + ties * 1);
 }
 
 // Desafio 6
@@ -32,7 +32,7 @@ function highestCount(array) {
       numeroRepete += 1
     }
   }
-  return numeroRepete
+  return numeroRepete;
 }
 
 
