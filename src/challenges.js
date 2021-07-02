@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2) {
-    return true
-  } else(valor1 && valor2)
-  return false
+    return true;
+  } else(valor1 && valor2);
+  return false;
 }
 
 // Desafio 2
@@ -27,8 +27,22 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numeros) {
+  let numeroMaior = numeros[0];
+  let repeticao = 0;
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] > numeroMaior) {
+      numeroMaior = numeros[i];
+    }
+  }
+  for (i = 0; i < numeros.length; i += 1) {
+    if (numeroMaior == numeros[i]) {
+      repeticao += 1;
+    }
+  }
+  return repeticao;
 }
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -39,7 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distanceCat2 > distanceCat1) {
     return 'cat1';
   } else {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
 }
 
