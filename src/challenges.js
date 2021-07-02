@@ -33,20 +33,19 @@ function highestNumber(numArray) {
   }
 }
 
+function countRepeats(arr) {
+  let counts = {};
+  for (const num of arr) {
+    // if key is undefined, create it, else increase it
+    counts[num] = counts[num] === undefined ? 1 : counts[num] + 1;
+  }
+  return counts;
+}
+
 // Desafio 6
 function highestCount(numArray) {
   let highest = highestNumber(numArray);
-  let counts = {};
-  for (const number of numArray) {
-    if (number > highest) {
-      highest = number;
-    }
-    if (counts[number]) {
-      counts[number] += 1;
-    } else {
-      counts[number] = 1;
-    }
-  }
+  let counts = countRepeats(numArray);
   return counts[highest];
 }
 
