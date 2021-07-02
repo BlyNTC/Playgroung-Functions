@@ -64,12 +64,9 @@ function generatePhoneNumber(numbers) {
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let triangulo = false;
-  if (lineA < (lineB + lineC) &&
-    lineB < (lineA + lineC) &&
-    lineC < (lineA + lineB)) {
+  if (lineA < (lineB + lineC) && lineB < (lineA + lineC) && lineC < (lineA + lineB)) {
     triangulo = true;
   }
-
   return triangulo;
 }
 
