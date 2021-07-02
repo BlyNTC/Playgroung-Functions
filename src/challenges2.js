@@ -64,38 +64,38 @@ function generatePhoneNumber(numbers) {
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let triangulo;
-  //função que verifica se um lado é menor que a soma dos outros lados
+  // função que verifica se um lado é menor que a soma dos outros lados
   function verificaSoma(a, b, c) {
     let condicao;
     if (a < (b + c) && b < (a + c) && c < (a + b)) {
       condicao = true;
     }
-    return condicao
+    return condicao;
   }
-  //função que verifica se um lado é maior que a diferença entre os outos lados
+  // função que verifica se um lado é maior que a diferença entre os outos lados
   function verificaDiferenca(a, b, c) {
     let condicao = false;
     if (Math.abs(a > (b - c)) && Math.abs(b > (a - c)) && Math.abs(c > (a - b))) {
-        condicao = true;
-      }
-      return condicao;
+      condicao = true;
     }
-    if (verificaSoma(lineA, lineB, lineC) && verificaDiferenca(lineA, lineB, lineC)){
-      triangulo = true;
-    }else{
-      triangulo = false;
-    }
-    return triangulo;
+    return condicao;
   }
-
-  // Desafio 13
-  function hydrate() {
-    // seu código aqui
+  if (verificaSoma(lineA, lineB, lineC) && verificaDiferenca(lineA, lineB, lineC)) {
+    triangulo = true;
+  } else {
+    triangulo = false;
   }
+  return triangulo;
+}
 
-  module.exports = {
-    generatePhoneNumber,
-    techList,
-    hydrate,
-    triangleCheck,
-  };
+// Desafio 13
+function hydrate() {
+  // seu código aqui
+}
+
+module.exports = {
+  generatePhoneNumber,
+  techList,
+  hydrate,
+  triangleCheck,
+};
