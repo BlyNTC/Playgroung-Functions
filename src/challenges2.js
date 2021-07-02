@@ -18,8 +18,8 @@ function techList(array, name) {
   } else {
     for (let elem of array) {
       let object = {
-        'tech': elem,
-        'name': name,
+        tech: elem,
+        name: name,
       };
       listObjects.push(object);
     }
@@ -38,14 +38,14 @@ function checkArray(array) {
     for (let i = 0; i < array.length; i += 1) {
       let qt = 1;
       for (let b = 0; b < array.length; b += 1) {
-        if (array[i] === array[b] && i !== b ){
+        if (array[i] === array[b] && i !== b ) {
           qt += 1;
         }
       }
-      if (array[i] < 0 || array[i] > 9 || qt >= 3){
+      if (array[i] < 0 || array[i] > 9 || qt >= 3) {
         answer = 1;
       }
-      qt = 0; //limpa a variavel quantidade para poder verificar se o proximo numero aparece mais de 3 vezes
+      qt = 0; /*limpa a variavel quantidade para poder verificar se o proximo numero aparece mais de 3 vezes*/
     }
   } 
   return answer;
@@ -70,7 +70,7 @@ function generatePhoneNumber(array) {
       } else {
         phoneNumber += array[i];
       }
-    } 
+    }
     answer = phoneNumber;
   }
   return answer;
@@ -104,16 +104,16 @@ function hydrate(phrase) {
   let phrase3 = phrase2.split(' '); /* corta a string anterior nos espaços e coloca os valores dentro de um array */
   let sum = 0;
   let answer = '';
-  for (let i = 0; i < phrase3.length; i += 1){
-    if(phrase3[i] !== ''){
-      sum += parseInt(phrase3[i],10); /* transforma o numero de string para inteiro e soma */
+  for (let i = 0; i < phrase3.length; i += 1) {
+    if (phrase3[i] !== '') {
+      sum += parseInt(phrase3[i], 10); /* transforma o numero de string para inteiro e soma */
     }
   }
-  if (sum === 1){
+  if (sum === 1) {
     answer = sum.toString() + ' copo de água';
   } else {
     answer = sum.toString() + ' copos de água';
-  } 
+  }
   return answer;
 }
 
