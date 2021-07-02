@@ -1,12 +1,13 @@
 // Desafio 1
 
 
-function compareTrue(n1,n2) {
-  if(n1 === true && n2 === true){
+function compareTrue(n1, n2) {
+  if (n1 === true && n2 === true) {
     return true
-  }else if(n1 === false && n2 === false){
+  } else if (n1 === false && n2 === false) {
     return false
-  }else { (n1 === true && n2 === false) 
+  } else {
+    (n1 === true && n2 === false)
     return false
   }
 }
@@ -16,8 +17,8 @@ function compareTrue(n1,n2) {
 
 
 
-function calcArea(base,height) {
-  return (base * height)/2
+function calcArea(base, height) {
+  return (base * height) / 2
 }
 
 
@@ -25,15 +26,28 @@ function calcArea(base,height) {
 // Desafio 3
 
 
-function splitSentence(string){
-  return string.split(' ')   
+function splitSentence(string) {
+  return string.split(' ')
 }
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+
+// função recebe um array
+function concatName(meuArray) {
+  // primeiraString recebe o ultimo elemento do array
+  let primeraString = meuArray[meuArray.length - 1]
+  // adiciona um espço e virgula entre as strings
+  let stringEspaco = ', '
+  // ultimaString recebe o primeiro elemento do array
+  let ultimaString = meuArray[0]
+  // retorna a concatenação das strings
+  return primeraString + stringEspaco + ultimaString
+
 }
+
+
 
 // Desafio 5
 function footballPoints() {
@@ -59,6 +73,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
