@@ -1,19 +1,22 @@
 // Desafio 10
 function techList(array, stringName) {
   let arrayOutPut = [];
-  for (let index of array) {
-    let objeto = {
-      tech: index,
-      nome: stringName
+  if (array === undefined) {
+    return "Vazio!"
+  } else {
+    for (let index of array) {
+      let objeto = {
+        tech: index,
+        nome: stringName
+      }
+      arrayOutPut.push(objeto)
     }
-    arrayOutPut.push(objeto)
+    return arrayOutPut.sort(function (a, b) {
+      return (a.tech > b.tech) ? 1 : ((b.tech > a.tech) ? -1 : 0) // encontrei essa solução para ordenanar objetos em um array no site https://www.edsonemiliano.com.br/blog
+    })
   }
- return arrayOutPut.sort(function (a, b) {
-    return (a.tech > b.tech) ? 1 : ((b.tech > a.tech) ? -1 : 0) // encontrei essa solução para ordenanar objetos em um array no site https://www.edsonemiliano.com.br/blog
-  })
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
-  "Lucas"));
+console.log(techList());
 
 // Desafio 11
 function generatePhoneNumber() {
