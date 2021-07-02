@@ -17,7 +17,7 @@ function calcArea(base, height) {
 
   return triArea;
 }
- 
+
 // Desafio 3
 function splitSentence(word) {
   // seu código aqui
@@ -81,7 +81,7 @@ function highestCount(arrayah) {
     }
   }
 
-  return numOft;  
+  return numOft;
 }
 
 // Desafio 7
@@ -118,12 +118,12 @@ function catAndMouse(mouse, cat1, cat2) {
 
   return message;
 }
-  
+
 // Desafio 8
 function fizzBuzz(numbers) {
   // seu código aqui
   let results = [];
-  
+
   for (let key of numbers){
     if (key % 3 == 0 && key % 5 == 0){
       results.push('fizzBuzz');
@@ -135,7 +135,7 @@ function fizzBuzz(numbers) {
       results.push('buzz');
     }
     else
-    results.push('bug!');  
+    results.push('bug!');
   }
   return results;
 }

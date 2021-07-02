@@ -25,7 +25,7 @@ function generatePhoneNumber(numbah) {
   // seu código aqui
   let phonenumber = '(';
   let checkrepeat = 0;
-  
+
   if (numbah.length != 11){
     return 'Array com tamanho incorreto.';
   }
@@ -53,11 +53,9 @@ function generatePhoneNumber(numbah) {
     else
     checkrepeat = 0;
   }
-
   //NOW it's gonna make the phone number jesus FUCK
   //ex: (12) 34567-8901
-  //to achando que preciso de um FOR IN aqui porque FOR OF nao distingue posição de valor
-  
+  //to achando que preciso de um FOR IN aqui porque FOR OF nao distingue posição de valor 
   for (let key in numbah){
     if (key == 2){
       phonenumber += ') ';
@@ -69,50 +67,44 @@ function generatePhoneNumber(numbah) {
 
     phonenumber += numbah[key];
   }
-   
+
   return phonenumber;
 }
-
-
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  
+
   if (lineA + lineB < lineC || lineB + lineC < lineA || lineA + lineC < lineB){
     return false;
   }
-  else
+
   return true;
-
-
 }
 
 // Desafio 13
 function hydrate(order) {
   // seu código aqui
   //ex 1 cachaça, 5 cervejas e 1 copo de vinho
-  
   let abstractbooze = '';
   let booze = 0;
   let checkInt;
 
   for (let key of order){
     checkInt = parseInt(key, 10);
-    if (Number.isInteger(checkInt) == true){
+    if (Number.isInteger(checkInt)){
       abstractbooze += key;
-      
     }
-    
+
     if (abstractbooze == '0'){
       abstractbooze = '';
     }
    
-    else if (key == ' ' && abstractbooze != '0' && Number.isInteger(parseInt(abstractbooze, 10)) == true){
+    else if (key == ' ' && abstractbooze != '0' && Number.isInteger(parseInt(abstractbooze, 10))){
     booze += parseInt(abstractbooze, 10);
     abstractbooze = '';
     }
-  }   
+  }
 
   if (booze > 1){
   return booze + ' copos de água';
@@ -120,8 +112,6 @@ function hydrate(order) {
 
   else
   return booze + ' copo de água';
- 
-
   /* works for <9 drinks
   for (let key of order){
     if (key > 0){
@@ -133,8 +123,7 @@ function hydrate(order) {
     return booze + ' copos de água';
   }
 
-  else return booze + ' copo de água'; 
-  */
+  else return booze + ' copo de água';   */
 }
 
 module.exports = {
