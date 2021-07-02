@@ -40,10 +40,17 @@ function generatePhoneNumber(fone) {
 
 
 // Desafio 12
-function triangleCheck() {
- 
-  
+function triangleCheck(ladoA, ladoB, ladoC) {
+  if (ladoA + ladoB < ladoC) {
+   return false; 
+ } else if (Math.abs(ladoA - ladoB) > ladoC){  
+   return false;
+ } else {
+  return true;  
 }
+}
+
+
 
 // Desafio 13
 function hydrate() {
