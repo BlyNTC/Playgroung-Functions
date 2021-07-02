@@ -78,9 +78,9 @@ function hydrate(bebidas) {
   let numeros = bebidas.match(/\d/g);
   let somar = 0;
   for (let percorrer of numeros) {
-    somar += parseInt(percorrer)
-  } 
-  if (somar != 1) {
+    somar += parseInt(percorrer, 10);
+  }
+  if (somar !== 1) {
     return somar + ' copos de água';
   }
   return somar + ' copo de água';
