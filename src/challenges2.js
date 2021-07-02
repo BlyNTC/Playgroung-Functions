@@ -27,11 +27,6 @@ function generatePhoneNumber(tel) {
   }
 }
 
-let tel = [0, 4, 3, 4, 4, 2, 7, 8, 9, 9, 4];
-console.log(generatePhoneNumber(tel));
-
-
-
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
