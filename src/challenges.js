@@ -80,9 +80,31 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
+let resultado=''
+
+let distanciacat1= cat1-mouse;
+let distanciacat2=cat2-mouse;
+
+if(Math.abs(distanciacat1)< Math.abs(distanciacat2)){
+
+  resultado='cat1';
 }
+
+else if(Math.abs(distanciacat2) < Math.abs(distanciacat1)){
+  resultado='cat2';
+}
+
+
+else if( Math.abs(distanciacat1)=== Math.abs(distanciacat2)){
+  resultado='os gatos trombam e o rato foge'
+}
+return resultado;
+
+}
+
+
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -161,7 +183,7 @@ function decode(texto) {
     else {
       textoCodificado = textoCodificado + texto[index];
     }
-   
+
   }
   return textoCodificado;
 }
