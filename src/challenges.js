@@ -82,7 +82,7 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
-let resultado=''
+let resultado='';
 
 let distanciacat1= cat1-mouse;
 let distanciacat2=cat2-mouse;
