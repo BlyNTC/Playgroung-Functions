@@ -29,13 +29,11 @@ function highestCount(array) {
   let maiorNumero = Math.max(...array);
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] === maiorNumero) {
-      numeroRepete += 1
+      numeroRepete += 1;
     }
   }
   return numeroRepete;
 }
-
-
 
 // Desafio 7
 function catAndMouse() {
