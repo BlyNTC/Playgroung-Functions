@@ -19,17 +19,16 @@ function generatePhoneNumber(array) {
   function rep(array2) {
     let cont = 0;
     let vetor = [];
-
     for (let i = 0; i < array2.length; i += 1) {
         cont = 0; //seta para nao acumular
-        for (let rep = 0; rep < array2.length; rep += 1) {
-            if (array2[i] == array2[rep]) { //verifica se sao iguais
-                if (i != rep) { // verifica se os indices sao iguais
+        for (let rep1 = 0; rep1 < array2.length; rep1 += 1) {
+            if (array2[i] == array2[rep1]) { //verifica se sao iguais
+                if (i != rep1) { // verifica se os indices sao iguais
                     cont += 1;
                 }
             }
         }
-        vetor.push(cont);
+        vetor.push(cont+1);
     }
     return Math.max.apply(null, vetor);
 }
