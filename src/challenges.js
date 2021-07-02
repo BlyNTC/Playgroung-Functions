@@ -53,7 +53,7 @@ function highestCount(numbers) {
   }
   return count;
 }
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let mouseCat1Distance = Math.abs(mouse - cat1);
