@@ -1,54 +1,57 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
+  let resultado = 0;
   if (valor1 === true && valor2 === true) {
-    return true;
+    resultado = true;
   } else {
-    return false;
+    resultado = false;
   } 
+  return resultado;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height)/2;
+  let area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
-//Fonte do split: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
+// Fonte do split: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
 function splitSentence(frase) {
-  return frase.split(" ");
+  return frase.split(' ');
 }
 
 // Desafio 4
 function concatName(nome) {
-  n = nome.length;
-  return nome[n - 1]+','+' '+nome[0];
+  let n = nome.length;
+  return nome[n - 1] + ',' + ' '+ nome[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = 0;
-  pontos = (wins*3) + (ties*1);
+  pontos = (wins * 3) + (ties);
   return pontos;
 }
 
 // Desafio 6
-/*Recebi ajuda do Luan Peres, que me mostrou a lógica que usou. Ele usou o "array.forEach". Poŕem, eu não faço a mínima ideia de como usar isso. Tentei adaptar a mesma lógica usando o for of.*/
+/* Recebi ajuda do Luan Peres, que me mostrou a lógica que usou. Ele usou o "array.forEach". Poŕem, eu não faço a mínima ideia de como usar isso. Tentei adaptar a mesma lógica usando o for of.*/
+
 let contador = 0;
 function highestCount(numeros) {
   let maior = 0;
   let contador = 0;
-  for(numero of numeros) {
-      if (numero === numeros[0]) { // Inicia a variável maior guardando o primeiro número do array "numeros".
-        maior = numero;
-      }
-      if (numero > maior){ 
-        maior = numero; /*Bloco que, no 1º loop, faz a variável "maior" guardar o 1º numero e que inicializa a variavel "contador" guardando o valor"1". Nos seguintes loops, faz a mesma variável guardar o maior valor do array.*/
-        contador = 1;
-      } else
-      if (numero === maior) {
-        contador = contador +1; /*Bloco que garante a contagem da quantidade de vezes que o maior valor dentro do array "numeros" se repete.*/
-      }
+  for(let numero of numeros) {
+    if (numero === numeros[0]) { // Inicia a variável maior guardando o primeiro número do array "numeros".
+      maior = numero;
+    }
+    if (numero > maior){ 
+      maior = numero; /*Bloco que, no 1º loop, faz a variável "maior" guardar o 1º numero e que inicializa a variavel "contador" guardando o valor"1". Nos seguintes loops, faz a mesma variável guardar o maior valor do array.*/
+      contador = 1;
+    } else
+    if (numero === maior) {
+      contador = contador + 1; /*Bloco que garante a contagem da quantidade de vezes que o maior valor dentro do array "numeros" se repete.*/
+    }
   }
   return contador;
 }
@@ -58,21 +61,23 @@ function highestCount(numeros) {
 function catAndMouse(mouse, cat1, cat2) {
   let d1 = Math.abs(mouse - cat1);
   let d2 = Math.abs(mouse - cat2);
+  let resultado = 0;
   if (d1 < d2) {
-    return "cat1";
+    resultado = "cat1";
   } else 
   if (d2 < d1) {
-    return "cat2";
+    resultado =  "cat2";
   } else
   if (d1 === d2) {
-    return "os gatos trombam e o rato foge";
+    resultado = "os gatos trombam e o rato foge";
   }
+  return resultado;
 }
 
 // Desafio 8
 function fizzBuzz(numeros) {
   let palavras = []; //Cria um array para receber as palavras conforme a divisibilidade do número
-  for (numero of numeros) { //Comando que faz o código analisar elemento por elemento do array recebido
+  for (let numero of numeros) { //Comando que faz o código analisar elemento por elemento do array recebido
     if ((numero % 3 === 0) && (numero % 5 === 0)){
       palavras.push('fizzBuzz');
     } else 
