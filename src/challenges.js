@@ -3,10 +3,10 @@ function compareTrue(valor1, valor2) {
   let resultado = 0;
   if (valor1 === true && valor2 === true) {
     resultado = true;
-    } else {
+  } else {
     resultado = false;
   }
-    return resultado;
+  return resultado;
 }
 
 // Desafio 2
@@ -40,46 +40,46 @@ function footballPoints(wins, ties) {
 function highestCount(numeros) {
   let maior = 0;
   let contador = 0;
-  for(let numero of numeros) {
+  for (let numero of numeros) {
     if (numero === numeros[0]) { // Inicia a variável maior guardando o primeiro número do array "numeros".
       maior = numero;
     }
-    if (numero > maior){ 
-      maior = numero; /*Bloco que, no 1º loop, faz a variável "maior" guardar o 1º numero e que inicializa a variavel "contador" guardando o valor"1". Nos seguintes loops, faz a mesma variável guardar o maior valor do array.*/
+    if (numero > maior) { 
+      maior = numero; /* Bloco que, no 1º loop, faz a variável "maior" guardar o 1º numero e que inicializa a variavel "contador" guardando o valor"1". Nos seguintes loops, faz a mesma variável guardar o maior valor do array. */
       contador = 1;
     } else
     if (numero === maior) {
-      contador = contador + 1; /*Bloco que garante a contagem da quantidade de vezes que o maior valor dentro do array "numeros" se repete.*/
+      contador = contador + 1; /* Bloco que garante a contagem da quantidade de vezes que o maior valor dentro do array "numeros" se repete. */
     }
   }
   return contador;
 }
 
 // Desafio 7
-//Fonte do Math.abs: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math
+// Fonte do Math.abs: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math
 function catAndMouse(mouse, cat1, cat2) {
   let d1 = Math.abs(mouse - cat1);
   let d2 = Math.abs(mouse - cat2);
   let resultado = 0;
   if (d1 < d2) {
-    resultado = "cat1";
-  } else 
+    resultado = 'cat1';
+  } else
   if (d2 < d1) {
-    resultado = "cat2";
+    resultado = 'cat2';
   } else
   if (d1 === d2) {
-    resultado = "os gatos trombam e o rato foge";
+    resultado = 'os gatos trombam e o rato foge';
   }
   return resultado;
 }
 
 // Desafio 8
 function fizzBuzz(numeros) {
-  let palavras = []; //Cria um array para receber as palavras conforme a divisibilidade do número
-  for (let numero of numeros) { //Comando que faz o código analisar elemento por elemento do array recebido
-    if ((numero % 3 === 0) && (numero % 5 === 0)){
+  let palavras = []; // Cria um array para receber as palavras conforme a divisibilidade do número
+  for (let numero of numeros) { // Comando que faz o código analisar elemento por elemento do array recebido
+    if ((numero % 3 === 0) && (numero % 5 === 0)) {
       palavras.push('fizzBuzz');
-    } else 
+    } else
     if (numero % 5 === 0) {
       palavras.push('buzz');
     } else
@@ -88,16 +88,15 @@ function fizzBuzz(numeros) {
     } else {
       palavras.push('bug!');
     }
-        
   }
   return palavras;
-  }  
+}  
 
 // Desafio 9
 /* Recebi ajuda da Anna Hamann, que me mandou o link https://www.w3schools.com/jsref/jsref_replace.asp
 - Eu Estava com dificuldade de usar o replace. No código que eu tinha feito, com "if" minha variável nao guardava todas as modificações, apenas a última. 
 - Tentei utilizar o switch case, com a sugestão do Thiago Oshiro, mas tive dificuldades em várias estruturas do tipo "for" e "if"
-- Com o uso do str.replace(/caracter-a-ser-mudado/g, 'caracter-que-quero-inserir') consigo armazenar todas as mudanças feitas em uma mesma variável.*/
+- Com o uso do str.replace(/caracter-a-ser-mudado/g, 'caracter-que-quero-inserir') consigo armazenar todas as mudanças feitas em uma mesma variável. */
 function encode(sentenca) {
   sentenca = sentenca.replace (/a/g, '1'); 
   sentenca = sentenca.replace (/e/g, '2');

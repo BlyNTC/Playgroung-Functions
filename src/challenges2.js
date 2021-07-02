@@ -16,19 +16,32 @@ function techList(array, name) { // Recebi ajuda do Filipe Brochier para desenvo
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  /*if (array.length !== 11) {
-    return "Array com tamanho incorreto."
-  } else
-  if () {
-
+  let repete = 0;
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
-  return (array[0],array[1])+array[2]+array[3]+array[4]+array[5]+'-'+array[6]+array[7]+array[8]+array[9]*/
+  for (let i = 0; i < array.length; i +=1){
+    if (array[i] < 0 || array[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    for (let i2 = 0; i2 < array.length; i2 +=1) {
+      if (array[i] === array[i2]) {
+        repete = repete + 1;
+      }
+    }
+    if (repete >= 3){
+      return 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      repete = 0;
+    }
+  }
+  return '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let resultado = 0;
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB))  {
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
     resultado = true;
   } else {
     resultado = false;
@@ -37,7 +50,6 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-hydrate('1 cerveja')
 function hydrate(String) {
   let numeroCoposAgua = 0;
   let conversaoStrParaInteiro = 0;
