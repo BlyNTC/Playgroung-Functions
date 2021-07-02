@@ -66,21 +66,52 @@ function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   if (lineA < (lineB + lineC) && lineA > (Math.abs(lineB - lineC))) {
     return true
-  } 
-  else if (lineB < (lineA + lineC) && lineB > (Math.abs(lineA - lineC))) {
+  } else if (lineB < (lineA + lineC) && lineB > (Math.abs(lineA - lineC))) {
     return true
-  }
-  else if (lineC < (lineB + lineA) && lineC > (Math.abs(lineB - lineA))) {
+  } else if (lineC < (lineB + lineA) && lineC > (Math.abs(lineB - lineA))) {
     return true
   } else {
     return false
   }
 }
 
+// Fonte Desafio 12:
+
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+
 // Desafio 13
-function hydrate() {
+function hydrate(breja) {
   // seu código aqui
+  let bebidas = 0;
+
+  for (let i = 0; i < breja.match(/\d+/g).length; i += 1) {
+    bebidas = parseInt(breja.match(/\d+/g)[i]) + bebidas
+  }
+  // let brejaInt = breja.split("").filter(n => (Number(n) || n == 0)).join(""); //  ==> tirou todas as letras e deixou apenas numeros;
+  // for (let i of brejaInt) {
+  //   bebidas = parseInt(i, 10) + bebidas
+  // }
+  // brejaInt = parseInt(breja, 10)// transformou a string em number ;
+  // let bebidas = 0;
+
+  let copo = ' copo de água';
+  let copos = ' copos de água';
+  // for (let i = 0; i <= gambiarra; i += 1) {
+  //   bebidas = bebidas + i;
+  // }
+  if (bebidas > 1) {
+    return bebidas + copos
+  } else {
+    return bebidas + copo
+  }
+
 }
+
+// Fonte Desafio 13:
+
+// https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript
+
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 
 module.exports = {
   generatePhoneNumber,
