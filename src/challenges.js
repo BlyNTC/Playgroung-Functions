@@ -83,38 +83,27 @@ function fizzBuzz(array=[]) {
   }
   return array;
 }
+console.log(fizzBuzz([54, 43, 15, 20, 30, 43]))
 
 // Desafio 9
-function encode(str = []) {
-  let sopa = []
-  for(let l of str){
-    sopa.push(l);
+function encode(str) {
+  let newword = '';
+  newword = str.replace(/a/g, '1');
+  newword = newword.replace(/e/g, '2');
+  newword = newword.replace(/i/g, '3');
+  newword = newword.replace(/o/g, '4');
+  newword = newword.replace(/u/g, '5');
+  return newword;
+}
+function decode(encoded) {
+    let reptool = '';
+    reptool = encoded.replace(/1/g, 'a');
+    reptool = reptool.replace(/2/g, 'e');
+    reptool = reptool.replace(/3/g, 'i');
+    reptool = reptool.replace(/4/g, 'o');
+    reptool = reptool.replace(/5/g, 'u');
+    return reptool;
   }
-  for(let i=0; i<sopa.length; i++){}
-  switch(sopa[i]){
-     case "a": str[i] = 1;
-     break;
-     case "e": str[i] = 2;
-     break;
-     case "i": str[i] = 3;
-     break;
-     case "o": str[i] = 4;
-     break;
-     case "u": str[i] = 5;
-     break;
-     default: break;
-}
-let junta=[];
-for(let z of sopa){
-  junta.push(z);
-}
-return junta;
-}
-console.log(encode("hey you"));
-}
-function decode() {
-  // seu código aqui
-}
 
 module.exports = {
   calcArea,
