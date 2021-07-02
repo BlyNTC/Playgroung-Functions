@@ -15,57 +15,38 @@ function techList(array, nome) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  // seu código aqui
-  function rep(array2) {
-    let cont = 0;
-    let vetor = [];
-    for (let i = 0; i < array2.length; i += 1) {
-        cont = 0; //seta para nao acumular
-        for (let rep1 = 0; rep1 < array2.length; rep1 += 1) {
-            if (array2[i] == array2[rep1]) { //verifica se sao iguais
-                if (i != rep1) { // verifica se os indices sao iguais
-                    cont += 1;
-                }
-            }
+  let cont = 0;
+  let vetor = [];
+  for (let i = 0; i < array.length; i += 1) {
+    cont = 0; //seta para nao acumular
+    for (let rep = 0; rep < array.length; rep += 1) {
+      if (array[i] == array[rep]) { //verifica se sao iguais
+        if (i != rep) { // verifica se os indices sao iguais
+          cont += 1;
         }
-        vetor.push(cont+1);
+      }
     }
-    return Math.max.apply(null, vetor);
-}
-function erro(array1) {
-    let a = false;
-    if (array1.length != 11) {
-        return 'Array com tamanho incorreto.';
-    } else if (Math.min.apply(null, array1) < 0 || Math.max.apply(null, array1) > 9 || rep(array1) >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
+    vetor.push(cont + 1);
+  }
+  if (array.length != 11) {
+    return 'Array com tamanho incorreto.';
+  } else if (Math.min.apply(null, array) < 0 || Math.max.apply(null, array) > 9 || Math.max.apply(null, vetor) >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  let string = '';
+  for (let i in array) {
+    if (i == 0) {
+      string += '(' + array[0];
+    } else if (i == 1) {
+      string += array[1] + ')' + ' ';
+    } else if (i == 6) {
+      string += array[6] + '-';
     } else {
-        a = true;
-        return a;
+      string += array[i];
     }
-}
-let y = erro(array);
-if (y != true) {
+  }
+  return string;
 
-    return y;
-}
-let string = '';
-function teste(index) {
-    if (index == 0) {
-        return '(' + array[0];
-    } else if (index == 1) {
-        return array[1] + ')' + ' ';
-    } else if (index == 6) {
-        return array[6] + '-';
-    }
-}
-for (let i in array) {
-    if (teste(i) != null) {
-        string += teste(i);
-    } else {
-        string += array[i];
-    }
-}
-return string;
 }
 
 // Desafio 12
