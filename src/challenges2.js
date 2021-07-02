@@ -30,21 +30,17 @@ function generatePhoneNumber(digits) {
   for (let i = 0; i < digits.length; i += 1) {
     count = 0;
     for (let j = 0; j < digits.length; j += 1) {
-
-      
-
       if (digits[j] === digits[i]) count += 1;
-      
-      if (digits[j] < 0 || digits[j] > 9 || count >= 3) return "não é possível gerar um número de telefone com esses valores";
-    }  
+
+      if (digits[j] < 0 || digits[j] > 9 || count >= 3)
+        return 'não é possível gerar um número de telefone com esses valores';
+    }
   }
-  
   digits.splice(0, 0, '(');
   digits.splice(3, 0, ') ');
   digits.splice(9, 0, '-');
 
   return digits.join('');
-  
 }
 
 // Desafio 12
