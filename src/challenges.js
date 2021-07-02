@@ -17,9 +17,11 @@ function splitSentence(frase) {
   return frase.split(" ");
 }
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
+// Desafio 4 - TERMINADO
+function concatName(nameArray) {
+  let name = `${nameArray[nameArray.length - 1]}, ${nameArray[0]}`;
+
+  return name;
 }
 
 // Desafio 5' - TERMINADO
