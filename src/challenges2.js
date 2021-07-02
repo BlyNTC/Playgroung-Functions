@@ -23,44 +23,42 @@ function generatePhoneNumber(telephoneArray) {
 
 }
 
-generatePhoneNumber([ 1, 2, 3, 4, 5, 6 ,7, 8, 9, 0, 1 ]);
+generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-
-  
-
-  if ( lineA > lineB + lineC  || lineB > lineA + lineC || lineC > lineA + lineB ) {
-  
-    return false;
-  
-  }
-
+  if ( lineA > lineB + lineC  || lineB > lineA + lineC || lineC > lineA + lineB ) {  
+return false; }
   else if ( lineA < (lineB + lineC)  ===  true && lineA >  Math.abs( lineB - lineC) === true ) {
-
     return true;
-
   } else if ( lineB < (lineC + lineA)  ===  true && lineB >  Math.abs( lineA - lineC) === true ) { 
-
     return true; 
-
   } else if  ( lineC < (lineB + lineA)  ===  true && lineC >  Math.abs( lineB - lineC) === true ) { 
-
     return true; 
-
    }  else {
-
     return false;
   }
-
 }
 
-triangleCheck( 30, 23, 10);
+triangleCheck(30, 23, 10);
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let drinksNumberfind = /\d+/g;
+  let arrayDrinks = drinks.match(drinksNumberfind);
+  let numberDrinks = arrayDrinks.map(Number);
+  let sumOfDrinks = 0;
+  for (let i = 0; i < numberDrinks.length; i += 1) {
+    sumOfDrinks += numberDrinks[i]; }
+  arrayDrinks = sumOfDrinks.toString();
+  if (sumOfDrinks === 1) {
+    arrayDrinks += ' copo de água';
+  } else {
+    arrayDrinks += ' copos de água';
+  }
+  return arrayDrinks;
 }
+hydrate('1 cerveja, 5 cachaças e 3 vodkas');
 
 module.exports = {
   generatePhoneNumber,
