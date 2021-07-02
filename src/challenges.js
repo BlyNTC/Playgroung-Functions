@@ -34,7 +34,7 @@ function highestCount(array) {
     }
   }
   return numeroRepete;
-}    
+}   
 
 // Desafio 7
 function catAndMouse() {
