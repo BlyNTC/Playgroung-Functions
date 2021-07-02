@@ -15,9 +15,9 @@ function techList(technologies, name) {
 
 // Desafio 11
 
-function numberCounter(numbers) { // Validation for generatePhoneNumber function
-  let numberCount = {};
-  for (let value of numbers) { // Counts how many times the value appears
+function numberCounter(numbers) {
+  let numberCount = {}; // Stores repetitions
+  for (let value of numbers) { // Counts repetitions
     if (numberCount[value] === undefined) {
       numberCount[value] = 1;
     } else {
@@ -28,30 +28,47 @@ function numberCounter(numbers) { // Validation for generatePhoneNumber function
 }
 
 function counter(numbers) {
-  for (let count in numberCounter(numbers)) {
-    if (numberCounter(numbers)[count] >= 3) {
+  let numberCount = numberCounter(numbers);
+  for (let count in numberCount) {
+    if (numberCount[count] >= 3) {
       return true;
     }
   }
+}
+
+function validation(numbers) {
+  let threeOrMore = counter(numbers);
+  for (let value of numbers) {
+    if (value < 0 || value > 9 || threeOrMore) {
+      return true;
+    }
+  }
+  return false;
 }
 
 function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (let value of numbers) {
-    if (value < 0 || value > 9 || counter(numbers)) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
+  if (validation(numbers)) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   return numbers.join('').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3'); // Based in 4th example <https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176>
 }
 
 // Desafio 12
+function higherThanDiff(lineA, lineB, lineC) {
+  return lineA > Math.abs(lineB - lineC)
+    && lineB > Math.abs(lineA - lineC)
+    && lineC > Math.abs(lineA - lineB);
+}
+
 function triangleCheck(lineA, lineB, lineC) {
-  return ((lineA < lineB + lineC) && lineA > Math.abs(lineB - lineC))
-  || ((lineB < lineA + lineC) && lineB > Math.abs(lineA - lineC))
-  || ((lineC < lineA + lineB) && lineC > Math.abs(lineA - lineB));
+  let absoluteDiff = higherThanDiff(lineA, lineB, lineC);
+  return (lineA < lineB + lineC)
+    && (lineB < lineA + lineC)
+    && (lineC < lineA + lineB)
+    && absoluteDiff;
 }
 
 // Desafio 13
