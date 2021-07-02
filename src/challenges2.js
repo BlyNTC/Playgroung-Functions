@@ -96,12 +96,48 @@ function generatePhoneNumber(listOfNumbers) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let lineOfTriangle = [lineA, lineB, lineC], conditionToBeATriangle = [];
+
+  for (let line of lineOfTriangle) {
+
+    let sum = 0, difference =  [], resultOfDifference = 0;;
+
+    for (let othersLines of lineOfTriangle) {
+      
+      if (line !== othersLines) {
+
+        sum += othersLines;
+        difference.push(othersLines);
+
+      }
+
+    }
+
+    resultOfDifference = Math.abs(difference[0] - difference [1]);
+
+    if (line < sum && line > resultOfDifference){
+
+      conditionToBeATriangle.push(true);
+
+    } else {
+
+      conditionToBeATriangle.push(false);
+
+    }
+
+  }
+
+  if (conditionToBeATriangle[0] === true && conditionToBeATriangle[1] === true && conditionToBeATriangle[2] === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
 function hydrate() {
   // seu código aqui
-
+  
 }
 
 module.exports = {
