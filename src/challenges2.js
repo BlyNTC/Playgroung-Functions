@@ -74,35 +74,26 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let numbersFromString = string.replace(/\D/g, "");
+  let cupsOfWater = 0;
+  let arrNumberStr = Array.from(numbersFromString);
+  let outputArray = [];
+  
+  for (let i = 0; i < arrNumberStr.length; i += 1) {
+    let integer = parseInt(arrNumberStr[i]);
+    cupsOfWater += integer;
+  }
+
+  if (cupsOfWater === 1) {
+    outputArray.push(cupsOfWater + " copo de água")
+  } else if (cupsOfWater > 1) {
+    outputArray.push(cupsOfWater + " copos de água")
+  }
+
+  return outputArray[0];
 }
 
 module.exports = {
