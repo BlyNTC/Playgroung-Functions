@@ -45,7 +45,8 @@ for (let index2 = 0; index2 < nums.length; index2 += 1) {
   } return soma;
 }
 
-// Desafio 7
+//Desafio 9
+
 function catAndMouse(mouse, cat1, cat2) {
   let distancia1 = (mouse) - (cat1);
   let distancia2 = (mouse) - (cat2);
