@@ -120,7 +120,6 @@ function decode(string) {
   let code = ['a', 'e', 'i', 'o', 'u'];
   let deploy = '';
   for (let i = 0; i < string.length; i += 1) {
-    letraFinder = string[i];
     let indexLetra = letra.indexOf(string[i]);
     if (string[i] === letra[indexLetra]) {
       deploy += code[indexLetra];

@@ -7,11 +7,9 @@ function techList(arr, name) {
   let tec = [];
   for (let j in arr) {
     tec.push({ tech: '', name: '' });
-  }
-  for (let i in arr) {
-    tec[i].tech = arr[i];
-    tec[i].name = name;
-    arr[i] = tec[i];
+    tec[j].tech = arr[j];
+    tec[j].name = name;
+    arr[j] = tec[j];
   }
   return arr;
 
@@ -29,19 +27,14 @@ function generatePhoneNumber(arr) {
   }
   for (let k in arr) {
     for (let m in arr) {
-      if (arr[k] === arr[m]) {
+      if (arr[k] === arr[m] || arr[m] < 0 || arr[m] > 9) {
         repeticao += 1;
+        if (repeticao >= 3) {
+          return 'não é possível gerar um número de telefone com esses valores';
+        }
       }
     }
-    if (repeticao >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
     repeticao = 0;
-  }
-  for (let i in arr) {
-    if (arr[i] < 0 || arr[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
   }
   for (let j in arrTel) {
     print += arrTel[j];
