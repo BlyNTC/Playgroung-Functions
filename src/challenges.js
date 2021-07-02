@@ -37,7 +37,7 @@ function highestCount(arr) {
   let resultado = 0;
   let maximo = Math.max(...arr); 
   for (let index = 0; index < arr.length; index += 1) {
-    if arr[index] === maximo {
+    if (arr[index] === maximo) {
       resultado += 1
     }
   }
