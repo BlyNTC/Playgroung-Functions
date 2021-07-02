@@ -41,50 +41,64 @@ function generatePhoneNumber(array) {
 		if (checkingForRep < 3) {
 			checkingForRep = 0;
 		}
+  }
+  if(checkingForRep < 3) {
+    arrSaida[0] = "(";
+    arrSaida[1] = array[0];
+    arrSaida[2] = array[1];
+    arrSaida[3] = ")";
+    arrSaida[4] = " ";
+    arrSaida[5] = array[2];
+    arrSaida[6] = array[3];
+    arrSaida[7] = array[4];
+    arrSaida[8] = array[5];
+    arrSaida[9] = array[6];
+    arrSaida[10] = "-";
+    arrSaida[11] = array[7];
+    arrSaida[12] = array[8];
+    arrSaida[13] = array[9];
+    arrSaida[14] = array[10];
+    arrJoined = arrSaida.join('');
+    arrStringed = arrJoined.toString();
+    return arrStringed; 
+  }
 }
-if(checkingForRep < 3) {
-	arrSaida[0] = "(";
-	arrSaida[1] = array[0];
-	arrSaida[2] = array[1];
-	arrSaida[3] = ")";
-	arrSaida[4] = " ";
-	arrSaida[5] = array[2];
-	arrSaida[6] = array[3];
-	arrSaida[7] = array[4];
-	arrSaida[8] = array[5];
-	arrSaida[9] = array[6];
-	arrSaida[10] = "-";
-	arrSaida[11] = array[7];
-	arrSaida[12] = array[8];
-	arrSaida[13] = array[9];
-	arrSaida[14] = array[10];
-	arrJoined = arrSaida.join('');
-	arrStringed = arrJoined.toString();
-	return arrStringed; 
-}
-}
-
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  if (lineA < lineC + lineB && lineB < lineC + lineA && lineC < lineA + lineB) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 13
 function hydrate() {
