@@ -80,28 +80,37 @@ function fizzBuzz(numeros) {
   return words;
 }
 // Desafio 9
+
+function letter(l) {
+  let change = ['a', 'e', 'i', 'o', 'u'];
+  for (let j = 0; j < change.length; j += 1) {
+    if (l === change[j]) {
+      l = j + 1;
+    }
+  }
+  return l;
+}
 function encode(str) {
   let arrayEncode = Array.from(str);
-  let change = ['a', 'e', 'i', 'o', 'u'];
   for (let i = 0; i < str.length; i += 1) {
-    for (let j = 0; j < change.length; j += 1) {
-      if (arrayEncode[i] === change[j]) {
-        arrayEncode[i] = j + 1;
-      }
-    }
+    arrayEncode[i] = letter(arrayEncode[i]);
   }
   let strEncode = arrayEncode.join('');
   return strEncode;
 }
+function numberToLetter(n) {
+  let change = ['a', 'e', 'i', 'o', 'u'];
+  for (let j = 0; j < change.length; j += 1) {
+    if (Number(n) === j + 1) {
+      n = change[j];
+    }
+  }
+  return n;
+}
 function decode(str) {
   let arrayDecode = Array.from(str);
-  let change = ['a', 'e', 'i', 'o', 'u'];
   for (let i = 0; i < str.length; i += 1) {
-    for (let j = 0; j < change.length; j += 1) {
-      if (Number(arrayDecode[i]) === j + 1) {
-        arrayDecode[i] = change[j];
-      }
-    }
+    arrayDecode[i] = numberToLetter(arrayDecode[i]);
   }
   let strDecode = arrayDecode.join('');
   return strDecode;
