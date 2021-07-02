@@ -50,16 +50,33 @@ function concatName(meuArray) {
 
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   return (wins * 3) + ties
 
 }
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// recebe um array de numeros
+function highestCount(outroArray) {
+  // recebe o numero maior do array
+  let numeroMaior = 0
+  // procura o numero maior do array
+  for (let index = 0; index < outroArray.length; index += 1) {
+    if (outroArray[index] > numeroMaior) {
+      numeroMaior = outroArray[index]
+    }
+  }
+  let vezesQueAparece = 0
+  for (let index = 0; index < outroArray.length; index += 1) {
+    if (numeroMaior === outroArray[index]) {
+      vezesQueAparece += 1
+    }
+  }
+  return vezesQueAparece
 }
+
+
 
 // Desafio 7
 function catAndMouse() {
