@@ -1,35 +1,35 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   } 
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height)/2
-  return area
+  let area = (base * height)/2;
+  return area;
 }
 
 // Desafio 3
 //Fonte do split: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
 function splitSentence(frase) {
-  return frase.split(" ")
+  return frase.split(" ");
 }
 
 // Desafio 4
 function concatName(nome) {
-  n = nome.length
-  return nome[n - 1]+','+' '+nome[0]
+  n = nome.length;
+  return nome[n - 1]+','+' '+nome[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = 0;
-  pontos = wins*3 + ties*1
-  return pontos
+  pontos = (wins*3) + (ties*1);
+  return pontos;
 }
 
 // Desafio 6
@@ -50,22 +50,22 @@ function highestCount(numeros) {
         contador = contador +1; /*Bloco que garante a contagem da quantidade de vezes que o maior valor dentro do array "numeros" se repete.*/
       }
   }
-  return contador
+  return contador;
 }
 
 // Desafio 7
 //Fonte do Math.abs: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math
 function catAndMouse(mouse, cat1, cat2) {
-  let d1 = Math.abs(mouse - cat1)
-  let d2 = Math.abs(mouse - cat2)
+  let d1 = Math.abs(mouse - cat1);
+  let d2 = Math.abs(mouse - cat2);
   if (d1 < d2) {
-    return "cat1"
+    return "cat1";
   } else 
   if (d2 < d1) {
-    return "cat2"
+    return "cat2";
   } else
   if (d1 === d2) {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
 }
 
@@ -74,19 +74,19 @@ function fizzBuzz(numeros) {
   let palavras = []; //Cria um array para receber as palavras conforme a divisibilidade do número
   for (numero of numeros) { //Comando que faz o código analisar elemento por elemento do array recebido
     if ((numero % 3 === 0) && (numero % 5 === 0)){
-      palavras.push('fizzBuzz')
+      palavras.push('fizzBuzz');
     } else 
     if (numero % 5 === 0) {
-      palavras.push('buzz')
+      palavras.push('buzz');
     } else
     if (numero % 3 === 0) {
-      palavras.push('fizz')
+      palavras.push('fizz');
     } else {
-      palavras.push('bug!')
+      palavras.push('bug!');
     }
         
   }
-  return palavras
+  return palavras;
   }  
 
 // Desafio 9
@@ -109,7 +109,7 @@ function decode(sentenca) {
   sentenca = sentenca.replace (/3/g, 'i');
   sentenca = sentenca.replace (/4/g, 'o');
   sentenca = sentenca.replace (/5/g, 'u');
-  return sentenca
+  return sentenca;
 }
 
 module.exports = {
