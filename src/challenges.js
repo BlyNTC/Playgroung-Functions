@@ -1,24 +1,27 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 && valor2)
+  if (valor1 && valor2 < 10)
     return true;
   else {
     return false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = base * height / 2;
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let array = frase.split (' ');
+  return array;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strings) {
+  let primeiroUltimo = "'" + strings[strings.length-1] + ', ' + strings[0] + "'";
+  return primeiroUltimo;
 }
 
 // Desafio 5
