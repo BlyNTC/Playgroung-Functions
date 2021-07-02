@@ -12,7 +12,7 @@ function calcArea(base, height) {
   return (base*height)/2;
 }
 
-// Desafio 3
+// Desafio 3 - TERMINADO
 function splitSentence(frase) {
   return frase.split(" ");
 }
@@ -48,16 +48,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+// Desafio 9 - TERMINADO
+function encode(frase) {
+  frase=frase.replace(/a/g,"1");
+  frase=frase.replace(/e/g,"2");
+  frase=frase.replace(/i/g,"3");
+  frase=frase.replace(/o/g,"4");
+  frase=frase.replace(/u/g,"5");
+  return frase;
 }
-function decode() {
-  // seu código aqui
+//Desafio 10 - TERMINADO
+function decode(frase) {
+  frase=frase.replace(/1/g,"a");
+  frase=frase.replace(/2/g,"e");
+  frase=frase.replace(/3/g,"i");
+  frase=frase.replace(/4/g,"o");
+  frase=frase.replace(/5/g,"u");
+  return frase;
 }
 
 module.exports = {
