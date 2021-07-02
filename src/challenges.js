@@ -67,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   let words = [];
   for (let i = 0; i < numeros.length; i += 1) {
-    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
+    if (numeros[i] % 15 === 0) {
       words[i] = 'fizzBuzz';
     } else if (numeros[i] % 3 === 0) {
       words[i] = 'fizz';
