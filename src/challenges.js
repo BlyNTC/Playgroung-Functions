@@ -1,11 +1,7 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  if (bool1 === true && bool2 === true) {
-    return true;
-  }
-  return false;
+  return bool1 && bool2;
 }
-console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -34,7 +30,7 @@ function highestCount(numbers) {
   for (let value of numbers) {
     if (value === highest) {
       output += 1;
-    } else if (highest === undefined || value > highest) {
+    } else if (!highest || value > highest) { // Thanks to Paulo de Sordi and Thiago Almeida (both from Turma 14) who taught me the ! usage
       highest = value;
       output = 1;
     }
@@ -57,7 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function divisorCheck(number) { // Checks unique divisors for fizzBuzz function
-  if (number % 3 === 0 && number % 5 === 0) {
+  if (number % 15 === 0) {
     return 'fizzBuzz';
   }
   if (number % 3 === 0) {
