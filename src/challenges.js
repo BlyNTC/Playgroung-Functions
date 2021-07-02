@@ -30,14 +30,15 @@ function footballPoints(wins, ties) {
 }
 
 
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+//digite aqui
 }
 
+
+
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
     return "cat1";
   } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)){
@@ -50,7 +51,7 @@ function catAndMouse(cat1, cat2, mouse) {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  
 }
 
 // Desafio 9
