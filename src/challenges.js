@@ -87,27 +87,52 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let frase = string;
+  let novaFrase = "";
 
-  for(let index = 1; index < frase.length; index += 1){
-      if(frase[index] === "a"){
-        frase.replace(frase(index), "1")
-      }else if(frase[index] === "e"){
-        frase.replace(frase(index), "2")
-      }else if(frase[index] === "i"){
-        frase.replace(frase(index), "3")
-      }else if(frase[index] === "o"){
-        frase.replace(frase(index), "4")
-      }else if(frase(index) === "u"){
-        frase.replace(frase(index), "5")
-      }
+  for(let index = 0; index < string.length; index += 1){
+    let letraAtual = string[index];
+    
+    if(letraAtual === "a"){
+      novaFrase += "1";
+    }else if(letraAtual === "e"){
+      novaFrase += "2";
+    }else if(letraAtual === "i"){
+      novaFrase += "3";
+    }else if(letraAtual === "o"){
+      novaFrase += "4";
+    }else if(letraAtual === "u"){
+      novaFrase += "5";
+    }else{
+      novaFrase += string[index];
+    }
   }
   
-  return frase;
+  return novaFrase;
 }
 
-function decode() {
+function decode(string) {
   // seu código aqui
+  let novaFrase = "";
+
+  for(let index = 0; index < string.length; index += 1){
+    let letraAtual = string[index];
+    
+    if(letraAtual === "1"){
+      novaFrase += "a";
+    }else if(letraAtual === "2"){
+      novaFrase += "e";
+    }else if(letraAtual === "3"){
+      novaFrase += "i";
+    }else if(letraAtual === "4"){
+      novaFrase += "o";
+    }else if(letraAtual === "5"){
+      novaFrase += "u";
+    }else{
+      novaFrase += string[index];
+    }
+  }
+  
+  return novaFrase;
 }
 
 module.exports = {
