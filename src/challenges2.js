@@ -26,7 +26,7 @@ function generatePhoneNumber(phoneNumber) {
     if (phoneNumber[index] > 9 || phoneNumber[index] < 0) {
       return "não é possível gerar um número de telefone com esses valores"
     }
-    for (let index2 = 1; index2 < phoneNumber.length; index2 += 1) {
+    for (let index2 = 0; index2 < phoneNumber.length; index2 += 1) {
           if (phoneNumber[index] === phoneNumber[index2]) {
               soma += 1;
             }
