@@ -1,8 +1,20 @@
 // Desafio 10
-function techList(techsLearn, name) {
-
+function techList(tecnologia, name) {
+  tecnologia.sort();
+  let listaDeTechs;
+  if (tecnologia.length === 0) {
+    listaDeTechs = "Vazio!";
+  } else {
+    listaDeTechs = [];
+    for (let key in tecnologia) {
+      listaDeTechs.push({
+        tech: tecnologia[key],
+        name: name,
+      });
+    }
+  }
+  return listaDeTechs;
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
@@ -10,13 +22,11 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineB + lineA){
+  if (lineA < lineB + lineC && lineB < lineC + lineA && lineC < lineB + lineA) {
     return true;
   }
-    return false;
+  return false;
 }
-
-console.log(triangleCheck(10,14,8))
 // Desafio 13
 function hydrate() {
   // seu código aqui
