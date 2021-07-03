@@ -143,8 +143,15 @@ function encode(encoded) {
   //versao 2.0 com  a bandeira g quer dizer global todas as ocorrencias no objeto.
   return codificaU;
 }
-function decode() {
+function decode(cipher) {
   // seu código aqui
+  //literalmente fiz o contrario de encode baseado no mesmo link!
+  let decodificaA = cipher.replace(/1/g,"a");
+  let decodificaE = decodificaA.replace(/2/g,"e");
+  let decodificaI = decodificaE.replace(/3/g,"i");
+  let decodificaO = decodificaI.replace(/4/g,"o");
+  let decodificaU = decodificaO.replace(/5/g,"u");
+  return decodificaU;
 }
 
 module.exports = {
