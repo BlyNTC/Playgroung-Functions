@@ -1,6 +1,22 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+
+function techList(techs) {
+  // let techs = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+  let name = 'Maurício';
+  let list = [];
+  let arFinal = [];
+  if (techs.length === 5) {
+    for (let i = 0; i < techs.length; i += 1) {
+      list.push(techs[i])
+    }
+    let techArray = list.sort();
+    for (let iA = 0; iA < techArray.length; iA += 1) {
+      arFinal.push({techname : techArray[iA], name : name})
+    }
+    return arFinal;
+  } else if (techs.length === 0) {
+    return 'Vazio!';
+  }
 }
 
 // Desafio 11
