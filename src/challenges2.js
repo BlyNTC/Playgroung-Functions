@@ -66,7 +66,6 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(line1,line2,line3) {
-  //let dif=Math.abs(line3-line2-line1)
   if ((line1<(line2-line3)) || (line2<(line1-line3)) || (line3<(line1-line2))){
     return false  
   }else if((line1+line2)<line3 && (line1+line3)<line2 && (line2+line3)<line1){
@@ -74,26 +73,22 @@ function triangleCheck(line1,line2,line3) {
   }else{
     return true
   }
-   
-  
-  
-    
-  
-  }
-  
-
-  
-
-
-console.log(triangleCheck(10,14,8))
-
-
-
-// Desafio 13
-function hydrate() {
-  // seu código aqui
 }
-
+  
+// Desafio 13
+function hydrate(string) {
+  let numbers=string.match(/\d+/g).map(Number)
+  let soma=0
+  for(let i=0;i<numbers.length;i+=1){
+    soma+=numbers[i]
+  }
+  if (soma<2){
+  return (soma+' copo de água')
+  }else{
+    return (soma+' copos de água')
+  }
+}
+console.log(hydrate('Bebi 1 cerveja e 3 vinhos'))
 module.exports = {
   generatePhoneNumber,
   techList,
