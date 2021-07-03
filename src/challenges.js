@@ -86,7 +86,6 @@ catAndMouse(10, 7, 8);
 function fizzBuzz(arrNumbers) {
 
   let solucao = [];
-
     for (let index = 0; index < arrNumbers.length; index += 1) {
       if (arrNumbers[index] % 3 === 0 && arrNumbers[index] % 5 === 0) {
         solucao.push('fizzBuzz');
@@ -96,7 +95,6 @@ function fizzBuzz(arrNumbers) {
     }
     
     function fizzBuzzBug (number){
-
       if (number % 3 === 0) {
         return "fizz";
       }
@@ -107,19 +105,31 @@ function fizzBuzz(arrNumbers) {
       }
   return solucao;    
 }
-
- 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
-
+fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(trocaVogais) {
+  let codifica = ''
+  codifica = trocaVogais.replace(/a/gi, "1");
+  codifica = codifica.replace(/e/gi, "2");
+  codifica = codifica.replace(/i/gi, "3");
+  codifica = codifica.replace(/o/gi, "4");
+  codifica = codifica.replace(/u/gi, "5");
+  return codifica;
 }
-function decode() {
-  // seu código aqui
+encode("Caminho Suave");
+
+function decode(trocaNumeros) {
+  let decodifica = ''
+  decodifica = trocaNumeros.replace(/1/gi, "a");
+  decodifica = decodifica.replace(/2/gi, "e");
+  decodifica = decodifica.replace(/3/gi, "i");
+  decodifica = decodifica.replace(/4/gi, "o");
+  decodifica = decodifica.replace(/5/gi, "u");
+  return decodifica;
 }
+decode("H3 th2r2!");
+
 
 module.exports = {
   calcArea,
