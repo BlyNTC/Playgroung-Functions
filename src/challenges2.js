@@ -106,15 +106,11 @@ function hydrate(string) {
   if (coposDeAgua === 1){
     let sugestao = `${coposDeAgua} copo de água`;
     return sugestao;
-  }else{
+  }else {
         let sugestao = `${coposDeAgua} copos de água`;
         return sugestao;
-
   }
 }
-
-hydrate("5 cachaça, 5 cervejas e 1 copo de vinho");
-
 module.exports = {
   generatePhoneNumber,
   techList,
