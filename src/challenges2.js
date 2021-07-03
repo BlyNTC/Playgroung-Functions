@@ -71,9 +71,23 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  // metodo pesquisado no W3 Schools
+  let str = string.match(/\d/g, " ");
+  let resultado;
+  let coposDeAgua = 0;
+  for (let index of str) {
+    coposDeAgua += parseInt(index);
+  }
+  if (coposDeAgua === 1) {
+    resultado = (coposDeAgua + ' copo de água');
+  } else if (coposDeAgua > 1) {
+    resultado = (coposDeAgua + ' copos de água');
+  }
+  return resultado;
 }
+
 
 module.exports = {
   generatePhoneNumber,
