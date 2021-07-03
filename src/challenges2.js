@@ -21,7 +21,7 @@ function techList(tecnologia, nome) {
   return lista;
 }
 }
-console.log(techList([], "Lucas"));
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
