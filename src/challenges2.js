@@ -6,19 +6,16 @@ function techList(techs, nome) {
     techNome = techs;
     techNome.sort();
     let listaObjetos = [];
-      for (let indice = 0; indice < techs.length; indice +=  1) {
+      for (let indice = 0; indice < techs.length; indice += 1) {
         let Objetos = {
         tech: techs[indice],
         name: nome,
         };
-
       listaObjetos.push(Objetos);
-
-      }
-    
+      }    
     return listaObjetos;
-  } else return "Vazio!";
-  
+  }
+  return "Vazio!";  
 }
 
 
@@ -26,7 +23,7 @@ function techList(techs, nome) {
 function generatePhoneNumber(numeroTel) {
   // seu código aqui
   let ddd = [numeroTel[0]] + [numeroTel[1]]
-  let inicial = [numeroTel[2]] + [numeroTel[3]]+ [numeroTel[4]] + [numeroTel[5]]+ [numeroTel[6]];
+  let inicial = [numeroTel[2]] + [numeroTel[3]] + [numeroTel[4]] + [numeroTel[5]] + [numeroTel[6]];
   let final = [numeroTel[7]] + [numeroTel[8]] + [numeroTel[9]] + [numeroTel[10]];
   let repete = 0;
   let numeroCompleto = "";
@@ -37,10 +34,7 @@ function generatePhoneNumber(numeroTel) {
 
   for (let numb of numeroTel) {
     if (repete >= 3 || numb < 0 || numb > 9) {
-      console.log("não é possível gerar um número de telefone com esses valores");
-      return "não é possível gerar um número de telefone com esses valores";
-      
-           
+      return "não é possível gerar um número de telefone com esses valores";                 
     }
     repete = 0;
     for (let numero of numeroTel) {
@@ -49,45 +43,36 @@ function generatePhoneNumber(numeroTel) {
       }
     }  
   }
-  numeroCompleto = "(" + ddd + ")"+ " " + inicial + "-" + final;
-  console.log(numeroCompleto);
+  numeroCompleto = "(" + ddd + ")" + " " + inicial + "-" + final;  
   return numeroCompleto;
 }
 
 // Desafio 12
-function triangleCheck(a, b, c) 
-{
+function triangleCheck(a, b, c) {
   // seu código aqui
-  if (a < b + c &&  a > Math.abs(b - c) && c < b + a && c > Math.abs(b - a) && b < a + c && b > Math.abs(a - c)){
+  if (a < b + c &&  a > Math.abs(b - c) && c < b + a && c > Math.abs(b - a) && b < a + c && b > Math.abs(a - c)) {
     return true;
-  } else return false; 
-
-
+  } 
+  return false;
 }
-
-triangleCheck(10, 13, 2);
 
 // Desafio 13
 function hydrate(bebidas) {
   // seu código aqui
   let quantidade = 0;
   let soma = 0;
-  quantidade = bebidas.match(/[0-9]/g)
-  for(i = 0; i < quantidade.length; i += 1){
+  quantidade = bebidas.match(/[0-9]/g);
+  for (let i = 0; i < quantidade.length; i += 1) { 
     soma = soma + parseInt(quantidade[i]);
   }
-  
-  
-  
-  if (soma === 1){
+    
+  if (soma === 1) {
     return (soma + " copo de água");
-  } else {
-    return (soma + " copos de água");
-  }
-
+  } 
+  return (soma + " copos de água");
+  
 }
 
-hydrate("1 cerveja");
 
 module.exports = {
   generatePhoneNumber,

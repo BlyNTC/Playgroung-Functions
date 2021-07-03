@@ -26,7 +26,6 @@ function splitSentence(frase) {
   // seu código aqui
   let quebrada = frase.split(' ');
   return quebrada;
-
 }
 splitSentence('Vamo que vamo');
 
@@ -44,7 +43,6 @@ function footballPoints(v, e) {
   let pontos = 3 * v + e;
   console.log(pontos);
   return pontos;
-
 }
 
 // Desafio 6
@@ -79,17 +77,14 @@ function catAndMouse(mouse, cat1, cat2) {
   let dcat2 = Math.abs(cat2 - mouse);
   if (dcat1 === dcat2) {
     return 'os gatos trombam e o rato foge';
-
-  } else
-    if (dcat1 < dcat2) {
-      return 'cat1';
-    } else
-      if (dcat2 < dcat1) {
-        return 'cat2';
-      }
-
+  }
+  if (dcat1 < dcat2) {
+    return 'cat1';
+  } 
+  if (dcat2 < dcat1) {
+    return 'cat2';
+  }
 }
-
 
 // Desafio 8
 function fizzBuzz(numbers) {
@@ -99,25 +94,21 @@ function fizzBuzz(numbers) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 != 0) {
       marcados.push('fizz');
     }
-
     if (numbers[index] % 5 === 0 && numbers[index] % 3 != 0) {
-      marcados.push('buzz')
+      marcados.push('buzz');
     }
-
     if (numbers[index] % 5 === 0 && numbers[index] % 3 === 0) {
-      marcados.push('fizzBuzz')
+      marcados.push('fizzBuzz');
     }
-
     if (numbers[index] % 3 != 0 && numbers[index] % 5 != 0) {
-      marcados.push('bug!')
+      marcados.push('bug!');
     }
-
   }
   return marcados;
 }
 
 // Desafio 9
-function encode(estranho) {   //Alteração de código por explicação de Thiago de Oliveira e Flávio Pires; =D 
+function encode(estranho) { //Alteração de código por explicação de Thiago de Oliveira e Flávio Pires; 
   // seu código aqui
   let stringQualquer = "";
   for (let letra of estranho) {
@@ -152,7 +143,7 @@ encode('aranha');
 function decode(convem) {
   // seu código aqui
   let caos = [];
-  for (pecas of convem) {
+  for (let pecas of convem) {
     caos.push(pecas);
   }
 
@@ -173,14 +164,11 @@ function decode(convem) {
       case '5':
         caos[i] = 'u';
         break;
-
     }
-
   }
   let decodigo = caos.join("");
   console.log(decodigo);
   return decodigo;
-
 }
 
 module.exports = {
