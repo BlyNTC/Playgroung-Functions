@@ -23,13 +23,18 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let ultimoArray =  array[array.length - 1];
+
+  let concatNome = ultimoArray + ", " + array[0];
+  return concatNome; 
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
   // seu código aqui
+
 }
 
 // Desafio 6
