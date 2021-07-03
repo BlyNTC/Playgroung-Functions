@@ -50,15 +50,19 @@ function highestCount(array) {
 }
 
 // Desafio 7
+// eslint-disable-next-line consistent-return
 function catAndMouse(mouse, cat1, cat2) {
   const distanciaCat1 = (mouse - cat1);
   const distanciaCat2 = (mouse - cat2);
 
   if (distanciaCat1 > distanciaCat2) {
     return 'cat1';
-  } else if (distanciaCat1 < distanciaCat2) {
+  }
+
+  if (distanciaCat1 < distanciaCat2) {
     return 'cat2';
-  } else {
+  }
+  if (distanciaCat1 === distanciaCat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
