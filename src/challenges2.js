@@ -56,7 +56,7 @@ function hydrate(ipa) {
   let ales = ipa.match(/\d+/g); // expressão regular \d+, o que significa qualquer dígito de 0 a 9 ( \d) repetido uma ou mais vezes ( +). O qualificador g tornará a pesquisa global. Fonte: stackoverflow.com/ - obtém tods inteiros dentro de uma string
   let contador = 0;
   for (let index of ales) {
-    contador += parseInt(index); // se o argumento não for uma string, o valor é convertido para uma string 
+    contador += parseInt(index); // parseInt() se for string retorna um inteiro na base especificada
   }
   if (contador === 1) {
     return `${contador} copo de água`;
