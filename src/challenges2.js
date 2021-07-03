@@ -64,6 +64,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
+//Fonte de pesquisa W3schools
 var numbers = string.match(/\d+/g).map(Number);
 let soma = numbers.reduce((a, b) => a + b);
 if (soma === 1){
