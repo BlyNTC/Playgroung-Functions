@@ -124,8 +124,24 @@ function fizzBuzz(numbers) {
  };
 
 // Desafio 9
-function encode() {
+function encode(encoded) {
   // seu código aqui
+  /*versão 2.0 o anterior tentei com transformar
+  a strin em array e mudar os elementos mas não passava no teste
+  encontrei no google https://www.javascripttutorial.net/javascript-string-replace/ 
+  , ainda sim Não funcionava pq eu não entendi q replace retorna uma nova strin
+  String em Javascript são imutaveis e vc só consegue criar novas baseadas nas antigas
+  e Não consegue mudar elemento a elemento 
+  */
+  let codificaA = encoded.replace(/a/g,"1");
+  let codificaE = codificaA.replace(/e/g,"2");
+  let codificaI = codificaE.replace(/i/g,"3");
+  let codificaO = codificaI.replace(/o/g,"4");
+  let codificaU = codificaO.replace(/u/g,"5");
+  //criei várias variaveis armazenando o valor da string apos uma substituição
+  //usei uma expressão regular para passar o valor em todas as letras que devem ser alteradas
+  //versao 2.0 com  a bandeira g quer dizer global todas as ocorrencias no objeto.
+  return codificaU;
 }
 function decode() {
   // seu código aqui
