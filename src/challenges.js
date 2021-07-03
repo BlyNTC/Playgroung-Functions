@@ -60,9 +60,26 @@ function catAndMouse(cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(fbA) {
+  for (let i = 0; i < fbA.length; i += 1) {
+    if (fbA[i] % 3 == 0 && fbA[i] % 5 == 0) { 
+        fbA[i] = 'fizzBuzz';
+    } else if (fbA[i] % 5 == 0) {
+        fbA[i] = 'buzz';
+    } else if (fbA[i] % 3 == 0) {
+        fbA[i] = 'fizz'
+    } else {
+        fbA[i] = 'bug!'
+    }
+  }
+  return fbA;
 }
+
+function sum(a, b) {
+  return a + b;
+}
+
+console.log(sum(2, 2));
 
 // Desafio 9
 function encode() {
