@@ -44,14 +44,15 @@ function generatePhoneNumber(arrayPhoneNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if (lineA + lineB < lineC || lineB + lineC < lineA || lineA + lineC < lineB) {
-    return false;
+  let check;
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC) || lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC) || lineC < (lineA < lineB && lineC > Math.abs(lineA - lineB))) {
+    check = true;
+  } else {
+    check = false;
   }
-  else {
-    return true;
-  }
+  return check;
 }
 
 // Desafio 13
