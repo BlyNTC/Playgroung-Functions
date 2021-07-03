@@ -1,9 +1,10 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 && valor2 < 10)
+  if (valor1 && valor2 < 10){
     return true;
-  else {
+  } else {
     return false;
+  }
 }
 
 // Desafio 2
@@ -139,4 +140,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
