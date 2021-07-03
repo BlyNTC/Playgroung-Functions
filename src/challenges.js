@@ -65,15 +65,22 @@ function highestCount(maiorRepetido) {
     if(maiorRepetido[i] == maiorNum)
         contRepet += 1 ;
 }
-
   return contRepet;
 }
- highestCount([9, 1, 2, 3, 9, 5, 7]);
+highestCount([9, 1, 2, 3, 9, 5, 7]);
+
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if(Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
+    return "os gatos trobam e o rato foge";
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+    return "cat2";
+  } else {
+    return "cat1";
+  }
 }
+catAndMouse(8, 4, 3);
 
 // Desafio 8
 function fizzBuzz() {
