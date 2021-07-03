@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-identical-functions */
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(valor1, valor2) {
   let resultado;
@@ -36,16 +38,10 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let maiorNumero = 0;
   let quantidade = 0;
 
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] > maiorNumero) {
-      maiorNumero = array[i];
-    }
-  }
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] === maiorNumero) {
+    if (array[index] === Math.max(...array)) {
       quantidade += 1;
     }
   }
@@ -57,15 +53,12 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   const distanciaCat1 = (mouse - cat1);
   const distanciaCat2 = (mouse - cat2);
-  let resultadoDaCaca;
 
   if (distanciaCat1 > distanciaCat2) {
     return 'cat1';
-  } else if (distanciaCat1 < distanciaCat2) {
+  } if (distanciaCat1 < distanciaCat2) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
-  }
+  } return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -88,45 +81,22 @@ function fizzBuzz(arrayNumero) {
 }
 
 // Desafio 9
+// eslint-disable-next-line sonarjs/cognitive-complexity
 function encode(frase) {
-  let codificacao = '';
-
-  for (let i = 0; i < frase.length; i += 1) {
-    if (frase[i] === 'a') {
-      codificacao += '1';
-    } else if (frase[i] === 'e') {
-      codificacao += '2';
-    } else if (frase[i] === 'i') {
-      codificacao += '3';
-    } else if (frase[i] === 'o') {
-      codificacao += '4';
-    } else if (frase[i] === 'u') {
-      codificacao += '5';
-    } else {
-      codificacao += frase[i];
-    }
-  }
+  let codificacao = frase.replace(/a/g, 1);
+  codificacao = codificacao.replace(/e/g, 2);
+  codificacao = codificacao.replace(/i/g, 3);
+  codificacao = codificacao.replace(/o/g, 4);
+  codificacao = codificacao.replace(/u/g, 5);
 
   return codificacao;
 }
 function decode(frase) {
-  let codificacao = '';
-
-  for (let i = 0; i < frase.length; i += 1) {
-    if (frase[i] === 'a') {
-      codificacao += '1';
-    } else if (frase[i] === 'e') {
-      codificacao += '2';
-    } else if (frase[i] === 'i') {
-      codificacao += '3';
-    } else if (frase[i] === 'o') {
-      codificacao += '4';
-    } else if (frase[i] === 'u') {
-      codificacao += '5';
-    } else {
-      codificacao += frase[i];
-    }
-  }
+  let codificacao = frase.replace(/1/g, 'a');
+  codificacao = codificacao.replace(/2/g, 'e');
+  codificacao = codificacao.replace(/3/g, 'i');
+  codificacao = codificacao.replace(/4/g, 'o');
+  codificacao = codificacao.replace(/5/g, 'u');
 
   return codificacao;
 }
