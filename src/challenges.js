@@ -73,7 +73,7 @@ highestCount([9, 1, 2, 3, 9, 5, 7]);
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if(Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
-    return "os gatos trobam e o rato foge";
+    return "os gatos trombam e o rato foge";
   } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return "cat2";
   } else {
