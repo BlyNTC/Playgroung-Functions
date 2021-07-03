@@ -49,7 +49,7 @@ function generatePhoneNumber(array) {
   }
   
 
-  //ddd=(array[0]+array[1])
+
   for(let m=0;m<array.length-9;m+=1){
     ddd+=array[m]
   }
@@ -61,11 +61,33 @@ function generatePhoneNumber(array) {
   }
   return('('+ddd+')'+' '+numeroTelefone+'-'+numeroTelefone2)
 }  
-console.log(generatePhoneNumber([5,2,8,1,5,3,7,2,8,9,0]))
+
+
+
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck(line1,line2,line3) {
+  //let dif=Math.abs(line3-line2-line1)
+  if ((line1<(line2-line3)) || (line2<(line1-line3)) || (line3<(line1-line2))){
+    return false  
+  }else if((line1+line2)<line3 && (line1+line3)<line2 && (line2+line3)<line1){
+    return false
+  }else{
+    return true
+  }
+   
+  
+  
+    
+  
+  }
+  
+
+  
+
+
+console.log(triangleCheck(10,14,8))
+
+
 
 // Desafio 13
 function hydrate() {
