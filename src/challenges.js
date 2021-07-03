@@ -1,20 +1,26 @@
+/* eslint-disable complexity */
+/* eslint-disable comma-dangle */
+/* eslint-disable key-spacing */
+/* eslint-disable editorconfig/editorconfig */
+/* eslint-disable quote-props */
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable no-undef */
 // Desafio 1
 function compareTrue(arg1, arg2) {
   if (arg1 && arg2) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return base*height/2; 
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  let separator = " ";
+  let separator = ' ';
   let arrayOfStrings = string.split(separator);
 
   return arrayOfStrings;
@@ -35,19 +41,17 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   let count = 0;
-  let highest = array[0]; 
-  
-  for (let i = 0; i < array.length; i+=1) {
+  let highest = array[0];
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] >= highest) {
       highest = array[i];
-    };
-  };
+    }
+  }
   for (let value of array) {
     if (value === highest) {
-      count+=1;
-    };
-  };
-
+      count += 1;
+    }
+  }
   return count;
 }
 
@@ -57,11 +61,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2Mouse = mouse - cat2;
 
   if (distanceCat1Mouse < 0) {
-    distanceCat1Mouse = (-1)*distanceCat1Mouse;
-  };
+    distanceCat1Mouse = (-1) * distanceCat1Mouse;
+  }
   if (distanceCat2Mouse < 0) {
     distanceCat2Mouse = (-1)*distanceCat2Mouse;
-  };
+  }
 
   if (distanceCat1Mouse > distanceCat2Mouse) {
     return 'cat2';
@@ -76,17 +80,16 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let arrayFB = [];
   for (let value of array) {
-    if (value % 3 == 0 && value % 5 == 0){
-      arrayFB.push("fizzBuzz");
-    } else if (value % 3 == 0) {
-      arrayFB.push("fizz");
-    } else if (value % 5 == 0){
-      arrayFB.push("buzz");
+    if (value % 3 === 0 && value % 5 === 0){
+      arrayFB.push('fizzBuzz');
+    } else if (value % 3 === 0) {
+      arrayFB.push('fizz');
+    } else if (value % 5 === 0) {
+      arrayFB.push('buzz');
     } else {
-      arrayFB.push("bug!")
-    };
-  };
-
+      arrayFB.push('bug!');
+    }
+  }
   return arrayFB;
 }
 
@@ -104,20 +107,19 @@ function encode(string) {
 }
 function decode(string) {
   let numbers = { 
-    '1' : 'a', 
-    '2' : 'e', 
-    '3' : 'i', 
+    '1': 'a', 
+    '2': 'e', 
+    '3': 'i', 
     '4' : 'o', 
     '5' : 'u'
   };
-
   for (let letter of string) {
     for (number in numbers) {
-      if (number == letter ) {
-        string = string.replace(letter, numbers[number])
-      };
-    };
-  };
+      if (number === letter) {
+        string = string.replace(letter, numbers[number]);
+      }
+    }
+  }
 
   return string;
 }
