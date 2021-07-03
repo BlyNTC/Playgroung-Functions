@@ -65,8 +65,23 @@ if (ladoAValido === true || ladoBValido === true || ladoCValido === true) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(quantidadeEBebida) {
+  let soma = 0;
+  let numerosArray = [];
+  let prov;
+  let numbs = quantidadeEBebida.match(/\d/g);
+  for (let i = 0; i < numbs.length; i += 1) {
+    prov = parseInt(numbs[i], 10);
+    numerosArray.push(prov)
+  }
+  for (let i2 = 0; i2 < numerosArray.length; i2 += 1) {
+    soma = soma + numerosArray[i2];
+  }
+  if (soma === 1) {
+    return soma + " " + "copo de água"
+  } else {
+    return soma + " " + "copos de água"
+  }
 }
 
 module.exports = {
