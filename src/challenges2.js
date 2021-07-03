@@ -1,27 +1,19 @@
 // Desafio 10
-function techList(lista,name) {
+function techList(lista, name) {
   let result = [];
-	for (let index = 0; index < lista.length; index += 1) {
-		let objeto = {
-			tech: "",
-			name: name,
-		}
-		objeto.tech = lista[index];
-		result.push(objeto);
-	}
-
-	if (result.length > 0) {
-		result.sort(function(a,b){  //Através do sort o resultado vai obedecer o padrão de ordenação estabelecido dentro da função.
-			if(a.tech < b.tech){      // O método sorte faz uma verificação entre os elementos como se fosse um for e faz a comparação
-				return false;                     
-			}else{
-				return true;
-			}
-		}); 
-	return result;
-	} else {
-	return 'Vazio!';
-	} 
+  lista.sort();
+  for (let index = 0; index < lista.length; index += 1) {
+    let objeto = {
+      tech: '',
+      name,
+    };
+    objeto.tech = lista[index];
+    result.push(objeto);
+  }
+  if (result.length > 0) {
+    return result;
+  }
+  return 'Vazio!';
 }
 
 // Desafio 11
