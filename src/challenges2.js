@@ -51,9 +51,23 @@ function generatePhoneNumber(arrayTelefone) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck(lineA, lineB, lineC) {
+  if ((lineA > lineB + lineC) || (lineB > lineA + lineC) || (lineC > lineB + lineA)) {
+    return false;
+  };
+  if ((lineA < Math.abs(lineB - lineC)) || (lineB < Math.abs(lineA - lineC)) || (lineC < Math.abs(lineB - lineA))) {
+    return false;
+  };
+  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
+    return true
+  } else if ((lineB < lineA + lineC) && (lineB > Math.abs(lineA - LineC))) {
+    return true;
+  } else if ((lineC < lineB + lineA) && (liceC > Math.abs(lineA - lineB))) {
+    return true;
+  } else {
+    return false;
+  };
+};
 
 // Desafio 13
 function hydrate() {
