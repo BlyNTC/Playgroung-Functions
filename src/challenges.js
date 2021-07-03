@@ -62,31 +62,30 @@ function catAndMouse(cat1, cat2) {
 // Desafio 8
 function fizzBuzz(fbA) {
   for (let i = 0; i < fbA.length; i += 1) {
-    if (fbA[i] % 3 == 0 && fbA[i] % 5 == 0) { 
-        fbA[i] = 'fizzBuzz';
-    } else if (fbA[i] % 5 == 0) {
-        fbA[i] = 'buzz';
-    } else if (fbA[i] % 3 == 0) {
-        fbA[i] = 'fizz'
+    if (fbA[i] % 3 === 0 && fbA[i] % 5 === 0) {
+      fbA[i] = 'fizzBuzz';
+    } else if (fbA[i] % 5 === 0) {
+      fbA[i] = 'buzz';
+    } else if (fbA[i] % 3 === 0) {
+      fbA[i] = 'fizz';
     } else {
-        fbA[i] = 'bug!'
+      fbA[i] = 'bug!';
     }
   }
   return fbA;
 }
 
-function sum(a, b) {
-  return a + b;
-}
-
-console.log(sum(2, 2));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(fraseE) {
+  let letrasEncode = { 'a':'1', 'e':'2', 'i':'3', 'o':'4', 'u':'5'};
+  fraseE = fraseE.replace(/[aeiou]/g, m => letrasEncode[m]);
+  return fraseE;
 }
-function decode() {
-  // seu código aqui
+
+function decode(fraseD) {
+  let letrasDecode = { '1':'a', '2':'e', '3':'i', '4':'o', '5':'u' };
+  fraseD = fraseD.replace(/[12345]/g, m => letrasDecode[m]);
+  return fraseD;
 }
 
 module.exports = {
