@@ -44,7 +44,7 @@ function highestCount(array) {
 
   let contador = 0;
 
-  for (index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
 
     if (array[index] === maiorNumero) {
 
