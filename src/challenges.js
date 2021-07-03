@@ -14,8 +14,6 @@ function compareTrue(fimDeSemana, temSol) {
 
 }
 
-compareTrue(true, true);
-
 // Desafio 2
 function calcArea(a, b) {
   // seu código aqui
@@ -40,9 +38,6 @@ function concatName(lista) {
   return result;  
 }
 
-let arraial = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-concatName(arraial);
-
 
 // Desafio 5
 function footballPoints(v,e) {
@@ -52,8 +47,6 @@ function footballPoints(v,e) {
   return pontos;
 
 }
-
-footballPoints(1,2)
 
 // Desafio 6
 
@@ -99,26 +92,26 @@ function catAndMouse(mouse, cat1, cat2) {
         }
     
 }
-catAndMouse(1, 0, 2)
+
 
 // Desafio 8
 function fizzBuzz(numbers) {
   // seu código aqui
   let marcados = [];
-  for (index = 0; index < numbers.length; index += 1){
+  for (index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 != 0) {
       marcados.push('fizz');
     }
 
-    if (numbers[index] % 5 === 0 && numbers[index] % 3 != 0){
+    if (numbers[index] % 5 === 0 && numbers[index] % 3 != 0) {
       marcados.push('buzz')
     }
 
-    if (numbers[index] % 5 === 0 && numbers[index] % 3 === 0){
+    if (numbers[index] % 5 === 0 && numbers[index] % 3 === 0) {
       marcados.push('fizzBuzz')
     }
 
-    if (numbers[index] % 3 != 0 && numbers[index] % 5 != 0){
+    if (numbers[index] % 3 != 0 && numbers[index] % 5 != 0) {
       marcados.push('bug!')
     }
   
@@ -130,8 +123,8 @@ function fizzBuzz(numbers) {
 function encode(estranho) {   //Alteração de código por explicação de Thiago de Oliveira e Flávio Pires; =D 
   // seu código aqui
   let stringQualquer = "";
-  for(let letra of estranho){
-    switch (letra){
+  for (let letra of estranho) {
+    switch (letra) { 
       case 'a':
         stringQualquer += 1;
         break;
@@ -162,11 +155,11 @@ encode('aranha');
 function decode(convem) {
   // seu código aqui
   let caos = [];
-  for (pecas of convem){
+  for (pecas of convem) {
     caos.push(pecas);
   }
 
-  for (let i = 0; i < convem.length; i += 1){
+  for (let i = 0; i < convem.length; i += 1) {
     switch (caos[i]) {
       case '1':
         caos[i] = 'a';
