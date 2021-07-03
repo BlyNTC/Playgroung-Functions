@@ -5,7 +5,7 @@ function techList(tech, name) {
   let ordenados = tech.sort();
   let tecnologias = [];
 
-  if (tech.length > 0){
+  if ( tech.length > 0 ){
 
     for ( let y = 0; y < tech.length; y += 1 ){
   
@@ -45,7 +45,7 @@ function generatePhoneNumber(numeroDeTelefone) {
     }
   }
 
-  for (let i = 0; i < 11; i += 1){
+  for ( let i = 0; i < 11; i += 1 ){
     if (numeroValidoSortt[i] === numeroValidoSortt[i + 1] && numeroValidoSortt[ i + 2] === numeroValidoSortt[i]){
       return "não é possível gerar um número de telefone com esses valores";
   }
@@ -55,11 +55,11 @@ numeroFormaTado[1] = numeroDeTelefone[0];
 numeroFormaTado[2] = numeroDeTelefone[1];
 numeroFormaTado[5] = numeroDeTelefone[2];
 
-  for (let y = 6; y < 10; y += 1 ){
+  for ( let y = 6; y < 10; y += 1 ){
       numeroFormaTado[y] = numeroDeTelefone[ y - 3 ];
   }
 
-  for (let y = 11; y < 15; y += 1 ){
+  for ( let y = 11; y < 15; y += 1 ){
     numeroFormaTado[y] = numeroDeTelefone[ y - 4 ];
   }
 
@@ -85,9 +85,35 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  // Busca por numero dentro de uma string obs o numero continua como string dentro de um array -> https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+  let busca = /\d+/g;
+  let guardaValorDeBebidas = string.match(busca);  // creates array from matches
+  //*****************************************************************************************************************************************************************************************************
+
+  let guardaValorDeBebidasNumber = [];
+  let coposDeAgua = 0;
+
+  for (let i = 0; i < guardaValorDeBebidas.length; i++){
+
+      guardaValorDeBebidasNumber[i] = parseInt(guardaValorDeBebidas[i])
+  }
+
+  for ( indice in guardaValorDeBebidasNumber ) { 
+    coposDeAgua = coposDeAgua + guardaValorDeBebidasNumber[indice];
+  }
+  if (coposDeAgua === 1){
+    let sugestao = `${coposDeAgua} copo de água`;
+    return sugestao;
+  }else{
+        let sugestao = `${coposDeAgua} copos de água`;
+        return sugestao;
+
+  }
 }
+
+hydrate("5 cachaça, 5 cervejas e 1 copo de vinho");
 
 module.exports = {
   generatePhoneNumber,
