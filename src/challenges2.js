@@ -29,10 +29,10 @@ function generatePhoneNumber(phoneNumber) {
     for (let index2 = 1; index2 < phoneNumber.length; index2 += 1) {
           if (phoneNumber[index] === phoneNumber[index2]) {
               soma += 1;
+            }
             if (soma >= 3) {
               return "não é possível gerar um número de telefone com esses valores"
-           } 
-          }
+           }   
       }
   } return estrutura;
 }
