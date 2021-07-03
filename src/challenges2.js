@@ -1,16 +1,16 @@
 // Desafio 10
 function techList(techs, name) {
-  if(techs.length===0){
-  return 'Vazio!';
-  } 
+  if (techs.length ===0 ) {
+      return 'Vazio!';
+    } 
   techs.sort();
   let a = [];
-  for (let i in techs) {
-  a[i] = new Object();
-  [i].tech = techs[i];
-  a[i].name = name;
-  }
-  return a;
+    for(let i in techs){
+        a[i] = new Object();
+        a[i].tech = techs[i];
+        a[i].name = name;
+    }
+      return a;
 }
 // Desafio 11
 function generatePhoneNumber(numeros) {
