@@ -5,7 +5,7 @@ function techList(tech, name) {
     tech[index] = {
       tech: tech[index],
       name: name,
-    };
+    }
   }
   if (tech == '') {
     return 'Vazio!';
@@ -31,19 +31,19 @@ function generatePhoneNumber(arrayTelefone) {
     }
     repeticao = 0;
   }
-  let phoneNumber = "";
+  let phoneNumber = '';
   for (let i3 = 0; i3 < arrayTelefone.length; i3 += 1) {
     if (phoneNumber.length == 0) {
-      phoneNumber += "(";
+      phoneNumber += '(';
     }
     if (phoneNumber.length == 3) {
-      phoneNumber += ")";
+      phoneNumber += ')';
     }
     if (phoneNumber.length == 4) {
-      phoneNumber += " ";
+      phoneNumber += ' ';
     }
     if (phoneNumber.length == 10) {
-      phoneNumber += "-";
+      phoneNumber += '-';
     }
     phoneNumber += arrayTelefone[i3];
   }
@@ -54,20 +54,20 @@ function generatePhoneNumber(arrayTelefone) {
 function triangleCheck(lineA, lineB, lineC) {
   if ((lineA > lineB + lineC) || (lineB > lineA + lineC) || (lineC > lineB + lineA)) {
     return false;
-  };
+  }
   if ((lineA < Math.abs(lineB - lineC)) || (lineB < Math.abs(lineA - lineC)) || (lineC < Math.abs(lineB - lineA))) {
     return false;
-  };
+  }
   if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
-    return true
-  } else if ((lineB < lineA + lineC) && (lineB > Math.abs(lineA - LineC))) {
     return true;
-  } else if ((lineC < lineB + lineA) && (liceC > Math.abs(lineA - lineB))) {
+  } else if ((lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC))) {
+    return true;
+  } else if ((lineC < lineB + lineA) && (lineC > Math.abs(lineA - lineB))) {
     return true;
   } else {
     return false;
-  };
-};
+  }
+}
 
 // Desafio 13
 function hydrate() {
