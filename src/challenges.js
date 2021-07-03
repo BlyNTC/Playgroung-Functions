@@ -80,7 +80,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return "cat1";
   }
 }
-catAndMouse(8, 4, 3);
+catAndMouse(10, 7, 8);
 
 // Desafio 8
 function fizzBuzz() {
