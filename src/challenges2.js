@@ -56,9 +56,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(bebidas) {
   // seu código aqui
+  for (let drinks = 0; drinks < bebidas.length; drinks += 1) {
+    drinks = parseInt(bebidas.match(/\d/g).join(''))
+    drinks += bebidas[drinks];
+    if (drinks === 1) {
+      return drinks + ' copo de água';
+    } else {
+      return drinks + ' copos de água';
+    }
+
+  }
 }
+// console.log(hydrate(1 + 'cerveja', 2 + 'cachaças'));
 
 module.exports = {
   generatePhoneNumber,
