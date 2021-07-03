@@ -2,7 +2,7 @@
 function compareTrue(valor1, valor2) {
   let resultado;
 
-  if (valor1 && valor2 < 10) {
+  if (valor1 && valor2) {
     resultado = true;
   } else {
     resultado = false;
@@ -30,7 +30,7 @@ function concatName(strings) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  const pontos = `${(wins * 3) + (ties * 1)} pontos`;
+  const pontos = wins * 3 + ties;
   return pontos;
 }
 
@@ -60,14 +60,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let resultadoDaCaca;
 
   if (distanciaCat1 > distanciaCat2) {
-    resultadoDaCaca = 'cat1';
+    return 'cat1';
   } else if (distanciaCat1 < distanciaCat2) {
-    resultadoDaCaca = 'cat2';
+    return 'cat2';
   } else {
-    resultadoDaCaca = 'os gatos trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   }
-
-  return resultadoDaCaca;
 }
 
 // Desafio 8
