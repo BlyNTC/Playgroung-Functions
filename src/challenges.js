@@ -5,10 +5,10 @@ function compareTrue(fimDeSemana, temSol) {
 
   if (fimDeSemana === true && temSol === true) {
     boraPraia = true;
-
   } else {
-    boraPraia = false;
 
+    boraPraia = false;
+    
   }
   return boraPraia;
 
@@ -24,25 +24,24 @@ function calcArea(a, b) {
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-  let quebrada = frase.split(" ");
+  let quebrada = frase.split(' ');
   return quebrada;
-  
+
 }
-splitSentence("Vamo que vamo");
+splitSentence('Vamo que vamo');
 
 // Desafio 4
 function concatName(lista) {
   // seu código aqui
   let result = lista[lista.length - 1] + "," + " " + lista[0];
   console.log(result);
-  return result;  
+  return result;
 }
 
-
 // Desafio 5
-function footballPoints(v,e) {
+function footballPoints(v, e) {
   // seu código aqui
-  let pontos = 3*v + e;
+  let pontos = 3 * v + e;
   console.log(pontos);
   return pontos;
 
@@ -54,20 +53,18 @@ function highestCount(numeros) {
   // seu código aqui
   let maior = -10;
   let repete = 0;
-  for(let i = 0; i <= numeros.length; i += 1) {
+  for (let i = 0; i <= numeros.length; i += 1) {
 
     if (numeros[i] >= maior) {
       maior = numeros[i];
     }
   }
-
   for (let num of numeros) {
 
     if (maior === num) {
       repete = repete + 1;
     }
   }
-
   console.log(repete);
   return repete;
 }
@@ -83,14 +80,14 @@ function catAndMouse(mouse, cat1, cat2) {
   if (dcat1 === dcat2) {
     return 'os gatos trombam e o rato foge';
 
-  } else 
+  } else
     if (dcat1 < dcat2) {
       return 'cat1';
-    } else 
-        if (dcat2 < dcat1) {
-          return 'cat2';
-        }
-    
+    } else
+      if (dcat2 < dcat1) {
+        return 'cat2';
+      }
+
 }
 
 
@@ -98,7 +95,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   // seu código aqui
   let marcados = [];
-  for (index = 0; index < numbers.length; index += 1) {
+  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 != 0) {
       marcados.push('fizz');
     }
@@ -114,7 +111,7 @@ function fizzBuzz(numbers) {
     if (numbers[index] % 3 != 0 && numbers[index] % 5 != 0) {
       marcados.push('bug!')
     }
-  
+
   }
   return marcados;
 }
@@ -124,7 +121,7 @@ function encode(estranho) {   //Alteração de código por explicação de Thiag
   // seu código aqui
   let stringQualquer = "";
   for (let letra of estranho) {
-    switch (letra) { 
+    switch (letra) {
       case 'a':
         stringQualquer += 1;
         break;
@@ -142,13 +139,13 @@ function encode(estranho) {   //Alteração de código por explicação de Thiag
         break;
       default:
         stringQualquer += letra;
-            
+
     }
   }
 
   console.log(stringQualquer);
   return stringQualquer;
-  
+
 }
 encode('aranha');
 
@@ -176,7 +173,7 @@ function decode(convem) {
       case '5':
         caos[i] = 'u';
         break;
-            
+
     }
 
   }
