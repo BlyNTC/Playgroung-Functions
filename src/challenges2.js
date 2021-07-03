@@ -25,11 +25,14 @@ function techList(tech, name) {
 function generatePhoneNumber(numeroDeTelefone) {
   // seu código aqui
 
+
+  // como classificar matriz sem altera a original https://stackoverflow.com/questions/9592740/how-can-you-sort-an-array-without-mutating-the-original-array/9592774#9592774
   let mutacao,
   numeroValidoSortt;
-mutacao = numeroDeTelefone;
-numeroValidoSortt = mutacao.slice().sort();
- 
+  mutacao = numeroDeTelefone;
+  numeroValidoSortt = mutacao.slice().sort();
+ // *************************************************************************************************************************************************************************
+
   let numeroFormaTado = ["(", 0, 0, ")", " ", 0, 0, 0, 0, 0, "-", 0, 0, 0, 0];
 
   if ( numeroDeTelefone.length !== 11 ){
@@ -65,8 +68,20 @@ numeroFormaTado[5] = numeroDeTelefone[2];
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+
+  let somaDoisLados = lineC + lineB;
+  let somaDoisB = lineA + lineC;
+  let somaDoisC = lineA + lineB;
+
+  if ( lineA > somaDoisLados || lineB > somaDoisB || lineC > somaDoisC ){
+    return false
+  }else if(lineA < Math.abs(lineA) || lineB < Math.abs(lineB) || lineC < Math.abs(lineC)){
+    return false
+  }else {
+    return true
+  }
 }
 
 // Desafio 13
