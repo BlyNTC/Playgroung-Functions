@@ -13,24 +13,34 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(array) {
-  if (array.length === 11) {
-    let cache = {};
-    for (let num of array) {
-      cache[num] = cache[num] ? cache[num] += 1 : 1;
-      if (num < 0 || num > 9 || cache[num] >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
+function phoneNumberRepeater(array) {
+  let cache = {};
+  for (let num of array) {
+    cache[num] = cache[num] ? cache[num] += 1 : 1;
+    if (cache[num] >= 3) {
+      return false;
     }
-    let result = '(';
-    for (let i = 0; i < array.length; i += 1) {
-      if (i === 2) result += ') ';
-      if (i === 7) result += '-';
-      result += array[i];
-    }
-    return result;
   }
-  return 'Array com tamanho incorreto.';
+  return true;
+}
+
+function phoneNumberVerifier(array) {
+  for (let num of array) {
+    if (num < 0 || num > 9) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function generatePhoneNumber(array) {
+  if (array.length !== 11) return 'Array com tamanho incorreto.';
+  let verifier = phoneNumberVerifier(array);
+  let repeater = phoneNumberRepeater(array);
+  if (verifier === true && array.length === 11 && repeater === true) {
+    return array.join('').replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+  }
+  return 'não é possível gerar um número de telefone com esses valores';
 }
 
 // Desafio 12
