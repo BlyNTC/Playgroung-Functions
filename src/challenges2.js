@@ -71,7 +71,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   let count = 0;
   for (let char of string) {
-    if (!isNaN(char) && char !== ' ') {
+    if (!Number.isNaN(parseInt(char, 10))) {
       count += parseInt(char, 10);
     }
   }
