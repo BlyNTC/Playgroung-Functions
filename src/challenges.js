@@ -142,12 +142,16 @@ function decode(string) {
     }
   
   }
-  
+
 return frase;
 
 }
 
-module.exports = {
+  
+
+
+
+module.exports = {  
   calcArea,
   catAndMouse,
   compareTrue,
