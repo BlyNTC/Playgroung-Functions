@@ -149,6 +149,7 @@ function encode(stringencode) {
 function decode(stringdecode) {
   let novaFrase = '';
   for (let letra = 0; letra <= stringdecode.length - 1; letra += 1) {
+
     switch (stringdecode[letra]) {
       case '1':
         novaFrase += 'a';
