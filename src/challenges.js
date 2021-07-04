@@ -49,12 +49,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let biggerValue = Number.NEGATIVE_INFINITY;
-  for (let number of array) {
-    if (number > biggerValue) {
-      biggerValue = number;
-    }
-  }
+  array = array.sort(function (a, b) { return a - b; });
+  let biggerValue = array[array.length - 1];
   let count = 0;
   for (let number of array) {
     if (number === biggerValue) {
