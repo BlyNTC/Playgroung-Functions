@@ -66,8 +66,22 @@ for (let i = 1; i < arrayNumbers.length; i += 1){
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
+
   // seu código aqui
+  let distCat1 = mouse - cat1;
+  let distCat2 = mouse - cat2;
+
+  if(distCat1 === distCat2){
+    return "os gatos trombam e o rato foge";  
+  }else if(distCat1 < distCat2) {
+    return "cat2";
+  }else {
+    return "cat1";
+  }
+  
+  
+  
 }
 
 // Desafio 8
