@@ -75,21 +75,22 @@ function catAndMouse(mouse, cat1, cat2) {
   return result;
 }
 
+function toWord(element, index, array) {
+  if (element % 15 === 0) {
+    array[index] = 'fizzBuzz';
+  } else if (element % 3 === 0) {
+    array[index] = 'fizz';
+  } else if (element % 5 === 0) {
+    array[index] = 'buzz';
+  } else {
+    array[index] = 'bug!';
+  }
+}
+
 // Desafio 8
 function fizzBuzz(array) {
-  let result = [];
-  for (let number of array) {
-    if (number % 3 === 0 && number % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (number % 3 === 0) {
-      result.push('fizz');
-    } else if (number % 5 === 0) {
-      result.push('buzz');
-    } else {
-      result.push('bug!');
-    }
-  }
-  return result;
+  array.forEach(toWord);
+  return array;
 }
 
 // Desafio 9
