@@ -31,9 +31,9 @@ function testaNumerosArray(array) {
   let count = 0;
   let slicedArray = array.slice();
   for (let value of array) {
-    while (slicedArray.indexOf(value) > 0) {
+    while (slicedArray.indexOf(value) >= 0) {
       count += 1;
-      slicedArray.splice(slicedArray.indexOf(value));
+      slicedArray.splice(slicedArray.indexOf(value), 1);
     }
     if (count >= 3) {
       return true;
