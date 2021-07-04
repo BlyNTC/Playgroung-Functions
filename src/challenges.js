@@ -95,43 +95,21 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let result = '';
-  for (let char of string) {
-    if (char === 'a') {
-      result += '1';
-    } else if (char === 'e') {
-      result += '2';
-    } else if (char === 'i') {
-      result += '3';
-    } else if (char === 'o') {
-      result += '4';
-    } else if (char === 'u') {
-      result += '5';
-    } else {
-      result += char;
-    }
-  }
-  return result;
+  string = string.replace(/a/ig, '1');
+  string = string.replace(/e/ig, '2');
+  string = string.replace(/i/ig, '3');
+  string = string.replace(/o/ig, '4');
+  string = string.replace(/u/ig, '5');
+  return string;
 }
 
 function decode(string) {
-  let result = '';
-  for (let char of string) {
-    if (char === '1') {
-      result += 'a';
-    } else if (char === '2') {
-      result += 'e';
-    } else if (char === '3') {
-      result += 'i';
-    } else if (char === '4') {
-      result += 'o';
-    } else if (char === '5') {
-      result += 'u';
-    } else {
-      result += char;
-    }
-  }
-  return result;
+  string = string.replace(/1/ig, 'a');
+  string = string.replace(/2/ig, 'e');
+  string = string.replace(/3/ig, 'i');
+  string = string.replace(/4/ig, 'o');
+  string = string.replace(/5/ig, 'u');
+  return string;
 }
 
 module.exports = {
