@@ -18,16 +18,22 @@ function testaTamanhoArray(array, n) {
   return false;
 }
 
-function testaNumerosArray(array) {
-  let count = 0;
-  for (let index1 = 0; index1 < array.length; index1 += 1) {
-    if (array[index1] < 0 || array[index1] > 9) {
+function testaRangeArray(array) {
+  for (let value of array) {
+    if (value < 0 || value > 9) {
       return true;
     }
-    for (let index2 in array) {
-      if (array[index1] === array[index2]) {
-        count += 1;
-      }
+  }
+  return false;
+}
+
+function testaNumerosArray(array) {
+  let count = 0;
+  let slicedArray = array.slice();
+  for (let value of array) {
+    while (slicedArray.indexOf(value) > 0) {
+      count += 1;
+      slicedArray.splice(slicedArray.indexOf(value));
     }
     if (count >= 3) {
       return true;
@@ -37,30 +43,23 @@ function testaNumerosArray(array) {
   return false;
 }
 
+function organizaNumero(array) {
+  array.splice(0, 0, '(');
+  array.splice(3, 0, ')');
+  array.splice(4, 0, ' ');
+  array.splice(10, 0, '-');
+  return array.toString().replace(/,/g, '');
+}
+
 // Desafio 11
 function generatePhoneNumber(array) {
-  let result = '';
   if (testaTamanhoArray(array, 11)) {
     return 'Array com tamanho incorreto.';
   }
-  if (testaNumerosArray(array)) {
+  if (testaRangeArray(array) || testaNumerosArray(array)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  for (let index = 0; index < array.length; index += 1) {
-    if (index === 0) {
-      result += '(';
-      result += array[index];
-    } else if (index === 1) {
-      result += array[index];
-      result += ') ';
-    } else if (index === 6) {
-      result += array[index];
-      result += '-';
-    } else {
-      result += array[index];
-    }
-  }
-  return result;
+  return organizaNumero(array);
 }
 
 // Desafio 12
