@@ -70,15 +70,16 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   let count = 0;
+  let result = '';
   for (let char of string) {
     if (!Number.isNaN(parseInt(char, 10))) {
       count += parseInt(char, 10);
     }
   }
   if (count > 1) {
-    return count + ' copos de água';
+    return result.concat(count, ' copos de água');
   }
-  return count + ' copo de água';
+  return result.concat(count, ' copo de água');
 }
 
 module.exports = {
