@@ -8,18 +8,14 @@ function compare(a, b) {
 
 function techList(techArray, name) {
   let answer = [];
-  let finalAnswer;
+
   for (let i = 0; i < techArray.length; i += 1) {
     answer[i] = {};
     answer[i].tech = techArray[i];
     answer[i].name = name;
   }
 
-  if (techArray.length === 0) {
-    return 'Vazio!';
-  }
-  finalAnswer = answer.sort(compare);
-  return finalAnswer;
+  return techArray.length === 0 ? 'Vazio!' : answer.sort(compare);
 }
 
 // Desafio 11
