@@ -50,15 +50,14 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  let sumAB = lineA + lineB;
-  let sumAC = lineA + lineC;
-  let sumBC = lineB + lineC;
-  let distAB = Math.abs(lineA - lineB);
-  let distAC = Math.abs(lineA - lineC);
-  let distBC = Math.abs(lineB - lineC);
-
-  if (lineA >= sumBC || lineA <= distBC || lineB >= sumAC || lineB <= distAC || lineC >= sumAB || lineC <= distAB) {
+function triangleCheck(a, b, c) {
+  let sumAB = a + b;
+  let sumAC = a + c;
+  let sumBC = b + c;
+  let disAB = Math.abs(a - b);
+  let disAC = Math.abs(a - c);
+  let disBC = Math.abs(b - c);
+  if (a >= sumBC || a <= disBC || b >= sumAC || b <= disAC || c >= sumAB || c <= disAB) {
     return false;
   }
   return true;
