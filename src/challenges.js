@@ -35,9 +35,17 @@ function footballPoints(wins, ties) {
 }
 footballPoints();
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// Desafio 6 MATERIAL CONSULTA https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+function highestCount(arrayNums) {
+  
+  let maxNum = Math.max(...arrayNums);
+  let resultado = 0;
+  for (let index of arrayNums) {
+    if (maxNum === index) {
+      resultado += 1
+    }
+  }
+  return resultado;
 }
 
 // Desafio 7
@@ -51,6 +59,16 @@ function fizzBuzz() {
 }
 
 // Desafio 9
+// let codes = {
+//   a: 1,
+//   e: 2,
+//   i: 3,
+//   o: 4,
+//   u: 5
+// }
+
+// console.log(codes)
+
 function encode() {
   // seu código aqui
 }
