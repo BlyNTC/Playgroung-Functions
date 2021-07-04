@@ -1,3 +1,5 @@
+const { TestWatcher } = require("jest");
+
 // Desafio 1
 function compareTrue(a,b) {
     return a && b;
@@ -9,9 +11,13 @@ function calcArea(base,height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  // Usei a referência a seguir: https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
+  return sentence.split(" ");
 }
+
+console.log(splitSentence("para testar, uma frase"))
+
 
 // Desafio 4
 function concatName() {
