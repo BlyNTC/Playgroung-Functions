@@ -17,24 +17,26 @@ function techList(lista, name) {
 
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(arrayComOnzeNumeros) {
 /*  let retorno;
   let repete;
 
   if (arrayComOnzeNumeros.length != 11) {
-    retorno = 'Array com tamanho incorreto.';  
+    retorno = 'Array com tamanho incorreto.'; 
+    return retorno; 
   } 
-
   for (let numero of arrayComOnzeNumeros) {
     if (numero < 0 || numero > 9) {
       retorno = 'não é possível gerar um número de telefone com esses valores';
-    }if (numero in arrayComOnzeNumeros === numero) {
-      retorno = 'não é possível gerar um número de telefone com esses valores';
     }
+    for (let cont = 0; cont < arrayComOnzeNumeros.length; cont +=1){
+      arrayComOnzeNumeros[cont] === numero; 
+    } 
   }
   return retorno;
 }
-console.log(generatePhoneNumber(2, 6, 5, 9, 8));*/
+console.log(generatePhoneNumber(2, 6, 5, 9, 8));
+}*/
 }
 // Desafio 12
 function triangleCheck() {
