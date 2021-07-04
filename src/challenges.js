@@ -1,11 +1,10 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-  if (a === true && b === true){
+  if (a === true && b === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -24,10 +23,8 @@ function splitSentence(frase) {
 function concatName(nomes) {
   // seu código aqui
   let primeiroNome = nomes[0];
-  let ultimoNome = nomes[nomes.length - 1];
-  
-  return (ultimoNome +', '+ primeiroNome);
-
+  let ultimoNome = nomes[nomes.length - 1];  
+  return (ultimoNome + ', ' + primeiroNome);
 }
 
 // Desafio 5
@@ -56,14 +53,14 @@ function catAndMouse(mouse, cat1, cat2) {
   let gato1 = Math.abs(mouse - cat1);
   let gato2 = Math.abs(mouse - cat2);
 
-  if (gato1 == gato2) {
-    return "os gatos trombam e o rato foge";
+  if (gato1 === gato2) {
+    return 'os gatos trombam e o rato foge';
   }
   else if (gato1 < gato2) {
-    return "cat1";
+    return 'cat1';
   }
   else {
-    return "cat2";
+    return 'cat2';
   }
 }
 
