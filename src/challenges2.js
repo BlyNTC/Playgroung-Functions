@@ -74,16 +74,6 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  let number = 0;
-  console.log(`
-  ${number} cerveja, ${number} copos de gim, ${number} outras bebidas`)
-
-  let tudo =+ number
-  
-  console.log(`${tudo} copos de água`)
-
-
-
   var numbers = string.match(/\d+/g).map(Number);
 let soma = numbers.reduce((a, b) => a + b);
 if (soma === 1){
