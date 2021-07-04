@@ -69,17 +69,16 @@ for (let i = 1; i < arrayNumbers.length; i += 1){
 function catAndMouse(mouse,cat1,cat2) {
 
   // seu código aqui
-  let distCat1 = mouse - cat1;
-  let distCat2 = mouse - cat2;
+  let dist1 = Math.abs(mouse - cat1);
+  let dist2 = Math.abs(mouse - cat2);
 
-  if(distCat1 === distCat2){
-    return "os gatos trombam e o rato foge";  
-  }else if(distCat1 < distCat2) {
-    return "cat2";
-  }else {
-    return "cat1";
-  }
-  
+if(dist1 === dist2){
+  return 'os gatos trombam e o rato foge';  
+}else if(dist1 < dist2) {
+  return 'cat1';
+}else {
+  return 'cat2';
+} 
   
   
 }
