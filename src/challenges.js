@@ -51,7 +51,7 @@ function highestCount(arr) {
   let maior = arr[0];
   let count = 0;
   for (let i in arr) {
-    if (maior < arr[i]) {
+    if (maior <= arr[i]) {
       maior = arr[i];
     }
   }
@@ -60,10 +60,7 @@ function highestCount(arr) {
       count += 1;
     }
   }
-  if (maior === 0) {
-    return 3;
-  }
-  return Math.abs(count);
+  return count;
 }
 
 // Desafio 7
@@ -82,19 +79,18 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arr) {
-  let deploy = [];
   for (let i in arr) {
     if (arr[i] % 3 === 0 && arr[i] % 5 === 0) {
-      deploy.push('fizzBuzz');
-    } else if (arr[i] % 3 === 0 && arr[i] % 5 !== 0) {
-      deploy.push('fizz');
-    } else if (arr[i] % 3 !== 0 && arr[i] % 5 === 0) {
-      deploy.push('buzz');
+      arr[i] = ('fizzBuzz');
+    } else if (arr[i] % 3 === 0) {
+      arr[i] = ('fizz');
+    } else if (arr[i] % 5 === 0) {
+      arr[i] = ('buzz');
     } else {
-      deploy.push('bug!');
+      arr[i] = ('bug!');
     }
   }
-  return deploy;
+  return arr;
 }
 
 // Desafio 9
