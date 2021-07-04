@@ -70,8 +70,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(cerveja) {
+  let quantidade = 0;
+  for (let i2 = 0; i2 < cerveja.length; i2 += 1) {
+    for (let i = 0; i < cerveja.length; i += 1) {
+      if (cerveja[i] == i2) {
+        quantidade += i2;
+      }
+    }
+  }
+  if (quantidade === 1) {
+    return quantidade + " copo de água";
+
+  } else {
+    return quantidade + " copos de água";
+  }
 }
 
 module.exports = {
