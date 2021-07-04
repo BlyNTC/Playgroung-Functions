@@ -1,7 +1,20 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  
+  let listaObjeto = [];
+  tech = tech.sort();
+  
+  if(tech.length == 0){
+    return 'Vazio!';
+
+  }else{
+    for (let i = 0;i < tech.length; i += 1){
+      listaObjeto.push( {tech:tech[i], name: name} );
+    }
+    return listaObjeto;
+  }
 }
+console.log(techList(["React", "Bootstrap", "Typescript", "Angular.js", "JavaScript"], "Rabito" ))
 
 // Desafio 11
 function generatePhoneNumber() {
