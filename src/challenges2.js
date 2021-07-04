@@ -67,10 +67,7 @@ function triangleCheck(a, b, c) {
   let sumAB = a + b;
   let sumAC = a + c;
   let sumBC = b + c;
-  let disAB = Math.abs(a - b);
-  let disAC = Math.abs(a - c);
-  let disBC = Math.abs(b - c);
-  if (a >= sumBC || a <= disBC || b >= sumAC || b <= disAC || c >= sumAB || c <= disAB) {
+  if (a >= sumBC || b >= sumAC || c >= sumAB) {
     return false;
   }
   return true;
