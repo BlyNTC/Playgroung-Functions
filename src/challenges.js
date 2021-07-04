@@ -23,7 +23,7 @@ function splitSentence(frase) {
 function concatName(nomes) {
   // seu código aqui
   let primeiroNome = nomes[0];
-  let ultimoNome = nomes[nomes.length - 1];  
+  let ultimoNome = nomes[nomes.length - 1];
   return (ultimoNome + ', ' + primeiroNome);
 }
 
@@ -41,7 +41,7 @@ function highestCount(numeros) {
 
   for (let index = 0; index < numeros.length; index += 1) {
     if (numMaior === numeros[index]) {
-      vezes = vezes + 1;
+      vezes +=1;
     }
   }
   return vezes;
@@ -55,13 +55,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (gato1 === gato2) {
     return 'os gatos trombam e o rato foge';
-  }
-  else if (gato1 < gato2) {
+  } else if (gato1 < gato2) {
     return 'cat1';
-  }
-  else {
-    return 'cat2';
-  }
+  } return 'cat2';
 }
 
 // Desafio 8
@@ -70,16 +66,13 @@ function fizzBuzz(numbers) {
   let test = [];
   for (let index = 0; index < numbers.length; index +=1) {
     if(numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      test.push("fizzBuzz");
-    }
-    else if (numbers[index] % 3 === 0) {
-      test.push("fizz");
-    }
-    else if (numbers[index] % 5 === 0) {
-      test.push("buzz");
-    }
-    else {
-      test.push("bug!");
+      test.push('fizzBuzz');
+    } else if (numbers[index] % 3 === 0) {
+      test.push('fizz');
+    } else if (numbers[index] % 5 === 0) {
+      test.push('buzz');
+    } else {
+      test.push('bug!');
     }
   }
   return test;
@@ -89,7 +82,7 @@ function fizzBuzz(numbers) {
 function encode(string) {
   // Utilizado método replace() para substituir caracteres específicos.
   // Fonte de pesquisa: https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
-  let stringEncode = string.replace(/a/g, "1").replace(/e/g, "2").replace(/i/g, "3").replace(/o/g, "4").replace(/u/g, "5");
+  let stringEncode = string.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
   return stringEncode;
 }
 
