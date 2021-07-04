@@ -4,12 +4,13 @@ function techList(listaTech, name) {
   listaTech.sort();
   let tech = [];
 
-  if (listaTech.lenght !== 0) {
+  if (listaTech.length !== 0) {
     for (let index in listaTech) {
-      tech[index] = {
+      let objetoTech = {
         tech: listaTech[index],
         name: name
       }
+      tech.push(objetoTech);
     }
     return tech;
   } return "Vazio!";
