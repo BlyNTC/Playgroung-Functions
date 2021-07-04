@@ -58,9 +58,29 @@ function generatePhoneNumber(numeros) {
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA,lineB,lineC) {
   // seu código aqui
+  let status; // variável que vai armazenar o valor booleano.
+  let verificaA = false;
+  let verificaB = false;
+  let verificaC = false;
+  if(lineA > Math.abs(lineB-lineC) && lineA < lineB + lineC) {
+    verificaA = true;
+  } 
+  if (lineB > Math.abs(lineA-lineC) && lineB < lineA + lineC) {
+    verificaB = true;
+  }
+  if (lineC > Math.abs(lineA-lineB) && lineC < lineA + lineB) {
+    verificaC = true;
+  }
+  if (verificaA === true && verificaB === true && verificaC === true){
+    status = true;
+  } else {
+    status = false;
+  }
+  return status
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
