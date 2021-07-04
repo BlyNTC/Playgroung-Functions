@@ -84,8 +84,21 @@ if(dist1 === dist2){
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumbers) {
   // seu código aqui
+
+  for(let i = 0;i < arrayNumbers.length; i+= 1){
+    if(arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0){
+      arrayNumbers[i] = "fizzBuzz";      
+    }else if (arrayNumbers[i] % 3 === 0){
+      arrayNumbers[i] = "fizz";     
+    }else if (arrayNumbers[i] % 5 === 0){
+      arrayNumbers[i] = "buzz";      
+    }else {
+      arrayNumbers[i] = "bug!";      
+    }
+  }
+  return arrayNumbers;
 }
 
 // Desafio 9
