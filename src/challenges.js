@@ -82,22 +82,22 @@ function fizzBuzz(numbers) {
 function encode(string) {
   // Utilizado método replace() para substituir caracteres específicos.
   // Fonte de pesquisa: https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
-  let stringEncode = string.replace(/a/g, '1').
-  replace(/e/g, '2').
-  replace(/i/g, '3').
-  replace(/o/g, '4').
-  replace(/u/g, '5');
+  let stringEncode = string.replace(/a/g, '1')
+    .replace(/e/g, '2')
+    .replace(/i/g, '3')
+    .replace(/o/g, '4')
+    .replace(/u/g, '5');
   return stringEncode;
 }
 
 function decode(string2) {
   // Utilizado método replace() para substituir caracteres específicos.
   // Fonte de pesquisa: https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
-  let stringDecode = string2.replace(/1/g, "a").
-  replace(/2/g, 'e').
-  replace(/3/g, 'i').
-  replace(/4/g, 'o').
-  replace(/5/g, 'u');
+  let stringDecode = string2.replace(/1/g, "a")
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u');
   return stringDecode;
 }
 

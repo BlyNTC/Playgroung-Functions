@@ -1,6 +1,18 @@
 // Desafio 10
-function techList() {
+function techList(listaTech, name) {
   // seu código aqui
+  tech.sort();
+  listaTech = [];
+
+  if (tech.lenght !== 0) {
+    for (let index in tech) {
+      listaTech[index] = {
+        tech: tech[index],
+        name: name
+      }
+    }
+    return listaTech;
+  } return "Vazio!";
 }
 
 // Desafio 11
