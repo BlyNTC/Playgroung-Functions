@@ -47,14 +47,17 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+const fizzBuzzVerifier = (num) => {
+  if (num % 15 === 0) return 'fizzBuzz';
+  if (num % 5 === 0) return 'buzz';
+  if (num % 3 === 0) return 'fizz';
+  return 'bug!';
+};
+
 function fizzBuzz(array) {
   let arrayReturn = [];
   for (let num of array) {
-    let result = 'bug!';
-    if (num % 3 === 0) result = 'fizz';
-    if (num % 5 === 0) result = 'buzz';
-    if (num % 15 === 0) result = 'fizzBuzz';
-    arrayReturn.push(result);
+    arrayReturn.push(fizzBuzzVerifier(num));
   }
   return arrayReturn;
 }
