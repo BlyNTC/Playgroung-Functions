@@ -35,9 +35,9 @@ function splitSentence(string) {
 function concatName(array) {
   let string = '';
   if (array.length >= 2) {
-    let firstName = array.shift();
-    let lastName = array.pop();
-    string = lastName + ', ' + firstName;
+    let firstName = array.shift().toString();
+    let lastName = array.pop().toString();
+    string = string.concat(lastName, ', ', firstName);
   }
   return string;
 }
