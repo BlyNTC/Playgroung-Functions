@@ -87,21 +87,17 @@ function encode(palavra) {
 
   for (let letra of palavra)
     if (letra === 'a') {
-      string += '1';  
-  } 
+      string += '1';
+    }
   else if (letra === 'e') {
     string += '2';
-  } 
-  else if (letra === 'i') {
+  } else if (letra === 'i') {
     string += '3';
-  } 
-  else if (letra === 'o') {
+  } else if (letra === 'o') {
     string += '4';
-  } 
-  else if (letra === 'u') {
+  } else if (letra === 'u') {
     string += '5';
-  } 
-  else {
+  } else {
     string += letra;
   }
   return string;

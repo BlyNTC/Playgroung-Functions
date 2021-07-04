@@ -3,12 +3,14 @@ function techList(techs, name) {
   let result = [];
   let ordem = techs.sort();
 
-  if (techs == 0){
+  if (techs == 0) {
     result = 'Vazio!';
-  }
-  else {
+  } else {
     for (let i of ordem) {
-      result.push({tech: i, 'name': name});
+      result.push({
+        tech: i,
+        'name': name
+      });
     }
   }
   return result;
