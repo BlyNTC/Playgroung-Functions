@@ -37,7 +37,7 @@ footballPoints();
 
 // Desafio 6 MATERIAL CONSULTA https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 function highestCount(arrayNums) {
-  
+
   let maxNum = Math.max(...arrayNums);
   let resultado = 0;
   for (let index of arrayNums) {
@@ -50,34 +50,30 @@ function highestCount(arrayNums) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-let distanciaGato1;
-let distanciaGato2;
-let resposta;
+  let distanciaGato1;
+  let distanciaGato2;
+  let resposta;
 
-if (mouse < cat1){
-  distanciaGato1 = mouse - cat1;
-}
-else {
-  distanciaGato1 = cat1 - mouse;
-}
+  if (mouse < cat1) {
+    distanciaGato1 = mouse - cat1;
+  } else {
+    distanciaGato1 = cat1 - mouse;
+  }
 
-if (mouse < cat2){
-  distanciaGato2 = mouse - cat2;
-}
-else {
-  distanciaGato2 = cat2 - mouse;
-}
+  if (mouse < cat2) {
+    distanciaGato2 = mouse - cat2;
+  } else {
+    distanciaGato2 = cat2 - mouse;
+  }
 
-if (distanciaGato1 > distanciaGato2){
-  resposta = "cat1";
-}
-else if (distanciaGato2 == distanciaGato1){
-  resposta = "os gatos trombam e o rato foge";
-}
-else {
-  resposta = "cat2";
-}
-return resposta;
+  if (distanciaGato1 > distanciaGato2) {
+    resposta = "cat1";
+  } else if (distanciaGato2 == distanciaGato1) {
+    resposta = "os gatos trombam e o rato foge";
+  } else {
+    resposta = "cat2";
+  }
+  return resposta;
 }
 
 // Desafio 8
@@ -86,22 +82,51 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-// let codes = {
-//   a: 1,
-//   e: 2,
-//   i: 3,
-//   o: 4,
-//   u: 5
-// }
+function encode(palavra) {
+  let string = '';
 
-// console.log(codes)
-
-function encode() {
-  // seu código aqui
+  for (let letra of palavra)
+    if (letra === 'a') {
+      string += '1';  
+  } 
+  else if (letra === 'e') {
+    string += '2';
+  } 
+  else if (letra === 'i') {
+    string += '3';
+  } 
+  else if (letra === 'o') {
+    string += '4';
+  } 
+  else if (letra === 'u') {
+    string += '5';
+  } 
+  else {
+    string += letra;
+  }
+  return string;
 }
 
-function decode() {
-  // seu código aqui
+function decode(palavra) {
+  let string = '';
+
+  for (let letra of palavra) {
+    if (letra === '1') {
+      string += 'a';
+    } else if (letra === '2') {
+      string += 'e';
+    } else if (letra === '3') {
+      string += 'i';
+    } else if (letra === '4') {
+      string += 'o';
+    } else if (letra === '5') {
+      string += 'u';
+    } else {
+      string += letra;
+    }
+  }
+
+  return string;
 }
 
 module.exports = {
