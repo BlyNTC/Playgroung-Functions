@@ -28,9 +28,22 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(hidratar) {
+  // precisei pesquisar sobre split, replace e parseint
+  let numberResult = hidratar.replace(/[^0-9]/g, "")
+  numberResult = numberResult.split("");
+  let resultado;
+
+  if (numberResult.length === 1) {
+    resultado = parseInt(numberResult) + " copo de água"
+  } else if (numberResult.length === 2) {
+    resultado = parseInt(numberResult[0]) + parseInt(numberResult[1]) + " copos de água"
+  } else {
+    resultado = parseInt(numberResult[0]) + parseInt(numberResult[1]) + parseInt(numberResult[2]) + " copos de água"
+  }
+  return resultado;
 }
+
 
 module.exports = {
   generatePhoneNumber,
