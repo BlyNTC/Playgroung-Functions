@@ -28,19 +28,32 @@ function concatName(string) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties;
+  let pontos = wins * 3 + ties;
+  return pontos;
 
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(number) {
+  let maior = array[0];
+  let repetidor = 0;
 
-  
+  for(let index = 0; index < array.length; index +=1) {
+    if (maior < array[index]) {
+      maior = array[index];
+    }
+  }
+  for(let index = 0; index <array.length; index +=1) {
+    if(maior === array[index]) {
+      repetidor +=1;
+    }
+  }
+  return repetidor; 
 }
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+
 }
 
 // Desafio 8
