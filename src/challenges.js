@@ -16,12 +16,9 @@ function splitSentence(sentence) {
   return sentence.split(" ");
 }
 
-console.log(splitSentence("para testar, uma frase"))
-
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name) {
+  return name[name.length - 1] + ", " + name[0];
 }
 
 // Desafio 5
