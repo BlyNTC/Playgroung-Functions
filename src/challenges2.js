@@ -1,12 +1,12 @@
 // Desafio 10
-function techList(array, name) {
+function techList(array, nome) {
   let arrayObjects = [];
   if (array.length === 0) {
     return 'Vazio!';
   }
   array.sort();
   for (let value of array) {
-    arrayObjects.push({ tech: value, name: name });
+    arrayObjects.push({ tech: value, name: nome });
   }
   return arrayObjects;
 }
@@ -58,10 +58,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let distAC = Math.abs(lineA - lineC);
   let distBC = Math.abs(lineB - lineC);
 
-  if (lineA >= sumBC || lineB >= sumAC || lineC >= sumAB) {
-    return false;
-  }
-  if (lineA <= distBC || lineB <= distAC || lineC <= distAB) {
+  if (lineA >= sumBC || lineA <= distBC || lineB >= sumAC || lineB <= distAC || lineC >= sumAB || lineC <= distAB) {
     return false;
   }
   return true;
