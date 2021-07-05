@@ -5,16 +5,16 @@ function compareTrue(numero1,numero2) {
   let numeroB = numero2;
   
   if(numeroA < 0 && numeroB > 0){
-    console.log(false);
+    return false;
   }
   else if(numeroA > 0 && numeroB < 0){
-    console.log(false);
+    return false;
   }
   else if(numeroA < 0 && numeroB < 0){
-    console.log(false);
+    return false;
   }
   else{
-    console.log(true);
+    return true;
   }
 
   }
