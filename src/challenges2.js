@@ -54,7 +54,7 @@ function generatenumTelephone(telefone) {
   return numTelephone;
   }
 }
-console.log(generatenumTelephone([1, 2, 0]));
+generatenumTelephone([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]);
 
 
 
