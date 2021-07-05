@@ -17,9 +17,6 @@ function generatePhoneNumber(numbers) {
 
 }
 
-
-
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let cond = false;
@@ -35,8 +32,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  var regex = /\d+/g;
+  var stringNumbers = string.match(regex);
+  var sum = 0;
+  for (let numbers of stringNumbers){
+    sum += parseInt(numbers);
+  }
+  let message = '';
+  if (sum < 2) {
+    message = sum + ' copo de água';
+  } else {
+    message = sum + ' copos de água';
+  }
+  return message;  
 }
 
 module.exports = {
