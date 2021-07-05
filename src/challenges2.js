@@ -17,44 +17,35 @@ function techList(tech, name) {
 techList(['React', 'Bootstrap', 'Typescript', 'Angular.js', 'JavaScript'], 'Rabito');
 
 // Desafio 11
-function generatenumTelephone(telefone) {
-  let numFone = '(';
-  if(telefone.length != 11){
-    return 'Array com tamanho incorreto.'
-  }else{
-    for(let i = 0;i < telefone.length; i += 1){
-      let contador = 0;
-      if(telefone[i] < 0|| telefone[i] > 9){
-        return 'não é possível gerar um número de telefone com esses valores'
-      }
-      for(let j = 0; j < 11; j += 1){
-        if (telefone[i] === telefone[j]){
-          contador += 1;
-          if (contador == 3){
-            return 'não é possível gerar um número de telefone com esses valores'
-          }
-        }
-      }
-      if(i < 2){
-        numFone = numFone + telefone[i]; 
-        if(i === 1){
-          numFone = numFone + ') ';
-        } 
-      }
-      if(i <= 6 && i > 1){
-        numFone = numFone + telefone[i];
-        if(i === 6){
-          numFone = numFone + '-';
-        }
-      }
-      if(i > 6){
-        numFone = numFone + telefone[i];
-      }
+function generatenumTelephone(numeroArray) {
+  let repeteCont = numeroArray.filter((e, i, a) => a.indexOf(e) !== i);
+  repeteCont.sort(function (a, b) { return a - b; });
+  let contagem = 0;
+  let checagem = 0;
+  for (let i = 0; i < repeteCont.length; i += 1) {
+    if (repeteCont[i] === repeteCont[i + 1] || repeteCont[i] === 
+    repeteCont[i + 2]) {
+    contagem = 3;
     }
-  return numFone
   }
+  for (let i in numeroArray) {
+    if (numeroArray[i] > 9 || numeroArray[i] < 0) {
+      checagem += 1;
+    }
+  }
+  if (numeroArray.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  } else if (contagem >= 3 || checagem !== 0) {
+    return 'não é possível gerar um número de telefone com esses valores';
 }
-// generatenumTelephone([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+  numeroArray.splice(0, 0, '(');
+  numeroArray.splice(3, 0, ')');
+  numeroArray.splice(4, 0, ' ');
+  numeroArray.splice(10, 0, '-');
+  return numeroArray.join('');
+}
+
+console.log(generatenumTelephone([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 
 
