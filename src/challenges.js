@@ -17,12 +17,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 // 3 - Crie uma função que divida a frase
-function splitSentence() {
-  const myString = ''
-  const splits = myString.split()
-  
+function splitSentence(myString) {
+
+  return myString.split(" ");
   
 }
+
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 // const myString = 'testestestes'
 // const splits = myString.split('')
