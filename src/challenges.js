@@ -19,14 +19,11 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(arr) {
-let ultimo = arr[-1];
-let primeiro = arr[0]
+function concatName(arrayCN) {
+let primeiro = arrayCN[0];
+let ultimo = arrayCN[arrayCN.length -1]
 
-  for(i = 0; i <= arr.length; i++){
-    if (arr[i] == ultimo && primeiro);
-  }
-    return ultimo, primeiro;
+return ultimo + ", "+ primeiro;
 }
 
 // Desafio 5
@@ -34,7 +31,7 @@ function footballPoints(wins, ties) {
   return 3*wins+1*ties;
 }
 
-// Desafio 6
+// Desafio 6  
 
 function highestCount(araara) {
 
@@ -49,21 +46,34 @@ function highestCount(araara) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 === cat2){
-    'os gatos trombam e o rato foge';
+  if (cat1 && cat2 > mouse){
+    return 'os gatos trombam e o rato foge';
   }
-  else if (cat2 < cat1){
+  else if (cat1 > cat2){
     return 'cat2';
   }
-  else{
+  else if(cat2 > cat1){
     return 'cat1';
   }
-  //necessita de nova logica
 }
 
 // Desafio 8
-function fizzBuzz() {
-  
+function fizzBuzz(arrayFB) {
+  for(index = 0; index <= arrayFB.length; arrayFB ++){
+    if (arrayFB[index] % 3 && arrayFB[index] % 5 != 0){
+       
+    }
+    else if (arrayFB[index] % 3 && arrayFB[index] % 5 == 0){
+      return 'FizzBuzz';
+    }
+    else if (arrayFB[index] % 5 == 0){
+      return 'buzz';
+    }
+    else if (arrayFB[index] % 3 == 0){
+      return 'fizz';
+    }
+  }return arrayFB;
+
 }
 
 // Desafio 9
@@ -71,7 +81,7 @@ function encode() {
   // seu código aqui
 }
 function decode() {
-  // seu código aqui
+  // seu código aqui, usar switch e case 
 }
 
 module.exports = {
