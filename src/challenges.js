@@ -60,8 +60,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(buzzFizz) {
   // seu código aqui
+  for (index = 0; index < buzzFizz; index++) {
+    if (buzzFizz % 3 === 0) {
+      return 'fizz';
+    } else if (buzzFizz % 5 === 0) {
+      return 'buzz';
+    } else if (buzzFizz % 3 === 0 && buzzFizz % 5 === 0) {
+      return 'fizzBuzz';
+    } else {
+      return 'bug';
+    }
+  }
 }
 
 // Desafio 9
