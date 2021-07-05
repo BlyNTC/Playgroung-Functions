@@ -53,19 +53,33 @@ function generatenumTelephone(telefone) {
     
     
     }
-    
   return numTelephone;
   }
-  
 }
-console.log(generatenumTelephone([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+generatenumTelephone([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sumAB = lineA + lineB;
+  let sumAC = lineA + lineC;
+  let sumBC = lineB + lineC;
+  let difAB = Math.abs(lineA - lineB);
+  let difAC = Math.abs(lineA - lineC);
+  let difBC = Math.abs(lineB - lineC);
+  if(sumAB > lineC && lineC < difAB){
+    return false
+  }else if(sumAC > lineB && lineB < difAC){
+    return false
+  }else if(sumBC > lineA && lineA < difBC){
+    return false
+  }else{
+    return true
+  }
 }
+triangleCheck(10, 14, 8);
+
 
 // Desafio 13
 function hydrate() {
