@@ -60,7 +60,7 @@ function footballPoints(wins, ties) {
 // recebe um array de numeros
 function highestCount(outroArray) {
   // recebe o numero maior do array
-  let numeroMaior = 0
+  let numeroMaior = outroArray[0]
   // procura o numero maior do array
   for (let index = 0; index < outroArray.length; index += 1) {
     if (outroArray[index] > numeroMaior) {
@@ -69,7 +69,7 @@ function highestCount(outroArray) {
   }
   let vezesQueAparece = 0
   for (let index = 0; index < outroArray.length; index += 1) {
-    if (numeroMaior === outroArray[index]) {
+    if (numeroMaior === outroArray[index]){
       vezesQueAparece += 1
     }
   }
