@@ -48,13 +48,11 @@ function generatePhoneNumber(numerosTel) {
     }
     
   }
-  
-  numero.push('(' + ddd + ') ' + primeiraParte + '-' + segundaParte);
-  console.log(numero.join(''));    
+  numero = '(' + ddd.join('') + ') ' + primeiraParte.join('') + '-' + segundaParte.join('');
+  return numero;
 } 
- 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));  
-    
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); 
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -71,9 +69,23 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log (triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(numeroCopos) {
+// numerosCopos = numero(1a9) + tipo de bebida
+/* 
+let copos = numeroCopos.split('');
+let quantidade = copos[0];
+let resultado;
+ 
+if (quantidade === 1) {
+    resultado = quantidade + 'copo de água'; 
+  } else if (quantidade > 1) {
+    resultado = quantidade + 'copos de água'
+  }
+return resultado; */
 }
+console.log(hydrate('1 cerveja'));
+
+
 
 module.exports = {
   generatePhoneNumber,
