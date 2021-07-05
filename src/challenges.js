@@ -68,9 +68,25 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-function fizzBuzz() {
-  
-}
+function fizzBuzz(numbers) {
+    const result = [];
+    for (let index = 0; index < numbers.length; index += 1){
+      if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0){
+      result.push = "fizzBuzz";
+    } else if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0){
+      result.push = "fizz";
+    } else if (numbers[index] % 5 === 0 && numbers[index] % 3 !== 0){
+      result.push = "buzz";
+    } else {
+      result.push = "bug!"
+    }
+  }
+  for (let index = 0; index < result.length; index += 1){
+    console.log(result[index]);
+ }
+ numbers = [2, 15, 7, 9, 45];
+ fizzBuzz (numbers)
+
 
 // Desafio 9
 function encode() {
