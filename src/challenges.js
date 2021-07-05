@@ -97,11 +97,76 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(code) {
+
+  // Usei o método ()split, encontrado aqui: https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
+  let letters = code.split("");
+  let codedArray = [];
+  for (let index = 0; index < letters.length; index ++) {
+    if (letters[index] == "a") {
+      letters[index] = "1";
+      codedArray.push(letters[index]);
+    }
+    else if (letters[index] == "e") {
+      letters[index] = "2";
+      codedArray.push(letters[index]);
+    }
+    else if (letters[index] == "i") {
+      letters[index] = "3";
+      codedArray.push(letters[index]);
+    }
+    else if (letters[index] == "o") {
+      letters[index] = "4";
+      codedArray.push(letters[index]);
+    }
+    else if (letters[index] == "u") {
+      letters[index] = "5";
+      codedArray.push(letters[index]);
+    }
+    else {
+      codedArray.push(letters[index]);
+    }
+  }
+ 
+  // Usei o método join(), encontrado aqui: https://www.w3schools.com/jsref/jsref_join.asp
+  let codedString = codedArray.join("");
+  return codedString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(code) {
+
+   // Usei o método ()split, encontrado aqui: https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
+   let letters = code.split("");
+   let decodedArray = [];
+   for (let index = 0; index < letters.length; index ++) {
+     if (letters[index] == "1") {
+       letters[index] = "a";
+       decodedArray.push(letters[index]);
+     }
+     else if (letters[index] == "2") {
+       letters[index] = "e";
+       decodedArray.push(letters[index]);
+     }
+     else if (letters[index] == "3") {
+       letters[index] = "i";
+       decodedArray.push(letters[index]);
+     }
+     else if (letters[index] == "4") {
+       letters[index] = "o";
+       decodedArray.push(letters[index]);
+     }
+     else if (letters[index] == "5") {
+       letters[index] = "u";
+       decodedArray.push(letters[index]);
+     }
+     else {
+       decodedArray.push(letters[index]);
+     }
+   }
+  
+   // Usei o método join(), encontrado aqui: https://www.w3schools.com/jsref/jsref_join.asp
+   let decodedString = decodedArray.join("");
+   return decodedString;
 }
 
 module.exports = {
