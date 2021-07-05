@@ -19,31 +19,31 @@ techList(['React', 'Bootstrap', 'Typescript', 'Angular.js', 'JavaScript'], 'Rabi
 // Desafio 11
 
 function generatenumTelephone(digitosFoneVetor) {
-  let vezesRepet = 0;
+  let vezes = 0;
   let vetorDDD = [digitosFoneVetor[0]]+ [digitosFoneVetor[1]];
   let vetorNumParte1 = [digitosFoneVetor[2]] + [digitosFoneVetor[3]] + [digitosFoneVetor[4]] + [digitosFoneVetor[5]] + [digitosFoneVetor[6]];
   let vetorNumParte2 = [digitosFoneVetor[7]] + [digitosFoneVetor[8]] + [digitosFoneVetor[9]] + [digitosFoneVetor[10]];
-  let numFoneCompleto= '';
+  let numCompleto= '';
 
   if (digitosFoneVetor.length != 11) {
     return 'Array com tamanho incorreto.'; 
   } 
   for (let numero of digitosFoneVetor) {
-    if (numero < 0 || numero > 9 || vezesRepet >= 3 ) {
+    if (numero < 0 || numero > 9 || vezes >= 3 ) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    vezesRepet = 0;
+    vezes = 0;
     for (let compare of digitosFoneVetor){
       if (compare === numero){
-        vezesRepet += 1;   
+        vezes += 1;   
       }  
     }
   } 
-  numFoneCompleto = '(' + vetorDDD + ')' + ' ' + vetorNumParte1 + '-' + vetorNumParte2;
-  return numFoneCompleto;
+  numCompleto = '(' + vetorDDD + ')' + ' ' + vetorNumParte1 + '-' + vetorNumParte2;
+  return numCompleto;
 }
 
-// generatenumTelephone([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+// console.log(generatenumTelephone([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 
 
