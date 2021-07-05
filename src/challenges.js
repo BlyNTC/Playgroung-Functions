@@ -69,7 +69,7 @@ function highestCount(outroArray) {
   }
   let vezesQueAparece = 0
   for (let index = 0; index < outroArray.length; index += 1) {
-    if (numeroMaior === outroArray[index]){
+    if (numeroMaior === outroArray[index]) {
       vezesQueAparece += 1
     }
   }
@@ -77,11 +77,26 @@ function highestCount(outroArray) {
 }
 
 
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+    if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+      return "cat2"
+    } else if (Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)) {
+    return "cat1"
+  } else {
+       return "os gatos trombam e o rato foge"
+  }
 }
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 8
 function fizzBuzz() {
