@@ -1,13 +1,17 @@
+// Atenção: Lembrar de tirar os CONSOLE.LOG!!!
+
 // Desafio 1
 // 1 - Crie uma função usando o operador &&
 function compareTrue(boleano_A, boleano_B) {
-return (boleano_A && boleano_B);
+  return boleano_A && boleano_B;
+
 }
-console.log(compareTrue)
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+// 2 - Crie uma função que calcule a área de um triângulo
+// Base= base  |  Altura=height
+function calcArea(base, height) {
+returna(base*height) / 2;
 }
 
 // Desafio 3
@@ -47,6 +51,8 @@ function encode() {
 function decode() {
   // seu código aqui
 }
+
+// Atenção: Lembrar de tirar os CONSOLE.LOG!!!
 
 module.exports = {
   calcArea,
