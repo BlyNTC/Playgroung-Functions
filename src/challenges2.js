@@ -18,7 +18,7 @@ techList(['React', 'Bootstrap', 'Typescript', 'Angular.js', 'JavaScript'], 'Rabi
 
 // Desafio 11
 
-function generatenumTelephone(digitosFoneVetor) {
+function generatePhoneNumber(digitosFoneVetor) {
   let vezes = 0;
   let vetorDDD = [digitosFoneVetor[0]]+ [digitosFoneVetor[1]];
   let vetorNumParte1 = [digitosFoneVetor[2]] + [digitosFoneVetor[3]] + [digitosFoneVetor[4]] + [digitosFoneVetor[5]] + [digitosFoneVetor[6]];
@@ -42,9 +42,6 @@ function generatenumTelephone(digitosFoneVetor) {
   numCompleto = '(' + vetorDDD + ')' + ' ' + vetorNumParte1 + '-' + vetorNumParte2;
   return numCompleto;
 }
-
-// console.log(generatenumTelephone([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
 
 
 // Desafio 12
