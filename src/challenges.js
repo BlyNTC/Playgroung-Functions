@@ -1,18 +1,33 @@
 // Desafio 1
-function compareTrue(param1, param2) {
-  if(param1 > 0 && param2 > 0){
-    console.log(true);
+
+function compareTrue(numero1,numero2) {
+  let numeroA = numero1;
+  let numeroB = numero2;
+  
+  if(numeroA < 0 && numeroB > 0){
+    console.log(false);
+  }
+  else if(numeroA > 0 && numeroB < 0){
+    console.log(false);
+  }
+  else if(numeroA < 0 && numeroB < 0){
+    console.log(false);
   }
   else{
-    console.log(false); 
+    console.log(true);
   }
+
   }
+  compareTrue(10,-5);
+  
   
   
 
 // Desafio 2
 function calcArea() {
-  // seu código aqui
+ 
+
+  
 }
 
 // Desafio 3
