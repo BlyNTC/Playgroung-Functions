@@ -26,24 +26,45 @@ function concatName(palavras) {
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
-  let pontos = (wins*3) + (ties*1);
+function footballPoints(wins, ties) {
+  let pontos = (wins * 3) + (ties * 1);
   return pontos; 
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayValores) {
+
 }
+  // descobrir qual é o maior número no array 
+  // retornar o numero de vezes que ele se repete
+
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return "cat1";
+  } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)){
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrays) {
+let resultado = [ ];
+for (let index = 0; index < arrays.lenght; index +=1) {
+  if (arrays[index] % 3 == 0 && arrays[index] % 5 != 0) {
+    resultado.push('fizz');
+  } else if (arrays[index] % 5 == 0 && arrays[index] % 3 != 0) {
+    resultado.push('buzz');
+  } else if (arrays[index] % 3 == 0 && arrays[index] % 5 == 0) {
+    resultado.push('fizzBuzz');
+  } else {
+    resultado.push('bug!');
+  }
+}
+return resultado;
 }
 
 // Desafio 9
