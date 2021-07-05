@@ -19,7 +19,7 @@ function splitSentence(string) {
 function concatName(array) {
   let first = array[0];
   let last = array[array.length - 1];
-  return last + ', ' + first;
+  return `${last},${' '}${first}`;
 }
 
 // Desafio 5
@@ -31,7 +31,18 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-
+  let maiorNumero = Math.max();
+  let resultado = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > maiorNumero) {
+      maiorNumero = array[index];
+    }
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === maiorNumero) {
+      resultado += 1;
+    }
+  } return resultado;
 }
 
 // Desafio 7
@@ -65,10 +76,10 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  
 }
 function decode() {
-  // seu código aqui
+  
 }
 
 module.exports = {
