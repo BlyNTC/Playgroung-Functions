@@ -4,14 +4,15 @@
 // 1 - Crie uma função usando o operador &&
 function compareTrue(boleano_A, boleano_B) {
   return boleano_A && boleano_B;
-
+  
 }
 
 // Desafio 2
 // 2 - Crie uma função que calcule a área de um triângulo
 // Base= base  |  Altura=height
 function calcArea(base, height) {
-returna(base*height) / 2;
+  return (base * height) / 2;
+
 }
 
 // Desafio 3
