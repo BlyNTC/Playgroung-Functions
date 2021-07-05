@@ -43,7 +43,7 @@ function generatePhoneNumber(arrayPhoneNumber) {
   return numeroPronto;
 }
 
-// Desafio 12
+// Desafio 12 OK
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let check;
@@ -58,18 +58,23 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(bebidas) {
   // seu código aqui
-  for (let drinks = 0; drinks < bebidas.length; drinks += 1) {
-    drinks = parseInt(bebidas.match(/\d/g).join(''))
-    drinks += bebidas[drinks];
-    if (drinks === 1) {
-      return drinks + ' copo de água';
-    } else {
-      return drinks + ' copos de água';
-    }
+  let separaNumeros = bebidas.match(/\d/g, '');
+  // console.log(separaNumeros);
+  // console.log(typeof separaNumeros);
+  let coposAgua = 0;
 
+  for (let index of separaNumeros) {
+    coposAgua += parseInt(index, 10);
+    // console.log(coposAgua);
   }
+  if (coposAgua === 1) {
+    return coposAgua + ' copo de água';
+  } else {
+    return coposAgua + ' copos de água';
+  }
+
 }
-// console.log(hydrate(1 + 'cerveja', 2 + 'cachaças'));
+// console.log(hydrate("1 cachaça, 5 cervejas e 2 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
