@@ -56,10 +56,22 @@ return count
 
  
  // Desafio 8
- function fizzBuzz() {
-   // seu código aqui
- }
- 
+ function fizzBuzz(arrayFizzBuzz) {
+  var arrayFinal = [];
+
+    for (var i=0; i < arrayFizzBuzz.length; i++){
+      if (arrayFizzBuzz[i] % 15 == 0)
+      arrayFinal.push("fizzBuzz");
+      else if (arrayFizzBuzz[i] % 5 == 0)
+      arrayFinal.push("buzz");
+      else if (arrayFizzBuzz[i] % 3 == 0)
+        arrayFinal.push("fizz");
+        else  arrayFinal.push("bug!");
+      
+    }
+    return arrayFinal;
+    }
+    console.log(fizzBuzz([3,10,15,19]));
  // Desafio 9
  function encode(tiraVogais) {
   
