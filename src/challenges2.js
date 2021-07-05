@@ -13,17 +13,28 @@ techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas');
 
 // Desafio 11
 function generatePhoneNumber(telephoneArray) {
+  if ( telephoneArray.length !== 11 || telephoneArray === [] ) {
+    return('Array com tamanho incorreto.')
+  }
+let repNumbers = 0;
+let telephoneNumber = '';
+    for(let iTelephone = 0; iTelephone < telephoneArray.length; iTelephone += 1) {  
+      for(let iRep = iTelephone + 1; iRep < telephoneArray.length; iRep += 1) {
+  if(telephoneArray[iTelephone] === telephoneArray[iRep] ) {
+          repNumbers += 1
+        }
+        else if (  telephoneArray[iTelephone] < 0 || telephoneArray[iTelephone] > 9 || repNumbers >= 3 ) { 
+          return("não é possível gerar um número de telefone com esses valores")
+      }
+    }
+  }
+telephoneNumber = "(" + telephoneArray[0] + telephoneArray[1] + ") " + telephoneArray[2] + telephoneArray[3] + telephoneArray[4] + telephoneArray[5] + telephoneArray[6] + "-" + telephoneArray[7] +  telephoneArray[8] + telephoneArray[9] + telephoneArray[10];
+telephoneNumber = telephoneNumber.toString();
+console.log(telephoneNumber)
+return telephoneNumber;
+ }
 
-// let telephoneNumber = 2193458768;
-
-// for ( i = 0; i < telephoneArray.length; i += 1)
-
-// if ( telephoneNumber  )
-
-
-}
-
-generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9,  0, 1]);
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {

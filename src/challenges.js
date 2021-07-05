@@ -31,15 +31,14 @@ function splitSentence(frase) {
 
 splitSentence('Go Trybe');
 
+
 // Desafio 4
 function concatName(nomes) {
-  for (let key in nomes) {
-    if (nomes[0] === nomes[2]) {
-      return (nomes[0] + ', ' + nomes[2]);
-    } else {
-    return (nomes[3] + ', ' + nomes[0]);
-    }
+  let fullName = '';
+  for (let i = 0; i < nomes.length; i +=1) {
+      fullName = nomes[nomes.length - 1]  + ', ' + nomes[0];
   }
+  return fullName;
 }
 
 concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
