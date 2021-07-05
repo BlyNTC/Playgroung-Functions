@@ -1,8 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+// 1 - Crie uma função usando o operador &&
+function compareTrue(boleano_A, boleano_B) {
+return (boleano_A && boleano_B);
 }
-// git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'
+console.log(compareTrue)
+
 // Desafio 2
 function calcArea() {
   // seu código aqui
