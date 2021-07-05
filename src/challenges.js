@@ -4,7 +4,7 @@
 // 1 - Crie uma função usando o operador &&
 function compareTrue(boleano_A, boleano_B) {
   return boleano_A && boleano_B;
-  
+
 }
 
 // Desafio 2
@@ -16,9 +16,18 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+// 3 - Crie uma função que divida a frase
 function splitSentence() {
-  // seu código aqui
+  const myString = ''
+  const splits = myString.split()
+  
+  
 }
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+// const myString = 'testestestes'
+// const splits = myString.split('')
+
+// console.log(splits);
 
 // Desafio 4
 function concatName() {
