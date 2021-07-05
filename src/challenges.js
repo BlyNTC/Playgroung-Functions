@@ -74,12 +74,25 @@ function fizzBuzz(array) {
   } return resultado;
 }
 
-// Desafio 9
-function encode() {
-  
+// Desafio 9 referencia https://www.w3schools.com/jsref/jsref_replace.asp
+function encode(string) {
+  let encod = '';
+  encod = string.replace(/a/g, '1');
+  encod = encod.replace(/e/g, '2');
+  encod = encod.replace(/i/g, '3');
+  encod = encod.replace(/o/g, '4');
+  encod = encod.replace(/u/g, '5');
+  return (encod);
 }
-function decode() {
-  
+
+function decode(string) {
+  let decod = '';
+  decod = string.replace(/1/g, 'a');
+  decod = decod.replace(/2/g, 'e');
+  decod = decod.replace(/3/g, 'i');
+  decod = decod.replace(/4/g, 'o');
+  decod = decod.replace(/5/g, 'u');
+  return (decod);
 }
 
 module.exports = {
