@@ -29,27 +29,44 @@ function concatName(string) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = wins * 3 + ties;
-  return pontos;
+  return pontos
 
 }
 
 // Desafio 6
-function highestCount(number) {
-  let maiorNum = Math.max.aplly(null, number);
-  let quantVezes = 0;
+function highestCount(array) {
+  let maiorNumero = array[0];
+  let numeroVezes = 0;
 
-  for(let index = 0; index < numeros.length; index += 1) {
-    if (maiorNum === number[index]) {
-      vezes += 1;
+  for (let index = 0; index < array.length; index += 1) {
+    if (maiorNumero < array[index]) {
+      maiorNumero = array[index];
     }
   }
-  return quantVezes;
+  for (let index = 0; index < array.length; index += 1) {
+    if (maiorNumero === array[index]) {
+      numeroVezes += 1;
+    }
+  }
+  return numeroVezes;
 }
 
+highestCount([9, 1, 2, 3, 9, 5, 7]);
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+
+
+
 // Desafio 7
-function catAndMouse() {
-
-
+function catAndMouse(mouse, cat1, cat2) {
+  let dCat1 = Math.abs(cat1 - mouse);
+  let dCat2 = Math.abs(cat2 -mouse);
+  if (dCat1 < dCat2) {
+    return 'cat1';
+  }else  if (dCat2 < dCat1) {
+    return 'cat2';
+  }else {
+    return'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
