@@ -43,6 +43,9 @@ function generatePhoneNumber(digitosFoneVetor) {
   return numCompleto;
 }
 
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
+
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -84,7 +87,7 @@ hydrate('1 cachaça, 5 cervejas e 1 copo de vinho');
 
 
 module.exports = {
-  generatePhoneNumber,
+  generatenumTelephone,
   techList,
   hydrate,
   triangleCheck,
