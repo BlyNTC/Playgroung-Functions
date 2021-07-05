@@ -28,7 +28,7 @@ function generatenumTelephone(telefone) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
       for (let j = 0; j < 11; j += 1) {
-        if (telefone[i] === telefone[j]) {
+        if (telefone[j] === telefone[j]) {
           contador += 1;
           if (contador === 3) {
             return 'não é possível gerar um número de telefone com esses valores';
@@ -54,7 +54,7 @@ function generatenumTelephone(telefone) {
   return numTelephone;
   }
 }
-generatenumTelephone([1, 2, 3, 4]);
+console.log(generatenumTelephone([1, 2, 0]));
 
 
 
