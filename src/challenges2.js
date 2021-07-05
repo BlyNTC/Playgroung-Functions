@@ -9,19 +9,17 @@ function techList(technologies, name) {
     let object = {
         tech: tech[index],
         name: name
-      }
-      newList.push(object)
+      };
+      newList.push(object);
     }
   }
   return newList;
 }
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
-"Lucas");
-
+techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],
+'Lucas');
 
 // Desafio 11
 function generatePhoneNumber(numerosTel) {
-  
   let ddd = [numerosTel[0], numerosTel[1]];
   let primeiraParte = [numerosTel[2], numerosTel[3], numerosTel[4], numerosTel[5], numerosTel[6]];
   let segundaParte = [numerosTel[7], numerosTel[8], numerosTel[9], numerosTel[10]];
@@ -46,12 +44,10 @@ function generatePhoneNumber(numerosTel) {
     if (numerosTel[i] < 0 || numerosTel[i] > 9){
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    
   }
   numero = '(' + ddd.join('') + ') ' + primeiraParte.join('') + '-' + segundaParte.join('');
   return numero;
 } 
-
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); 
 
 // Desafio 12
@@ -90,8 +86,6 @@ let quantidade = 0;
 }
 
 console.log(hydrate('1 cachaça, 5 numeroCoposs e 1 copo de vinho'));
-
-
 
 module.exports = {
   generatePhoneNumber,

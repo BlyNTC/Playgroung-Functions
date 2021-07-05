@@ -1,8 +1,8 @@
-const { techList } = require("./challenges2");
+const { techList } = require('./challenges2');
 
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 && param2 === true){
+  if (param1 && param2 === true) {
     return true;
   } else {
     return false;
@@ -22,9 +22,6 @@ function calcArea(base, height) {
 calcArea(10, 50);
 calcArea(5, 2);
 calcArea(51, 1);
-
-
-
 
 // Desafio 3
 
@@ -70,7 +67,7 @@ function highestCount(arrayDeNumeros) {
   }
   for (let indice = 0; indice < arrayDeNumeros.length; indice += 1) {
     if (maiorNumero === arrayDeNumeros[indice]) {
-      contador += 1
+      contador += 1;
     }
   }
   return contador;  
@@ -88,11 +85,11 @@ function catAndMouse(mouse, cat1, cat2) {
   distanceCat2 = Math.abs(cat2 - mouse);
 
   if (distanceCat1 < distanceCat2) {
-    return 'cat1'
+    return 'cat1';
   } else if (distanceCat1 > distanceCat2) {
-    return 'cat2'
+    return 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
 }
 
