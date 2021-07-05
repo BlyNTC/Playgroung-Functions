@@ -17,14 +17,14 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(phraseSplit) {
   //função split pesquisada em: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
-  return phraseSplit.split(" ");
+  return phraseSplit.split(' ');
 }
 
 // Desafio 4
 function concatName(sentenceConcat) {
-  let resultado = sentenceConcat.split(" ");
-  let primeiroItem = resultado[0];
-  let ultimoItem = resultado[resultado.length - 1];
+  sentenceConcat = sentenceConcat.split(' ');
+  let primeiroItem = sentenceConcat[0];
+  let ultimoItem = sentenceConcat[sentenceConcat.length - 1];
   return (ultimoItem, primeiroItem);
 }
 
