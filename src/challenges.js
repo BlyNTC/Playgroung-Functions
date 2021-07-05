@@ -37,13 +37,31 @@ function concatName(arr) {
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  wins = (wins * 3) + ties
+  return wins
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  
+  arr = arr.sort(function (a, b) { return a - b; });
+
+  let highValue = arr[arr.length - 1];
+
+  let count = 0;
+
+  for (let number of arr) {
+
+    if (number === highValue) {
+
+      count += 1;
+    }
+  }
+  return count;
+
+  // source: https://github.com/tryber/sd-014-a-project-playground-functions/commit/cdd88e5f455c7cf45c28ea4734d638767d4bad1c#
+
 }
 
 // Desafio 7
