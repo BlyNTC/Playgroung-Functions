@@ -34,18 +34,24 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numeros) {
-  let conta = 0;
-  for (let cont = 0; cont < numeros.length; cont += 1)
-    if (numeros[cont] === 9)
-      conta += 1;
-    return conta;
+function highestCount() {
+  
 }
 
 // Desafio 7
-function catAndMouse() {
-  
+function catAndMouse(mouse, cat1, cat2) {
+  let dCat1 = Math.abs(cat1 - mouse);
+  let dCat2 = Math.abs(cat2 -mouse);
+
+  if (dCat1 < dCat2) {
+    return 'cat1';
+  }else  if (dCat2 < dCat1) {
+    return 'cat2';
+  }else {
+    return'os gatos trombam e o rato foge';
+  }
 }
+
 
 // Desafio 8
 function fizzBuzz() {
