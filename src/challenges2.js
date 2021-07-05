@@ -15,55 +15,47 @@ function techList(techs, Name) {
   return array;
 }
 // Desafio 11
-function verificaTamanho(tam) {
-  if (tam !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
-  return '';
-}
-function verificaRepeticoes(n, str, i) {
-  let count = 1;
-  for (let j = i + 1; j < str.length; j += 1) {
-    if (n === str[j]) {
+function verificaRepeticoes(n, number) {
+  let count = 0;
+  for (let j of number) {
+    if (n === j) {
       count += 1;
     }
   }
-  return count;
-}
-function phone (format, number) {
-  for (let i = 0; i < number.length; i += 1) {
-    count = verificaRepeticoes(number[i], number, i);
-    if ((number[i] < 0 || number[i] > 9) || count >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    } 
-    if (i === 0) {
-      format += '(' + number[i];
-    } else if ((i > 0 && i < 2) || (i > 2 && i < 7) || (i > 7)) {
-      format += number[i];
-    } else if (i === 2) {
-      format += ') ' + number[i];
-    } else if (i === 7) {
-      format += '-' + number[i];
-    }
-    count = 1;
+  if (count >= 3) {
+    return true;
   }
-  return format;
+  return false;
+}
+function condicoes(number) {
+  for (let i of number) {
+    if (i > 9 || i < 0 || verificaRepeticoes(i, number)) {
+      return true;
+    }
+  }
+  return false;
 }
 function generatePhoneNumber(number) {
-  let numberFormat = verificaTamanho(number.length);
-  let count = 0;
-  if(numberFormat !== ''){
-    return numberFormat;
+  if (number.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
-  numberFormat = phone(numberFormat, number);
+  if (condicoes(number)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  let numberFormat = `(${number[0]}${number[1]}) `;
+  for (let i = 2; i < number.length; i += 1) {
+    if (i === 7) {
+      numberFormat += '-';
+    }
+    numberFormat += number[i];
+  }
   return numberFormat;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let check = false;
-  if (((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) || ((lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC))) || ((lineC < lineA + lineB && (lineC > Math.abs(lineA - lineB))))) {
-    check = true;
+  let check = true;
+  if ((lineA > lineB + lineC) || (lineB > lineA + lineC) || (lineC > lineA + lineB)) {
+    check = false;
   }
   return check;
 }
@@ -77,9 +69,9 @@ function hydrate(str) {
     count += Number(numbers[i]);
   }
   if (count > 1) {
-    return count + ' copos de água';
-  } 
-  return count + ' copo de água';
+    return `${count} copos de água`;
+  }
+  return `${count} copo de água`;
 }
 module.exports = {
   generatePhoneNumber,
