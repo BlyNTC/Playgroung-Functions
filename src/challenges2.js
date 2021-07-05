@@ -91,7 +91,7 @@ function hydrate(string) {
   let cont = 0;
   let saida;
   for (let index = 0; index < result.length; index += 1) {
-    array.push(parseInt(result[index]));
+    array.push(parseInt(result[index])); // Source: https://www.youtube.com/watch?v=pfkkdzeyx6U  // Onde encontrei sobre a função para buscar os números dentro da string e como transformá-los em números.
   }
   for (let i = 0; i < array.length; i += 1) {
     cont += array[i];
