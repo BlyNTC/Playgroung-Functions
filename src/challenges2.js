@@ -17,6 +17,7 @@ function techList(tech, name) {
 techList(['React', 'Bootstrap', 'Typescript', 'Angular.js', 'JavaScript'], 'Rabito');
 
 // Desafio 11
+
 function generatenumTelephone(digitosFoneVetor) {
   let vezesRepet = 0;
   let vetorDDD = [digitosFoneVetor[0]]+ [digitosFoneVetor[1]];
@@ -42,7 +43,7 @@ function generatenumTelephone(digitosFoneVetor) {
   return numFoneCompleto;
 }
 
-generatenumTelephone([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+// generatenumTelephone([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
 
 
