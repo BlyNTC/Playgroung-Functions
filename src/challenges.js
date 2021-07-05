@@ -31,12 +31,11 @@ function splitSentence(frase) {
 
 splitSentence('Go Trybe');
 
-
 // Desafio 4
 function concatName(nomes) {
   let fullName = '';
-  for (let i = 0; i < nomes.length; i +=1) {
-      fullName = nomes[nomes.length - 1]  + ', ' + nomes[0];
+  for (let i = 0; i < nomes.length; i += 1) {
+    fullName = `${nomes[nomes.length - 1]}, ${nomes[0]}`;
   }
   return fullName;
 }
