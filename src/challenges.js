@@ -39,9 +39,18 @@ function compareTrue(parametro1, parametro2){
  }
  
  // Desafio 7
- function catAndMouse() {
-   // seu código aqui
+ function catAndMouse(mouse, cat1, cat2) {
+  let posicaoGato1 = Math.abs(mouse - cat1);
+  let posicaoGato2 = Math.abs(mouse - cat2);
+  if (posicaoGato1 < posicaoGato2) {
+    return "cat1";
+} else if (posicaoGato2 < posicaoGato1) {
+    return "cat2";
+} else {
+    return "os gatos trombam e o rato foge";
+}
  }
+
  
  // Desafio 8
  function fizzBuzz() {
@@ -49,9 +58,10 @@ function compareTrue(parametro1, parametro2){
  }
  
  // Desafio 9
- function encode() {
-   // seu código aqui
+ function encode(tiraVogais) {
+  
  }
+
  function decode() {
    // seu código aqui
  }
