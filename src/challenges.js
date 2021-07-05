@@ -1,34 +1,38 @@
 // Desafio 1
 
 function compareTrue(numero1,numero2) {
+  
   let numeroA = numero1;
   let numeroB = numero2;
   
   if(numeroA < 0 && numeroB > 0){
-    return false;
+    console.log(false);
   }
   else if(numeroA > 0 && numeroB < 0){
-    return false;
+    console.log (false);
   }
   else if(numeroA < 0 && numeroB < 0){
-    return false;
+    console.log (false);
   }
   else{
-    return true;
+    console.log(true);
   }
 
   }
-  compareTrue(10,-5);
-  
-  
   
 
 // Desafio 2
-function calcArea() {
- 
 
-  
+function calcArea(base,heigth) {
+ 
+ let base1 = base;
+ let altura = heigth;
+ 
+ let calculaArea = (base1 * altura)/2;
+ 
+ console.log(calculaArea);
 }
+
 
 // Desafio 3
 function splitSentence() {
