@@ -33,46 +33,60 @@ function footballPoints(wins, ties) {
 
 // Desafio 6  
 
-function highestCount(araara) {
+function highestCount(arrayHc) {
+let maiorNumero = Math.max(arrayHc);
+let contadorDeRepeticao = 0;
 
-  for (let index = 0; index <= araara.length; index = +1) {
-    if (araara[index] === numeroMaximo){
-      total = total + 1;
-    }
-  } 
-  return total; 
-  //bug ao rodar
+
 }
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 && cat2 > mouse){
-    return 'os gatos trombam e o rato foge';
-  }
-  else if (cat1 > cat2){
-    return 'cat2';
-  }
-  else if(cat2 > cat1){
-    return 'cat1';
-  }
+  let diferença =  Math.abs( cat1 - mouse);
+  let diferença2 = Math.abs( cat2 - mouse);
+  
+    if (diferença === diferença2){
+      return 'os gatos trombam e o rato foge';
+    }
+    else if(diferença < diferença2){
+      return "cat1";
+    }
+    else{
+      return "cat2";
+    }
 }
+
+// function catAndMouse(mouse, cat1, cat2) {
+//   if (cat1 && cat2 > mouse){
+//     return 'os gatos trombam e o rato foge';
+//   }
+//   else if (mouse - cat2 < cat1 - mouse){
+//     return 'cat2';
+//   }
+//   else if (mouse - cat1 < cat2 - mouse){
+//     return 'cat1';
+//   }
+// }
 
 // Desafio 8
 function fizzBuzz(arrayFB) {
+  let voltando = [];
+
   for(index = 0; index <= arrayFB.length; arrayFB ++){
-    if (arrayFB[index] % 3 && arrayFB[index] % 5 != 0){
-       
+    if (arrayFB[index] % 3 != 0 && arrayFB[index] % 5 != 0){
+     voltando.push("bug!")
     }
-    else if (arrayFB[index] % 3 && arrayFB[index] % 5 == 0){
-      return 'FizzBuzz';
+    else if (arrayFB[index] % 3 == 0 && arrayFB[index] % 5 == 0){
+     voltando.push("FizzBuzz");
     }
     else if (arrayFB[index] % 5 == 0){
-      return 'buzz';
+     voltando.push("buzz");
     }
     else if (arrayFB[index] % 3 == 0){
-      return 'fizz';
+    voltando.push("fizz");
     }
-  }return arrayFB;
+  }return voltando;
 
 }
 
