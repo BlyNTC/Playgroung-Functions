@@ -39,6 +39,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(frase) {
+  // seu código aqui
   let alcolismo = frase.match(/\d+/g);
   let consiencia = 0;
   for (let index = 0; index < alcolismo.length; index++) {

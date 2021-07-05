@@ -1,9 +1,7 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   let absoluto;
-  if (valor1 === true && valor2 === true) {
-    absoluto = true;
-  }
+  if (valor1 === true && valor2 === true) {absoluto = true;}
   else {
     absoluto = false;
   }
