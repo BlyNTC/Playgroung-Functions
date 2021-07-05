@@ -4,38 +4,31 @@ function techList(array, name) {
   let arraySorted = array.sort();
   if (array < 1) {
     return 'Vazio!';
-  } else {
-    for (let tech of arraySorted) {
-      arrayTech.push({ tech, name });
-    }
-    return arrayTech;
   }
+  for (let tech of arraySorted) {
+    arrayTech.push({ tech, name });
+  }
+  return arrayTech;
 }
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
+  let count = 0;
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   for (let number of numbers) {
-    if (number < 0 || number > 9) {
-      return 'não é possível gerar um número de telefone com esses valores'
-    }
-  }
-  var count = 0;
-  for (let number of numbers) {
-    for ( let number1 of numbers){
-      if (number === number1){
-        count += 1
+    for (let number1 of numbers) {
+      if (number === number1) {
+        count += 1;
       }
     }
-    if (count >= 3) {
+    if (number < 0 || number > 9 || count >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     count = 0;
   }
-
-  let telephoneNumber = '(' + numbers[0] + numbers[1] + ') ';
+  let telephoneNumber = `(${numbers[0]}${numbers[1]}) `;
   for (let index = 2; index < numbers.length; index += 1) {
     if (index === 7) {
       telephoneNumber += '-';
@@ -48,32 +41,28 @@ function generatePhoneNumber(numbers) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let cond = false;
-  if(lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
-    return cond = true;
-  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
-    return cond = true;
-  } else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
-    return cond = true;
-  } else {
-    return cond;
+
+  if ((lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) || (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) || (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB))) {
+    cond = true;
   }
+  return cond;
 }
 
 // Desafio 13
 function hydrate(string) {
-  var regex = /\d+/g;
-  var stringNumbers = string.match(regex);
-  var sum = 0;
-  for (let numbers of stringNumbers){
-    sum += parseInt(numbers);
+  let regex = /\d+/g;
+  let stringNumbers = string.match(regex);
+  let sum = 0;
+  for (let numbers of stringNumbers) {
+    sum += parseInt(numbers, 10);
   }
   let message = '';
   if (sum < 2) {
-    message = sum + ' copo de água';
+    message = `${sum} copo de água`;
   } else {
-    message = sum + ' copos de água';
+    message = `${sum} copos de água`;
   }
-  return message;  
+  return message;
 }
 
 module.exports = {
