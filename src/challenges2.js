@@ -38,8 +38,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(frase) {
+  let alcolismo = frase.match(/\d+/g);
+  let consiencia = 0;
+  for (let index = 0; index < alcolismo.length; index++) {
+    consiencia += Number.parseInt(alcolismo[index]);
+  }
+  if (consiencia == 0 || consiencia > 1) {
+    return `${consiencia} copos de água`;
+  }
+  else {
+    return `${consiencia} copo de água`;
+  }
 }
 
 module.exports = {
