@@ -70,20 +70,26 @@ console.log (triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(numeroCopos) {
-// numerosCopos = numero(1a9) + tipo de bebida
-/* 
-let copos = numeroCopos.split('');
-let quantidade = copos[0];
-let resultado;
- 
-if (quantidade === 1) {
-    resultado = quantidade + 'copo de água'; 
-  } else if (quantidade > 1) {
-    resultado = quantidade + 'copos de água'
+
+let quantidade = 0;
+
+  for (let contador = 0; contador < numeroCopos.length; contador += 1) {
+    for (let contador2 = 0; contador2 < numeroCopos.length; contador2 += 1) {
+   
+      if (numeroCopos[contador2] == contador) {
+        quantidade += contador;
+      }
+    }
   }
-return resultado; */
+
+  if (quantidade < 2) {
+    return '1 copo de água';
+  } else {
+    return quantidade + ' copos de água';
+  }
 }
-console.log(hydrate('1 cerveja'));
+
+console.log(hydrate('1 cachaça, 5 numeroCoposs e 1 copo de vinho'));
 
 
 
