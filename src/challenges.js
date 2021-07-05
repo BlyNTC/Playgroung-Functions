@@ -47,10 +47,10 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   
   // Transforma distâncias negativas em positivas:
-  function makePositive(numbers) {
-    let numbers1 = [numbers]
+  function makePositive(data) {
+    let numbers = [data]
     let posNumber = [];
-    for (let number of numbers1) {
+    for (let number of numbers) {
       if (number < 0) {
         number = number * -1;
         posNumber = number;
@@ -77,8 +77,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let solution = []
+  for (let element of array) {
+    if (element % 3 == 0 && element % 5 == 0) {
+      solution.push("fizzBuzz");
+    } 
+    else if (element % 3 == 0) {
+      solution.push("fizz");
+    }
+    else if (element % 5 == 0) {
+      solution.push("buzz");
+    }
+    else {
+      solution.push("bug!");
+    }
+  }
+  return solution;
 }
 
 // Desafio 9
