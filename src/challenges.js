@@ -1,7 +1,9 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   let absoluto;
-  if (valor1 === true && valor2 === true) {absoluto = true;}
+  if (valor1 === true && valor2 === true) {
+    absoluto = true;
+  }
   else {
     absoluto = false;
   }
@@ -101,10 +103,10 @@ function fizzBuzz(numArray) {
 
 // Desafio 9
 function encode(frase) {
-  return frase.replace(/a/ig,'1').replace(/e/ig,'2').replace(/i/ig,'3').replace(/o/ig,'4').replace(/u/ig,'5')
+  return frase.replace(/a/g,'1').replace(/e/g,'2').replace(/i/g,'3').replace(/o/g,'4').replace(/u/g,'5')
 }
 function decode(frase) {
-  return frase.replace(/1/ig,'a').replace(/2/ig,'e').replace(/3/ig,'i').replace(/4/ig,'o').replace(/5/ig,'u')
+  return frase.replace(/1/g,'a').replace(/2/g,'e').replace(/3/g,'i').replace(/4/g,'o').replace(/5/g,'u')
 }
 
 module.exports = {

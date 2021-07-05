@@ -1,6 +1,15 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(technologies, name) {
+  let array10 = [];
+  if (technologies.length === 0) {
+    return 'Vazio!';
+  }
+  else {
+    for (let tech of technologies.sort()) {
+      array10.push({tech, name});
+    }
+  }
+  return array10
 }
 
 // Desafio 11
@@ -15,7 +24,7 @@ function generatePhoneNumber(tel) {
             return 'não é possível gerar um número de telefone com esses valores';
           }
         }
-      }      
+      }
       if (tel[index1] < 0 || tel[index1] > 9) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
