@@ -14,7 +14,7 @@ function techList(tech, name) {
     return listaObjeto;
   }
 }
-console.log(techList(['React', 'Bootstrap', 'Typescript', 'Angular.js', 'JavaScript'], 'Rabito'));
+techList(['React', 'Bootstrap', 'Typescript', 'Angular.js', 'JavaScript'], 'Rabito');
 
 // Desafio 11
 function generatenumTelephone(telefone) {
@@ -54,7 +54,7 @@ function generatenumTelephone(telefone) {
   return numTelephone;
   }
 }
-console.log(generatenumTelephone([1, 2, 3, 4]));
+generatenumTelephone([1, 2, 3, 4]);
 
 
 
@@ -94,7 +94,7 @@ function hydrate(string) {
   }
 
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+hydrate('1 cachaça, 5 cervejas e 1 copo de vinho');
 
 
 module.exports = {
