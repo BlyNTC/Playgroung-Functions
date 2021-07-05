@@ -34,10 +34,13 @@ function compareTrue(parametro1, parametro2){
  
  
  // Desafio 6
- function highestCount() {
- 
- }
- 
+ function highestCount(arrayNumeros) {
+  let max= Math.max(...arrayNumeros);
+var count = arrayNumeros.reduce(function(counter, value) {
+    return counter + (value === max);
+}, 0);
+return count
+}
  // Desafio 7
  function catAndMouse(mouse, cat1, cat2) {
   let posicaoGato1 = Math.abs(mouse - cat1);
