@@ -13,9 +13,11 @@ function compareTrue(parametro1, parametro2){
  }
  
  // Desafio 3
- function splitSentence() {
-   // seu código aqui
+ function splitSentence(fraseSeparar) {
+  var fraseSeparada = fraseSeparar.split(" ")
+  return fraseSeparada
  }
+
  
  // Desafio 4
  function concatName(array) {
