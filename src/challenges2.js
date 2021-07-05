@@ -50,19 +50,27 @@ function triangleCheck(lineA, lineB, lineC) {
 	}
 
 // Desafio 13
-function hydrate() {
-	let numero = parseInt.Match(/\d+/g);
+function hydrate(string) {
+	let array = []
+	let numero = string.match(/\d+/g);
 	let soma = 0;
-	let proposto = "";
-	for(let i = 0; index < numero.length; i += 1){ 
-		soma +=  numero[i];
-		
+	let proposto = " ";
+	for(let index = 0; index < numero.length; index += 1){
+	let transformacao = parseInt(numero[index], 10)
+		array.push(transformacao);
+	}
+	for(let i = 0; i < array.length; i += 1){ 
+		soma +=  array[i];
 }
-	proposto += soma + " copos de água"
-	return proposto; 	
+	if(soma === 1){
+		return soma + " copo de água"
+	}
+	else{
+		return soma + " " + "copos de água"
+	}
+	
+
 }
-	parseInt = "1 cerveja, 2 cachaças"; 
-let numero = String.match(/\d+/g);
 
 	
 
