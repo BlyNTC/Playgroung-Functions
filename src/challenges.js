@@ -48,7 +48,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numeros) {
+function fizzBuzz(numeros){
+    let check = [];
+    for (let value of numeros){
+      if (value % 3 === 0 && value % 5 === 0){
+        check.push('fizzBuzz');
+      } else if (value % 3 === 0){
+        check.push('fizz');
+      } else if (value % 5 === 0){
+        check.push('buzz');
+      } else{
+        check.push('bug!');
+      }
+    }
+    return check;
 }
 
 // Desafio 9 - TERMINADO
