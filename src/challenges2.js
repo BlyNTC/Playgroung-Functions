@@ -56,15 +56,26 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
 }
-
 //console.log(triangleCheck(10, 14, 8));
 
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numero = string.match(/\d+/g);
+  let soma = 0;
+  let resultado = '';
+
+  for(let index = 0; index <numero.length; index += 1){
+    soma += Number(numero[index]);
+  }
+  if (soma === 1){
+    return "1 copo de água"
+  }
+  resultado = soma + ' copos de água';
+  return resultado; 
 }
+console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
