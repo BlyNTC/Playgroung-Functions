@@ -14,7 +14,35 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let number of numbers) {
+    if (number < 0 || number > 9) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+  }
+  var count = 0;
+  for (let number of numbers) {
+    for ( let number1 of numbers){
+      if (number === number1){
+        count += 1
+      }
+    }
+    if (count >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    count = 0;
+  }
 
+  let telephoneNumber = '(' + numbers[0] + numbers[1] + ') ';
+  for (let index = 2; index < numbers.length; index += 1) {
+    if (index === 7) {
+      telephoneNumber += '-';
+    }
+    telephoneNumber += numbers[index];
+  }
+  return telephoneNumber;
 }
 
 // Desafio 12
