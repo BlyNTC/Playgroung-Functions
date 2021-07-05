@@ -89,6 +89,7 @@ let reg = /\d+/g;
 let result = string.match(reg);
 let array = [];
 let cont = 0;
+let saida;
 for (let index = 0; index < result.length; index += 1) {
   array.push(parseInt(result[index]));
 }
@@ -96,10 +97,11 @@ for (let i = 0; i < array.length; i += 1){
   cont += array[i];
 }
 if (cont > 1) {
-  return cont + ' copos de água';
+  saida = cont + ' copos de água';
 } else {
-  return cont + ' copo de água';
+  saida = cont + ' copo de água';
 }
+return saida;
 }
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
