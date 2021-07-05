@@ -88,6 +88,12 @@ function encode(codificar) {
 
 function decode(decodificar) {
   // seu código aqui
+  let decodificacao = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' };
+  let decodificado = decodificar.replace(
+    /[12345]/g,
+    (letras) => decodificacao[letras]
+  );
+  return decodificado;
   // Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 }
 
