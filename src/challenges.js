@@ -5,7 +5,7 @@ function compareTrue(value1, value2) {
     return true;
   } else {
     return false;
-  } 
+  }
 }
 
 // Desafio 2
@@ -18,24 +18,24 @@ function calcArea(base, height) {
 function splitSentence(phraseSplit) {
   //função split pesquisada em: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
   return phraseSplit.split(" ");
-
 }
 
 // Desafio 4
 function concatName(sentenceConcat) {
-   // digitar codigo aqui
+  let resultado = sentenceConcat.split(" ");
+  let primeiroItem = resultado[0];
+  let ultimoItem = resultado[resultado.length - 1];
+  return (ultimoItem, primeiroItem);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  //digitar codigo aqui
   return (wins * 3) + ties; 
 }
 
 
 // Desafio 6
 function highestCount(arrayNumbers) {
-  //digitar codigo aqui
   let contador = 0;
   let majorNumber = 0;
   for (let index = 0; index < arrayNumbers.length; index += 1){
@@ -55,7 +55,7 @@ function highestCount(arrayNumbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   //seu codigo aqui 
-  result = " "
+  let result = " "
   if ((mouse - cat1) < (mouse - cat2)){
     result = "cat1";
   } else if ((mouse - cat2) < (mouse - cat1)){
