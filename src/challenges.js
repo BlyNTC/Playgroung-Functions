@@ -76,12 +76,20 @@ function fizzBuzz(buzzFizz) {
 }
 
 // Desafio 9
-function encode() {
+function encode(codificar) {
   // seu código aqui
+  for (index = 0; index < codificar.length; index++) {
+  let codificado = codificar.replace(/a/i, '1', /e/i, '2', /i/i, '3', /o/i, '4', /u/i, '5')
+  return codificado;
+  }
 }
-function decode() {
+function decode(decodificar) {
   // seu código aqui
+
+
+  // Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 }
+
 
 module.exports = {
   calcArea,
