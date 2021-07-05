@@ -44,8 +44,36 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
+  // Transforma distâncias negativas em positivas:
+  function makePositive(numbers) {
+    let numbers1 = [numbers]
+    let posNumber = [];
+    for (let number of numbers1) {
+      if (number < 0) {
+        number = number * -1;
+        posNumber = number;
+      }
+      else if (number >= 0) {
+        posNumber = number;
+      }
+    } 
+    return posNumber;
+  }
+
+  let firstCat = makePositive((cat1 - mouse));
+  let secondCat = makePositive((cat2 - mouse)); 
+
+  if (firstCat < secondCat)  {
+    return "cat1";
+  } 
+  else if (secondCat < firstCat) {
+    return "cat2";
+  }
+  else if (firstCat == secondCat) {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
