@@ -1,48 +1,36 @@
 // Desafio 1
 
-function compareTrue(numero1,numero2) {
-  
-  let numeroA = numero1;
-  let numeroB = numero2;
-  
-  if(numeroA < 0 && numeroB > 0){
-    console.log(false);
-  }
-  else if(numeroA > 0 && numeroB < 0){
-    console.log (false);
-  }
-  else if(numeroA < 0 && numeroB < 0){
-    console.log (false);
-  }
-  else{
-    console.log(true);
-  }
-
-  }
-  
+function compareTrue(booleano1, booleano2) {
+  return booleano1 && booleano2;
+}
+//console.log(compareTrue(false,false));
 
 // Desafio 2
 
-function calcArea(base,heigth) {
- 
- let base1 = base;
- let altura = heigth;
- 
- let calculaArea = (base1 * altura)/2;
- 
- console.log(calculaArea);
-}
+function calcArea(base, heigth) {
+  let base1 = base;
+  let altura = heigth;
 
+  let calculaArea = (base1 * altura) / 2;
+
+  return calculaArea;
+}
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = string.split(' ');
+  return array;
 }
+//console.log(splitSentence("Go trybe"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let primeiraPosicao = array[0];
+  let index = array.length - 1;
+  let ultimaPosicao = array[index];
+  return ultimaPosicao + ', ' + primeiraPosicao;
 }
+//console.log(concatName(["foguete", "não", "tem","re"]))
 
 // Desafio 5
 function footballPoints() {
