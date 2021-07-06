@@ -51,27 +51,28 @@ function catAndMouse(mouse, cat1, cat2) {
   let Cat2Position = Math.abs(mouse - cat2);
   if (Cat1Position < Cat2Position) {
     return 'cat1';
-  } else if (Cat1Position > Cat2Position) {
-      return 'cat2';
-    }
-      return 'os gatos trombam e o rato foge';
+  } if (Cat1Position > Cat2Position) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
-
 
 // Desafio 8
 function fizzBuzz(numbers) {
+  let resultado = [];
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 15 === 0) {
-      result.push = 'fizzBuzz';
+      resultado.push('fizzBuzz');
     } else if (numbers[index] % 3 === 0) {
-      result.push = 'fizz';
+      resultado.push('fizz');
     } else if (numbers[index] % 5 === 0) {
-      result.push = 'buzz';
+      resultado.push('buzz');
     } else {
-      result.push = 'bug!';
+      resultado.push('bug!');
     }
   }
- }
+  return resultado;
+}
 
 // Desafio 9
 function encode() {
