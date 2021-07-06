@@ -76,6 +76,7 @@ function fizzBuzz(number) {
 // Desafio 9
 function encode(string) {
   let vMinuscula = "";
+  for (let index of string){
   switch (vMinuscula) {
     case 'a':
       vMinuscula += 1;
@@ -93,11 +94,13 @@ function encode(string) {
       vMinuscula += 5;
       break;
   }
+  }
   return vMinuscula;
 }
 
-function decode(string) {
+function decode(number) {
   let number = "";
+  for (let index of number) {
   switch (number) {
     case 1:
       number = 'a';
@@ -114,6 +117,7 @@ function decode(string) {
     case 5:
       number = 'u';
       break
+  }
   }
   return number;
 }
