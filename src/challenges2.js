@@ -1,18 +1,35 @@
+// // Desafio 10
+// function techList(techName, name) {
+//   // seu código aqui
+//   let result = [];
+//   if (techName.lenght === 0) {
+//     return 'Vazio!';
+//   }
+//   for (let tech of techName.sort()) {
+//     result.push({ tech, name });
+//   }
+//   return result;
+// }
+
+
 // Desafio 10
 function techList(techName, name) {
   // seu código aqui
   let result = [];
-  if (techName.lenght === 0) {
+  if (techName.length === 0) {
     return 'Vazio!';
+  } else {
+    for (let tech of techName.sort()) {
+      result.push({ tech, name})
+    }
+    return result;
   }
-  for (let tech of techName.sort()) {
-    result.push({ tech, name });
-  }
-  return result;
 }
 
+
+
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(number) {
   // seu código aqui
   let sameAsNumber = number;
   let filteredNumbers = number.filter(sameAsNumber);
