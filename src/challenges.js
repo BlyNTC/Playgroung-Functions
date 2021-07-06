@@ -30,9 +30,11 @@ function splitSentence(myString) {
 // console.log(splits);
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+// 4 - Crie uma função que use concatenação de strings
+function concatName(myStringConca) {
+return myStringConca[myStringConca.length - 1] + ", " + myStringConca[0];
 }
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/length
 
 // Desafio 5
 function footballPoints() {
