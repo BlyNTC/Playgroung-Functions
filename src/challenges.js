@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
 };
 
 // Desafio 8
-function fizzBuzz(numeros); {
+function fizzBuzz(numeros) {
   // seu código aqui
   let string = [];
   for (let num of numeros); {
