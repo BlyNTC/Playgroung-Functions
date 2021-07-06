@@ -74,12 +74,48 @@ function fizzBuzz(number) {
 }
 
 // Desafio 9
-function encode() {
-  
+function encode(string) {
+  let vMinuscula = "";
+  switch (vMinuscula) {
+    case 'a':
+      vMinuscula += 1;
+      break;
+    case 'e':
+      vMinuscula += 2;
+      break;
+    case 'i':
+      vMinuscula += 3;
+      break;
+    case 'o':
+      vMinuscula += 4;
+      break;
+    case 'u':
+      vMinuscula += 5;
+      break;
+  }
+  return vMinuscula;
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let number = "";
+  switch (number) {
+    case 1:
+      number = 'a';
+      break;
+    case 2:
+      number = 'e';
+      break
+    case 3:
+      number = 'i';
+      break;
+    case 4:
+      number = 'o';
+      break;
+    case 5:
+      number = 'u';
+      break
+  }
+  return number;
 }
 
 module.exports = {
