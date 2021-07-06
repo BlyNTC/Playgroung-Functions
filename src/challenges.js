@@ -1,4 +1,4 @@
-// Desafio 1
+// Desafio 1 ok
 function compareTrue(bollean1, bollean2) {
   if (bollean1 && bollean2 == true){
     return true;
@@ -8,17 +8,17 @@ function compareTrue(bollean1, bollean2) {
   }
 }
 
-// Desafio 2
+// Desafio 2 ok
 function calcArea(base, height) {
    return base*height/2;
 }
 
-// Desafio 3
+// Desafio 3 ok
 function splitSentence(string) {
   return string.split([' ']);
 }
 
-// Desafio 4
+// Desafio 4 ok
 function concatName(arrayCN) {
 let primeiro = arrayCN[0];
 let ultimo = arrayCN[arrayCN.length -1]
@@ -26,7 +26,7 @@ let ultimo = arrayCN[arrayCN.length -1]
 return ultimo + ", "+ primeiro;
 }
 
-// Desafio 5
+// Desafio 5 ok
 function footballPoints(wins, ties) {
   return 3*wins+1*ties;
 }
@@ -41,7 +41,7 @@ let contadorDeRepeticao = 0;
 }
 
 
-// Desafio 7
+// Desafio 7 ok
 function catAndMouse(mouse, cat1, cat2) {
   let diferença =  Math.abs( cat1 - mouse);
   let diferença2 = Math.abs( cat2 - mouse);
@@ -61,25 +61,25 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayFB) {
   let voltando = [];
 
-  for(index = 0; index < arrayFB.length; arrayFB += 1){
+  for(index = 0; index < arrayFB.length; index += 1){
     
     if (arrayFB[index] % 3 === 0 && arrayFB[index] % 5 === 0){
       voltando[index] = "FizzBuzz";
     }
-    if (arrayFB[index] % 5 === 0){
+    else if (arrayFB[index] % 5 === 0){
       voltando[index] = "buzz";
     }
-    if (arrayFB[index] % 3 === 0){
+    else if (arrayFB[index] % 3 === 0){
       voltando[index] = "fizz";
     }
-    if (arrayFB[index] % 3 != 0 && arrayFB[index] % 5 != 0){
+    else {
       voltando[index] = "bug!";
      }
   }return voltando;
 
 }
 
-// Desafio 9
+// Desafio 9 ok
 function encode(codigo) {
   let codificador = '';
 
