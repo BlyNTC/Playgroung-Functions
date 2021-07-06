@@ -47,9 +47,24 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// 6 - Crie uma função que calcule a repetição do maior número
+function highestCount(numerosArray) {
+  
+  let numeros;
+  let somaMaior = 0;
+
+  for (let numero of numerosArray) {
+
+    if (numero === numeros) somaMaior += 1;
+
+    else if (!numeros || numeros < numero) {
+      numeros = numero;
+      somaMaior = 1;
+    }
+  }
+  return somaMaior;
 }
+//colocar as tred do slack e fonte
 
 // Desafio 7
 function catAndMouse() {
