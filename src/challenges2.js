@@ -1,17 +1,3 @@
-// // Desafio 10
-// function techList(techName, name) {
-//   // seu código aqui
-//   let result = [];
-//   if (techName.lenght === 0) {
-//     return 'Vazio!';
-//   }
-//   for (let tech of techName.sort()) {
-//     result.push({ tech, name });
-//   }
-//   return result;
-// }
-
-
 // Desafio 10
 function techList(techName, name) {
   // seu código aqui
@@ -31,22 +17,16 @@ function techList(techName, name) {
 // Desafio 11
 function generatePhoneNumber(number) {
   // seu código aqui
-  let sameAsNumber = number;
-  let filteredNumbers = number.filter(sameAsNumber);
+  // let sameAsNumber = number;
+  // let filteredNumbers = number.filter(sameAsNumber);
 
-  if (filteredNumbers.length === 11 && filteredNumbers.length) {
-    let telNumber =
-      '(' +
-      number.slice(0, -9) +
-      ')' +
-      number.slice(2, -4) +
-      '-' +
-      number.slice(7);
+  if (number.length === 11 && number.length) {
+    let telNumber = '(' + number.slice(0, -9) + ')' + number.slice(2, -4) + '-' + number.slice(7);
     let result = telNumber.replaceAll(',', '');
     return result;
-  } else if (filteredNumbers.length < 11) {
+  } else if (number.length < 11) {
     return 'Array com tamanho errado';
-  } else if (filteredNumbers < 0 && fileredNumbers > 9) {
+  } else if (number < 0 && number > 9) {
   } else {
     return 'lascou';
   }
