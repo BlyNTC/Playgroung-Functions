@@ -83,8 +83,7 @@ function catAndMouse(rato,gato01,gato02) {
 
     return "cat2"
   }
-
-
+  //Creditos a aula do italo, ajudou a enxergar como fazer.
 }
 
 // Desafio 8
@@ -96,12 +95,22 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
-function decode() {
+function decode(tec, name){ 
 
+   let arr = []
 
-  
+   if(tec.length === 0){
+
+     return 'Vazio!'
+   }
+
+   for(let tecs of tec.sort()){
+
+     arr.push({tecs,name,});     
+   }
+
+   return arr;
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
