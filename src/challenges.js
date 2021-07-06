@@ -45,7 +45,7 @@ let contadorDeRepeticao = 0;
 function catAndMouse(mouse, cat1, cat2) {
   let diferença =  Math.abs( cat1 - mouse);
   let diferença2 = Math.abs( cat2 - mouse);
-  
+
     if (diferença === diferença2){
       return 'os gatos trombam e o rato foge';
     }
@@ -57,35 +57,24 @@ function catAndMouse(mouse, cat1, cat2) {
     }
 }
 
-// function catAndMouse(mouse, cat1, cat2) {
-//   if (cat1 && cat2 > mouse){
-//     return 'os gatos trombam e o rato foge';
-//   }
-//   else if (mouse - cat2 < cat1 - mouse){
-//     return 'cat2';
-//   }
-//   else if (mouse - cat1 < cat2 - mouse){
-//     return 'cat1';
-//   }
-// }
-
 // Desafio 8
 function fizzBuzz(arrayFB) {
   let voltando = [];
 
-  for(index = 0; index <= arrayFB.length; arrayFB ++){
+  for(index = 0; index < arrayFB.length; arrayFB += 1){
+    
+    if (arrayFB[index] % 3 === 0 && arrayFB[index] % 5 === 0){
+      voltando[index] = "FizzBuzz";
+    }
+    if (arrayFB[index] % 5 === 0){
+      voltando[index] = "buzz";
+    }
+    if (arrayFB[index] % 3 === 0){
+      voltando[index] = "fizz";
+    }
     if (arrayFB[index] % 3 != 0 && arrayFB[index] % 5 != 0){
-     voltando.push("bug!")
-    }
-    else if (arrayFB[index] % 3 == 0 && arrayFB[index] % 5 == 0){
-     voltando.push("FizzBuzz");
-    }
-    else if (arrayFB[index] % 5 == 0){
-     voltando.push("buzz");
-    }
-    else if (arrayFB[index] % 3 == 0){
-    voltando.push("fizz");
-    }
+      voltando[index] = "bug!";
+     }
   }return voltando;
 
 }
