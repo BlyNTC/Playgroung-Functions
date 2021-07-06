@@ -75,8 +75,13 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(trocaVogais) {
+  let letterA =  trocaVogais.replace(/a/gi, 1);
+  let letterE =  trocaVogais.replace(/e/gi, 2);
+  let letterI = trocaVogais.replace(/i/gi, 3);
+  let letterO = trocaVogais.replace(/o/gi, 4);
+  let letterU = trocaVogais.replace(/u/gi, 5);
+  return trocaVogais;
 }
 function decode() {
   // seu código aqui
