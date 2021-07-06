@@ -16,7 +16,10 @@ function techList(list, name) {
   }
   return lista;
   // seu código aqui
+
 }
+//Colocar a fonte:
+//Slackturma e plantão
 
 // Desafio 11
 function generatePhoneNumber() {
