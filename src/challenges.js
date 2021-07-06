@@ -67,9 +67,26 @@ function highestCount(numerosArray) {
 //colocar as tred do slack e fonte
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// 7 - Crie uma função de Caça ao Rato
+// Posições= mouse, cat1 e cat2
+
+function catAndMouse(mouse, cat1, cat2) {
+    // seu código aqui
+
+  let localCat1 = Math.abs(mouse - cat1);
+  let localCat2 = Math.abs(mouse - cat2);
+  let ratoEscapa = '';
+  if (localCat1 < localCat2) {
+    ratoEscapa = 'cat1';
+  } else if (localCat1 > localCat2) {
+    ratoEscapa = 'cat2';
+  } else if (localCat1 === localCat2) {
+    ratoEscapa = 'os gatos trombam e o rato foge';
+  }
+  return ratoEscapa;
 }
+// Ler sobre ABS abaixo o link para entender melhor o a função.
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 // Desafio 8
 function fizzBuzz() {
@@ -77,9 +94,15 @@ function fizzBuzz() {
 }
 
 // Desafio 9
+// 9 - Crie uma função que Codifique e Decodifique
+
 function encode() {
   // seu código aqui
+  
 }
+//Procurar sobre .REPLACE
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace
+
 function decode() {
   // seu código aqui
 }
