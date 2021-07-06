@@ -67,9 +67,9 @@ function fizzBuzz(numeros) {
   for (let num of numeros); {
     if (num % 3 === 0 && num % 5 === 0) {
       string.push('fizzBuzz');
-    } else if (num] % 3 === 0) {
+    } else if (num % 3 === 0) {
       string.push('fizz');
-    } else if (num] % 5 === 0) {
+    } else if (num % 5 === 0) {
       string.push('buzz');
     } else {
       string.push('bug!');
