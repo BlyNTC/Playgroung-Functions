@@ -1,12 +1,9 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  function compareTrue(numberOne, numberTwo) {
-    if (numberOne < 10 && numberTwo > 10) {
-      return true;
-    } else {
-      return false;
-    }
+function compareTrue(number1, number2) {
+  if (number1 === true && number2 === true) {
+    return true;
+  } else {
+    return false;
   }
 
 // Desafio 2
