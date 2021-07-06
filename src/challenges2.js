@@ -15,17 +15,18 @@ function techList(arrayTech, nome) {
 }
 
 // Desafio 11
-// eslint-disable-next-line complexity
 function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    return true;
+  } return false;
 }
 
 // Desafio 13
-// referencia https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+// referencia https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994 e code review
 function hydrate(string) {
   let resultado = 0;
   let numeros = string.replace(/[^0-9]/g, '').split('');
