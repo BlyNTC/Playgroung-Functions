@@ -69,13 +69,13 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function check(buzzFizz) {
   // seu código aqui
-  if (buzzFizz % 3 == 0 && buzzFizz % 5 == 0) {
+  if (buzzFizz % 3 === 0 && buzzFizz % 5 === 0) {
     return 'fizzBuzz';
   }
-  if (buzzFizz % 5 == 0) {
+  if (buzzFizz % 5 === 0) {
     return 'buzz';
   }
-  if (buzzFizz % 3 == 0) {
+  if (buzzFizz % 3 === 0) {
     return 'fizz';
   }
   return 'bug!';
