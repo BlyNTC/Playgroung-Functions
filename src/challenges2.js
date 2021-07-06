@@ -15,24 +15,26 @@ function techList(tecnologia, name) {
 
 // Desafio 11
 function generatePhoneNumber(numeros) {
-//   let quantidadeRepeticao = 0;
-//   if (numeros !== 11) {
-//     return 'Array com tamanho incorreto.';
-//   }
-//   for (let valor1 of numeros) {
-//     for (let valor2 of numeros) {
-//       if (valor1 === valor2) {
-//         quantidadeRepeticao += 1;
-//       }
-//     }
-//     break;
-//     if (valor1 < 0 || valor1 > 9 || quantidadeRepeticao >= 3) {
-//       return 'não é possível gerar um número de telefone com esses valores';
-//     }
-//     quantidadeRepeticao = 0;
-//   }
+  if (numeros.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  let contadorDeRepeticoes = 0;
+  for (let numero of numeros) {
+    for (let numero2 of numeros) { 
+      if (numero === numero2) {
+        contadorDeRepeticoes += 1;
+      }
+    }
+    if (numero < 0 || numero > 9 || contadorDeRepeticoes >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }  
+    contadorDeRepeticoes = 0;  
+  }
+  let ddd = `(${numeros[0]}${numeros[1]})`;
+  let primeiraSequencia = `${numeros[2]}${numeros[3]}${numeros[4]}${numeros[5]}${numeros[6]}`;
+  let segundaSequencia = `${numeros[7]}${numeros[8]}${numeros[9]}${numeros[10]}`;
+  return `${ddd} ${primeiraSequencia}-${segundaSequencia}`;
 }
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
