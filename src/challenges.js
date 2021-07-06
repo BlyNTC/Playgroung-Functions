@@ -34,10 +34,10 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontucaoTotal = wins * 3 + ties
+  let pontucaoTotal = wins * 3 + ties;
   return pontucaoTotal;
 }
-console.log(footballPoints(14,8));
+console.log(footballPoints(14, 8));
 // Desafio 6
 function highestCount(numeros) {
   let contRepetido = 0;
@@ -53,13 +53,34 @@ function highestCount(numeros) {
 }
 // console.log(highestCount([1, 1, 1, 8, 8]));
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distancia1 = Math.abs(mouse - cat1);
+  let distancia2 = Math.abs(mouse - cat2);
+  if (distancia1 < distancia2) {
+    return 'cat1';
+  }
+  if (distancia2 < distancia1) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let resultado = [];
+  for (let index = 0; index < array.length; index += 1) {
+    let element = array[index];
+    if (element % 3 === 0 && element % 5 === 0) {
+      resultado.push('fizzBuzz');
+    } else if (element % 3 === 0) {
+      resultado.push('fizz');
+    } else if (element % 5 === 0) {
+      resultado.push('buzz');
+    } else {
+      resultado.push('bug!');
+    }
+  }
+  return resultado;
 }
 
 // Desafio 9
