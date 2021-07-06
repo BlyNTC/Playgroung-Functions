@@ -64,7 +64,7 @@ function fizzBuzz(arrayFB) {
   for(index = 0; index < arrayFB.length; index += 1){
     
     if (arrayFB[index] % 3 === 0 && arrayFB[index] % 5 === 0){
-      voltando[index] = "FizzBuzz";
+      voltando[index] = "fizzBuzz";
     }
     else if (arrayFB[index] % 5 === 0){
       voltando[index] = "buzz";
