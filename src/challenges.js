@@ -80,11 +80,25 @@ function fizzBuzz(arrayFB) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codigo) {
+  let codificador = '';
+
+  codificador = codigo.replace(/a/g, '1');
+  codificador = codificador.replace(/e/g, '2');
+  codificador = codificador.replace(/i/g, '3');
+  codificador = codificador.replace(/o/g, '4');
+  codificador = codificador.replace(/u/g, '5');
+  return codificador;
 }
-function decode() {
-  // seu código aqui, usar switch e case 
+function decode(criptografado) {
+  let decodificador = '';
+
+  decodificador = criptografado.replace(/1/g, 'a');
+  decodificador = decodificador.replace(/2/g, 'e');
+  decodificador = decodificador.replace(/3/g, 'i');
+  decodificador = decodificador.replace(/4/g, 'o');
+  decodificador = decodificador.replace(/5/g, 'u');
+  return decodificador;
 }
 
 module.exports = {
