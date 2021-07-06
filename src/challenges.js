@@ -77,7 +77,7 @@ function fizzBuzz(number) {
 function encode(string) {
   let vMinuscula = "";
   for (let index of string){
-  switch (vMinuscula) {
+  switch (index) {
     case 'a':
       vMinuscula += 1;
       break;
@@ -98,10 +98,10 @@ function encode(string) {
   return vMinuscula;
 }
 
-function decode(number) {
+function decode(string) {
   let number = "";
   for (let index of number) {
-  switch (number) {
+  switch (index) {
     case 1:
       number = 'a';
       break;
