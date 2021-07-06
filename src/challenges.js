@@ -21,7 +21,7 @@ function splitSentence(string) {
   let array = string.split(' ');
   return array;
 }
-//console.log(splitSentence("Go trybe"));
+// console.log(splitSentence("Go trybe"));
 
 // Desafio 4
 function concatName(array) {
@@ -30,18 +30,28 @@ function concatName(array) {
   let ultimaPosicao = array[index];
   return ultimaPosicao + ', ' + primeiraPosicao;
 }
-//console.log(concatName(["foguete", "não", "tem","re"]))
+// console.log(concatName(["foguete", "não", "tem","re"]))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontucaoTotal = wins * 3 + ties
+  return pontucaoTotal;
 }
-
+console.log(footballPoints(14,8));
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(numeros) {
+  let contRepetido = 0;
 
+  let maiorNumero = Math.max(...numeros);
+  for (let i in numeros) {
+    if (maiorNumero === numeros[i]) {
+      contRepetido += 1;
+    }
+  }
+
+  return contRepetido;
+}
+// console.log(highestCount([1, 1, 1, 8, 8]));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
