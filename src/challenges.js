@@ -99,9 +99,26 @@ function encode(string) {
   }
   return stringModificada;
 }
-function decode() {
-  // seu código aqui
 
+function decode(string) {
+  // seu código aqui
+  let stringModificada = '';
+  for (let key in string) {
+    if (string[key] === '1') {
+      stringModificada += 'a';
+    } else if (string[key] === '2') {
+      stringModificada += 'e';
+    } else if (string[key] === '3') {
+      stringModificada += 'i';
+    } else if (string[key] === '4') {
+      stringModificada += 'o';
+    } else if (string[key] === '5') {
+      stringModificada += 'u';
+    } else {
+      stringModificada += string[key];
+    }
+  }
+  return stringModificada;
 }
 
 module.exports = {
