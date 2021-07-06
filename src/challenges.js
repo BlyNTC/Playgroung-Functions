@@ -37,8 +37,13 @@ return myStringConca[myStringConca.length - 1] + ", " + myStringConca[0];
 //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/length
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+// 5 - Crie uma função que calcule a quantidade de pontos no futebol
+// // Vitórias= wins  |  Empates= ties
+function footballPoints(wins, ties) {
+
+  
+  return (wins=(wins*3) + (ties));
+
 }
 
 // Desafio 6
