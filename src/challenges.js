@@ -24,7 +24,8 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(nameConcat) {
   // seu código aqui
-  return nameConcat[nameConcat.length - 1] + ', ' + nameConcat[0];
+  let concatN = 0;
+  return nameConcat = (nameConcat[nameConcat.length - 1] + ', ' + nameConcat[0]);
 }
 
 // Desafio 5
@@ -36,6 +37,17 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(highestNumber) {
   // seu código aqui
+  let result = 0;
+  let highest;
+  for (let number of highestNumber) {
+    if (number === highest) {
+      result++;
+    } else if (!highest || number > highest) {
+      highest = number;
+      result = 1;
+    }
+  }
+  return result;
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -55,23 +67,25 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function check(buzzFizz) {
   // seu código aqui
-    if (buzzFizz % 3 == 0 && buzzFizz % 5 == 0) {
-      return 'fizzBuzz';
-    } if (buzzFizz % 5 == 0) {
-      return 'buzz';
-    } if (buzzFizz % 3 == 0) {
-      return 'fizz';
-    }
-      return 'bug!';
+  if (buzzFizz % 3 == 0 && buzzFizz % 5 == 0) {
+    return 'fizzBuzz';
   }
+  if (buzzFizz % 5 == 0) {
+    return 'buzz';
+  }
+  if (buzzFizz % 3 == 0) {
+    return 'fizz';
+  }
+  return 'bug!';
+}
 
-  function fizzBuzz(fuzzBizz) {
-    let result = [];
-    for(let buzzFizz of fuzzBizz) {
-      result.push(check(buzzFizz));
-    }
-    return result;
+function fizzBuzz(fuzzBizz) {
+  let result = [];
+  for (let buzzFizz of fuzzBizz) {
+    result.push(check(buzzFizz));
   }
+  return result;
+}
 // Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 // Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 // Referência: https://stackoverflow.com/questions/56921356/is-it-good-practice-to-override-function-parameter-value
