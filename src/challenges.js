@@ -21,7 +21,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayDeStrings) {
   let primeiro = arrayDeStrings[0];
-  let ultimo = arrayDeStrings[arrayDeStrings.length -1];
+  let ultimo = arrayDeStrings[arrayDeStrings.length - 1];
   return ultimo + ',' + ' ' + primeiro;
 }
 
@@ -35,10 +35,10 @@ function footballPoints(wins, ties) {
 function highestCount(arr) {
   // seu código aqui
   let resultado = 0;
-  let maximo = Math.max(...arr); 
+  let maximo = Math.max(...arr);
   for (let index = 0; index < arr.length; index += 1) {
     if (arr[index] === maximo) {
-      resultado += 1
+      resultado += 1;
     }
   }
   return resultado;
@@ -58,18 +58,18 @@ function catAndMouse(mouse, cat1, cat2) {
     resultado = 'cat2';
   }
   return resultado;
-};
+}
 
 // Desafio 8
 function fizzBuzz(numeros) {
   // seu código aqui
   let string = [];
-  for (let num of numeros); {
-    if (num % 3 === 0 && num % 5 === 0) {
+  for (let i = 0; i < numeros.length; i += 1); {
+    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
       string.push('fizzBuzz');
-    } else if (num % 3 === 0) {
+    } else if (numeros[i] % 3 === 0) {
       string.push('fizz');
-    } else if (num % 5 === 0) {
+    } else if (numeros[i] % 5 === 0) {
       string.push('buzz');
     } else {
       string.push('bug!');
