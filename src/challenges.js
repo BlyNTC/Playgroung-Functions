@@ -49,6 +49,7 @@ function highestCount(highestNumber) {
     }
   }
   return result;
+  // Referência: https://teamtreehouse.com/community/what-does-the-means-if-its-before-a-variable
 }
 
 // Desafio 7
@@ -86,10 +87,12 @@ function fizzBuzz(fuzzBizz) {
     result.push(check(buzzFizz));
   }
   return result;
+  // Referências:
+
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+  // https://stackoverflow.com/questions/56921356/is-it-good-practice-to-override-function-parameter-value
 }
-// Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/push
-// Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
-// Referência: https://stackoverflow.com/questions/56921356/is-it-good-practice-to-override-function-parameter-value
 
 // Desafio 9
 function encode(codificar) {
