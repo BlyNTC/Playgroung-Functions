@@ -25,7 +25,8 @@ function splitSentence(frase) {
 function concatName(nameConcat) {
   // seu código aqui
   let concatN = 0;
-  return nameConcat = (nameConcat[nameConcat.length - 1] + ', ' + nameConcat[0]);
+  return (nameConcat =
+    nameConcat[nameConcat.length - 1] + ', ' + nameConcat[0]);
 }
 
 // Desafio 5
@@ -49,6 +50,7 @@ function highestCount(highestNumber) {
   }
   return result;
 }
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
@@ -78,7 +80,6 @@ function check(buzzFizz) {
   }
   return 'bug!';
 }
-
 function fizzBuzz(fuzzBizz) {
   let result = [];
   for (let buzzFizz of fuzzBizz) {
