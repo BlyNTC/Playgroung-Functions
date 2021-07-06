@@ -9,9 +9,11 @@ function calcArea(base, height) {
   return area;
 }
 //console.log(calcArea(5,2));
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(funcao,separador) {
+  let resultado = funcao.split(separador);
+  return resultado;
 }
 
 // Desafio 4
