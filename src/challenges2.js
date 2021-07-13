@@ -23,8 +23,20 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(order) {
   // seu código aqui
+  // let orderString = order;
+  let numString = order.match(/\d+/g).map(Number);
+  let glassWater = 0;
+
+  for (let index = 0; index < numString.length; index += 1) {
+    glassWater += numString[index];
+  }
+  if (glassWater === 1) {
+    return `${glassWater} copo de água`;
+  } if (glassWater > 1) {
+    return `${glassWater} copos de água`;
+  }
 }
 
 module.exports = {
