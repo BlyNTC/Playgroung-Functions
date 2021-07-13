@@ -18,14 +18,21 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let sumA = lineB + lineC;
+  let sumB = lineA + lineC;
+  let sumC = lineA + lineB;
+
+  if (lineA < (sumA) && lineB < (sumB) && lineC < (sumC)) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
 function hydrate(order) {
   // seu código aqui
-  // let orderString = order;
   let numString = order.match(/\d+/g).map(Number);
   let glassWater = 0;
 
