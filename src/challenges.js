@@ -1,11 +1,11 @@
 // Desafio 1
-function compareTrue(param1,param2) {
+function compareTrue(param1, param2) {
   return param1 && param2;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base*height)/2;
+  let area = (base * height) / 2;
   return area;
 }
 //console.log(calcArea(5,2));
@@ -18,8 +18,9 @@ function splitSentence(funcao) {
 
 // Desafio 4
 function concatName(nomes) {
-  nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-  return nomes (length.[0]);
+  let first = nomes[0];
+  let last = nomes[nomes.length - 1];
+  return (last + ', ' + first);
 }
 
 // Desafio 5
