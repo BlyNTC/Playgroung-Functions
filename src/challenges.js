@@ -24,21 +24,44 @@ function concatName(nomes) {
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
-  wins = 3;
-  ties = 1;
+function footballPoints(wins, ties) {
+  let vitoria = 0;
+  let empate = 0;
+  let pontos = 0;
   
-}
+  if (wins > 0) {
+    vitoria += wins * 3;
+    //console.log(wins * 3);
+    }
+    if (ties > 0) {
+    empate += ties * 1;
+    //console.log(ties * 1);
+    }
+    pontos += vitoria + empate;
+    return(pontos);
+} //footballPoints(1, 2);
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  let numbers = [0, 0, 0];
+  let cont = 0;
+  maior = Math.max.apply(null, numbers);
+   for (var i = 0; i < numbers.length; i++) {
+     if (maior == numbers[i]) {
+       cont++;
+  } return cont;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 > cat2) {
+    return ('cat2');
+  } else if (cat2 > cat1) {
+    return ('cat1');
+  } else if(mouse > (cat1 === cat2)) {
+    return ('os gatos trombam e o rato foge');
+  }
+} //console.log(catAndMouse(0, 1, 1));
 
 // Desafio 8
 function fizzBuzz() {
