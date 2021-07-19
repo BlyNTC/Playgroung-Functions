@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
   let vitoria = 0;
   let empate = 0;
   let pontos = 0;
-  
+
   if (wins > 0) {
     vitoria += wins * 3;
     //console.log(wins * 3);
@@ -41,18 +41,19 @@ function footballPoints(wins, ties) {
     return(pontos);
 } //footballPoints(1, 2);
 
-// Desafio 6
-function highestCount(numbers) {
-  let numbers = [];
-  let cont = 0;
-  let maior = Math.max.apply(null, numbers);
-    for (var i = 0; i < numbers.length; i++) {
-      if (maior == numbers[i]) {
-        cont++;
-      }   
-    }
-    return (cont);  
-} console.log(highestCount([20, 15, 45, 84]));
+// // Desafio 6
+// function highestCount(numbers) {
+//   let numbers = [];
+//   let cont = 0;
+//   let maior = Math.max.apply(null, numbers);
+//     for (var i = 0; i < numbers.length; i++) {
+//       if (maior == numbers[i]) {
+//         cont++;
+//       }   
+//     }
+//     return (cont);  
+//} //console.log(highestCount([20, 15, 45, 84]));
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (cat1 > cat2) {
@@ -64,28 +65,44 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 } //console.log(catAndMouse(0, 1, 1));
 
-// Desafio 8
+// // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  let numbers = [];
+  let divisivel;
+  let tipo;
+  let tiposString = [];
+  for (var i = 0; i < numbers.length; i++) {
+    divisivel = numbers[i];
+    if (divisivel % 3 === 0 && divisivel % 5 === 0) {
+      tipo = "fizzBuzz";
+    } else if (divisivel % 3 === 0) {
+      tipo = "fizz";
+    } else if (divisivel % 5 === 0) {
+      tipo = "buzz";
+    } else {
+      tipo = "bugg!";
+    }
+  }
+  return tiposString;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+// // Desafio 9
+// function encode() {
+//   // seu código aqui
+// }
+// function decode() {
+//   // seu código aqui
+// }
 
 module.exports = {
   calcArea,
-  catAndMouse,
+  // catAndMouse,
   compareTrue,
   concatName,
-  decode,
-  encode,
-  fizzBuzz,
+  // decode,
+  // encode,
+  // fizzBuzz
   footballPoints,
-  highestCount,
+  // highestCount,
   splitSentence,
 };
