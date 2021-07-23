@@ -1,7 +1,12 @@
 // Desafio 1
-function compareTrue() {
-  xablau
+function compareTrue(a, t) {
+  if (a === true && t === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
 
 // Desafio 2
 function calcArea() {
