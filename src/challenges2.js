@@ -5,8 +5,6 @@ function techList() {
 
 // Desafio 11
 function generatePhoneNumber() {
-  numeros = [];
-  
 }
 
 // Desafio 12
