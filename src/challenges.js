@@ -32,17 +32,16 @@ function footballPoints(wins, ties) {
   if (wins > 0) {
     vitoria += wins * 3;
     //console.log(wins * 3);
-    }
-    if (ties > 0) {
+  } else if (ties > 0) {
     empate += ties * 1;
     //console.log(ties * 1);
-    }
-    pontos += vitoria + empate;
-    return(pontos);
+  }
+  pontos += vitoria + empate;
+  return(pontos);
 } //footballPoints(1, 2);
 
 // Desafio 6
-// function highestCount(numbers) {
+function highestCount(numbers) {
 //   let numbers = [];
 //   let cont = 0;
 //   let maior = Math.max.apply(null, numbers);
@@ -52,7 +51,7 @@ function footballPoints(wins, ties) {
 //       }   
 //     }
 //     return (cont);  
-// } //console.log(highestCount([20, 15, 45, 84]));
+}; //console.log(highestCount([20, 15, 45, 84]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -67,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
     resultado = ('os gatos trombam e o rato foge');
   }
   return resultado;
-} //console.log(catAndMouse(0, 1, 1));
+}; //console.log(catAndMouse(0, 1, 1));
 
 // // Desafio 8
 function fizzBuzz() {
@@ -88,15 +87,15 @@ function fizzBuzz() {
     }
   }
   return tiposString;
-}
+};
 
 // Desafio 9
 function encode() {
   // seu código aqui
-}
+};
 function decode() {
   // seu código aqui
-}
+};
 
 module.exports = {
   calcArea,
