@@ -41,26 +41,26 @@ function footballPoints(wins, ties) {
     return(pontos);
 } //footballPoints(1, 2);
 
-// // Desafio 6
-// function highestCount(numbers) {
-//   let numbers = [];
-//   let cont = 0;
-//   let maior = Math.max.apply(null, numbers);
-//     for (var i = 0; i < numbers.length; i++) {
-//       if (maior == numbers[i]) {
-//         cont++;
-//       }   
-//     }
-//     return (cont);  
-//} //console.log(highestCount([20, 15, 45, 84]));
+// Desafio 6
+function highestCount(numbers) {
+  let numbers = [];
+  let cont = 0;
+  let maior = Math.max.apply(null, numbers);
+    for (var i = 0; i < numbers.length; i++) {
+      if (maior == numbers[i]) {
+        cont++;
+      }   
+    }
+    return (cont);  
+} //console.log(highestCount([20, 15, 45, 84]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 > cat2) {
-    return ('cat2');
-  } else if (cat2 > cat1) {
+  if (cat1 < cat2) {
     return ('cat1');
-  } else if(mouse > (cat1 === cat2)) {
+  } else if (cat2 < cat1) {
+    return ('cat2');
+  } else {
     return ('os gatos trombam e o rato foge');
   }
 } //console.log(catAndMouse(0, 1, 1));
@@ -96,13 +96,13 @@ function fizzBuzz() {
 
 module.exports = {
   calcArea,
-  // catAndMouse,
+  catAndMouse,
   compareTrue,
   concatName,
-  // decode,
-  // encode,
-  // fizzBuzz
+  decode,
+  encode,
+  fizzBuzz,
   footballPoints,
-  // highestCount,
+  highestCount,
   splitSentence,
 };
