@@ -90,13 +90,13 @@ function fizzBuzz() {
   return tiposString;
 }
 
-// // Desafio 9
-// function encode() {
-//   // seu código aqui
-// }
-// function decode() {
-//   // seu código aqui
-// }
+// Desafio 9
+function encode() {
+  // seu código aqui
+}
+function decode() {
+  // seu código aqui
+}
 
 module.exports = {
   calcArea,
