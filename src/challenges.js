@@ -24,33 +24,23 @@ function concatName(nomes) {
 };
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  let vitoria = 0;
-  let empate = 0;
-  let pontos = 0;
-
-  if (wins > 0) {
-    vitoria += wins * 3;
-    //console.log(wins * 3);
-  } else if (ties > 0) {
-    empate += ties * 1;
-    //console.log(ties * 1);
-  }
-  pontos += vitoria + empate;
-  return(pontos);
+function footballPoints(wins, ties) { //peguei referência ao código do Flávio
+  let totalPontos = wins * 3 + ties * 1;
+  return totalPontos;
 }; //footballPoints(1, 2);
 
 // Desafio 6
 function highestCount(numbers) {
-//   let numbers = [];
-//   let cont = 0;
-//   let maior = Math.max.apply(null, numbers);
-//     for (var i = 0; i < numbers.length; i++) {
-//       if (maior == numbers[i]) {
-//         cont++;
-//       }   
-//     }
-//     return (cont);  
+  let numeroMaior = numbers[0];
+  let cont = 0;
+    for (let i = 0; i < numbers.length; i++) {
+      if (numeroMaior < numbers[i]) {
+        cont++;
+      } else if(numbers[i] === numeroMaior) {
+        cont++;
+      }
+    }
+    return cont;  
 }; //console.log(highestCount([20, 15, 45, 84]));
 
 // Desafio 7
