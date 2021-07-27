@@ -33,13 +33,14 @@ function footballPoints(wins, ties) { //peguei referência ao código do Flávio
 function highestCount(numbers) {
   let numeroMaior = numbers[0];
   let cont = 0;
-    for (let i = 0; i < numbers.length; i++) {
-      if (numeroMaior < numbers[i]) {
-        cont++;
-      } else if(numbers[i] === numeroMaior) {
-        cont++;
-      }
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > numeroMaior) {
+      numeroMaior = numbers[i];
+      cont = 1;
+    } else if(numbers[i] === numeroMaior) {
+      cont++;
     }
+  }
     return cont;  
 }; //console.log(highestCount([20, 15, 45, 84]));
 
