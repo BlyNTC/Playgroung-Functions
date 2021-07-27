@@ -14,7 +14,7 @@ function techList(tech, name) {
   } else {
     return techListOrdered;
   }
-  
+
 }
 
 
@@ -33,9 +33,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let regex = /\d+/g;
+  var matches = string.match(regex);
+  let coposDagua = 0;
+  for (let index = 0; index < matches.length; index++) {
+    coposDagua += parseInt(matches[index]);
+  }
+  if (coposDagua === 1) {
+    return coposDagua + ' copo de água';
+  } else {
+    return coposDagua + ' copos de água';
+  }
 }
+
 
 module.exports = {
   generatePhoneNumber,
