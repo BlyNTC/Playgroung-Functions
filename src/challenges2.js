@@ -1,18 +1,19 @@
 // Desafio 10
 function techList(tech, name) {
+  let lista;
   tech.sort();
-  let res = '';
-  if(tech.lenght === 0) {
-    res = 'Vazio!';
-  };
-  res = [];
-  for (let i in tech) {
-    res.push({
-      tech: tech[i],
-      name,
-    });
+  if (tech.length === 0) {
+    lista = 'Vazio!';
+  } else {
+    lista = [];
+    for (let index = 0; index < tech.length; index += 1) {
+      lista.push({
+        tech: tech[index],
+        name: name,
+      });
+    }
   }
-  return res;
+  return lista;
 }
 
 // Desafio 11
@@ -30,8 +31,19 @@ return true;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let str = string.match(/\d/g, " ");
+  let resultado;
+  let coposDeAgua = 0;
+  for (let index of str) {
+    coposDeAgua += parseInt(index);
+  }
+  if (coposDeAgua === 1) {
+    resultado = (coposDeAgua + ' copo de água');
+  } else if (coposDeAgua > 1) {
+    resultado = (coposDeAgua + ' copos de água');
+  }
+  return resultado;
 }
 
 module.exports = {
