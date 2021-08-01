@@ -1,90 +1,92 @@
 // Desafio 10
-function techList(tech, name) {
+function techList(tech, nome) {
   tech.sort();
   for (let index = 0; index < tech.length; index += 1) {
     tech[index] = {
       tech: tech[index],
-      name: name,
-    }
+      name: nome,
+    };
   }
-  if (tech == '') {
+  if (tech === '') {
     return 'Vazio!';
-  } else {
-    return tech;
   }
+  return tech;
 }
 
 // Desafio 11
-function generatePhoneNumber(arrayTelefone) {
-  if (arrayTelefone.length !== 11) {
+function contador(array, index) {
+  let total = 0;
+  for (let indexNumber = 0; indexNumber < array.length; indexNumber += 1) {
+    if (array[index] === array[indexNumber]) {
+      total += 1;
+    }
+  }
+  return total;
+}
+function validar(array, index, count) {
+  if (array[index] < 0 || array[index] > 9 || count >= 3) {
+    return false;
+  }
+  return true;
+}
+function generatePhoneNumber(arrayNumber) {
+  if (arrayNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  let repeticao = 0;
-  for (let i = 0; i < arrayTelefone.length; i += 1) {
-    for (let i2 = 0; i2 < arrayTelefone.length; i2 += 1) {
-      if (arrayTelefone[i] == arrayTelefone[i2]) {
-        repeticao += 1;
-      }
-    }
-    if ((repeticao >= 3) || (arrayTelefone[i] > 9) || (arrayTelefone[i] < 0)) {
+  for (let index = 0; index < arrayNumber.length; index += 1) {
+    let count = contador(arrayNumber, index);
+    if (!validar(arrayNumber, index, count)) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    repeticao = 0;
   }
-  let phoneNumber = '';
-  for (let i3 = 0; i3 < arrayTelefone.length; i3 += 1) {
-    if (phoneNumber.length == 0) {
-      phoneNumber += '(';
-    }
-    if (phoneNumber.length == 3) {
-      phoneNumber += ')';
-    }
-    if (phoneNumber.length == 4) {
-      phoneNumber += ' ';
-    }
-    if (phoneNumber.length == 10) {
-      phoneNumber += '-';
-    }
-    phoneNumber += arrayTelefone[i3];
-  }
-  return phoneNumber;
+  let numeroFinal = '(';
+  numeroFinal += `${arrayNumber[0]}${arrayNumber[1]}`;
+  numeroFinal += ') ';
+  numeroFinal += `${arrayNumber[2]}${arrayNumber[3]}${arrayNumber[4]}${arrayNumber[5]}`;
+  numeroFinal += `${arrayNumber[6]}`;
+  numeroFinal += '-';
+  numeroFinal += `${arrayNumber[7]}${arrayNumber[8]}${arrayNumber[9]}${arrayNumber[10]}`;
+  return numeroFinal;
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  if ((lineA > lineB + lineC) || (lineB > lineA + lineC) || (lineC > lineB + lineA)) {
-    return false;
-  }
-  if ((lineA < Math.abs(lineB - lineC)) || (lineB < Math.abs(lineA - lineC)) || (lineC < Math.abs(lineB - lineA))) {
-    return false;
-  }
-  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
+function verificar(linha, x, y) {
+  return linha < (x + y) && linha > Math.abs(x - y);
+}
+
+function triangleCheck(linhaA, linhaB, linhaC) {
+  let verificaA = verificar(linhaA, linhaB, linhaC);
+  let verificaB = verificar(linhaB, linhaA, linhaC);
+  let verificaC = verificar(linhaC, linhaB, linhaA);
+
+  if (verificaA && verificaB && verificaC) {
     return true;
-  } else if ((lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC))) {
-    return true;
-  } else if ((lineC < lineB + lineA) && (lineC > Math.abs(lineA - lineB))) {
-    return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 13
-function hydrate(cerveja) {
-  let quantidade = 0;
-  for (let i2 = 0; i2 < cerveja.length; i2 += 1) {
-    for (let i = 0; i < cerveja.length; i += 1) {
-      if (cerveja[i] == i2) {
-        quantidade += i2;
-      }
+function coposAgua(array) {
+  let total = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] >= 0 && array[index] <= 9) {
+      let int = Math.abs(array[index]);
+      total += int;
     }
   }
-  if (quantidade === 1) {
-    return quantidade + " copo de água";
+  return total;
+}
 
-  } else {
-    return quantidade + " copos de água";
+function hydrate(agua) {
+  let soma = coposAgua(agua);
+  let result;
+  if (soma === 1) {
+    result = '1 copo de água';
+  } else if (soma > 1) {
+    let num = soma.toString();
+    result = `${num} copos de água`;
   }
+  return result;
 }
 
 module.exports = {
