@@ -38,15 +38,10 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(contador) {
-  let valor = contador[0];
   let vezes = 0;
-  for (let index = 0; index < contador.length; index += 1) {
-    if (contador[index] > valor) {
-      valor = contador[index];
-    }
-  }
-  for (let i = 0; i < contador.length; i += 1) {
-    if (valor === contador[i]) {
+  contador.sort((a, b) => a - b);
+  for (let number of contador) {
+    if (number === contador[contador.length - 1]) {
       vezes += 1;
     }
   }
@@ -74,62 +69,46 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayFizzBuzz) {
-  for (let i = 0; i < arrayFizzBuzz.length; i += 1) {
-    if (((arrayFizzBuzz[i] % 3) === 0) && ((arrayFizzBuzz[i] % 5) === 0)) {
-      arrayFizzBuzz[i] = 'fizzBuzz';
-    } else if ((arrayFizzBuzz[i] % 3) === 0) {
-      arrayFizzBuzz[i] = 'fizz';
-    } else if ((arrayFizzBuzz[i] % 5) === 0) {
-      arrayFizzBuzz[i] = 'buzz';
-    } else {
-      arrayFizzBuzz[i] = 'bug!';
+  return arrayFizzBuzz.map((element) => {
+    if (element % 15 === 0) {
+      return 'fizzBuzz';
     }
-  }
-  return arrayFizzBuzz;
+    if (element % 3 === 0) {
+      return 'fizz';
+    }
+    if (element % 5 === 0) {
+      return 'buzz';
+    }
+    return 'bug!';
+  });
 }
 
 // Desafio 9
 function encode(param1) {
-  let codigo = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  let letra = '';
-  for (let index = 0; index < param1.length; index += 1) {
-    for (let key in codigo) {
-      if (param1[index] == key) {
-        letra += codigo[key];
-      }
-    }
-    if (letra.length <= index) {
-      letra += param1[index];
+  let codigo = '';
+  let letra = ['a', 'e', 'i', 'o', 'u'];
+  for (let i = 0; i < param1.length; i += 1) {
+    if (letra.includes(param1[i])) {
+      codigo += letra.indexOf(param1[i]) + 1;
+    } else {
+      codigo += param1[i];
     }
   }
-  return letra;
+  return codigo;
 }
 function decode(param2) {
-  let codigo = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  let letra = '';
-  for (let index = 0; index < param2.length; index += 1) {
-    for (let key in codigo) {
-      if (param2[index] == codigo[key]) {
-        letra += key;
-      }
-    }
-    if (letra.length <= index) {
-      letra += param2[index];
+  let codigo = '';
+  let numero = ['1', '2', '3', '4', '5'];
+  let letra = ['a', 'e', 'i', 'o', 'u'];
+
+  for (let i = 0; i < param2.length; i += 1) {
+    if (numero.includes(param2[i])) {
+      codigo += letra[numero.indexOf(param2[i])];
+    } else {
+      codigo += param2[i];
     }
   }
-  return letra;
+  return codigo;
 }
 
 module.exports = {
