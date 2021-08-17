@@ -9,11 +9,34 @@ function techList(techs, name) {
   return 'Vazio!';
 }
 
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
-
 // Desafio 11
-function generatePhoneNumber(phoneNumber) {
-  return phoneNumber;
+function countNumbers(phone, value) {
+  return phone.filter((v) => (v === value)).length;
+}
+
+function formatNumber(phone) {
+  let result = '';
+  for (let pos = 0; pos < phone.length; pos += 1) {
+    result += phone[pos];
+  }
+  return `(${result.slice(0, 2)}) ${result.slice(2, 7)}-${result.slice(7, 11)}`
+}
+
+function generatePhoneNumber(phone) {
+  let repeat = [];
+  const repeatedNumbers = phone.map((a) => {
+    repeat[a] = countNumbers(phone, a);
+    return repeat[a];
+  });
+
+  if (phone.length !== 11) { return 'Array com tamanho incorreto.'; }
+  if (phone.some((number) => number < 0) || phone.some((number) => number > 9)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  if (repeatedNumbers.some((a) => a >= 3)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return formatNumber(phone);
 }
 
 // Desafio 12
