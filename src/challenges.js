@@ -3,15 +3,14 @@ function compareTrue(verdade1, verdade2) {
   // seu código aqui
   if (verdade1 && verdade2) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return (base*height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -23,29 +22,35 @@ function splitSentence(str) {
 // Desafio 4
 function concatName(arrStr) {
   // seu código aqui
-  return arrStr[arrStr.length - 1] + ', ' + arrStr[0];
+  return `${arrStr[arrStr.length - 1]}, ${arrStr[0]}`;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let winsPoints = wins*3;
-  let tiesPoints = ties*1;
+  let winsPoints = wins * 3;
+  let tiesPoints = ties * 1;
   return winsPoints + tiesPoints;
 }
 
 // Desafio 6
-function highestCount(arrNumbers) {
-  // seu código aqui
-  let maiorNum = arrNumbers[0];
-  let contador = 0;
-  for (n1 in arrNumbers) {
-    if (arrNumbers[n1] > maiorNum) {
-      maiorNum = arrNumbers[n1];
+let contador = 0;
+
+function findBiggestNumber(arr) {
+  let maiorNum = arr[0];
+  for (let number in arr) {
+    if (arr[number] > maiorNum) {
+      maiorNum = arr[number];
     }
   }
-  for (n2 in arrNumbers) {
-    if (arrNumbers[n2] === maiorNum) {
+  return maiorNum;
+}
+
+function highestCount(arrNumbers) {
+  // seu código aqui
+  const biggestNumber = findBiggestNumber(arrNumbers);
+  for (let n2 in arrNumbers) {
+    if (arrNumbers[n2] === biggestNumber) {
       contador += 1;
     }
   }
@@ -60,26 +65,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (mouseCat1 < mouseCat2) {
     return 'cat1';
-  } else if (mouseCat1 === mouseCat2) {
+  } if (mouseCat1 === mouseCat2) {
     return 'os gatos trombam e o rato foge';
-  } else {
-    return 'cat2';
-  }
+  } return 'cat2';
 }
 
 // Desafio 8
+// eslint-disable-next-line sonarjs/cognitive-complexity
 function fizzBuzz(arrFizzBuzz) {
   // seu código aqui
   for (let n = 0; n < arrFizzBuzz.length; n += 1) {
-    if (arrFizzBuzz[n] % 3 === 0 && arrFizzBuzz[n] % 5 === 0) {
-      arrFizzBuzz[n] = 'fizzBuzz';
-    } else if (arrFizzBuzz[n] % 3 === 0 && arrFizzBuzz[n] % 5 != 0) {
-      arrFizzBuzz[n] = 'fizz';
-    } else if (arrFizzBuzz[n] % 3 != 0 && arrFizzBuzz[n] % 5 === 0) {
-      arrFizzBuzz[n] = 'buzz';
-    } else {
-      arrFizzBuzz[n] = 'bug!';
-    }
+    if (arrFizzBuzz[n] % 15 === 0) arrFizzBuzz[n] = 'fizzBuzz';
+    else if (arrFizzBuzz[n] % 3 === 0) arrFizzBuzz[n] = 'fizz';
+    else if (arrFizzBuzz[n] % 5 === 0) arrFizzBuzz[n] = 'buzz';
+    else arrFizzBuzz[n] = 'bug!';
   }
   return arrFizzBuzz;
 }
