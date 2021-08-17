@@ -34,13 +34,11 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-let contador = 0;
-
 function findBiggestNumber(arr) {
   let maiorNum = arr[0];
-  for (let number in arr) {
-    if (arr[number] > maiorNum) {
-      maiorNum = arr[number];
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] > maiorNum) {
+      maiorNum = arr[i];
     }
   }
   return maiorNum;
@@ -48,6 +46,7 @@ function findBiggestNumber(arr) {
 
 function highestCount(arrNumbers) {
   // seu código aqui
+  let contador = 0;
   const biggestNumber = findBiggestNumber(arrNumbers);
   for (let n2 in arrNumbers) {
     if (arrNumbers[n2] === biggestNumber) {
