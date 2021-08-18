@@ -1,13 +1,7 @@
 const { techList } = require('./challenges2');
 
 // Desafio 1
-function compareTrue(param1, param2) {
-  if (param1 && param2 === true) {
-    return true;
-  } else {
-    return false;
-  }
-}
+const compareTrue = (param1, param2) => param1 && param2;
 
 compareTrue(true, true);
 compareTrue(true, false);
@@ -15,9 +9,7 @@ compareTrue(false, true);
 compareTrue(false, false);
 
 // Desafio 2
-function calcArea(base, height) {
-  return base * height / 2;
-}
+const calcArea = (base, height) => (base * height) / 2;
 
 calcArea(10, 50);
 calcArea(5, 2);
@@ -25,11 +17,7 @@ calcArea(51, 1);
 
 // Desafio 3
 
-function splitSentence(string) {
-  let arrayDeStrings = [];
-  arrayDeStrings = string.split(' ');
-  return arrayDeStrings;
-}
+const splitSentence = (string) => string.split(' ');
 
 splitSentence('go Trybe');
 splitSentence('vamo que vamo');
@@ -37,32 +25,29 @@ splitSentence('foguete');
 
 // Desafio 4
 
-function concatName(arrayDeStrings) {
-  let novoArray = [];
-  novoArray = arrayDeStrings[arrayDeStrings.length - 1] + ', ' + arrayDeStrings[0];
-  return novoArray;
-}
+const concatName = (arrDeStrings) => `${arrDeStrings[arrDeStrings.length - 1]}, ${arrDeStrings[0]}`;
 
 concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  winPoints = 3;
-  tiePoints = 1;
-  totalPoints = (wins * winPoints) + (ties * tiePoints);
+const footballPoints = ((wins, ties) => {
+  let winPoints = 3;
+  let tiePoints = 1;
+  let totalPoints = (wins * winPoints) + (ties * tiePoints);
   return totalPoints;
-}
+});
+
 footballPoints(14, 8);
 footballPoints(1, 2);
 footballPoints(0, 0);
 
 // Desafio 6
-function highestCount(arrayDeNumeros) {
-  let maiorNumero = arrayDeNumeros[0]; 
+const highestCount = ((arrayDeNumeros) => {
+  let maiorNumero = arrayDeNumeros[0];
   let contador = 0;
   for (let index = 0; index < arrayDeNumeros.length; index += 1) {
     if (arrayDeNumeros[index] > maiorNumero) {
-        maiorNumero = arrayDeNumeros[index];
+      maiorNumero = arrayDeNumeros[index];
     }
   }
   for (let indice = 0; indice < arrayDeNumeros.length; indice += 1) {
@@ -70,8 +55,8 @@ function highestCount(arrayDeNumeros) {
       contador += 1;
     }
   }
-  return contador;  
-}
+  return contador;
+});
 
 highestCount([9, 1, 2, 3, 9, 5, 7]);
 highestCount([0, 4, 4, 4, 9, 2, 1]);
@@ -80,23 +65,19 @@ highestCount([1, 9, 2, 3, 9, 5, 7]);
 highestCount([-2, -2, -1]);
 
 // Deafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  distanceCat1 = Math.abs(cat1 - mouse);
-  distanceCat2 = Math.abs(cat2 - mouse);
+const catAndMouse = ((mouse, cat1, cat2) => {
+  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat2 = Math.abs(cat2 - mouse);
 
-  if (distanceCat1 < distanceCat2) {
-    return 'cat1';
-  } else if (distanceCat1 > distanceCat2) {
-    return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
-  }
-}
+  if (distanceCat1 < distanceCat2) return 'cat1';
+  if (distanceCat1 > distanceCat2) return 'cat2';
+  return 'os gatos trombam e o rato foge';
+});
 
 console.log(catAndMouse(0, 3, 2));
 
 // Desafio 8
-function fizzBuzz(numeros) {
+const fizzBuzz = ((numeros) => {
   let mensagem = [];
   for (let index = 0; index < numeros.length; index += 1) {
     if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
@@ -110,7 +91,7 @@ function fizzBuzz(numeros) {
     }
   }
   return mensagem;
-}
+});
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
@@ -126,7 +107,7 @@ function encode(stringLetras) {
       break;
     case 'e':
       stringDecodificada += '2';
-      break;  
+      break;
     case 'i':
       stringDecodificada += '3';
       break;
@@ -141,8 +122,8 @@ function encode(stringLetras) {
     }
   }
   return stringDecodificada;
-} 
-  console.log(encode('hi there!'));
+}
+console.log(encode('hi there!'));
 
 function decode(stringNumeros) {
   let stringDecodificada = '';
@@ -153,7 +134,7 @@ function decode(stringNumeros) {
       break;
     case '2':
       stringDecodificada += 'e';
-      break;  
+      break;
     case '3':
       stringDecodificada += 'i';
       break;
@@ -168,9 +149,8 @@ function decode(stringNumeros) {
     }
   }
   return stringDecodificada;
-} 
-  console.log(decode('h3 th2r2!'));
-
+}
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
