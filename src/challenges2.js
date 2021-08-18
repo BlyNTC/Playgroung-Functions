@@ -35,8 +35,6 @@ const hydrate = (str) => {
   return `${counter} copos de água`;
 };
 
-console.log(hydrate('fala 4 pinga 3'));
-
 module.exports = {
   generatePhoneNumber,
   techList,
