@@ -1,21 +1,14 @@
 // Desafio 10
-function techList(arrTech, name) {
-  // seu código aqui
-  let arrObj = [];
-  if (arrTech.length === 0) {
-    return 'Vazio!'
-  } else {
-      arrTech = arrTech.sort();
-      for (techs of arrTech) {
-        let bloco = {
-          tech: techs,
-          name: name
-        }
-        arrObj.push(bloco);
-      }
-      return arrObj;
-  }
-}
+const techList = (arr, nome) => {
+  if (arr.length === 0) return 'Vazio!';
+  const arrayOfTech = arr.sort().map((element) => {
+    return {
+      tech: element,
+      name: nome,
+    };
+  });
+  return arrayOfTech;
+};
 
 // Desafio 11
 function generatePhoneNumber() {
