@@ -1,11 +1,3 @@
-/* eslint-disable sonarjs/cognitive-complexity */
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
-/* eslint-disable complexity */
-/* eslint-disable max-lines-per-function */
-/* eslint-disable eqeqeq */
-/* eslint-disable no-plusplus */
-/* eslint-disable no-mixed-operators */
 // Desafio 1
 function compareTrue(n1, n2) {
   if (n1 && n2) {
@@ -16,8 +8,9 @@ function compareTrue(n1, n2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height / 2);
-  return area;
+  let area = base * height;
+  let area2 = area / 2;
+  return area2;
 }
 
 // Desafio 3
@@ -43,9 +36,9 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let max = Math.max(...array);
   let count = 0;
-  for (let i = 0; i < array.length; ++i) {
-    if (array[i] == max) {
-      count++;
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === max) {
+      count += 1;
     }
   }
   return count;
@@ -74,80 +67,30 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let result = [];
-  let final = [];
-  let a;
-  let b;
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] % 3 == 0) {
-      a = 'fizz';
-    } else {
-      a = 'null';
-    }
-    if (array[i] % 5 == 0) {
-      b = 'buzz';
-    } else {
-      b = 'null';
-    }
-    let c = a + b;
-    result.push(c);
-  }
-  for (let i = 0; i < result.length; i++) {
-    if (result[i] == 'nullnull') {
-      final.push('bug!');
-    } else if (result[i] == 'fizzbuzz') {
-      final.push('fizzBuzz');
-    } else if (result[i] == 'fizznull') {
-      final.push('fizz');
-    } else if (result[i] == 'nullbuzz') {
-      final.push('buzz');
-    }
-  }
-  return final;
+  const check = array.map((number) => {
+    if (number % 3 === 0 && number % 5 === 0) { return 'fizzBuzz'; }
+    if (number % 3 === 0) { return 'fizz'; }
+    if (number % 5 === 0) { return 'buzz'; }
+    return 'bug!';
+  });
+  return check;
 }
 
 // Desafio 9
 function encode(string) {
-  let array = string.split('');
-  let final = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] == 'a') {
-      final.push('1');
-    } else if (array[i] == 'e') {
-      final.push('2');
-    } else if (array[i] == 'i') {
-      final.push('3');
-    } else if (array[i] == 'o') {
-      final.push('4');
-    } else if (array[i] == 'u') {
-      final.push('5');
-    } else {
-      final.push(array[i]);
-    }
-  }
-  let result = final.join('');
-  return result;
+  const newstr = [...string].map((letter) => letter.replace('a', '1').replace('e', '2')
+    .replace('i', '3')
+    .replace('o', '4')
+    .replace('u', '5'));
+  return newstr.join('');
 }
+
 function decode(string) {
-  let array = string.split('');
-  let final = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] == '1') {
-      final.push('a');
-    } else if (array[i] == '2') {
-      final.push('e');
-    } else if (array[i] == '3') {
-      final.push('i');
-    } else if (array[i] == '4') {
-      final.push('o');
-    } else if (array[i] == '5') {
-      final.push('u');
-    } else {
-      final.push(array[i]);
-    }
-  }
-  let result = final.join('');
-  return result;
+  const newstr = [...string].map((letter) => letter.replace('1', 'a').replace('2', 'e')
+    .replace('3', 'i')
+    .replace('4', 'o')
+    .replace('5', 'u'));
+  return newstr.join('');
 }
 
 module.exports = {

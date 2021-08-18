@@ -15,3 +15,24 @@ describe('9 - Crie uma função que Codifique e Decodifique', () => {
     expect(challenges.decode('g4 Tryb2!')).toBe('go Trybe!');
   });
 });
+
+describe('Testa se são funções', () => {
+  it('Encode e Decode é uma função?', () => {
+    expect(typeof challenges.encode).toBe('function');
+    expect(typeof challenges.decode).toBe('function');
+  });
+  it('função encode teste se as vogais a, e, i, o, u são convertidas em 1, 2, 3, 4 e 5, respectivamente', () => {
+    expect(challenges.encode('aeiou')).toBe('12345');
+  });
+  it('função decode teste se os números 1, 2, 3, 4 e 5 são convertido nas vogais a, e, i, o, u , respectivamente', () => {
+    expect(challenges.decode('12345')).toBe('aeiou');
+  });
+  it('Teste se as demais letras/números não são convertidos para cada caso', () => {
+    expect(challenges.encode('bcdfghjklmnpqrstvwxyz')).toBe('bcdfghjklmnpqrstvwxyz');
+    expect(challenges.decode('06789')).toBe('06789');
+  });
+  it('Teste se a string que é retornada pelas funções têm o mesmo número de caracteres que a string passada como parâmetro', () => {
+    expect(challenges.encode('Testa isso').length).toBe(10);
+    expect(challenges.decode('T2st1 3ss4').length).toBe(10);
+  });
+});
