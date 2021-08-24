@@ -38,28 +38,17 @@ function highestCount(valores) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let alcancouRato = '';
-  let distanciaMouseCat1 = 0;
-  let distanciaMouseCat2 = 0;
-  if (mouse >= cat1) {
-    distanciaMouseCat1 = mouse - cat1;
-  } else {
-    distanciaMouseCat1 = cat1 - mouse;
-  }
-  if (mouse >= cat2) {
-    distanciaMouseCat2 = mouse - cat2;
-  } else {
-    distanciaMouseCat2 = cat2 - mouse;
-  }
+  let distanciaMouseCat1 = Math.abs(mouse - cat1);
+  let distanciaMouseCat2 = Math.abs(mouse - cat2);
+  let pegouRato;
   if (distanciaMouseCat1 < distanciaMouseCat2) {
-    alcancouRato = 'cat1';
+    pegouRato = 'cat1';
+  } else if (distanciaMouseCat1 > distanciaMouseCat2) {
+    pegouRato = 'cat2';
   } else {
-    alcancouRato = 'cat2';
+    pegouRato = 'os gatos trombam e o rato foge';
   }
-  if (distanciaMouseCat1 === distanciaMouseCat2) {
-    alcancouRato = 'os gatos trombam e o rato foge';
-  }
-  return alcancouRato;
+  return pegouRato;
 }
 
 // Desafio 8
