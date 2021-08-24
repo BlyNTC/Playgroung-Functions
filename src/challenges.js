@@ -24,7 +24,6 @@ function splitSentence(string) {
   let arrayOfStrings = string.split(separator);
 
   return arrayOfStrings;
-
 }
 
 // Desafio 4
@@ -35,52 +34,44 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins*3 + ties);
+  return (wins * 3 + ties);
 }
+
+const counter = (array, highest) => {
+  let count = 0;
+  for (let value of array) {
+    if (value === highest) {
+      count += 1;
+    }
+  }
+
+  return count;
+};
 
 // Desafio 6
 function highestCount(array) {
-  let count = 0;
   let highest = array[0];
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] >= highest) {
       highest = array[i];
     }
   }
-  for (let value of array) {
-    if (value === highest) {
-      count += 1;
-    }
-  }
-  return count;
+  return counter(array, highest);
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1Mouse = mouse - cat1;
-  let distanceCat2Mouse = mouse - cat2;
-
-  if (distanceCat1Mouse < 0) {
-    distanceCat1Mouse = (-1) * distanceCat1Mouse;
-  }
-  if (distanceCat2Mouse < 0) {
-    distanceCat2Mouse = (-1)*distanceCat2Mouse;
-  }
-
-  if (distanceCat1Mouse > distanceCat2Mouse) {
-    return 'cat2';
-  } else if (distanceCat2Mouse > distanceCat1Mouse) {
-    return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
-  };
+  let distanceCat1Mouse = Math.abs(mouse - cat1);
+  let distanceCat2Mouse = Math.abs(mouse - cat2);
+  if (distanceCat1Mouse > distanceCat2Mouse) return 'cat2';
+  if (distanceCat2Mouse > distanceCat1Mouse) return 'cat1';
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(array) {
-  let arrayFB = [];
-  for (let value of array) {
-    if (value % 3 === 0 && value % 5 === 0){
+  const arrFB = array.reduce((arrayFB, value) => {
+    if (value % 3 === 0 && value % 5 === 0) {
       arrayFB.push('fizzBuzz');
     } else if (value % 3 === 0) {
       arrayFB.push('fizz');
@@ -89,8 +80,10 @@ function fizzBuzz(array) {
     } else {
       arrayFB.push('bug!');
     }
-  }
-  return arrayFB;
+    return arrayFB;
+  }, []);
+
+  return arrFB;
 }
 
 // Desafio 9
@@ -106,15 +99,15 @@ function encode(string) {
   return string;
 }
 function decode(string) {
-  let numbers = { 
-    '1': 'a', 
-    '2': 'e', 
-    '3': 'i', 
-    '4' : 'o', 
-    '5' : 'u'
+  let numbers = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
   };
   for (let letter of string) {
-    for (number in numbers) {
+    for (let number in numbers) {
       if (number === letter) {
         string = string.replace(letter, numbers[number]);
       }
