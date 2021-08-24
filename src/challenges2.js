@@ -1,20 +1,15 @@
 // Desafio 10
 function techList(array, name) {
-  let tecnologias = [];
-  let objeto = {};
   array.sort();
-
-  for (let index = 0; index < array.length; index += 1) {
-    objeto.tech = array[index];
-    objeto.name = name;
-    tecnologias.push(objeto);
-    objeto = {};
-  }
-  if (array.length === 0) {
-    return 'Vazio!';
-  } else {
-    return tecnologias;
-  }
+  const tecnologias = [];
+  array.forEach((tecnologia) => {
+    const tech = {
+      tech: tecnologia,
+      name,
+    };
+    tecnologias.push(tech);
+  });
+  return array.length === 0 ? 'Vazio!' : tecnologias;
 }
 
 // Desafio 11
