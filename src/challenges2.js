@@ -21,14 +21,14 @@ function generatePhoneNumber(numeros) {
       if (numeros[i] === numeros[index]) {
         vezesRepetido += 1;
       }
-      if (vezesRepetido >= 3){
+      if (vezesRepetido >= 3) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
     }
     vezesRepetido = 0;
   }
-// Faz os outros testes
-  if (numeros.length !== 11){
+  // Faz os outros testes
+  if (numeros.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   let numeroTelefone = '(';
@@ -40,7 +40,7 @@ function generatePhoneNumber(numeros) {
       numeroTelefone += ') ';
     } else if (index === 7) {
       numeroTelefone += '-';
-    } 
+    }
     numeroTelefone += numeros[index];
   }
   return numeroTelefone;
@@ -55,14 +55,10 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   let numerosNaString = string.match(/\d+/g);
   let somaNumeros = 0;
-  for (let index = 0; index < numerosNaString.length; index += 1) {
-    somaNumeros += parseInt(numerosNaString[index]);
-  }
-  if (somaNumeros === 1) {
-  return somaNumeros + ' copo de água';
-  } else {
-    return somaNumeros + ' copos de água';
-  }
+  numerosNaString.forEach((numero) => {
+    somaNumeros += parseInt(numero, 10);
+  });
+  return somaNumeros === 1 ? `${somaNumeros} copo de água` : `${somaNumeros} copos de água`;
 }
 
 module.exports = {
