@@ -1,133 +1,78 @@
 // Desafio 1
-function compareTrue(param1, param2) {
-  if (param1 === true && param2 === true) {
-    return true;
-  } else {
-    return false;
-  }
-}
+const compareTrue = (param1, param2) => (param1 && param2);
 
 // Desafio 2
-function calcArea(base, height) {
-  return (base * height) / 2;
-}
+const calcArea = (base, height) =>(base * height) / 2;
 
 // Desafio 3
-function splitSentence(string) {
-  let array = [];
-  let word = '';
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === ' ') {
-      array.push(word);
-      word = '';
-    } else {
-      word += string[index];
-    }    
-  }
-  array.push(word);
-  return array;
-}
+const splitSentence = (string) => string.split(' ');
 
 // Desafio 4
-function concatName(array) {
-  return (array[array.length-1] + ', ' + array[0]);
-}
+const concatName = (array) => (`${array[array.length - 1]}, ${array[0]}`);
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  return 3 * wins + ties;
-}
+const footballPoints = (wins, ties) => 3 * wins + ties;
 
 // Desafio 6
-function highestCount(array) {
-  let maior = array[0];
-  let cont = 0;
-  for (let index in array){
-    if (array[index] > maior){
-      maior = array[index];
-    }
-  }
-  for (let index in array){
-    if (array[index] === maior){
-      cont +=1;
-    }
-  }
-  return cont;
-}
+const highestCount = (array) => array.filter((number) => number === Math.max(...array)).length;
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let distMouseCat1 = Math.abs(mouse - cat1);
-  let distMouseCat2 = Math.abs(mouse - cat2);
-  if (distMouseCat1 < distMouseCat2){
-    return 'cat1';
-  } else if (distMouseCat2 < distMouseCat1){
-    return 'cat2';
-  } else { 
-    return 'os gatos trombam e o rato foge';
-  }
-}
+const catAndMouse = (mouse, cat1, cat2) => {
+  if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) return 'os gatos trombam e o rato foge';
+  return Math.abs(mouse - cat1) < Math.abs(mouse - cat2) ? 'cat1' : 'cat2';
+};
 
 // Desafio 8
-function fizzBuzz(array) {
-  let arrayReturn = [];
-  for (let index in array){
-    if (array[index] % 3 === 0 && array[index] % 5 === 0 ){
-      arrayReturn.push('fizzBuzz');
-    } else if (array[index] % 3 === 0 && array[index] % 5 !== 0 ){
-      arrayReturn.push('fizz');
-    } else if ((array[index] % 3 !== 0 && array[index] % 5 === 0 )){
-      arrayReturn.push('buzz');
-    } else {
-      arrayReturn.push('bug!');
-    }
-  }return arrayReturn;
-}
-
+const fizzBuzz = (array) => array.map((number) => {
+  if (number % 3 === 0) {
+    return (number % 5 === 0) ? 'fizzBuzz' : 'fizz';
+  } return (number % 5 === 0) ? 'buzz' : 'bug!';
+});
+  
 // Desafio 9
 function encode(string) {
   let data = {
-    a : '1',
-    e : '2',
-    i : '3',
-    o : '4',
-    u : '5',
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
   };
   let password = '';
-  for (let index in string){
+  for (let index in string) {
     let status = false;
-    for (let code in data){
-      if (string[index] === code){
+    for (let code in data) {
+      if (string[index] === code) {
         password += data[code];
         status = true;
       }
     }
-      if (status === false) {
-        password += string[index];
-      }
+    if (status === false) {
+      password += string[index];
+    }
   } return password;
 }
 
 function decode(string) {
   let data = {
-    a : '1',
-    e : '2',
-    i : '3',
-    o : '4',
-    u : '5',
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
   };
   let password = '';
-  for (let index in string){
+  for (let index in string) {
     let status = false;
-    for (let code in data){
-      if (string[index] === data[code]){
+    for (let code in data) {
+      if (string[index] === data[code]) {
         password += code;
         status = true;
       }
     }
-      if (status === false) {
-        password += string[index];
-      }
+    if (status === false) {
+      password += string[index];
+    }
   } return password;
 }
 
