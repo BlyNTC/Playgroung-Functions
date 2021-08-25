@@ -2,7 +2,7 @@
 const compareTrue = (param1, param2) => (param1 && param2);
 
 // Desafio 2
-const calcArea = (base, height) =>(base * height) / 2;
+const calcArea = (base, height) => (base * height) / 2;
 
 // Desafio 3
 const splitSentence = (string) => string.split(' ');
@@ -28,53 +28,21 @@ const fizzBuzz = (array) => array.map((number) => {
     return (number % 5 === 0) ? 'fizzBuzz' : 'fizz';
   } return (number % 5 === 0) ? 'buzz' : 'bug!';
 });
-  
-// Desafio 9
-function encode(string) {
-  let data = {
-    a: '1',
-    e: '2',
-    i: '3',
-    o: '4',
-    u: '5',
-  };
-  let password = '';
-  for (let index in string) {
-    let status = false;
-    for (let code in data) {
-      if (string[index] === code) {
-        password += data[code];
-        status = true;
-      }
-    }
-    if (status === false) {
-      password += string[index];
-    }
-  } return password;
-}
 
-function decode(string) {
-  let data = {
-    a: '1',
-    e: '2',
-    i: '3',
-    o: '4',
-    u: '5',
-  };
-  let password = '';
-  for (let index in string) {
-    let status = false;
-    for (let code in data) {
-      if (string[index] === data[code]) {
-        password += code;
-        status = true;
-      }
-    }
-    if (status === false) {
-      password += string[index];
-    }
-  } return password;
-}
+// Desafio 9
+let data = {
+  a: '1',
+  e: '2',
+  i: '3',
+  o: '4',
+  u: '5',
+};
+
+const encode = ([...string]) => string.reduce((acc, char) =>
+  acc + (Object.keys(data).includes(char) ? data[char] : char), '');
+
+const decode = ([...string]) => string.reduce((acc, char) =>
+  acc + (Object.values(data).includes(char) ? Object.keys(data)[char - 1] : char), '');
 
 module.exports = {
   calcArea,
