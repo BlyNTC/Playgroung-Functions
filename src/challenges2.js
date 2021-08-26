@@ -1,52 +1,20 @@
 // Desafio 10
-function techList(array, name) {
-  if (array.length === 0) {
-    return 'Vazio!';
-  }
-  array = array.sort();
-  let object = {};
-  let arrayResp = [];
-  for (let index in array) {
-    object.tech = array[index];
-    object.name = name;
-    arrayResp.push(object);
-    object = {};
-  }
-  return arrayResp;
-}
-// }
+const techList = (array, name) => {
+  if (array.length === 0) return 'Vazio!';
+  return array.sort().map((element) => ({ tech: element, name }));
+};
 
 // Desafio 11
-function generatePhoneNumber(array) {
-  let phoneNumber = null;
-  let cont = 0;
-  if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
+const generatePhoneNumber = (a) => {
+  if (a.length !== 11) return 'Array com tamanho incorreto.';
+  if (a.find((number) => number < 0 || number > 9)
+  ) return 'não é possível gerar um número de telefone com esses valores';
+  for (let numberToCompare of a) {
+    if (a.filter((number) => number === numberToCompare).length
+      >= 3) return 'não é possível gerar um número de telefone com esses valores';
   }
-  for (let index in array) {
-    cont = 0;
-    for (let indexCont in array) {
-      if (array[index] === array[indexCont]) {
-        cont += 1;
-      }
-      if (array[index] < 0 || array[index] > 9 || cont >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-    }
-  }
-  phoneNumber = (`(${array[0]}${array[1]}) `);
-
-  for (let index = 2; index <= 6; index += 1) {
-    phoneNumber += array[index];
-  }
-
-  phoneNumber += '-';
-
-  for (let index = 7; index <= 10; index += 1) {
-    phoneNumber += array[index];
-  }
-  return phoneNumber;
-}
+  return `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`;
+};
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
